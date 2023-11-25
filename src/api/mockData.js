@@ -10,8 +10,13 @@ const mockData = {
   "categories": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode",
+      "title": "French",
+      "author": "Ally",
+    },
+    {
+      "id": 2,
+      "title": "English",
+      "author": "Ally",
     }
   ],
   "entries": [{
