@@ -2,11 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Start from "./components/Start"
-import { mockData } from "../src/api/mockData"
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(mockData)
   return (
     <>
       <header>
