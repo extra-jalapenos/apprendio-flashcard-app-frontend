@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router"
 import { mockData } from "../api/mockData"
+import Card from "./VocabCard"
 
 export default function Practice () {
   const {id} = useParams()
@@ -9,7 +10,7 @@ export default function Practice () {
   const getEntries = () => {
     const temp = mockData.entries.forEach(entry => console.log(entry.categoryId === id, id))
     console.log(temp)
-    setEntries(mockData.entries.filter(entry => entry.categoryId === id))
+    setEntries(mockData.entries.filter(entry => entry.categoryId === Number(id)))
   }
 
   useEffect(getEntries, [])
@@ -20,7 +21,7 @@ export default function Practice () {
     <>
     <div>Test</div>
     {entries.length}
-    {/* {entries.map((entry, index) => <button key={index}>{entry.question}</button>)} */}
+    {entries.map((entry, index) => <Card key={index} text={entry.question} />)}
     </>
   )
 }
