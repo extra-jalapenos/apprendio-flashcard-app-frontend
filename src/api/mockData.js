@@ -20,10 +20,10 @@ const mockData = {
     }
   ],
   "entries": [{
-    "id": 1,
+    "id": 2,
     "question": "Ei",
-    "answer": "",
-    "categoryId": "",
+    "answer": "egg",
+    "categoryId": 2,
     "stage": 0,
     "repetitions": {
       "correct": 0,
