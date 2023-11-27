@@ -4,7 +4,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  --white: rgba(255, 255, 255, 0.87);
+  color: var(--white);
+  --black: rgb(40, 18, 79);
   background: rgb(40, 18, 79);
   background: linear-gradient(-45deg, 
   rgb(47, 109, 129) 0%,
@@ -51,6 +53,15 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+.card {
+  padding: 1rem;
+  min-width: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1em;
+  font-size: 2rem;
+}
+
 /* 
 @media (prefers-color-scheme: light) {
   :root {
