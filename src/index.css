@@ -64,21 +64,23 @@ button {
   cursor: pointer;
 }
 
-.confirm, .reveal, .skip {
+.circleButton {
   height: 50px;
   width: 50px;
   border-radius: 100%;
+  display: grid;
+  place-content: center;
 }
 
-.confirm {
+.green {
   background-color: var(--green);
 }
 
-.reveal {
+.blue {
   background-color: var(--blue);
 }
 
-.skip {
+.red {
   background-color: var(--red);
 }
 
@@ -95,6 +97,7 @@ button {
     color: #213547;
     background-color: #ffffff;
     background: rgb(183,238,255);
+    --grey: rgba(240, 240, 240, 1);
     background: linear-gradient(333deg, rgba(183,238,255,1) 0%, rgba(238,222,255,1) 36%, rgba(255,220,244,1) 57%, rgba(247,237,223,1) 87%, rgba(255,252,198,1) 100%);
     --green: rgba(106, 232, 203, 0.5);
     --blue: rgba(113, 219, 255, 0.5);
@@ -103,7 +106,15 @@ button {
   a:hover {
     color: #747bff;
   }
+
   button {
-    background-color: #ffc7c7;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--grey);
+    mix-blend-mode: multiply;
+  }
+
+  button:hover {
+    background-color: var(--pink);
+    transition: background-color 2000ms linear;
   }
 }

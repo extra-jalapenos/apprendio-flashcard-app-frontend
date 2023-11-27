@@ -10,13 +10,10 @@ nav {
   justify-content: start;
 }
 
-nav li {
+nav button, label {
   border-radius: 1em;
   padding: 0.5rem 1rem;
   margin: 0.25rem 0.5rem ;
-}
-
-nav li:hover {
-  background: linear-gradient(315deg, transparent 0%, rgb(189, 209, 255) 100%);
+  background-color: var(--grey);
   mix-blend-mode: multiply;
 }

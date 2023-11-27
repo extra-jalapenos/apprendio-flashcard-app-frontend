@@ -7,8 +7,10 @@ import CreateLanguage from './components/CreateLanguage'
 import Practice from './components/Practice'
 import LanguageSelection from './components/LanguageSelection'
 import Card from './components/VocabCard'
-import Header from './components/Header'
+import Header from './components/header/Header'
 import "./Header.css"
+import Footer from './components/footer/footer'
+import "./Footer.css"
 
 function App() {
   return (
@@ -21,9 +23,7 @@ function App() {
         <Route path={"/select-language"} element={<LanguageSelection />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
       </Routes>
-      <footer>
-
-      </footer>
+      <Footer />
     </>
   )
 }
