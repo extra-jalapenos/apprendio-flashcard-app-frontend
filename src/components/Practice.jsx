@@ -4,7 +4,7 @@ import { mockData } from "../api/mockData"
 import Card from "./Card"
 import InputField from "./InputField"
 
-function CardPair ({props, revealAnswer}) {
+function CardPair ({props, revealAnswer, handleEntry}) {
   const { question, answer } = props
 
   return(
@@ -16,11 +16,8 @@ function CardPair ({props, revealAnswer}) {
       <div>
         <h2>Answer</h2>
         {revealAnswer && <Card text={revealAnswer ? answer : ""} />}
-        {!revealAnswer && <InputField />}
+        {!revealAnswer && <InputField handleEntry={handleEntry}/>}
       </div>
-      
-
-
     </div>
   )
 }
@@ -32,7 +29,6 @@ function CardStats ({props}) {
     <div className="buttoncontainer">
         <label>Correct</label>
         <circlebutton>{repetitions.correct}</circlebutton>
-        <label>Correct</label>
         <circlebutton>{repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}</circlebutton>
         <label>Total</label>
         <circlebutton>{repetitions.total}</circlebutton>
@@ -66,6 +62,10 @@ export default function Practice () {
 
   const handleEntry = (event) => setUserEntry(event.target.value) 
 
+  const handleSubmit = () => {
+    console.log(userEntry)
+  }
+
   const reveal = () => setShowAnswer(showAnswer ? false : true)
 
   const next = () => {
@@ -94,9 +94,9 @@ export default function Practice () {
   return (
     <>
       <CardStats props={currentCard} />
-      <CardPair props={currentCard} revealAnswer={showAnswer} />
+      <CardPair props={currentCard} revealAnswer={showAnswer} handleEntry={handleEntry}/>
       <div className="buttoncontainer">
-        <circlebutton className="green">✓</circlebutton>
+        <circlebutton className="green" onClick={() => handleSubmit()}>✓</circlebutton>
         <circlebutton className="blue" onClick={reveal}>?</circlebutton>
         <circlebutton className="red" onClick={() => next()}>→</circlebutton>
       </div>

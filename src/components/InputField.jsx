@@ -1,8 +1,6 @@
-export default function InputField () {
+export default function InputField ({handleEntry}) {
   return (
-    
-    <textarea>
-      HELLO
+    <textarea onChange={handleEntry}>
     </textarea>
   )
 }

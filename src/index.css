@@ -115,7 +115,7 @@ circlebutton {
 .card, textarea {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.5em;
-  margin: 0 1em;
+  margin: 1rem 1rem;
   padding: 2rem;
   line-height: 1rem;
   min-height: 10em;
@@ -126,6 +126,7 @@ circlebutton {
 
 textarea {
   padding: 2rem;
+  margin: 3px;
   font-size: 1rem;
   resize: none;
   width: calc(100% - 2rem);
