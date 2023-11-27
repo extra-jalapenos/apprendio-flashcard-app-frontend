@@ -1,0 +1,22 @@
+header {
+  padding: 0.5rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  list-style: none;
+  justify-content: start;
+}
+
+nav li {
+  border-radius: 1em;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.5rem ;
+}
+
+nav li:hover {
+  background: linear-gradient(315deg, transparent 0%, rgb(189, 209, 255) 100%);
+  mix-blend-mode: multiply;
+}

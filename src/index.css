@@ -11,6 +11,7 @@
   --green: rgba(0, 235, 110, 0.5);
   --blue: rgba(0, 176, 235, 0.5);
   --red: rgba(235, 0, 59, 0.5);
+  --pink: rgba(255, 83, 189, 0.5);
   background: linear-gradient(-45deg, 
   rgb(47, 109, 129) 0%,
   rgb(40, 18, 79) 100%);
@@ -19,6 +20,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  text-align: center;
 }
 
 a {

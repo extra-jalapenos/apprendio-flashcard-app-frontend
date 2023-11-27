@@ -7,20 +7,20 @@ import CreateLanguage from './components/CreateLanguage'
 import Practice from './components/Practice'
 import LanguageSelection from './components/LanguageSelection'
 import Card from './components/VocabCard'
+import Header from './components/Header'
+import "./Header.css"
 
 function App() {
   return (
     <>
-      <header>
-        <h1>StudyPal</h1>
-      </header>
-        <Routes>
-          <Route path={"/"} element={<Start />}/>
-          <Route path={"/:categoryId/new-entry"} element={<CreateEntry />}/>
-          <Route path={"/new-language"} element={<CreateLanguage />}/>
-          <Route path={"/select-language"} element={<LanguageSelection />}/>
-          <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
-        </Routes>
+      <Header />
+      <Routes>
+        <Route path={"/"} element={<Start />}/>
+        <Route path={"/:categoryId/new-entry"} element={<CreateEntry />}/>
+        <Route path={"/new-language"} element={<CreateLanguage />}/>
+        <Route path={"/select-language"} element={<LanguageSelection />}/>
+        <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
+      </Routes>
       <footer>
 
       </footer>

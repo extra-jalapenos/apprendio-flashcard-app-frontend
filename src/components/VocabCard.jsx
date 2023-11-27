@@ -2,8 +2,8 @@ import { mockData } from "../api/mockData.js"
 
 export default function Card ({text}) {
   return (
-    <div className="card">
+    <p className="card">
       {text}
-    </div>
+    </p>
   )
 }
