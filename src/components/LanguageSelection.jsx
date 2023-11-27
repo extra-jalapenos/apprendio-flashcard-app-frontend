@@ -8,7 +8,7 @@ export default function LanguageSelection () {
     <>
       <h2>Select your category</h2>
       <div className="autoColumns">
-        {mockData.categories.map((category, index) => <p className="card" key={index} onClick={() => navigate("/practice/"+index+"/0")}>{category.title}</p>)}
+        {mockData.categories.map((category, index) => <label key={index} onClick={() => navigate("/practice/"+index+"/0")}>{category.title}</label>)}
       </div>
     </>
   )

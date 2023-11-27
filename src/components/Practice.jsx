@@ -24,17 +24,20 @@ function CardPair ({props, revealAnswer, handleEntry}) {
 
 function CardStats ({props}) {
   const { repetitions, stage } = props
-
+  const { cardId } = useParams()
   return (
+    <>
+    <h3>Card {cardId}</h3>
     <div className="buttoncontainer">
         <label>Correct</label>
-        <circlebutton>{repetitions.correct}</circlebutton>
-        <circlebutton>{repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}</circlebutton>
+        <p className="circlebutton">{repetitions.correct}</p>
+        <p className="circlebutton">{repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}</p>
         <label>Total</label>
-        <circlebutton>{repetitions.total}</circlebutton>
+        <p className="circlebutton">{repetitions.total}</p>
         <label>Level</label>
-        <circlebutton>{stage}</circlebutton>
+        <p className="circlebutton">{stage}</p>
     </div>
+    </>
   )
 }
 
@@ -96,9 +99,9 @@ export default function Practice () {
       <CardStats props={currentCard} />
       <CardPair props={currentCard} revealAnswer={showAnswer} handleEntry={handleEntry}/>
       <div className="buttoncontainer">
-        <circlebutton className="green" onClick={() => handleSubmit()}>✓</circlebutton>
-        <circlebutton className="blue" onClick={reveal}>?</circlebutton>
-        <circlebutton className="red" onClick={() => next()}>→</circlebutton>
+        <p className="circlebutton green" onClick={() => handleSubmit()}>✓</p>
+        <p className="circlebutton blue" onClick={reveal}>?</p>
+        <p className="circlebutton red" onClick={() => next()}>→</p>
       </div>
     </>
   )
