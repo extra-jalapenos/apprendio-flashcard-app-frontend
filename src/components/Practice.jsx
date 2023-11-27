@@ -3,25 +3,41 @@ import { useParams, useNavigate } from "react-router"
 import { mockData } from "../api/mockData"
 import Card from "./VocabCard"
 
+function CardPair ({props}) {
+  const { question, answer } = props
+  return(
+    <div className="twoColumns">
+      <Card text={question || "unknown"} />
+      <Card text={answer || "unknown"} />
+    </div>
+  )
+}
+
 export default function Practice () {
+
   const {id} = useParams()
-  console.log(id, "ID")
   const [entries, setEntries] = useState(null)
+  const [currentCard, setCurrentCard] = useState(null)
+  const [currentCardIndex, setCurrentCardIndex] = useState(null)
+
   const getEntries = () => {
-    const temp = mockData.entries.forEach(entry => console.log(entry.categoryId === id, id))
-    console.log(temp)
-    setEntries(mockData.entries.filter(entry => entry.categoryId === Number(id)))
+    setEntries(mockData.categories[id].entries)
+    setCurrentCardIndex(0)
+  }
+
+  const getCurrentCard = () => {if (entries) {
+      setCurrentCard(entries[currentCardIndex])
+    }
   }
 
   useEffect(getEntries, [])
-  if (!entries) return <>… Loading</>
-  
-  console.log(entries.length)
+  useEffect(getCurrentCard, [currentCardIndex])
+
+  if (!entries) return <p>Loading…</p>
+
+  if (!currentCard) return <p>Loading current card…</p>
+  console.log(currentCard)
   return (
-    <>
-    <div>Test</div>
-    {entries.length}
-    {entries.map((entry, index) => <Card key={index} text={entry.question} />)}
-    </>
+    <CardPair props={currentCard} />
   )
 }

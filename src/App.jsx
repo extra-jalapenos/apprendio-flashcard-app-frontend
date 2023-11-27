@@ -18,7 +18,7 @@ function App() {
           <Route path={"/"} element={<Start />}/>
           <Route path={"/new-entry"} element={<CreateEntry />}/>
           <Route path={"/new-language"} element={<CreateLanguage />}/>
-          <Route path={"/practice"} element={<LanguageSelection />}/>
+          <Route path={"/select-language"} element={<LanguageSelection />}/>
           <Route path={"/practice/:id"} element={<Practice />}/>
         </Routes>
       <footer>
