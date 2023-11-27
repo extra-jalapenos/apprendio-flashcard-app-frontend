@@ -5,9 +5,8 @@ export default function Header () {
   return (
     <header>
       <nav>
-        <button>✨ Flashy Flash Cards ✨</button>
-        <button>Home</button>
-        <button>Switch Languages</button>
+        <button onClick={() => navigate("/")}>✨ Flashy Flash Cards ✨</button>
+        <button onClick={() => navigate("/select-language")}>Switch Languages</button>
       </nav>
     </header>
   )

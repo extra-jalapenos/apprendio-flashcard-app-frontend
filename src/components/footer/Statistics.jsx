@@ -16,11 +16,11 @@ export default function Statistics () {
         {new Date().toLocaleDateString()}
       </li>
       <label>🥇 First Try</label>
-      <li className="circleButton blue">{sessionStats.firstTry}</li>
+      <circlebutton className="blue"><span>{sessionStats.firstTry}</span></circlebutton>
       <label>🥈🥉 Correct</label>
-      <li className="circleButton green">{sessionStats.correct}</li>
+      <circlebutton className="green">{sessionStats.correct}</circlebutton>
       <label>↻ Maybe next time</label>
-      <li className="circleButton red">{sessionStats.wrong}</li>
+      <circlebutton className="red">{sessionStats.wrong}</circlebutton>
     </>
   )
 }

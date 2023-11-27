@@ -1,26 +1,21 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router"
 import { mockData } from "../api/mockData"
-import Card from "./VocabCard"
+import Card from "./Card"
 
 function CardPair ({props, revealAnswer}) {
   const { question, answer } = props
   return(
     <div className="twoColumns">
-      <h2>Question</h2>
-      <h2>Answer</h2>
-      <Card text={question || ""} />
-      <Card text={revealAnswer ? answer : ""} />
+      <div>
+        <h2>Question</h2>
+        <Card text={question || ""} />
+      </div>
+      <div>
+        <h2>Answer</h2>
+        <Card text={revealAnswer ? answer : ""} />
+      </div>
     </div>
-  )
-}
-
-function Buttons () {
-  return (
-    <>
-      <button className="confirm"/>
-      <button className="reveal"/>
-    </>
   )
 }
 
@@ -28,27 +23,39 @@ function CardStats ({props}) {
   const { repetitions, stage } = props
 
   return (
-    <>
-      <div>
-        <button className="confirm">
-          {repetitions.correct}
-        </button>
-        <button className="skip">
-          {repetitions.wrong}
-        </button>
-        <button className="reveal">
-          {repetitions.total}
-        </button>
-      </div>
-      <div>
-      <button className="confirm">
-        {repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}
-      </button>
-      <p>Level: <b>{stage}</b></p>
-      <button className="skip">
-        {repetitions.total ? repetitions.wrong / repetitions.total + "%" : "0%"}
-      </button>
+    <div className="buttoncontainer">
+        <label>Correct</label>
+        <circlebutton>{repetitions.correct}</circlebutton>
+        <label>Correct</label>
+        <circlebutton>{repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}</circlebutton>
+        <label>Total</label>
+        <circlebutton>{repetitions.total}</circlebutton>
+        <label>Level</label>
+        <circlebutton>{stage}</circlebutton>
     </div>
+  )
+
+  return (
+    <>
+      <circlebutton className="green">
+        {repetitions.correct}
+      </circlebutton>
+      <circlebutton className="blue">
+        {repetitions.wrong}
+      </circlebutton>
+      <label>Test</label>
+      <circlebutton className="red">
+        {repetitions.total}
+      </circlebutton>
+      <circlebutton className="green">
+        {repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}
+      </circlebutton>
+      <circlebutton className="blue">
+        <label>Level</label>{stage}
+      </circlebutton>
+      <circlebutton className="red">
+        {repetitions.total ? repetitions.wrong / repetitions.total + "%" : "0%"}
+      </circlebutton>
     </>
   )
 }
@@ -59,7 +66,7 @@ export default function Practice () {
   const navigate = useNavigate()
   const [entries, setEntries] = useState(null)
   const [currentCard, setCurrentCard] = useState(null)
-  const [currentCardIndex, setCurrentCardIndex] = useState(Number(cardId))
+  const [currentCardIndex, setCurrentCardIndex] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState(null)
 
@@ -70,7 +77,7 @@ export default function Practice () {
   }
 
   const getCurrentCard = () => {if (entries) {
-      setCurrentCard(entries[currentCardIndex])
+      setCurrentCard(entries[cardId])
       console.log("loaded card")
     }
   }
@@ -91,17 +98,27 @@ export default function Practice () {
   useEffect(getEntries, [])
   useEffect(getCurrentCard, [currentCardIndex])
 
-  if (!entries) return <p>Loading…</p>
+  if (entries === null || entries.length === 0) {
+    return (
+      <>
+        <h3>Whoops! There's no entries for {mockData.categories[categoryId].title}</h3>
+        <button>➕ Add Entry</button>
+      </>
+    )
+  }
+
   if (!currentCard) return <p>Loading current card…</p>
 
   console.log(currentCard)
   return (
-    <body>
-      <CardPair props={currentCard} revealAnswer={showAnswer} />
-      <button className="confirm">✓</button>
-      <button className="reveal" onClick={reveal}>?</button>
-      <button className="skip" onClick={() => next()}>→</button>
+    <>
       <CardStats props={currentCard} />
-    </body>
+      <CardPair props={currentCard} revealAnswer={showAnswer} />
+      <div className="buttoncontainer">
+        <circlebutton className="green">✓</circlebutton>
+        <circlebutton className="blue" onClick={reveal}>?</circlebutton>
+        <circlebutton className="red" onClick={() => next()}>→</circlebutton>
+      </div>
+    </>
   )
 }
