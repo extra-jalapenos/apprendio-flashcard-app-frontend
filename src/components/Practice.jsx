@@ -2,9 +2,11 @@ import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router"
 import { mockData } from "../api/mockData"
 import Card from "./Card"
+import InputField from "./InputField"
 
 function CardPair ({props, revealAnswer}) {
   const { question, answer } = props
+
   return(
     <div className="twoColumns">
       <div>
@@ -13,8 +15,12 @@ function CardPair ({props, revealAnswer}) {
       </div>
       <div>
         <h2>Answer</h2>
-        <Card text={revealAnswer ? answer : ""} />
+        {revealAnswer && <Card text={revealAnswer ? answer : ""} />}
+        {!revealAnswer && <InputField />}
       </div>
+      
+
+
     </div>
   )
 }
@@ -34,30 +40,6 @@ function CardStats ({props}) {
         <circlebutton>{stage}</circlebutton>
     </div>
   )
-
-  return (
-    <>
-      <circlebutton className="green">
-        {repetitions.correct}
-      </circlebutton>
-      <circlebutton className="blue">
-        {repetitions.wrong}
-      </circlebutton>
-      <label>Test</label>
-      <circlebutton className="red">
-        {repetitions.total}
-      </circlebutton>
-      <circlebutton className="green">
-        {repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}
-      </circlebutton>
-      <circlebutton className="blue">
-        <label>Level</label>{stage}
-      </circlebutton>
-      <circlebutton className="red">
-        {repetitions.total ? repetitions.wrong / repetitions.total + "%" : "0%"}
-      </circlebutton>
-    </>
-  )
 }
 
 export default function Practice () {
@@ -68,7 +50,7 @@ export default function Practice () {
   const [currentCard, setCurrentCard] = useState(null)
   const [currentCardIndex, setCurrentCardIndex] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
-  const [userEntry, setUserEntry] = useState(null)
+  const [userEntry, setUserEntry] = useState("")
 
   const getEntries = () => {
     setEntries(mockData.categories[categoryId].entries)
@@ -109,7 +91,6 @@ export default function Practice () {
 
   if (!currentCard) return <p>Loading current card…</p>
 
-  console.log(currentCard)
   return (
     <>
       <CardStats props={currentCard} />
