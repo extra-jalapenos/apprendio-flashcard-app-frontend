@@ -16,10 +16,10 @@ function App() {
       </header>
         <Routes>
           <Route path={"/"} element={<Start />}/>
-          <Route path={"/new-entry"} element={<CreateEntry />}/>
+          <Route path={"/:categoryId/new-entry"} element={<CreateEntry />}/>
           <Route path={"/new-language"} element={<CreateLanguage />}/>
           <Route path={"/select-language"} element={<LanguageSelection />}/>
-          <Route path={"/practice/:id"} element={<Practice />}/>
+          <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
         </Routes>
       <footer>
 

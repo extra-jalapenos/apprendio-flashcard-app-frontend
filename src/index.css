@@ -8,6 +8,9 @@
   color: var(--white);
   --black: rgb(40, 18, 79);
   background: rgb(40, 18, 79);
+  --green: rgba(0, 235, 110, 0.5);
+  --blue: rgba(0, 176, 235, 0.5);
+  --red: rgba(235, 0, 59, 0.5);
   background: linear-gradient(-45deg, 
   rgb(47, 109, 129) 0%,
   rgb(40, 18, 79) 100%);
@@ -29,10 +32,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 h1 {
@@ -43,7 +49,7 @@ h1 {
 button {
   border-radius: 1em;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -51,29 +57,43 @@ button {
   color: inherit;
   margin: 1em;
   cursor: pointer;
-  transition: border-color 0.25s;
+}
+
+.confirm, .reveal, .skip {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.confirm {
+  background-color: var(--green);
+}
+
+.reveal {
+  background-color: var(--blue);
+}
+
+.skip {
+  background-color: var(--red);
 }
 
 .card {
-  padding: 1rem;
-  min-width: 200px;
+  padding: 2rem;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1em;
-  margin: 0.5rem;
+  margin: 1em;
+  width: 100%;
 }
 
-.twoColumns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
     background: rgb(183,238,255);
     background: linear-gradient(333deg, rgba(183,238,255,1) 0%, rgba(238,222,255,1) 36%, rgba(255,220,244,1) 57%, rgba(247,237,223,1) 87%, rgba(255,252,198,1) 100%);
+    --green: rgba(106, 232, 203, 0.5);
+    --blue: rgba(113, 219, 255, 0.5);
+    --red: rgba(255, 83, 189, 0.5);
   }
   a:hover {
     color: #747bff;
@@ -81,4 +101,4 @@ button {
   button {
     background-color: #ffc7c7;
   }
-} */
+}
