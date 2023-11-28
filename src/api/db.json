@@ -16,7 +16,7 @@
       "id": 2,
       "title": "French",
       "author": "Ally",
-      "entries":[
+      "entries": [
         {
           "categoryId": 2,
           "stage": 0,
@@ -25,7 +25,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "au premier abord / de prime abord", 
+          "question": "au premier abord / de prime abord",
           "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
         },
         {
@@ -36,8 +36,9 @@
             "wrong": 0,
             "total": 0
           },
-            "question": "les abords m. pl. d’une ville", 
-            "answer": "die unmittelbare Umgebung einer Stadt"},
+          "question": "les abords m. pl. d’une ville",
+          "answer": "die unmittelbare Umgebung einer Stadt"
+        },
         {
           "categoryId": 2,
           "stage": 0,
@@ -46,7 +47,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un abrégé", 
+          "question": "un abrégé",
           "answer": "gekürzte Fassung, Kurzfassung, Abriss"
         },
         {
@@ -57,7 +58,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une abréviation", 
+          "question": "une abréviation",
           "answer": "Abkürzung (mot abrégé); Abkürzung, das Abkürzen (action d’abréger)"
         },
         {
@@ -68,7 +69,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une accalmie", 
+          "question": "une accalmie",
           "answer": "Beruhigung, ruhigere Phase"
         },
         {
@@ -79,7 +80,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un accomplissement", 
+          "question": "un accomplissement",
           "answer": "Erledigung, Ausführung, Vollbringung, Erfüllung;Leistung"
         },
         {
@@ -90,7 +91,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un accord", 
+          "question": "un accord",
           "answer": "Einverständnis; Vereinbarung, Übereinkunft, Vertrag, Abkommen"
         },
         {
@@ -101,7 +102,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un acharnement", 
+          "question": "un acharnement",
           "answer": "Hartnäckigkeit, Verbissenheit, Leidenschaft, Engagement"
         },
         {
@@ -112,7 +113,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "les actus", 
+          "question": "les actus",
           "answer": "les actualités"
         },
         {
@@ -123,7 +124,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "faire l’affaire", 
+          "question": "faire l’affaire",
           "answer": "(genau) der/die/das Richtige sein, geeignet sein, taugen als, es tunUn bon vin devrait faire l’affaire - ein guter Wein müsste es tun"
         },
         {
@@ -134,7 +135,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un afflux / une affluence", 
+          "question": "un afflux / une affluence",
           "answer": "Ansturm, Andrang, Zustrom"
         },
         {
@@ -145,7 +146,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un affrontement", 
+          "question": "un affrontement",
           "answer": "Zusammenstoß, Auseinandersetzung, Konfrontation"
         },
         {
@@ -156,7 +157,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un agencement", 
+          "question": "un agencement",
           "answer": "Zusammenfügen, -setzen, Aneinanderreihung, -fügen;Aufbau, Stellung;(Raum)aufteilung - l’agencement du salon"
         },
         {
@@ -167,7 +168,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une agglomération", 
+          "question": "une agglomération",
           "answer": "Ortschaft, Ansiedlung;Ballungsraum ;Ansammlung"
         },
         {
@@ -178,7 +179,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un agrément - Zustimmung, Genehmigung;Vergnügen; jardin d’agrément", 
+          "question": "un agrément - Zustimmung, Genehmigung;Vergnügen; jardin d’agrément",
           "answer": "Ziergarten, le voyage d’agrément - VergnügungsreiseReiz, Charme: l’agrément de sa conversation - seine / ihre charmante Art, Konversation zu machenles agréments de la vie - die Annehmlichkeiten des Lebens"
         },
         {
@@ -189,7 +190,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une allure.", 
+          "question": "une allure.",
           "answer": "1. Gang (Quand elle marchait, elle avait une allure d’un tigre)2. Geschwindigkeit (Nous n’avons mis que deux heures pour venir, nous avons roulé à toute allure)3. Aussehen (Cette voiture a une drôle d’allure. Où l’as-tu trouvée ?)"
         },
         {
@@ -200,7 +201,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "en son âme et conscience", 
+          "question": "en son âme et conscience",
           "answer": "nach bestem Wissen und Gewissen"
         },
         {
@@ -211,7 +212,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une aménité", 
+          "question": "une aménité",
           "answer": "Annehmlichkeit, Liebenswürdigkeit"
         },
         {
@@ -222,7 +223,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un amoncellement", 
+          "question": "un amoncellement",
           "answer": "Haufen, Stapel"
         },
         {
@@ -233,7 +234,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une andouille f. ugs.", 
+          "question": "une andouille f. ugs.",
           "answer": "Blödmann, Dödel, Eumel ugs."
         },
         {
@@ -244,7 +245,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un aplomb", 
+          "question": "un aplomb",
           "answer": "Gleichgewicht, Lot; Selbstsicherheit; Frechheit, Unverfrorenheitavoir de l’aplomb – ganz schön frech seinêtre de l’aplomb – auf der Höhe / im Gleichgewicht seinremettre qn d’aplomb – jdn wieder auf die Beine / ins Gleichgewicht bringen"
         },
         {
@@ -255,8 +256,8 @@
             "wrong": 0,
             "total": 0
           },
-            "question": "une apparition (action de paraître)",
-            "answer": "a) das Erscheinen; b) (théât., ciné) - Auftritt; c) (fait de devenir visible) - das Auftreten, das Erscheinen; d) (manifestation) (d’un être surnaturel) - die Erscheinung;e) (fantôme) - Gespenst"
+          "question": "une apparition (action de paraître)",
+          "answer": "a) das Erscheinen; b) (théât., ciné) - Auftritt; c) (fait de devenir visible) - das Auftreten, das Erscheinen; d) (manifestation) (d’un être surnaturel) - die Erscheinung;e) (fantôme) - Gespenst"
         },
         {
           "categoryId": 2,
@@ -266,7 +267,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un appentis [-ti]", 
+          "question": "un appentis [-ti]",
           "answer": "Pultdach; angebauter Schuppen"
         },
         {
@@ -277,7 +278,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un appontement", 
+          "question": "un appontement",
           "answer": "Landungsbrücke, Pier"
         },
         {
@@ -288,7 +289,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une aptitude", 
+          "question": "une aptitude",
           "answer": "Fähigkeit"
         },
         {
@@ -299,7 +300,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un arbusier m.", 
+          "question": "un arbusier m.",
           "answer": "Erdbeerbaum"
         },
         {
@@ -310,7 +311,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un arbuste", 
+          "question": "un arbuste",
           "answer": "ein Strauch"
         },
         {
@@ -321,7 +322,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "ARS", 
+          "question": "ARS",
           "answer": "allocation de rentrée scolaire"
         },
         {
@@ -332,7 +333,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le 7e art", 
+          "question": "le 7e art",
           "answer": "(das Kino)"
         },
         {
@@ -343,7 +344,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un artifice", 
+          "question": "un artifice",
           "answer": "Trick, Kunststück"
         },
         {
@@ -354,10 +355,9 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un artisan", 
+          "question": "un artisan",
           "answer": "ein Handwerker"
         },
-        
         {
           "categoryId": 2,
           "stage": 0,
@@ -366,7 +366,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un artiste", 
+          "question": "un artiste",
           "answer": "ein Künstler"
         },
         {
@@ -377,7 +377,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "assommer", 
+          "question": "assommer",
           "answer": "bewusstlos schlagen, erschlagen (a. fig.)cet orateur / cette nouvelle m’a assommé(e) (abasourdir) – sprachlos machenle bruit / le soleil m’a assommé(e) (abrutir) – benommen machen"
         },
         {
@@ -388,7 +388,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "assortir qc à qc", 
+          "question": "assortir qc à qc",
           "answer": "etwas mit etwas kombinieren"
         },
         {
@@ -399,7 +399,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un atermoiement (meist pl.) (tergiversation)", 
+          "question": "un atermoiement (meist pl.) (tergiversation)",
           "answer": "Ausflüchte"
         },
         {
@@ -410,7 +410,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une auréole", 
+          "question": "une auréole",
           "answer": "Rand (beim Fleck); Hof (beim Stern); Heiligenschein, Nimbus"
         },
         {
@@ -421,7 +421,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "l’avachissement m.", 
+          "question": "l’avachissement m.",
           "answer": "Erlahmen, Erschlaffen"
         },
         {
@@ -432,8 +432,8 @@
             "wrong": 0,
             "total": 0
           },
-            "question": "un avènement (d’un roi)",
-            "answer": "– Thronbesteigung(d’un régime) – Machtergreifung(d’une politique, idée) – Durchbruch(d’une époque, ère) – Anbruch(du Messie) – Ankunft, Kommen"
+          "question": "un avènement (d’un roi)",
+          "answer": "– Thronbesteigung(d’un régime) – Machtergreifung(d’une politique, idée) – Durchbruch(d’une époque, ère) – Anbruch(du Messie) – Ankunft, Kommen"
         },
         {
           "categoryId": 2,
@@ -443,9 +443,8 @@
             "wrong": 0,
             "total": 0
           },
-        
-            "question": "une averse",
-            "answer":"Regenschauer"
+          "question": "une averse",
+          "answer": "Regenschauer"
         },
         {
           "categoryId": 2,
@@ -455,7 +454,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "un avoué", 
+          "question": "un avoué",
           "answer": "(nicht plädierender) Rechtsanwalt"
         },
         {
@@ -466,7 +465,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une babiole", 
+          "question": "une babiole",
           "answer": "Kleinigkeit, Nippes; Kleinigkeit, Bagatelle"
         },
         {
@@ -477,7 +476,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la baignoire", 
+          "question": "la baignoire",
           "answer": "Badewanne"
         },
         {
@@ -488,7 +487,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "bâtiments et travaux publics (B. T. P.)", 
+          "question": "bâtiments et travaux publics (B. T. P.)",
           "answer": "Hoch- und Tiefbau"
         },
         {
@@ -499,7 +498,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le bail, (pl.) bauxconclure/ signer / passer un bail", 
+          "question": "le bail, (pl.) bauxconclure/ signer / passer un bail",
           "answer": "einen Miet-/ Pachtvertrag abschließenrésilier un bail: einen ~ kündigenun bail résiliable annuel: jährlich kündbarer ~un bail à ferme: ein Miet-/ Pachtverhältnis (mit à ferme habe ich Schwierigkeiten)le crédit-bail: Leasing(geschäft)un véhicule en crédit-bail: ein Leasingfahrzeug"
         },
         {
@@ -510,7 +509,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la balafre", 
+          "question": "la balafre",
           "answer": "Schnittwunde"
         },
         {
@@ -521,7 +520,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la bâtisse fam.", 
+          "question": "la bâtisse fam.",
           "answer": "Kasten fam. (Bauwerk)"
         },
         {
@@ -532,7 +531,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la barquette", 
+          "question": "la barquette",
           "answer": "Schale, Schälchen"
         },
         {
@@ -543,7 +542,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le bazare", 
+          "question": "le bazare",
           "answer": "Durcheinander, Krimskramsle moins de bazare que possible - so wenig Durcheinander wie möglich"
         },
         {
@@ -554,7 +553,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "bénévole (n.) - qui accomplit un travail sans être rémunéré, sans être obligé de le faire (contr. rétribué)", 
+          "question": "bénévole (n.) - qui accomplit un travail sans être rémunéré, sans être obligé de le faire (contr. rétribué)",
           "answer": "Freiwilliger, Ehrenamtlicher"
         },
         {
@@ -565,7 +564,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la benne", 
+          "question": "la benne",
           "answer": "Lore, Kipplore ;Großbehälter, Ladefläche;la benne à ordures - Müll(abfuhr)wagen"
         },
         {
@@ -576,7 +575,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la berline", 
+          "question": "la berline",
           "answer": "Limousine"
         },
         {
@@ -587,7 +586,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la bestiole ugs.", 
+          "question": "la bestiole ugs.",
           "answer": "Tier(chen), ViechMais c’est qu’elles piquent, ces sales bestioles - ah, die stechen, diese Mistviecher"
         },
         {
@@ -598,7 +597,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le biais de confirmation", 
+          "question": "le biais de confirmation",
           "answer": "Bestätigungsfehler"
         },
         {
@@ -609,7 +608,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la bicoque", 
+          "question": "la bicoque",
           "answer": "Bruchbude"
         },
         {
@@ -620,7 +619,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la boîte", 
+          "question": "la boîte",
           "answer": "Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont presque des frères, c’est très compliqué. (…die fünfzehn Jahre im Betrieb beschäftigt waren…) "
         },
         {
@@ -631,7 +630,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "une bouteille à la mer", 
+          "question": "une bouteille à la mer",
           "answer": "ziemlich ungewisses Unterfangen, nicht viel Hoffnung haben"
         },
         {
@@ -642,7 +641,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la braderie / la (foire à la) brocante / (le marché) aux puces - Trödelmarktle brocanteur", 
+          "question": "la braderie / la (foire à la) brocante / (le marché) aux puces - Trödelmarktle brocanteur",
           "answer": "Trödler (Händler)"
         },
         {
@@ -653,7 +652,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le brevet", 
+          "question": "le brevet",
           "answer": "Diplom, Abschlusszeugnisle brevet de sécurité routiére - AM-Führerschein"
         },
         {
@@ -664,7 +663,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la brimade", 
+          "question": "la brimade",
           "answer": "Schikane"
         },
         {
@@ -675,7 +674,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le brouhaha / le vacarme", 
+          "question": "le brouhaha / le vacarme",
           "answer": "Lärm, Krach"
         },
         {
@@ -686,7 +685,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "les brucelles f pl", 
+          "question": "les brucelles f pl",
           "answer": "Pinzette (für Präzisionsarbeiten)"
         },
         {
@@ -697,7 +696,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la bruine", 
+          "question": "la bruine",
           "answer": "Niesel-, Sprühregen"
         },
         {
@@ -708,7 +707,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le bulletin", 
+          "question": "le bulletin",
           "answer": "Schulzeugnis"
         },
         {
@@ -719,7 +718,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la buvette", 
+          "question": "la buvette",
           "answer": "Bar, Getränkekiosk, Trinkhalle"
         },
         {
@@ -730,7 +729,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le cabinet", 
+          "question": "le cabinet",
           "answer": "Arztpraxis, Anwaltskanzleile cabinet particulier - Nebenzimmerle cabinet d’affaires - Bürole cabinet de consultation - Sprechzimmerle cabinet de travail Arbeitszimmer"
         },
         {
@@ -741,7 +740,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "CAF", 
+          "question": "CAF",
           "answer": "la caisse d’allocations familiales"
         },
         {
@@ -752,7 +751,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "à fond la caisse", 
+          "question": "à fond la caisse",
           "answer": "mit Schmackes, Karacho ; mit voller Lautstärke"
         },
         {
@@ -763,7 +762,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le cambiste", 
+          "question": "le cambiste",
           "answer": "Börsenmakler"
         },
         {
@@ -774,7 +773,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le cancre", 
+          "question": "le cancre",
           "answer": "schlechter Schüler"
         },
         {
@@ -785,7 +784,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le canevas", 
+          "question": "le canevas",
           "answer": "der Kanevas, Stramin;Grundgerüst, (grober) Rahmen"
         },
         {
@@ -796,7 +795,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la carcasse", 
+          "question": "la carcasse",
           "answer": "Gerippe (vom Tier; Flugzeug, Schiff), Gerüst (Bauwerk), Skelett (Bauwerk)ma vieille carcasse ugs. - meine alten Knochen ugs."
         },
         {
@@ -807,7 +806,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "les carottes sont cuites fam.", 
+          "question": "les carottes sont cuites fam.",
           "answer": "da ist nichts mehr zu machen, die Würfel sind gefallen"
         },
         {
@@ -818,7 +817,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "en carriole f.", 
+          "question": "en carriole f.",
           "answer": "mit dem Karren"
         },
         {
@@ -829,7 +828,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le carrousel", 
+          "question": "le carrousel",
           "answer": "kreisförmiges Förderband, Gepäckausgabe ;Kreisverkehr"
         },
         {
@@ -840,7 +839,7 @@
             "wrong": 0,
             "total": 0
           },
-            "question": "le carrousel ministériel",
+          "question": "le carrousel ministériel",
           "answer": "ständiger Ministerwechsel"
         },
         {
@@ -851,7 +850,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "Ça n’est pas rien", 
+          "question": "Ça n’est pas rien",
           "answer": "Das ist nicht nichts. Das will schon etwas heißen."
         },
         {
@@ -862,7 +861,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le cas marginal / isolé / particulier", 
+          "question": "le cas marginal / isolé / particulier",
           "answer": "Ausnahmefall, Einzelfall, kein Normalfall"
         },
         {
@@ -873,7 +872,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la case", 
+          "question": "la case",
           "answer": "Feld (d’un formulaire, tableau, damier), Fach, Kästchen, Spielfeld"
         },
         {
@@ -884,7 +883,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le casse-cou inv.", 
+          "question": "le casse-cou inv.",
           "answer": "Draufgänger "
         },
         {
@@ -895,9 +894,8 @@
             "wrong": 0,
             "total": 0
           },
-        
-            "question": "travailler / employer en CDI",
-            "answer": "arbeiten / einstellen mit unbefristetem ArbeitsvertragCDI – le contrat à durée indéterminée"
+          "question": "travailler / employer en CDI",
+          "answer": "arbeiten / einstellen mit unbefristetem ArbeitsvertragCDI – le contrat à durée indéterminée"
         },
         {
           "categoryId": 2,
@@ -907,9 +905,8 @@
             "wrong": 0,
             "total": 0
           },
-        
-            "question": "la célérité",
-            "answer": "Schnelligkeit"
+          "question": "la célérité",
+          "answer": "Schnelligkeit"
         },
         {
           "categoryId": 2,
@@ -919,9 +916,8 @@
             "wrong": 0,
             "total": 0
           },
-        
-            "question": "la cérémonie",
-            "answer": "Feier, Festveranstaltungla cérémonie religieuse / civile du mariage – kirchliche / standesamtliche Trauungla cérémonie religieuse – kirchliche Feier"
+          "question": "la cérémonie",
+          "answer": "Feier, Festveranstaltungla cérémonie religieuse / civile du mariage – kirchliche / standesamtliche Trauungla cérémonie religieuse – kirchliche Feier"
         },
         {
           "categoryId": 2,
@@ -931,7 +927,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le cerne", 
+          "question": "le cerne",
           "answer": "(Jahres)Ring (beim Baum), Ring (um die Augen)"
         },
         {
@@ -942,7 +938,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le certificat", 
+          "question": "le certificat",
           "answer": "ZertifikatCFDT - confédération française démocratique du travail"
         },
         {
@@ -953,7 +949,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "CFE-CGC", 
+          "question": "CFE-CGC",
           "answer": "confédération française de l’encadrement - Confédération générale des cadres"
         },
         {
@@ -964,7 +960,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "CGT", 
+          "question": "CGT",
           "answer": "confédération général du travail (allgemeiner Gewerkschaftsbund)"
         },
         {
@@ -975,7 +971,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la châtaigne, le marron", 
+          "question": "la châtaigne, le marron",
           "answer": "die Esskastanie"
         },
         {
@@ -986,7 +982,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le chatoiement", 
+          "question": "le chatoiement",
           "answer": "Schillern, Schimmern, Funkeln"
         },
         {
@@ -997,7 +993,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la chemisette", 
+          "question": "la chemisette",
           "answer": "kurzärmeliges Hemd ; Top"
         },
         {
@@ -1008,7 +1004,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la chevelure crépue", 
+          "question": "la chevelure crépue",
           "answer": "Naturkrause"
         },
         {
@@ -1019,7 +1015,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le chineur, la chineuse", 
+          "question": "le chineur, la chineuse",
           "answer": "regelmäßiger Trödelmarktbesucher; Trödler, Liebhaber von Trödel"
         },
         {
@@ -1030,7 +1026,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la circonspection", 
+          "question": "la circonspection",
           "answer": "Umsicht(igkeit), Vorsicht(igkeit), BesonnenheitElle a analysé le dossier de son client avec circonspection"
         },
         {
@@ -1041,7 +1037,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "CJR", 
+          "question": "CJR",
           "answer": "la Cour de justice de la République - (oberster Gerichtshof)"
         },
         {
@@ -1052,7 +1048,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "CNRS", 
+          "question": "CNRS",
           "answer": "centre national de recherche scientifique (renommiertes Forschungsinstitut)"
         },
         {
@@ -1063,7 +1059,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la cohabitation intergénérationnelle", 
+          "question": "la cohabitation intergénérationnelle",
           "answer": "das Zusammenwohnen mehrerer/verschiedener Generationen"
         },
         {
@@ -1074,7 +1070,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la cohue", 
+          "question": "la cohue",
           "answer": "Menschenmenge, Gedränge"
         },
         {
@@ -1085,7 +1081,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le combiné", 
+          "question": "le combiné",
           "answer": "Telefonhörer"
         },
         {
@@ -1096,7 +1092,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le comment", 
+          "question": "le comment",
           "answer": "wie, das Wie"
         },
         {
@@ -1107,7 +1103,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le commérage (souvent pl)", 
+          "question": "le commérage (souvent pl)",
           "answer": "das Gerede, Geschwätz, Rederei"
         },
         {
@@ -1118,7 +1114,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la communication d’enteprise", 
+          "question": "la communication d’enteprise",
           "answer": "Öffentlichkeitsarbeit"
         },
         {
@@ -1129,7 +1125,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la compétition", 
+          "question": "la compétition",
           "answer": "Konkurrenz, Wettbewerb, Wettkampf"
         },
         {
@@ -1140,7 +1136,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la compétitivité", 
+          "question": "la compétitivité",
           "answer": "Wettbewerbs-, Konkurrenzfähigkeit"
         },
         {
@@ -1151,7 +1147,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le con", 
+          "question": "le con",
           "answer": "Blödmann, (Voll)idiot"
         },
         {
@@ -1162,7 +1158,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le concours", 
+          "question": "le concours",
           "answer": "Wettbewerb, Wettkampf;Aufnahmeprüfung, Auswahlverfahren"
         },
         {
@@ -1173,7 +1169,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "à condition de laisser", 
+          "question": "à condition de laisser",
           "answer": "vorausgesetzt, man lässt"
         },
         {
@@ -1184,7 +1180,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le cône", 
+          "question": "le cône",
           "answer": "Kegel, Konus"
         },
         {
@@ -1195,7 +1191,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la conjoncture", 
+          "question": "la conjoncture",
           "answer": "(situation, ensemble de circonstances) Bedingung, Situation"
         },
         {
@@ -1206,7 +1202,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la connectique", 
+          "question": "la connectique",
           "answer": "Anschluss-, Verbindungstechnik"
         },
         {
@@ -1217,7 +1213,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la connivence", 
+          "question": "la connivence",
           "answer": "heimliches Einverständnis"
         },
         {
@@ -1228,7 +1224,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la contusion", 
+          "question": "la contusion",
           "answer": "Prellung, Quetschung"
         },
         {
@@ -1239,7 +1235,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la coque", 
+          "question": "la coque",
           "answer": "(Schutz)Hülle; (Schiffs)Rumpf"
         },
         {
@@ -1250,7 +1246,7 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "la corniche (c o r n i c h e)", 
+          "question": "la corniche (c o r n i c h e)",
           "answer": "Gesims, Sims; (Fels)vorsprung; Straße an einer Steilküste, einem Steilhang"
         },
         {
@@ -1261,10 +1257,16 @@
             "wrong": 0,
             "total": 0
           },
-          "question": "le corollaire, le corolaire", 
+          "question": "le corollaire, le corolaire",
           "answer": "(logische) Folge / Konsequenz"
         }
       ]
+    },
+    {
+      "user": "unknown",
+      "entries": [],
+      "title": "Test",
+      "id": 3
     }
   ],
   "profile": {

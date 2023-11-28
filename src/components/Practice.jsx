@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router"
 import { mockData } from "../api/mockData"
 import Card from "./Card"
 import InputField from "./InputField"
+import { baseURL } from "../helpers/helpers"
 
 function CardPair ({props, revealAnswer, handleEntry}) {
   const { question, answer } = props
@@ -45,20 +46,25 @@ export default function Practice () {
 
   const {categoryId, cardId} = useParams()
   const navigate = useNavigate()
-  const [entries, setEntries] = useState(null)
+  const [category, setCategory] = useState(null)
   const [currentCard, setCurrentCard] = useState(null)
   const [currentCardIndex, setCurrentCardIndex] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
 
   const getEntries = () => {
-    setEntries(mockData.categories[categoryId].entries)
-    setCurrentCardIndex(0)
-    console.log("loaded entries", mockData.categories[categoryId].entries.length)
+    const endpoint = "/categories"
+
+    fetch(baseURL + endpoint)
+      .then(response => response.json())
+      .then(data => setCategory(data[categoryId]))
+      .then(() => setCurrentCardIndex(0))
+      .then(() => console.log("loaded entries", category))
+      .catch(error => console.log("error getting entries", error))
   }
 
-  const getCurrentCard = () => {if (entries) {
-      setCurrentCard(entries[cardId])
+  const getCurrentCard = () => {if (category) {
+      setCurrentCard(category.entries[cardId])
       console.log("loaded card")
     }
   }
@@ -72,7 +78,7 @@ export default function Practice () {
   const reveal = () => setShowAnswer(showAnswer ? false : true)
 
   const next = () => {
-    if (currentCardIndex + 1 < entries.length) {
+    if (currentCardIndex + 1 < category.entries.length) {
       navigate("/practice/"+ categoryId + "/" + Number(currentCardIndex + 1))
       setCurrentCardIndex(currentCardIndex+1)
     } else {
@@ -83,10 +89,12 @@ export default function Practice () {
   useEffect(getEntries, [])
   useEffect(getCurrentCard, [currentCardIndex])
 
-  if (entries === null || entries.length === 0) {
+  if (!category) return
+
+  if (!!category.entries) {
     return (
       <>
-        <h3>Whoops! There's no entries for {mockData.categories[categoryId].title}</h3>
+        <h3>Whoops! There are no entries for {category.title}</h3>
         <button>➕ Add Entry</button>
       </>
     )

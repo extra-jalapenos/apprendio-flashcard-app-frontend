@@ -9,7 +9,7 @@ export default function Header () {
     <header>
       <nav>
         <button onClick={() => navigate("/")}>✨ Flashy Flash Cards ✨</button>
-        <button onClick={() => navigate("/select-language")}>Switch Languages</button>
+        <button onClick={() => navigate("/select-category")}>Switch Category</button>
         <button onClick={() => navigate("/login")}>{user ? "🐝 " + user : "Login"}</button>
       </nav>
     </header>
