@@ -1273,14 +1273,5 @@
       "title": "Test",
       "id": 3
     }
-  ],
-  "profile": {
-    "id": 1,
-    "displayname": "",
-    "statistics": {
-      "correct": 0,
-      "wrong": 0,
-      "total": 0
-    }
-  }
+  ]
 }
