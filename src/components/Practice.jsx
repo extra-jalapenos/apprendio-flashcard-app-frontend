@@ -47,6 +47,7 @@ export default function Practice () {
   const {categoryId, cardId} = useParams()
   const navigate = useNavigate()
   const [category, setCategory] = useState(null)
+  const [entries, setEntries] = useState(null)
   const [currentCard, setCurrentCard] = useState(null)
   const [currentCardIndex, setCurrentCardIndex] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -57,14 +58,17 @@ export default function Practice () {
 
     fetch(baseURL + endpoint)
       .then(response => response.json())
-      .then(data => setCategory(data[categoryId]))
+      .then(data => {
+        setCategory(data[categoryId])
+        if (data[categoryId].entries) setEntries(data[categoryId].entries)
+      })
       .then(() => setCurrentCardIndex(0))
       .then(() => console.log("loaded entries", category))
       .catch(error => console.log("error getting entries", error))
   }
 
   const getCurrentCard = () => {if (category) {
-      setCurrentCard(category.entries[cardId])
+      setCurrentCard(entries[cardId])
       console.log("loaded card")
     }
   }
@@ -78,7 +82,7 @@ export default function Practice () {
   const reveal = () => setShowAnswer(showAnswer ? false : true)
 
   const next = () => {
-    if (currentCardIndex + 1 < category.entries.length) {
+    if (currentCardIndex + 1 < entries.length) {
       navigate("/practice/"+ categoryId + "/" + Number(currentCardIndex + 1))
       setCurrentCardIndex(currentCardIndex+1)
     } else {
@@ -91,11 +95,11 @@ export default function Practice () {
 
   if (!category) return
 
-  if (!!category.entries) {
+  if (!entries) {
     return (
       <>
         <h3>Whoops! There are no entries for {category.title}</h3>
-        <button>➕ Add Entry</button>
+        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
       </>
     )
   }
