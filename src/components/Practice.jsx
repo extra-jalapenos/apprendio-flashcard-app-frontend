@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router"
-import { mockData } from "../api/mockData"
 import Card from "./Card"
 import InputField from "./InputField"
 import { baseURL } from "../helpers/helpers"

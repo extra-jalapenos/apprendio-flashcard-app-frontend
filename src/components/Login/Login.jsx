@@ -3,8 +3,6 @@ import { baseURL } from "../../helpers/helpers"
 import { useNavigate } from "react-router"
 import { userContext } from "../../App"
 
-
-
 export default function Login () {
 
   const { setUser } = useContext(userContext)

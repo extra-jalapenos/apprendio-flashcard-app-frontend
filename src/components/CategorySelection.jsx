@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router"
-import { mockData } from "../api/mockData"
 import { baseURL } from "../helpers/helpers"
 
 export default function LanguageSelection () {
