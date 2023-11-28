@@ -2,7 +2,7 @@ const mockData = {
   "users" : [
     { 
       "id": 1,
-      "displayname": "",
+      "username": "",
       "email": "",
       "password": ""
     }

@@ -1,4 +1,6 @@
-export const httpHelper = () => {
+export const baseURL = "http://localhost:3000"
+
+export const httpHelper = (url, options) => {
   const customFetch = async (url, options = {}) => {
     const defaultMethod = "GET"
     const defaultHeaders = {
