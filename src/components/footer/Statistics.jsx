@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 
 const initSession = {
-  "firstTry": (sessionStorage.getItem("firstTry") || 0),
   "correct": (sessionStorage.getItem("correct") || 0),
   "wrong": (sessionStorage.getItem("wrong") || 0),
   "total": (sessionStorage.getItem("total") || 0)
@@ -16,6 +15,7 @@ export default function Statistics () {
     console.log(localStorage)
   }
   
+  console.log(initSession)
   const [sessionStats, setSessionStats] = useState(initSession)
 
   return (
@@ -23,12 +23,12 @@ export default function Statistics () {
       <li>
         {new Date().toLocaleDateString()}
       </li>
-      <label>🥇 First Try</label>
-      <p className="circlebutton blue" name="firstTry" onClick={(event) => handleIncrease(event)}><span>{sessionStats.firstTry}</span></p>
-      <label>🥈🥉 Correct</label>
+      <label>🥇 Correct</label>
       <p className="circlebutton green">{sessionStats.correct}</p>
       <label>↻ Maybe next time</label>
       <p className="circlebutton red">{sessionStats.wrong}</p>
+      <label>Total</label>
+      <p className="circlebutton blue">{sessionStats.total}</p>
     </div>
   )
 }

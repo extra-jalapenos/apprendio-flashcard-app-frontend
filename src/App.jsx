@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Start from "./components/Start"
 import CreateEntry from './components/CreateEntry'
@@ -17,7 +17,18 @@ const userContext = createContext()
 export default function App() {
 
   const [user, setUser] = useState(null)
+  const loginUser = () => sessionStorage.setItem("user", JSON.stringify(user))
+  const initSession = () => sessionStorage.setItem("sessionStats", JSON.stringify({
+    "correct": 0,
+    "wrong": 0,
+    "total": 0
+  }))
+
+  useEffect(loginUser, [user])
+  useEffect(initSession, [user])
+
   console.log(!!user ? user : "unknown")
+
   return (
     <>
       <userContext.Provider value={{user, setUser}}>

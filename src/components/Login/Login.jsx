@@ -33,7 +33,7 @@ export default function Login () {
       console.log(event.target.value)
       const foundUser = knownUsers.find(user => user.displayname === loginUser)
       if (foundUser) {
-        setUser(loginUser)
+        setUser(foundUser)
         setFailedLogin(false)
         navigate("/")
       } else {
@@ -71,17 +71,6 @@ export default function Login () {
 
   const resetLogin = () => {
     console.log()
-  }
-
-  const RegisterButtons = () => {
-    return (
-      <div>
-        <h3>Oh hi, {loginUser}!</h3>
-        <p>You seem new here – do you want to create an account?</p>
-        <button className="green" onClick={createAccount}>Create Account</button>
-        <button className="red" value="reset" onClick={resetLogin}>Cancel</button>
-      </div>
-    )
   }
   
   if (!knownUsers) return (<button>Loading…</button>)
