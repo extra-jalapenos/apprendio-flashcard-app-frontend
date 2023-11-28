@@ -2,7 +2,12 @@
   "users": [
     {
       "id": 1,
-      "displayname": "Ally"
+      "displayname": "Ally",
+      "statistics": {
+        "correct": 0,
+        "wrong": 0,
+        "total": 0
+      }
     }
   ],
   "categories": [
@@ -1272,6 +1277,10 @@
   "profile": {
     "id": 1,
     "displayname": "",
-    "email": ""
+    "statistics": {
+      "correct": 0,
+      "wrong": 0,
+      "total": 0
+    }
   }
 }

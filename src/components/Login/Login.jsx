@@ -13,7 +13,6 @@ export default function Login () {
   const [knownUsers, setKnownUsers] = useState(null)
   const [knownUser, setKnownUser] = useState(null)
   const [loginUser, setLoginUser] = useState(null)
-  const [registerUser, setRegisterUser] = useState(null)
   const [failedLogin, setFailedLogin] = useState(false)
 
   const getUsers = () => {
@@ -48,7 +47,12 @@ export default function Login () {
     console.log("Create")
     const endpoint = "/users"
     const body = {
-      "displayname": loginUser
+      "displayname": loginUser,
+      "statistics": {
+        "correct": 0,
+        "wrong": 0,
+        "total": 0
+      }
     }
     
     const headers = {
