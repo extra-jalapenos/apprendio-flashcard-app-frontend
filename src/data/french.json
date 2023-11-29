@@ -3,8 +3,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
   \n"question": "$1", \n"answer": "$2"\n},
 {
@@ -12,8 +11,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "au premier abord / de prime abord ", 
 "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
@@ -23,8 +21,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
   "question": "les abords m. pl. d’une ville ", 
 "answer": "die unmittelbare Umgebung einer Stadt"},
@@ -33,8 +30,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un abrégé ", 
 "answer": "gekürzte Fassung, Kurzfassung, Abriss"
@@ -44,8 +40,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une abréviation ", 
 "answer": "Abkürzung (mot abrégé); Abkürzung, das Abkürzen (action d’abréger)"
@@ -55,8 +50,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une accalmie ", 
 "answer": "Beruhigung, ruhigere Phase"
@@ -66,8 +60,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un accomplissement ", 
 "answer": "Erledigung, Ausführung, Vollbringung, Erfüllung;Leistung"
@@ -77,8 +70,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un accord ", 
 "answer": "Einverständnis; Vereinbarung, Übereinkunft, Vertrag, Abkommen"
@@ -88,8 +80,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un acharnement ", 
 "answer": "Hartnäckigkeit, Verbissenheit, Leidenschaft, Engagement"
@@ -99,8 +90,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "les actus ", 
 "answer": "les actualités"
@@ -110,8 +100,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "faire l’affaire ", 
 "answer": "(genau) der/die/das Richtige sein, geeignet sein, taugen als, es tunUn bon vin devrait faire l’affaire - ein guter Wein müsste es tun"
@@ -121,8 +110,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un afflux / une affluence ", 
 "answer": "Ansturm, Andrang, Zustrom"
@@ -132,8 +120,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un affrontement ", 
 "answer": "Zusammenstoß, Auseinandersetzung, Konfrontation"
@@ -143,8 +130,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un agencement ", 
 "answer": "Zusammenfügen, -setzen, Aneinanderreihung, -fügen;Aufbau, Stellung;(Raum)aufteilung - l’agencement du salon"
@@ -154,8 +140,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une agglomération ", 
 "answer": "Ortschaft, Ansiedlung;Ballungsraum ;Ansammlung"
@@ -165,8 +150,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un agrément - Zustimmung, Genehmigung;Vergnügen; jardin d’agrément ", 
 "answer": "Ziergarten, le voyage d’agrément - VergnügungsreiseReiz, Charme: l’agrément de sa conversation - seine / ihre charmante Art, Konversation zu machenles agréments de la vie - die Annehmlichkeiten des Lebens"
@@ -176,8 +160,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une allure. ", 
 "answer": "1. Gang (Quand elle marchait, elle avait une allure d’un tigre)2. Geschwindigkeit (Nous n’avons mis que deux heures pour venir, nous avons roulé à toute allure)3. Aussehen (Cette voiture a une drôle d’allure. Où l’as-tu trouvée ?)"
@@ -187,8 +170,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "en son âme et conscience ", 
 "answer": "nach bestem Wissen und Gewissen"
@@ -198,8 +180,7 @@
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une aménité ", 
 "answer": "Annehmlichkeit, Liebenswürdigkeit"
@@ -210,8 +191,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une andouille f. ugs. ", 
 "answer": "Blödmann, Dödel, Eumel ugs."
@@ -221,8 +201,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un aplomb ", 
 "answer": "Gleichgewicht, Lot; Selbstsicherheit; Frechheit, Unverfrorenheitavoir de l’aplomb – ganz schön frech seinêtre de l’aplomb – auf der Höhe / im Gleichgewicht seinremettre qn d’aplomb – jdn wieder auf die Beine / ins Gleichgewicht bringen"
@@ -232,8 +211,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 
   "question": "une apparition (action de paraître)",
@@ -244,8 +222,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un appentis [-ti] ", 
 "answer": "Pultdach; angebauter Schuppen"
@@ -255,8 +232,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un appontement ", 
 "answer": "Landungsbrücke, Pier"
@@ -266,8 +242,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une aptitude ", 
 "answer": "Fähigkeit"
@@ -277,8 +252,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un arbusier m. ", 
 "answer": "Erdbeerbaum"
@@ -288,8 +262,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un arbuste ", 
 "answer": "ein Strauch"
@@ -299,8 +272,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "ARS ", 
 "answer": "allocation de rentrée scolaire"
@@ -310,8 +282,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le 7e art ", 
 "answer": "(das Kino)"
@@ -321,8 +292,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un artifice ", 
 "answer": "Trick, Kunststück"
@@ -332,8 +302,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un artisan ", 
 "answer": "ein Handwerker"
@@ -344,8 +313,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un artiste ", 
 "answer": "ein Künstler"
@@ -355,8 +323,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "assommer ", 
 "answer": "bewusstlos schlagen, erschlagen (a. fig.)cet orateur / cette nouvelle m’a assommé(e) (abasourdir) – sprachlos machenle bruit / le soleil m’a assommé(e) (abrutir) – benommen machen"
@@ -366,8 +333,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "assortir qc à qc ", 
 "answer": "etwas mit etwas kombinieren"
@@ -377,8 +343,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un atermoiement (meist pl.) (tergiversation) ", 
 "answer": "Ausflüchte"
@@ -388,8 +353,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une auréole ", 
 "answer": "Rand (beim Fleck); Hof (beim Stern); Heiligenschein, Nimbus"
@@ -399,8 +363,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "l’avachissement m. ", 
 "answer": "Erlahmen, Erschlaffen"
@@ -410,8 +373,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
   "question": "un avènement (d’un roi)",
   "answer": "– Thronbesteigung(d’un régime) – Machtergreifung(d’une politique, idée) – Durchbruch(d’une époque, ère) – Anbruch(du Messie) – Ankunft, Kommen"
@@ -421,8 +383,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 
   "question": "une averse",
@@ -433,8 +394,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "un avoué ", 
 "answer": "(nicht plädierender) Rechtsanwalt"
@@ -444,8 +404,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une babiole ", 
 "answer": "Kleinigkeit, Nippes; Kleinigkeit, Bagatelle"
@@ -455,8 +414,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la baignoire ", 
 "answer": "Badewanne"
@@ -466,8 +424,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "bâtiments et travaux publics (B. T. P.) ", 
 "answer": "Hoch- und Tiefbau"
@@ -477,8 +434,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le bail, (pl.) bauxconclure/ signer / passer un bail", 
 "answer": "einen Miet-/ Pachtvertrag abschließenrésilier un bail: einen ~ kündigenun bail résiliable annuel: jährlich kündbarer ~un bail à ferme: ein Miet-/ Pachtverhältnis (mit à ferme habe ich Schwierigkeiten)le crédit-bail: Leasing(geschäft)un véhicule en crédit-bail: ein Leasingfahrzeug"
@@ -488,8 +444,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la balafre", 
 "answer": "Schnittwunde"
@@ -499,8 +454,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la bâtisse fam. ", 
 "answer": "Kasten fam. (Bauwerk)"
@@ -510,8 +464,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la barquette ", 
 "answer": "Schale, Schälchen"
@@ -521,8 +474,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le bazare ", 
 "answer": "Durcheinander, Krimskramsle moins de bazare que possible - so wenig Durcheinander wie möglich"
@@ -532,8 +484,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "bénévole (n.) - qui accomplit un travail sans être rémunéré, sans être obligé de le faire (contr. rétribué) ", 
 "answer": "Freiwilliger, Ehrenamtlicher"
@@ -543,8 +494,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la benne ", 
 "answer": "Lore, Kipplore ;Großbehälter, Ladefläche;la benne à ordures - Müll(abfuhr)wagen"
@@ -554,8 +504,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la berline ", 
 "answer": "Limousine"
@@ -565,8 +514,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la bestiole ugs. ", 
 "answer": "Tier(chen), ViechMais c’est qu’elles piquent, ces sales bestioles - ah, die stechen, diese Mistviecher"
@@ -576,8 +524,7 @@ un amoncellement - Haufen, Stapel
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le biais de confirmation ", 
 "answer": "Bestätigungsfehler"
@@ -589,8 +536,7 @@ la boîte - Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "une bouteille à la mer ", 
 "answer": "ziemlich ungewisses Unterfangen, nicht viel Hoffnung haben"
@@ -600,8 +546,7 @@ la boîte - Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la braderie / la (foire à la) brocante / (le marché) aux puces - Trödelmarktle brocanteur ", 
 "answer": "Trödler (Händler)"
@@ -611,8 +556,7 @@ la boîte - Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le brevet ", 
 "answer": "Diplom, Abschlusszeugnisle brevet de sécurité routiére - AM-Führerschein"
@@ -623,8 +567,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le brouhaha / le vacarme ", 
 "answer": "Lärm, Krach"
@@ -634,8 +577,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "les brucelles f pl ", 
 "answer": "Pinzette (für Präzisionsarbeiten)"
@@ -645,8 +587,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la bruine ", 
 "answer": "Niesel-, Sprühregen"
@@ -656,8 +597,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le bulletin ", 
 "answer": "Schulzeugnis"
@@ -667,8 +607,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la buvette ", 
 "answer": "Bar, Getränkekiosk, Trinkhalle"
@@ -678,8 +617,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le cabinet", 
 "answer": "Arztpraxis, Anwaltskanzleile cabinet particulier - Nebenzimmerle cabinet d’affaires - Bürole cabinet de consultation - Sprechzimmerle cabinet de travail Arbeitszimmer"
@@ -689,8 +627,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "CAF ", 
 "answer": "la caisse d’allocations familiales"
@@ -700,8 +637,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "à fond la caisse ", 
 "answer": "mit Schmackes, Karacho ; mit voller Lautstärke"
@@ -711,8 +647,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le cambiste ", 
 "answer": "Börsenmakler"
@@ -722,8 +657,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le cancre ", 
 "answer": "schlechter Schüler"
@@ -733,8 +667,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le canevas ", 
 "answer": "der Kanevas, Stramin;Grundgerüst, (grober) Rahmen"
@@ -744,8 +677,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la carcasse ", 
 "answer": "Gerippe (vom Tier; Flugzeug, Schiff), Gerüst (Bauwerk), Skelett (Bauwerk)ma vieille carcasse ugs. - meine alten Knochen ugs."
@@ -755,8 +687,7 @@ la brimade - Schikane
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "les carottes sont cuites fam. ", 
 "answer": "da ist nichts mehr zu machen, die Würfel sind gefallen"
@@ -768,8 +699,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "en carriole f. ", 
 "answer": "mit dem Karren"
@@ -779,8 +709,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le carrousel ", 
 "answer": "kreisförmiges Förderband, Gepäckausgabe ;Kreisverkehr"
@@ -790,8 +719,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
   "question": "le carrousel ministériel",
 "answer": "ständiger Ministerwechsel"
@@ -801,8 +729,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "Ça n’est pas rien ", 
 "answer": "Das ist nicht nichts. Das will schon etwas heißen."
@@ -812,8 +739,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le cas marginal / isolé / particulier ", 
 "answer": "Ausnahmefall, Einzelfall, kein Normalfall"
@@ -823,8 +749,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la case ", 
 "answer": "Feld (d’un formulaire, tableau, damier), Fach, Kästchen, Spielfeld"
@@ -834,8 +759,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le casse-cou inv. ", 
 "answer": "Draufgänger "
@@ -845,8 +769,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 
   "question": "travailler / employer en CDI",
@@ -857,8 +780,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 
   "question": "la célérité",
@@ -869,8 +791,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 
   "question": "la cérémonie",
@@ -881,8 +802,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le cerne ", 
 "answer": "(Jahres)Ring (beim Baum), Ring (um die Augen)"
@@ -892,8 +812,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le certificat ", 
 "answer": "ZertifikatCFDT - confédération française démocratique du travail"
@@ -903,8 +822,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "CFE-CGC ", 
 "answer": "confédération française de l’encadrement - Confédération générale des cadres"
@@ -914,8 +832,7 @@ le carrefour des imaginaires = Forum der Traumtänzer / der Fantasien
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "CGT ", 
 "answer": "confédération général du travail (allgemeiner Gewerkschaftsbund)"
@@ -926,8 +843,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la châtaigne, le marron  ", 
 "answer": "die Esskastanie"
@@ -937,8 +853,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le chatoiement ", 
 "answer": "Schillern, Schimmern, Funkeln"
@@ -948,8 +863,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la chemisette ", 
 "answer": "kurzärmeliges Hemd ; Top"
@@ -959,8 +873,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la chevelure crépue ", 
 "answer": "Naturkrause"
@@ -970,8 +883,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le chineur, la chineuse ", 
 "answer": "regelmäßiger Trödelmarktbesucher ; Trödler, Liebhaber von Trödel"
@@ -981,8 +893,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la circonspection ", 
 "answer": "Umsicht(igkeit), Vorsicht(igkeit), BesonnenheitElle a analysé le dossier de son client avec circonspection"
@@ -992,8 +903,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "CJR ", 
 "answer": "la Cour de justice de la République - (oberster Gerichtshof)"
@@ -1003,8 +913,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "CNRS ", 
 "answer": "centre national de recherche scientifique (renommiertes Forschungsinstitut)"
@@ -1014,8 +923,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la cohabitation intergénérationnelle ", 
 "answer": "das Zusammenwohnen mehrerer/verschiedener Generationen"
@@ -1025,8 +933,7 @@ châtain – inv.! en genre de (châtaigne) – se dit de cheveux, d'une barbe b
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la cohue ", 
 "answer": "Menschenmenge, Gedränge"
@@ -1037,8 +944,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le combiné ", 
 "answer": "Telefonhörer"
@@ -1048,8 +954,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le comment ", 
 "answer": "wie, das Wie"
@@ -1059,8 +964,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le commérage (souvent pl) ", 
 "answer": "das Gerede, Geschwätz, Rederei"
@@ -1070,8 +974,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la communication d’enteprise ", 
 "answer": "Öffentlichkeitsarbeit"
@@ -1081,8 +984,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la compétition ", 
 "answer": "Konkurrenz, Wettbewerb, Wettkampf"
@@ -1092,8 +994,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la compétitivité ", 
 "answer": "Wettbewerbs-, Konkurrenzfähigkeit"
@@ -1103,8 +1004,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le con ", 
 "answer": "Blödmann, (Voll)idiot"
@@ -1114,8 +1014,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le concours ", 
 "answer": "Wettbewerb, Wettkampf;Aufnahmeprüfung, Auswahlverfahren"
@@ -1125,8 +1024,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "à condition de laisser ", 
 "answer": "vorausgesetzt, man lässt"
@@ -1136,8 +1034,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le cône ", 
 "answer": "Kegel, Konus"
@@ -1147,8 +1044,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la conjoncture ", 
 "answer": "(situation, ensemble de circonstances) Bedingung, Situation"
@@ -1158,8 +1054,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la connectique ", 
 "answer": "Anschluss-, Verbindungstechnik"
@@ -1169,8 +1064,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la connivence ", 
 "answer": "heimliches Einverständnis"
@@ -1180,8 +1074,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la contusion ", 
 "answer": "Prellung, Quetschung"
@@ -1191,8 +1084,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la coque ", 
 "answer": "(Schutz)Hülle; (Schiffs)Rumpf"
@@ -1202,8 +1094,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "la corniche (c o r n i c h e) ", 
 "answer": "Gesims, Sims; (Fels)vorsprung; Straße an einer Steilküste, einem Steilhang"
@@ -1213,8 +1104,7 @@ le colimaçon - Schnecke
   "stage": 0,
   "repetitions": {
     "correct": 0,
-    "wrong": 0,
-    "total": 0
+    "wrong": 0
   },
 "question": "le corollaire, le corolaire ", 
 "answer": "(logische) Folge / Konsequenz"

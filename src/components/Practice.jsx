@@ -20,15 +20,16 @@ function CardPair ({props, revealAnswer, handleEntry}) {
 function CardStats ({props}) {
   const { repetitions, stage } = props
   const { cardId } = useParams()
+  const totalrepetitions = repetitions.correct + repetitions.wrong
   return (
     <>
     <h3>Card {cardId}</h3>
     <div className="buttoncontainer">
         <label>Correct</label>
         <p className="circlebutton">{repetitions.correct}</p>
-        <p className="circlebutton">{repetitions.total ? repetitions.correct / repetitions.total + "%" : "0%"}</p>
+        <p className="circlebutton">{totalrepetitions ? repetitions.correct / totalrepetitions + "%" : "0%"}</p>
         <label>Total</label>
-        <p className="circlebutton">{repetitions.total}</p>
+        <p className="circlebutton">{totalrepetitions}</p>
         <label>Level</label>
         <p className="circlebutton">{stage}</p>
     </div>

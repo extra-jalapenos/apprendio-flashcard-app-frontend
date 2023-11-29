@@ -16,42 +16,63 @@ const userContext = createContext()
 const sessionContext = createContext()
 
 const initSession = {
-  "correct": (sessionStorage.getItem("correct") || 0),
-  "wrong": (sessionStorage.getItem("wrong") || 0),
-  "total": (sessionStorage.getItem("total") || 0)
+  "correct": 0,
+  "wrong": 0
 }
 
 export default function App() {
 
   const [user, setUser] = useState(null)
-  const loginUser = () => sessionStorage.setItem("user", JSON.stringify(user))
+  
+  const loginUser = (user) => {
+    setUser(user)
+    sessionStorage.setItem("user", JSON.stringify(user))
+    sessionStorage.setItem("sessionStats", JSON.stringify(user.statistics))
+  }
 
-  useEffect(loginUser, [user])
+  const logoutUser = () => {
+    sessionStorage.removeItem("user")
+    setUser(null)
+    sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
+  }
 
   const [sessionStats, setSessionStats] = useState(JSON.parse(sessionStorage.getItem("sessionStats")) || initSession)
-  const logCorrect = () => increaseSessionStats("correct")
+  const logCorrect = () => {
+    if (user) {
+      const endpoint = "/users/" + user.id
+      const headers = {
+        "content-type": "application/json"
+      }
+      const options = {
+        method: "PATCH"
+      }
+      const body = {
+        statistics: {...statistics, correct: user.statistics.correct + 1}
+      }
+      console.log(body)
+    }
+
+    increaseSessionStats("correct")
+  }
+
   const logWrong = () => increaseSessionStats("wrong")
-  console.log(sessionStats, "in App")
 
   const increaseSessionStats = (keyName) => {
     const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
-    const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1, total: sessionStatsOld.total + 1} 
+    const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1} 
     sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
     setSessionStats(sessionStatsNew)
     console.log(sessionStatsOld, sessionStorage.getItem("sessionStats"))
   }
 
-  console.log(!!user ? user : "unknown")
-
   return (
     <>
-      <userContext.Provider value={{user, setUser}}>
+      <userContext.Provider value={{user, loginUser, logoutUser}}>
       <sessionContext.Provider value={{logWrong, logCorrect, sessionStats, setSessionStats}}>
         <Header />
       <Routes>
         <Route path={"/"} element={<Start />}/>
         <Route path={"/login"} element={<Login />}/>
-        <Route path={"/signup"} element={<Register />}/>
         <Route path={"/:categoryId/create-entry"} element={<CreateEntry />}/>
         <Route path={"/create-category"} element={<CreateCategory />}/>
         <Route path={"/select-category"} element={<CategorySelection />}/>

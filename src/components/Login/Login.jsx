@@ -5,14 +5,13 @@ import { userContext } from "../../App"
 
 export default function Login () {
 
-  const { setUser } = useContext(userContext)
+  const { loginUser } = useContext(userContext)
 
   const navigate = useNavigate()
   const [knownUsers, setKnownUsers] = useState(null)
   const [knownUser, setKnownUser] = useState(null)
-  const [loginUser, setLoginUser] = useState(null)
   const [failedLogin, setFailedLogin] = useState(false)
-
+  const [username, setUsername] = useState(null)
   const getUsers = () => {
     const endpoint = "/users"
     fetch(baseURL + endpoint)
@@ -23,17 +22,18 @@ export default function Login () {
   useEffect(getUsers, [])
 
   const handleInput = (event) => {
+    setUsername(event.target.value)
     const checkDatabase = () => !!knownUsers.find(user => user.displayname === event.target.value)
-    setLoginUser(event.target.value)
     setKnownUser(checkDatabase())
   }
 
   const handleSubmit = (event) => {
       event.preventDefault()
-      console.log(event.target.value)
-      const foundUser = knownUsers.find(user => user.displayname === loginUser)
+      console.log(username)
+      const foundUser = knownUsers.find(user => user.displayname === username)
+      console.log(foundUser)
       if (foundUser) {
-        setUser(foundUser)
+        loginUser(foundUser)
         setFailedLogin(false)
         navigate("/")
       } else {
@@ -45,11 +45,10 @@ export default function Login () {
     console.log("Create")
     const endpoint = "/users"
     const body = {
-      "displayname": loginUser,
+      "displayname": username,
       "statistics": {
         "correct": 0,
-        "wrong": 0,
-        "total": 0
+        "wrong": 0
       }
     }
     
@@ -65,7 +64,7 @@ export default function Login () {
 
     fetch(baseURL + endpoint, options)
       .then(res => res.json())
-      .then(setLoginUser(loginUser))
+      .then(loginUser(body))
       .then(() => navigate("/"))
   }
 
@@ -81,9 +80,9 @@ export default function Login () {
         <label>Username</label>
         <input name="username" onChange={handleInput}/>
         <button value={"Submit"}>Submit</button>
-        {failedLogin && knownUser === false && !!loginUser && 
+        {failedLogin && knownUser === false && !!username && 
               (<div>
-              <h3>Oh hi, {loginUser}!</h3>
+              <h3>Oh hi, {username}!</h3>
               <p>You seem new here – do you want to create an account?</p>
               <button className="green" onClick={createAccount}>Create Account</button>
               <button className="red">Cancel</button>

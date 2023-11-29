@@ -5,9 +5,8 @@
       "displayname": "Ally",
       "last": "2023-11-29",
       "statistics": {
-        "correct": 0,
-        "wrong": 0,
-        "total": 0
+        "correct": 22,
+        "wrong": 0
       }
     }
   ],
@@ -30,1460 +29,1348 @@
   ],
   "entries": [
     {
-        "id": 1,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "les abords m. pl. d’une ville",
-        "answer": "die unmittelbare Umgebung einer Stadt"
-    },
-    {
-        "id": 2,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un abrégé",
-        "answer": "gekürzte Fassung, Kurzfassung, Abriss"
-    },
-    {
-        "id": 3,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une abréviation",
-        "answer": "Abkürzung (mot abrégé); Abkürzung, das Abkürzen (action d’abréger)"
-    },
-    {
-        "id": 4,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une accalmie",
-        "answer": "Beruhigung, ruhigere Phase"
-    },
-    {
-        "id": 5,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un accomplissement",
-        "answer": "Erledigung, Ausführung, Vollbringung, Erfüllung;Leistung"
-    },
-    {
-        "id": 6,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un accord",
-        "answer": "Einverständnis; Vereinbarung, Übereinkunft, Vertrag, Abkommen"
-    },
-    {
-        "id": 7,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un acharnement",
-        "answer": "Hartnäckigkeit, Verbissenheit, Leidenschaft, Engagement"
-    },
-    {
-        "id": 8,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "les actus",
-        "answer": "les actualités"
-    },
-    {
-        "id": 9,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "faire l’affaire",
-        "answer": "(genau) der/die/das Richtige sein, geeignet sein, taugen als, es tunUn bon vin devrait faire l’affaire - ein guter Wein müsste es tun"
-    },
-    {
-        "id": 10,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un afflux / une affluence",
-        "answer": "Ansturm, Andrang, Zustrom"
-    },
-    {
-        "id": 11,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un affrontement",
-        "answer": "Zusammenstoß, Auseinandersetzung, Konfrontation"
-    },
-    {
-        "id": 12,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un agencement",
-        "answer": "Zusammenfügen, -setzen, Aneinanderreihung, -fügen;Aufbau, Stellung;(Raum)aufteilung - l’agencement du salon"
-    },
-    {
-        "id": 13,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une agglomération",
-        "answer": "Ortschaft, Ansiedlung;Ballungsraum ;Ansammlung"
-    },
-    {
-        "id": 14,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un agrément - Zustimmung, Genehmigung;Vergnügen; jardin d’agrément",
-        "answer": "Ziergarten, le voyage d’agrément - VergnügungsreiseReiz, Charme: l’agrément de sa conversation - seine / ihre charmante Art, Konversation zu machenles agréments de la vie - die Annehmlichkeiten des Lebens"
-    },
-    {
-        "id": 15,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une allure.",
-        "answer": "1. Gang (Quand elle marchait, elle avait une allure d’un tigre)2. Geschwindigkeit (Nous n’avons mis que deux heures pour venir, nous avons roulé à toute allure)3. Aussehen (Cette voiture a une drôle d’allure. Où l’as-tu trouvée ?)"
-    },
-    {
-        "id": 16,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "en son âme et conscience",
-        "answer": "nach bestem Wissen und Gewissen"
-    },
-    {
-        "id": 17,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une aménité",
-        "answer": "Annehmlichkeit, Liebenswürdigkeit"
-    },
-    {
-        "id": 18,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un amoncellement",
-        "answer": "Haufen, Stapel"
-    },
-    {
-        "id": 19,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une andouille f. ugs.",
-        "answer": "Blödmann, Dödel, Eumel ugs."
-    },
-    {
-        "id": 20,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un aplomb",
-        "answer": "Gleichgewicht, Lot; Selbstsicherheit; Frechheit, Unverfrorenheitavoir de l’aplomb – ganz schön frech seinêtre de l’aplomb – auf der Höhe / im Gleichgewicht seinremettre qn d’aplomb – jdn wieder auf die Beine / ins Gleichgewicht bringen"
-    },
-    {
-        "id": 21,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une apparition (action de paraître)",
-        "answer": "a) das Erscheinen; b) (théât., ciné) - Auftritt; c) (fait de devenir visible) - das Auftreten, das Erscheinen; d) (manifestation) (d’un être surnaturel) - die Erscheinung;e) (fantôme) - Gespenst"
-    },
-    {
-        "id": 22,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un appentis [-ti]",
-        "answer": "Pultdach; angebauter Schuppen"
-    },
-    {
-        "id": 23,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un appontement",
-        "answer": "Landungsbrücke, Pier"
-    },
-    {
-        "id": 24,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une aptitude",
-        "answer": "Fähigkeit"
-    },
-    {
-        "id": 25,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un arbusier m.",
-        "answer": "Erdbeerbaum"
-    },
-    {
-        "id": 26,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un arbuste",
-        "answer": "ein Strauch"
-    },
-    {
-        "id": 27,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "ARS",
-        "answer": "allocation de rentrée scolaire"
-    },
-    {
-        "id": 28,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le 7e art",
-        "answer": "(das Kino)"
-    },
-    {
-        "id": 29,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un artifice",
-        "answer": "Trick, Kunststück"
-    },
-    {
-        "id": 30,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un artisan",
-        "answer": "ein Handwerker"
-    },
-    {
-        "id": 31,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un artiste",
-        "answer": "ein Künstler"
-    },
-    {
-        "id": 32,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "assommer",
-        "answer": "bewusstlos schlagen, erschlagen (a. fig.)cet orateur / cette nouvelle m’a assommé(e) (abasourdir) – sprachlos machenle bruit / le soleil m’a assommé(e) (abrutir) – benommen machen"
-    },
-    {
-        "id": 33,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "assortir qc à qc",
-        "answer": "etwas mit etwas kombinieren"
-    },
-    {
-        "id": 34,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un atermoiement (meist pl.) (tergiversation)",
-        "answer": "Ausflüchte"
-    },
-    {
-        "id": 35,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une auréole",
-        "answer": "Rand (beim Fleck); Hof (beim Stern); Heiligenschein, Nimbus"
-    },
-    {
-        "id": 36,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "l’avachissement m.",
-        "answer": "Erlahmen, Erschlaffen"
-    },
-    {
-        "id": 37,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un avènement (d’un roi)",
-        "answer": "– Thronbesteigung(d’un régime) – Machtergreifung(d’une politique, idée) – Durchbruch(d’une époque, ère) – Anbruch(du Messie) – Ankunft, Kommen"
-    },
-    {
-        "id": 38,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une averse",
-        "answer": "Regenschauer"
-    },
-    {
-        "id": 39,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "un avoué",
-        "answer": "(nicht plädierender) Rechtsanwalt"
-    },
-    {
-        "id": 40,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une babiole",
-        "answer": "Kleinigkeit, Nippes; Kleinigkeit, Bagatelle"
-    },
-    {
-        "id": 41,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la baignoire",
-        "answer": "Badewanne"
-    },
-    {
-        "id": 42,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "bâtiments et travaux publics (B. T. P.)",
-        "answer": "Hoch- und Tiefbau"
-    },
-    {
-        "id": 43,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le bail, (pl.) bauxconclure/ signer / passer un bail",
-        "answer": "einen Miet-/ Pachtvertrag abschließenrésilier un bail: einen ~ kündigenun bail résiliable annuel: jährlich kündbarer ~un bail à ferme: ein Miet-/ Pachtverhältnis (mit à ferme habe ich Schwierigkeiten)le crédit-bail: Leasing(geschäft)un véhicule en crédit-bail: ein Leasingfahrzeug"
-    },
-    {
-        "id": 44,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la balafre",
-        "answer": "Schnittwunde"
-    },
-    {
-        "id": 45,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la bâtisse fam.",
-        "answer": "Kasten fam. (Bauwerk)"
-    },
-    {
-        "id": 46,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la barquette",
-        "answer": "Schale, Schälchen"
-    },
-    {
-        "id": 47,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le bazare",
-        "answer": "Durcheinander, Krimskramsle moins de bazare que possible - so wenig Durcheinander wie möglich"
-    },
-    {
-        "id": 48,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "bénévole (n.) - qui accomplit un travail sans être rémunéré, sans être obligé de le faire (contr. rétribué)",
-        "answer": "Freiwilliger, Ehrenamtlicher"
-    },
-    {
-        "id": 49,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la benne",
-        "answer": "Lore, Kipplore ;Großbehälter, Ladefläche;la benne à ordures - Müll(abfuhr)wagen"
-    },
-    {
-        "id": 50,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la berline",
-        "answer": "Limousine"
-    },
-    {
-        "id": 51,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la bestiole ugs.",
-        "answer": "Tier(chen), ViechMais c’est qu’elles piquent, ces sales bestioles - ah, die stechen, diese Mistviecher"
-    },
-    {
-        "id": 52,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le biais de confirmation",
-        "answer": "Bestätigungsfehler"
-    },
-    {
-        "id": 53,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la bicoque",
-        "answer": "Bruchbude"
-    },
-    {
-        "id": 54,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la boîte",
-        "answer": "Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont presque des frères, c’est très compliqué. (…die fünfzehn Jahre im Betrieb beschäftigt waren…) "
-    },
-    {
-        "id": 55,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "une bouteille à la mer",
-        "answer": "ziemlich ungewisses Unterfangen, nicht viel Hoffnung haben"
-    },
-    {
-        "id": 56,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la braderie / la (foire à la) brocante / (le marché) aux puces - Trödelmarktle brocanteur",
-        "answer": "Trödler (Händler)"
-    },
-    {
-        "id": 57,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le brevet",
-        "answer": "Diplom, Abschlusszeugnisle brevet de sécurité routiére - AM-Führerschein"
-    },
-    {
-        "id": 58,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la brimade",
-        "answer": "Schikane"
-    },
-    {
-        "id": 59,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le brouhaha / le vacarme",
-        "answer": "Lärm, Krach"
-    },
-    {
-        "id": 60,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "les brucelles f pl",
-        "answer": "Pinzette (für Präzisionsarbeiten)"
-    },
-    {
-        "id": 61,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la bruine",
-        "answer": "Niesel-, Sprühregen"
-    },
-    {
-        "id": 62,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le bulletin",
-        "answer": "Schulzeugnis"
-    },
-    {
-        "id": 63,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la buvette",
-        "answer": "Bar, Getränkekiosk, Trinkhalle"
-    },
-    {
-        "id": 64,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le cabinet",
-        "answer": "Arztpraxis, Anwaltskanzleile cabinet particulier - Nebenzimmerle cabinet d’affaires - Bürole cabinet de consultation - Sprechzimmerle cabinet de travail Arbeitszimmer"
-    },
-    {
-        "id": 65,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "CAF",
-        "answer": "la caisse d’allocations familiales"
-    },
-    {
-        "id": 66,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "à fond la caisse",
-        "answer": "mit Schmackes, Karacho ; mit voller Lautstärke"
-    },
-    {
-        "id": 67,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le cambiste",
-        "answer": "Börsenmakler"
-    },
-    {
-        "id": 68,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le cancre",
-        "answer": "schlechter Schüler"
-    },
-    {
-        "id": 69,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le canevas",
-        "answer": "der Kanevas, Stramin;Grundgerüst, (grober) Rahmen"
-    },
-    {
-        "id": 70,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la carcasse",
-        "answer": "Gerippe (vom Tier; Flugzeug, Schiff), Gerüst (Bauwerk), Skelett (Bauwerk)ma vieille carcasse ugs. - meine alten Knochen ugs."
-    },
-    {
-        "id": 71,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "les carottes sont cuites fam.",
-        "answer": "da ist nichts mehr zu machen, die Würfel sind gefallen"
-    },
-    {
-        "id": 72,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "en carriole f.",
-        "answer": "mit dem Karren"
-    },
-    {
-        "id": 73,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le carrousel",
-        "answer": "kreisförmiges Förderband, Gepäckausgabe ;Kreisverkehr"
-    },
-    {
-        "id": 74,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le carrousel ministériel",
-        "answer": "ständiger Ministerwechsel"
-    },
-    {
-        "id": 75,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "Ça n’est pas rien",
-        "answer": "Das ist nicht nichts. Das will schon etwas heißen."
-    },
-    {
-        "id": 76,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le cas marginal / isolé / particulier",
-        "answer": "Ausnahmefall, Einzelfall, kein Normalfall"
-    },
-    {
-        "id": 77,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la case",
-        "answer": "Feld (d’un formulaire, tableau, damier), Fach, Kästchen, Spielfeld"
-    },
-    {
-        "id": 78,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le casse-cou inv.",
-        "answer": "Draufgänger "
-    },
-    {
-        "id": 79,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "travailler / employer en CDI",
-        "answer": "arbeiten / einstellen mit unbefristetem ArbeitsvertragCDI – le contrat à durée indéterminée"
-    },
-    {
-        "id": 80,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la célérité",
-        "answer": "Schnelligkeit"
-    },
-    {
-        "id": 81,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la cérémonie",
-        "answer": "Feier, Festveranstaltungla cérémonie religieuse / civile du mariage – kirchliche / standesamtliche Trauungla cérémonie religieuse – kirchliche Feier"
-    },
-    {
-        "id": 82,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le cerne",
-        "answer": "(Jahres)Ring (beim Baum), Ring (um die Augen)"
-    },
-    {
-        "id": 83,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le certificat",
-        "answer": "ZertifikatCFDT - confédération française démocratique du travail"
-    },
-    {
-        "id": 84,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "CFE-CGC",
-        "answer": "confédération française de l’encadrement - Confédération générale des cadres"
-    },
-    {
-        "id": 85,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "CGT",
-        "answer": "confédération général du travail (allgemeiner Gewerkschaftsbund)"
-    },
-    {
-        "id": 86,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la châtaigne, le marron",
-        "answer": "die Esskastanie"
-    },
-    {
-        "id": 87,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le chatoiement",
-        "answer": "Schillern, Schimmern, Funkeln"
-    },
-    {
-        "id": 88,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la chemisette",
-        "answer": "kurzärmeliges Hemd ; Top"
-    },
-    {
-        "id": 89,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la chevelure crépue",
-        "answer": "Naturkrause"
-    },
-    {
-        "id": 90,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le chineur, la chineuse",
-        "answer": "regelmäßiger Trödelmarktbesucher; Trödler, Liebhaber von Trödel"
-    },
-    {
-        "id": 91,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la circonspection",
-        "answer": "Umsicht(igkeit), Vorsicht(igkeit), BesonnenheitElle a analysé le dossier de son client avec circonspection"
-    },
-    {
-        "id": 92,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "CJR",
-        "answer": "la Cour de justice de la République - (oberster Gerichtshof)"
-    },
-    {
-        "id": 93,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "CNRS",
-        "answer": "centre national de recherche scientifique (renommiertes Forschungsinstitut)"
-    },
-    {
-        "id": 94,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la cohabitation intergénérationnelle",
-        "answer": "das Zusammenwohnen mehrerer/verschiedener Generationen"
-    },
-    {
-        "id": 95,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la cohue",
-        "answer": "Menschenmenge, Gedränge"
-    },
-    {
-        "id": 96,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le combiné",
-        "answer": "Telefonhörer"
-    },
-    {
-        "id": 97,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le comment",
-        "answer": "wie, das Wie"
-    },
-    {
-        "id": 98,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le commérage (souvent pl)",
-        "answer": "das Gerede, Geschwätz, Rederei"
-    },
-    {
-        "id": 99,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la communication d’enteprise",
-        "answer": "Öffentlichkeitsarbeit"
-    },
-    {
-        "id": 100,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la compétition",
-        "answer": "Konkurrenz, Wettbewerb, Wettkampf"
-    },
-    {
-        "id": 101,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la compétitivité",
-        "answer": "Wettbewerbs-, Konkurrenzfähigkeit"
-    },
-    {
-        "id": 102,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le con",
-        "answer": "Blödmann, (Voll)idiot"
-    },
-    {
-        "id": 103,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le concours",
-        "answer": "Wettbewerb, Wettkampf;Aufnahmeprüfung, Auswahlverfahren"
-    },
-    {
-        "id": 104,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "à condition de laisser",
-        "answer": "vorausgesetzt, man lässt"
-    },
-    {
-        "id": 105,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le cône",
-        "answer": "Kegel, Konus"
-    },
-    {
-        "id": 106,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la conjoncture",
-        "answer": "(situation, ensemble de circonstances) Bedingung, Situation"
-    },
-    {
-        "id": 107,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la connectique",
-        "answer": "Anschluss-, Verbindungstechnik"
-    },
-    {
-        "id": 108,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la connivence",
-        "answer": "heimliches Einverständnis"
-    },
-    {
-        "id": 109,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la contusion",
-        "answer": "Prellung, Quetschung"
-    },
-    {
-        "id": 110,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la coque",
-        "answer": "(Schutz)Hülle; (Schiffs)Rumpf"
-    },
-    {
-        "id": 111,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "la corniche (c o r n i c h e)",
-        "answer": "Gesims, Sims; (Fels)vorsprung; Straße an einer Steilküste, einem Steilhang"
-    },
-    {
-        "id": 112,
-        "categoryId": 2,
-        "stage": 0,
-        "last": "2023-11-29",
-        "repetitions": {
-            "correct": 0,
-            "wrong": 0,
-            "total": 0
-        },
-        "question": "le corollaire, le corolaire",
-        "answer": "(logische) Folge / Konsequenz"
+      "id": 1,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "les abords m. pl. d’une ville",
+      "answer": "die unmittelbare Umgebung einer Stadt"
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un abrégé",
+      "answer": "gekürzte Fassung, Kurzfassung, Abriss"
+    },
+    {
+      "id": 3,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une abréviation",
+      "answer": "Abkürzung (mot abrégé); Abkürzung, das Abkürzen (action d’abréger)"
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une accalmie",
+      "answer": "Beruhigung, ruhigere Phase"
+    },
+    {
+      "id": 5,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un accomplissement",
+      "answer": "Erledigung, Ausführung, Vollbringung, Erfüllung;Leistung"
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un accord",
+      "answer": "Einverständnis; Vereinbarung, Übereinkunft, Vertrag, Abkommen"
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un acharnement",
+      "answer": "Hartnäckigkeit, Verbissenheit, Leidenschaft, Engagement"
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "les actus",
+      "answer": "les actualités"
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "faire l’affaire",
+      "answer": "(genau) der/die/das Richtige sein, geeignet sein, taugen als, es tunUn bon vin devrait faire l’affaire - ein guter Wein müsste es tun"
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un afflux / une affluence",
+      "answer": "Ansturm, Andrang, Zustrom"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un affrontement",
+      "answer": "Zusammenstoß, Auseinandersetzung, Konfrontation"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un agencement",
+      "answer": "Zusammenfügen, -setzen, Aneinanderreihung, -fügen;Aufbau, Stellung;(Raum)aufteilung - l’agencement du salon"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une agglomération",
+      "answer": "Ortschaft, Ansiedlung;Ballungsraum ;Ansammlung"
+    },
+    {
+      "id": 14,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un agrément - Zustimmung, Genehmigung;Vergnügen; jardin d’agrément",
+      "answer": "Ziergarten, le voyage d’agrément - VergnügungsreiseReiz, Charme: l’agrément de sa conversation - seine / ihre charmante Art, Konversation zu machenles agréments de la vie - die Annehmlichkeiten des Lebens"
+    },
+    {
+      "id": 15,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une allure.",
+      "answer": "1. Gang (Quand elle marchait, elle avait une allure d’un tigre)2. Geschwindigkeit (Nous n’avons mis que deux heures pour venir, nous avons roulé à toute allure)3. Aussehen (Cette voiture a une drôle d’allure. Où l’as-tu trouvée ?)"
+    },
+    {
+      "id": 16,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "en son âme et conscience",
+      "answer": "nach bestem Wissen und Gewissen"
+    },
+    {
+      "id": 17,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une aménité",
+      "answer": "Annehmlichkeit, Liebenswürdigkeit"
+    },
+    {
+      "id": 18,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un amoncellement",
+      "answer": "Haufen, Stapel"
+    },
+    {
+      "id": 19,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une andouille f. ugs.",
+      "answer": "Blödmann, Dödel, Eumel ugs."
+    },
+    {
+      "id": 20,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un aplomb",
+      "answer": "Gleichgewicht, Lot; Selbstsicherheit; Frechheit, Unverfrorenheitavoir de l’aplomb – ganz schön frech seinêtre de l’aplomb – auf der Höhe / im Gleichgewicht seinremettre qn d’aplomb – jdn wieder auf die Beine / ins Gleichgewicht bringen"
+    },
+    {
+      "id": 21,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une apparition (action de paraître)",
+      "answer": "a) das Erscheinen; b) (théât., ciné) - Auftritt; c) (fait de devenir visible) - das Auftreten, das Erscheinen; d) (manifestation) (d’un être surnaturel) - die Erscheinung;e) (fantôme) - Gespenst"
+    },
+    {
+      "id": 22,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un appentis [-ti]",
+      "answer": "Pultdach; angebauter Schuppen"
+    },
+    {
+      "id": 23,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un appontement",
+      "answer": "Landungsbrücke, Pier"
+    },
+    {
+      "id": 24,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une aptitude",
+      "answer": "Fähigkeit"
+    },
+    {
+      "id": 25,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un arbusier m.",
+      "answer": "Erdbeerbaum"
+    },
+    {
+      "id": 26,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un arbuste",
+      "answer": "ein Strauch"
+    },
+    {
+      "id": 27,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "ARS",
+      "answer": "allocation de rentrée scolaire"
+    },
+    {
+      "id": 28,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le 7e art",
+      "answer": "(das Kino)"
+    },
+    {
+      "id": 29,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un artifice",
+      "answer": "Trick, Kunststück"
+    },
+    {
+      "id": 30,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un artisan",
+      "answer": "ein Handwerker"
+    },
+    {
+      "id": 31,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un artiste",
+      "answer": "ein Künstler"
+    },
+    {
+      "id": 32,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "assommer",
+      "answer": "bewusstlos schlagen, erschlagen (a. fig.)cet orateur / cette nouvelle m’a assommé(e) (abasourdir) – sprachlos machenle bruit / le soleil m’a assommé(e) (abrutir) – benommen machen"
+    },
+    {
+      "id": 33,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "assortir qc à qc",
+      "answer": "etwas mit etwas kombinieren"
+    },
+    {
+      "id": 34,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un atermoiement (meist pl.) (tergiversation)",
+      "answer": "Ausflüchte"
+    },
+    {
+      "id": 35,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une auréole",
+      "answer": "Rand (beim Fleck); Hof (beim Stern); Heiligenschein, Nimbus"
+    },
+    {
+      "id": 36,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "l’avachissement m.",
+      "answer": "Erlahmen, Erschlaffen"
+    },
+    {
+      "id": 37,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un avènement (d’un roi)",
+      "answer": "– Thronbesteigung(d’un régime) – Machtergreifung(d’une politique, idée) – Durchbruch(d’une époque, ère) – Anbruch(du Messie) – Ankunft, Kommen"
+    },
+    {
+      "id": 38,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une averse",
+      "answer": "Regenschauer"
+    },
+    {
+      "id": 39,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "un avoué",
+      "answer": "(nicht plädierender) Rechtsanwalt"
+    },
+    {
+      "id": 40,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une babiole",
+      "answer": "Kleinigkeit, Nippes; Kleinigkeit, Bagatelle"
+    },
+    {
+      "id": 41,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la baignoire",
+      "answer": "Badewanne"
+    },
+    {
+      "id": 42,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "bâtiments et travaux publics (B. T. P.)",
+      "answer": "Hoch- und Tiefbau"
+    },
+    {
+      "id": 43,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le bail, (pl.) bauxconclure/ signer / passer un bail",
+      "answer": "einen Miet-/ Pachtvertrag abschließenrésilier un bail: einen ~ kündigenun bail résiliable annuel: jährlich kündbarer ~un bail à ferme: ein Miet-/ Pachtverhältnis (mit à ferme habe ich Schwierigkeiten)le crédit-bail: Leasing(geschäft)un véhicule en crédit-bail: ein Leasingfahrzeug"
+    },
+    {
+      "id": 44,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la balafre",
+      "answer": "Schnittwunde"
+    },
+    {
+      "id": 45,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la bâtisse fam.",
+      "answer": "Kasten fam. (Bauwerk)"
+    },
+    {
+      "id": 46,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la barquette",
+      "answer": "Schale, Schälchen"
+    },
+    {
+      "id": 47,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le bazare",
+      "answer": "Durcheinander, Krimskramsle moins de bazare que possible - so wenig Durcheinander wie möglich"
+    },
+    {
+      "id": 48,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "bénévole (n.) - qui accomplit un travail sans être rémunéré, sans être obligé de le faire (contr. rétribué)",
+      "answer": "Freiwilliger, Ehrenamtlicher"
+    },
+    {
+      "id": 49,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la benne",
+      "answer": "Lore, Kipplore ;Großbehälter, Ladefläche;la benne à ordures - Müll(abfuhr)wagen"
+    },
+    {
+      "id": 50,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la berline",
+      "answer": "Limousine"
+    },
+    {
+      "id": 51,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la bestiole ugs.",
+      "answer": "Tier(chen), ViechMais c’est qu’elles piquent, ces sales bestioles - ah, die stechen, diese Mistviecher"
+    },
+    {
+      "id": 52,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le biais de confirmation",
+      "answer": "Bestätigungsfehler"
+    },
+    {
+      "id": 53,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la bicoque",
+      "answer": "Bruchbude"
+    },
+    {
+      "id": 54,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la boîte",
+      "answer": "Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont presque des frères, c’est très compliqué. (…die fünfzehn Jahre im Betrieb beschäftigt waren…) "
+    },
+    {
+      "id": 55,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "une bouteille à la mer",
+      "answer": "ziemlich ungewisses Unterfangen, nicht viel Hoffnung haben"
+    },
+    {
+      "id": 56,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la braderie / la (foire à la) brocante / (le marché) aux puces - Trödelmarktle brocanteur",
+      "answer": "Trödler (Händler)"
+    },
+    {
+      "id": 57,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le brevet",
+      "answer": "Diplom, Abschlusszeugnisle brevet de sécurité routiére - AM-Führerschein"
+    },
+    {
+      "id": 58,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la brimade",
+      "answer": "Schikane"
+    },
+    {
+      "id": 59,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le brouhaha / le vacarme",
+      "answer": "Lärm, Krach"
+    },
+    {
+      "id": 60,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "les brucelles f pl",
+      "answer": "Pinzette (für Präzisionsarbeiten)"
+    },
+    {
+      "id": 61,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la bruine",
+      "answer": "Niesel-, Sprühregen"
+    },
+    {
+      "id": 62,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le bulletin",
+      "answer": "Schulzeugnis"
+    },
+    {
+      "id": 63,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la buvette",
+      "answer": "Bar, Getränkekiosk, Trinkhalle"
+    },
+    {
+      "id": 64,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le cabinet",
+      "answer": "Arztpraxis, Anwaltskanzleile cabinet particulier - Nebenzimmerle cabinet d’affaires - Bürole cabinet de consultation - Sprechzimmerle cabinet de travail Arbeitszimmer"
+    },
+    {
+      "id": 65,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "CAF",
+      "answer": "la caisse d’allocations familiales"
+    },
+    {
+      "id": 66,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "à fond la caisse",
+      "answer": "mit Schmackes, Karacho ; mit voller Lautstärke"
+    },
+    {
+      "id": 67,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le cambiste",
+      "answer": "Börsenmakler"
+    },
+    {
+      "id": 68,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le cancre",
+      "answer": "schlechter Schüler"
+    },
+    {
+      "id": 69,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le canevas",
+      "answer": "der Kanevas, Stramin;Grundgerüst, (grober) Rahmen"
+    },
+    {
+      "id": 70,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la carcasse",
+      "answer": "Gerippe (vom Tier; Flugzeug, Schiff), Gerüst (Bauwerk), Skelett (Bauwerk)ma vieille carcasse ugs. - meine alten Knochen ugs."
+    },
+    {
+      "id": 71,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "les carottes sont cuites fam.",
+      "answer": "da ist nichts mehr zu machen, die Würfel sind gefallen"
+    },
+    {
+      "id": 72,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "en carriole f.",
+      "answer": "mit dem Karren"
+    },
+    {
+      "id": 73,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le carrousel",
+      "answer": "kreisförmiges Förderband, Gepäckausgabe ;Kreisverkehr"
+    },
+    {
+      "id": 74,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le carrousel ministériel",
+      "answer": "ständiger Ministerwechsel"
+    },
+    {
+      "id": 75,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "Ça n’est pas rien",
+      "answer": "Das ist nicht nichts. Das will schon etwas heißen."
+    },
+    {
+      "id": 76,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le cas marginal / isolé / particulier",
+      "answer": "Ausnahmefall, Einzelfall, kein Normalfall"
+    },
+    {
+      "id": 77,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la case",
+      "answer": "Feld (d’un formulaire, tableau, damier), Fach, Kästchen, Spielfeld"
+    },
+    {
+      "id": 78,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le casse-cou inv.",
+      "answer": "Draufgänger "
+    },
+    {
+      "id": 79,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "travailler / employer en CDI",
+      "answer": "arbeiten / einstellen mit unbefristetem ArbeitsvertragCDI – le contrat à durée indéterminée"
+    },
+    {
+      "id": 80,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la célérité",
+      "answer": "Schnelligkeit"
+    },
+    {
+      "id": 81,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la cérémonie",
+      "answer": "Feier, Festveranstaltungla cérémonie religieuse / civile du mariage – kirchliche / standesamtliche Trauungla cérémonie religieuse – kirchliche Feier"
+    },
+    {
+      "id": 82,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le cerne",
+      "answer": "(Jahres)Ring (beim Baum), Ring (um die Augen)"
+    },
+    {
+      "id": 83,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le certificat",
+      "answer": "ZertifikatCFDT - confédération française démocratique du travail"
+    },
+    {
+      "id": 84,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "CFE-CGC",
+      "answer": "confédération française de l’encadrement - Confédération générale des cadres"
+    },
+    {
+      "id": 85,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "CGT",
+      "answer": "confédération général du travail (allgemeiner Gewerkschaftsbund)"
+    },
+    {
+      "id": 86,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la châtaigne, le marron",
+      "answer": "die Esskastanie"
+    },
+    {
+      "id": 87,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le chatoiement",
+      "answer": "Schillern, Schimmern, Funkeln"
+    },
+    {
+      "id": 88,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la chemisette",
+      "answer": "kurzärmeliges Hemd ; Top"
+    },
+    {
+      "id": 89,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la chevelure crépue",
+      "answer": "Naturkrause"
+    },
+    {
+      "id": 90,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le chineur, la chineuse",
+      "answer": "regelmäßiger Trödelmarktbesucher; Trödler, Liebhaber von Trödel"
+    },
+    {
+      "id": 91,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la circonspection",
+      "answer": "Umsicht(igkeit), Vorsicht(igkeit), BesonnenheitElle a analysé le dossier de son client avec circonspection"
+    },
+    {
+      "id": 92,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "CJR",
+      "answer": "la Cour de justice de la République - (oberster Gerichtshof)"
+    },
+    {
+      "id": 93,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "CNRS",
+      "answer": "centre national de recherche scientifique (renommiertes Forschungsinstitut)"
+    },
+    {
+      "id": 94,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la cohabitation intergénérationnelle",
+      "answer": "das Zusammenwohnen mehrerer/verschiedener Generationen"
+    },
+    {
+      "id": 95,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la cohue",
+      "answer": "Menschenmenge, Gedränge"
+    },
+    {
+      "id": 96,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le combiné",
+      "answer": "Telefonhörer"
+    },
+    {
+      "id": 97,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le comment",
+      "answer": "wie, das Wie"
+    },
+    {
+      "id": 98,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le commérage (souvent pl)",
+      "answer": "das Gerede, Geschwätz, Rederei"
+    },
+    {
+      "id": 99,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la communication d’enteprise",
+      "answer": "Öffentlichkeitsarbeit"
+    },
+    {
+      "id": 100,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la compétition",
+      "answer": "Konkurrenz, Wettbewerb, Wettkampf"
+    },
+    {
+      "id": 101,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la compétitivité",
+      "answer": "Wettbewerbs-, Konkurrenzfähigkeit"
+    },
+    {
+      "id": 102,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le con",
+      "answer": "Blödmann, (Voll)idiot"
+    },
+    {
+      "id": 103,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le concours",
+      "answer": "Wettbewerb, Wettkampf;Aufnahmeprüfung, Auswahlverfahren"
+    },
+    {
+      "id": 104,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "à condition de laisser",
+      "answer": "vorausgesetzt, man lässt"
+    },
+    {
+      "id": 105,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le cône",
+      "answer": "Kegel, Konus"
+    },
+    {
+      "id": 106,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la conjoncture",
+      "answer": "(situation, ensemble de circonstances) Bedingung, Situation"
+    },
+    {
+      "id": 107,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la connectique",
+      "answer": "Anschluss-, Verbindungstechnik"
+    },
+    {
+      "id": 108,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la connivence",
+      "answer": "heimliches Einverständnis"
+    },
+    {
+      "id": 109,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la contusion",
+      "answer": "Prellung, Quetschung"
+    },
+    {
+      "id": 110,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la coque",
+      "answer": "(Schutz)Hülle; (Schiffs)Rumpf"
+    },
+    {
+      "id": 111,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "la corniche (c o r n i c h e)",
+      "answer": "Gesims, Sims; (Fels)vorsprung; Straße an einer Steilküste, einem Steilhang"
+    },
+    {
+      "id": 112,
+      "categoryId": 2,
+      "stage": 0,
+      "last": "2023-11-29",
+      "repetitions": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "question": "le corollaire, le corolaire",
+      "answer": "(logische) Folge / Konsequenz"
     },
     {
       "id": 114,
@@ -1491,9 +1378,8 @@
       "stage": 0,
       "last": "2023-11-29",
       "repetitions": {
-          "correct": 0,
-          "wrong": 0,
-          "total": 0
+        "correct": 0,
+        "wrong": 0
       },
       "question": "au premier abord / de prime abord",
       "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
@@ -1501,15 +1387,15 @@
   ],
   "languages": [
     {
-    "id": 1,
-    "name": "Test",
-    "creator": "Ally",
-    "items": [
+      "id": 1,
+      "name": "Test",
+      "creator": "Ally",
+      "items": [
         {
           "id": 1,
           "name": "Test"
         },
-        { 
+        {
           "id": 2,
           "name": "Test"
         },
@@ -1528,7 +1414,7 @@
           "id": 1,
           "name": "Test"
         },
-        { 
+        {
           "id": 2,
           "name": "Test"
         },

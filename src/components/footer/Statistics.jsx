@@ -14,7 +14,7 @@ export default function Statistics () {
       <label>↻ Maybe next time</label>
       <p className="circlebutton red">{sessionStats.wrong}</p>
       <label>Total</label>
-      <p className="circlebutton blue">{sessionStats.total}</p>
+      <p className="circlebutton blue">{sessionStats.correct + sessionStats.wrong}</p>
     </div>
   )
 }

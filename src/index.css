@@ -162,14 +162,13 @@ textarea {
   }
 
   button {
-    display: grid;
-    place-content: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    mix-blend-mode: multiply;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px white transparent;
   }
 
   button:hover {
     background-color: var(--pink);
+    border-color: var(--pink);
     transition: background-color 5000ms linear;
   }
 }
