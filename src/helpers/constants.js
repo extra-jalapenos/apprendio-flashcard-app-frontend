@@ -12,4 +12,6 @@ export const entryBlueprint = {
 "answer": ""
 }
 
+export const siteTitle = "7️⃣ 🧠 🛁 Seven Brains"
+
 export const shuffle = (array) => array.sort(() => Math.random() - 0.5)

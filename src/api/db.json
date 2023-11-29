@@ -32,6 +32,12 @@
       "entries": [],
       "title": "Boolean",
       "id": 3
+    },
+    {
+      "user": "unknown",
+      "entries": [],
+      "title": "Taylor Swift",
+      "id": 4
     }
   ],
   "entries": [
@@ -1392,146 +1398,17 @@
       "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
     },
     {
-      "categoryId": null,
+      "categoryId": 4,
       "stage": 0,
-      "last": "2023-11-29T16:37:11.276Z",
+      "last": "2023-11-29T23:11:42.395Z",
       "repetitions": {
         "correct": 0,
         "wrong": 0
       },
-      "prompt": "asd",
-      "answer": "asda",
+      "prompt": "What is Taylor's middle name?",
+      "answer": "Alison",
+      "clue": "The company used to apply / register for trademark phrases related to her brand and songs is called TAS Rights Management LLC, using her initials.",
       "id": 115
-    },
-    {
-      "categoryId": "3",
-      "stage": 0,
-      "last": "2023-11-29T16:37:23.890Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "s",
-      "answer": "asdasd",
-      "id": 116
-    },
-    {
-      "categoryId": "3",
-      "stage": 0,
-      "last": "2023-11-29T16:38:25.562Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "asd",
-      "answer": "sd",
-      "id": 117
-    },
-    {
-      "categoryId": null,
-      "stage": 0,
-      "last": "2023-11-29T16:38:32.747Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "s",
-      "answer": "s",
-      "id": 118
-    },
-    {
-      "categoryId": null,
-      "stage": 0,
-      "last": "2023-11-29T16:38:42.013Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "s",
-      "answer": "s",
-      "id": 119
-    },
-    {
-      "stage": 0,
-      "last": "2023-11-29T16:40:28.236Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "sda",
-      "answer": "sd",
-      "id": 120
-    },
-    {
-      "stage": 0,
-      "last": "2023-11-29T16:40:31.534Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "sds",
-      "answer": "as",
-      "id": 121
-    },
-    {
-      "categoryId": "1",
-      "stage": 0,
-      "last": "2023-11-29T16:45:39.312Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "asda",
-      "answer": "asd",
-      "id": 122
-    },
-    {
-      "categoryId": null,
-      "stage": 0,
-      "last": "2023-11-29T16:45:41.911Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "asdas",
-      "answer": "asdasd",
-      "id": 123
-    },
-    {
-      "categoryId": null,
-      "stage": 0,
-      "last": "2023-11-29T16:46:45.529Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "s",
-      "answer": "s",
-      "id": 124
-    },
-    {
-      "categoryId": null,
-      "stage": 0,
-      "last": "2023-11-29T16:47:12.716Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "s",
-      "answer": "s",
-      "id": 125
-    },
-    {
-      "categoryId": null,
-      "stage": 0,
-      "last": "2023-11-29T21:04:12.521Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "dsfa",
-      "answer": "asdds",
-      "id": 126
     }
   ],
   "languages": [

@@ -27,7 +27,8 @@ export default function CreateEntry() {
   const initForm = {
     "categoryId": null,
     "prompt": "",
-    "answer": ""
+    "answer": "",
+    "clue": ""
   }
 
   const [form, setForm] = useState(initForm)
@@ -53,6 +54,7 @@ export default function CreateEntry() {
       "last": new Date().toISOString(),
       "prompt": form.prompt,
       "answer": form.answer,
+      "clue": form.clue
     }
 
     const options = {
@@ -78,11 +80,11 @@ export default function CreateEntry() {
         {categories.map((category, index) => <option key={index} value={category.id}>{category.title}</option>)}
       </select>
       <label>Prompt</label>
-      <textarea type="text" name="question" value={form.question} onChange={handleInput} required />
+      <textarea type="text" name="prompt" value={form.prompt} onChange={handleInput} required />
       <label>Answer</label>
       <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
       <label>Clue / Context</label>
-      <textarea type="text" name="context" value={form.context} onChange={handleInput}  required />
+      <textarea type="text" name="clue" value={form.clue} onChange={handleInput}  required />
       <p></p>
       <button value="Submit">➕ Create</button>
     </form>

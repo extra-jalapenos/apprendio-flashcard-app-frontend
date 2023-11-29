@@ -53,6 +53,7 @@ export default function App() {
       <userContext.Provider value={{user, setUser, logoutUser}}>
       <sessionContext.Provider value={{sessionStats, setSessionStats}}>
         <Header />
+      <main>
       <Routes>
         <Route path={"/"} element={<Start />}/>
         <Route path={"/login"} element={<Login />}/>
@@ -62,6 +63,7 @@ export default function App() {
         <Route path={"/practice/:categoryId/"} element={<Practice />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
       </Routes>
+      </main>
         <Footer />
       </sessionContext.Provider>
       </userContext.Provider>
