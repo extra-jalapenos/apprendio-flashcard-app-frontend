@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router"
-import { baseURL } from "../helpers/helpers"
+import { baseURL } from "../helpers/constants"
 
 export default function LanguageSelection () {
 

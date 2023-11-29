@@ -10,7 +10,7 @@ import Header from './components/header/Header'
 import "./Header.css"
 import Footer from './components/footer/Footer'
 import "./Footer.css"
-import { baseURL } from './helpers/helpers'
+import { baseURL } from './helpers/constants'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -49,57 +49,11 @@ export default function App() {
   useEffect(syncSessionStorage, [user])
 
   const [sessionStats, setSessionStats] = useState(initSession)
-  
-  const updateUserStats = (type) => {
-    console.log(!!user, "inside updateUserStats")
-    if (!type || !user) return
-    const endpoint = "/users/" + user.id
-      const headers = {
-        "content-type": "application/json"
-      }
-
-      const body = {
-        statistics: {correct: user.statistics[type] + 1}
-      }
-
-      const options = {
-        method: "PATCH",
-        headers: headers,
-        body: JSON.stringify(body)
-      }
-
-      fetch(baseURL + endpoint, options)
-        .then(response => response.json())
-        .catch(error => console.log(error, "error updating user"))
-  }
-  
-  const logCorrect = () => {
-    if (user) {
-      updateUserStats("correct")
-    } else {
-      increaseSessionStats("correct")
-    }
-  }
-
-  const logWrong = () => {
-    if (user) {
-      updateUserStats("wrong")
-    } else {
-      increaseSessionStats("wrong")
-    }
-  }
-  
-  const increaseSessionStats = (keyName) => {
-    const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
-    const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1} 
-    sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
-    setSessionStats(sessionStatsNew)
-  }
 
   return (
     <>
       <userContext.Provider value={{user, setUser, logoutUser}}>
-      <sessionContext.Provider value={{logWrong, logCorrect, sessionStats, setSessionStats}}>
+      <sessionContext.Provider value={{sessionStats, setSessionStats}}>
         <Header />
       <Routes>
         <Route path={"/"} element={<Start />}/>

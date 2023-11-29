@@ -2,8 +2,8 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import Card from "./Card"
 import InputField from "./InputField"
-import { baseURL } from "../helpers/helpers"
-import { sessionContext } from "../App"
+import { baseURL } from "../helpers/constants"
+import { sessionContext, userContext } from "../App"
 
 function CardPair ({props, revealAnswer, handleEntry}) {
   const { question, answer } = props
@@ -39,7 +39,8 @@ function CardStats ({props}) {
 
 export default function Practice () {
 
-  const { logCorrect, logWrong } = useContext(sessionContext)
+  const { user, setUser } = useContext(userContext)
+  const { setSessionStats } = useContext(sessionContext)
   const {categoryId, cardId} = useParams()
   const navigate = useNavigate()
   const [entries, setEntries] = useState(null)
@@ -89,6 +90,56 @@ export default function Practice () {
   const handleSubmit = () => {
     currentCard.answer.match(userEntry) ? setEvaluation(true) : setEvaluation(false)
     setShowAnswer(true)
+  }
+
+  const logCorrect = () => {
+    if (user) {
+      updateUserStats("correct")
+    } else {
+      increaseSessionStats("correct")
+    }
+    next()
+  }
+  
+  const logWrong = () => {
+    if (user) {
+      updateUserStats("wrong")
+    } else {
+      increaseSessionStats("wrong")
+    }
+    next()
+  }
+
+  const increaseSessionStats = (keyName) => {
+    const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
+    const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1} 
+    sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
+    setSessionStats(sessionStatsNew)
+  }
+
+  const updateUserStats = (type) => {
+    console.log(!!user, "inside updateUserStats")
+    if (!type || !user) return
+    const endpoint = "/users/" + user.id
+      const headers = {
+        "content-type": "application/json"
+      }
+
+      const body = {
+        statistics: {...user.statistics, [type]: user.statistics[type] + 1}
+      }
+      console.log(body)
+
+      const options = {
+        method: "PATCH",
+        headers: headers,
+        body: JSON.stringify(body)
+      }
+
+      fetch(baseURL + endpoint, options)
+        .then(response => response.json())
+        .then(data => setUser(data))
+        .catch(error => console.log(error, "error updating user"))
   }
 
   const next = () => {

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { baseURL } from "../../helpers/helpers"
+import { baseURL } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../App"
 

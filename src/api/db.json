@@ -4,7 +4,8 @@
       "id": 1,
       "displayname": "Ally",
       "statistics": {
-        "correct": 28
+        "correct": 42,
+        "wrong": 10
       }
     }
   ],
