@@ -24,7 +24,7 @@ export default function LanguageSelection () {
     <>
       <h2>Select your category</h2>
       <div className="autoColumns">
-        {categories.map((category, index) => <label key={index} onClick={() => navigate("/practice/"+index+"/0")}>{category.title}</label>)}
+        {categories.map((category, index) => <label key={index} onClick={() => navigate("/practice/"+category.id+"/")}>{category.title}</label>)}
         <button onClick={() => navigate("/create-category")}>Create new category</button>
       </div>
     </>
