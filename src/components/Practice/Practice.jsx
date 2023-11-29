@@ -1,42 +1,9 @@
 import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
-import Card from "./Card"
-import InputField from "./InputField"
-import { baseURL } from "../helpers/constants"
-import { sessionContext, userContext } from "../App"
-
-function CardPair ({props, revealAnswer, handleEntry}) {
-  const { question, answer } = props
-
-  return(
-    <div className="twoColumns">
-        <Card text={question || ""} />
-        {revealAnswer && <Card text={revealAnswer ? answer : ""} />}
-        {!revealAnswer && <InputField handleEntry={handleEntry}/>}
-    </div>
-  )
-}
-
-function CardStats ({props}) {
-  const { repetitions, stage } = props
-  const { cardId } = useParams()
-  if (!cardId) return
-  const totalrepetitions = repetitions.correct + repetitions.wrong
-  return (
-    <>
-    <h3>Card {cardId}</h3>
-    <div className="buttoncontainer">
-        <label>Correct</label>
-        <p className="circlebutton">{repetitions.correct}</p>
-        <p className="circlebutton">{totalrepetitions ? repetitions.correct / totalrepetitions + "%" : "0%"}</p>
-        <label>Total</label>
-        <p className="circlebutton">{totalrepetitions}</p>
-        <label>Level</label>
-        <p className="circlebutton">{stage}</p>
-    </div>
-    </>
-  )
-}
+import CardPair from "./CardPair"
+import CardStats from "./CardStatistics"
+import { baseURL } from "../../helpers/constants"
+import { sessionContext, userContext } from "../../App"
 
 export default function Practice () {
 

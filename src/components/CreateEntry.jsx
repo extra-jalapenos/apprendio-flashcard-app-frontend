@@ -26,7 +26,7 @@ export default function CreateEntry() {
 
   const initForm = {
     "categoryId": null,
-    "question": "",
+    "prompt": "",
     "answer": ""
   }
 
@@ -51,7 +51,7 @@ export default function CreateEntry() {
     const body = { ...entryBlueprint,
       "categoryId": form.categoryId,
       "last": new Date().toISOString(),
-      "question": form.question,
+      "prompt": form.prompt,
       "answer": form.answer,
     }
 
@@ -77,10 +77,12 @@ export default function CreateEntry() {
         {!form.categoryId && <option>Select Category</option>}
         {categories.map((category, index) => <option key={index} value={category.id}>{category.title}</option>)}
       </select>
-      <label>Question</label>
+      <label>Prompt</label>
       <textarea type="text" name="question" value={form.question} onChange={handleInput} required />
       <label>Answer</label>
       <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
+      <label>Clue / Context</label>
+      <textarea type="text" name="context" value={form.context} onChange={handleInput}  required />
       <p></p>
       <button value="Submit">➕ Create</button>
     </form>

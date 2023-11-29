@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Start from "./components/Start"
 import CreateEntry from './components/CreateEntry'
 import CreateCategory from './components/CreateCategory'
-import Practice from './components/Practice'
+import Practice from './components/Practice/Practice'
 import CategorySelection from './components/CategorySelection'
 import Login from './components/Login/Login'
 import Header from './components/header/Header'

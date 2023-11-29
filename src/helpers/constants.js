@@ -8,6 +8,6 @@ export const entryBlueprint = {
     "correct": 0,
     "wrong": 0
   },
-"question": "", 
+"prompt": "", 
 "answer": ""
 }
