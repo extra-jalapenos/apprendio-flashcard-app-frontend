@@ -18,7 +18,9 @@ export default function LanguageSelection () {
 
   useEffect(getCategories, [])
 
-  if (!categories) return "Loading…"
+  if (!categories) return (<div className="center">
+      Loading…
+    </div>)
 
   return (
     <>

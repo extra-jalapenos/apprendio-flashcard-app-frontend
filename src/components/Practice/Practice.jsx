@@ -137,7 +137,9 @@ export default function Practice () {
     )
   }
 
-  if (!currentCard) return <p>Loading current card…</p>
+  if (!currentCard) return (<div className="center">
+  Loading card…
+</div>)
 
   return (
     <>

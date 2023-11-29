@@ -68,7 +68,10 @@ export default function Login () {
       .catch(error => console.log(error, "error creating account"))
   }
 
-  if (!knownUsers) return (<button>Loading…</button>)
+  if (!knownUsers) return (
+    <div className="center">
+      Loading users…
+    </div>)
   
   return (
     <div className="center">

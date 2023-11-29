@@ -52,7 +52,9 @@ export default function CreateCategory () {
     duplicate() ? navigate("/select-category") : createCategory()
   }
 
-  if (!categories) return "Loading…"
+  if (!categories) return (<div className="center">
+    Loading categories…
+  </div>)
 
   return (
     <>

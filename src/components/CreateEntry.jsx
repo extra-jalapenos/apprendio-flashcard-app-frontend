@@ -70,7 +70,9 @@ export default function CreateEntry() {
       .catch(error => console.log("error creating entry", error))
   }
   
-  if (!categories) return (<p>Loading…</p>)
+  if (!categories) return (<div className="center">
+    Loading categories…
+  </div>)
 
   return (
     <form className="twoColumns" onSubmit={handleSubmit}>
