@@ -27,12 +27,14 @@ export default function App() {
   const loginUser = (user) => {
     setUser(user)
     sessionStorage.setItem("user", JSON.stringify(user))
+    setSessionStats(user.statistics)
     sessionStorage.setItem("sessionStats", JSON.stringify(user.statistics))
   }
 
   const logoutUser = () => {
     sessionStorage.removeItem("user")
     setUser(null)
+    setSessionStats(initSession)
     sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
   }
 
@@ -47,9 +49,8 @@ export default function App() {
         method: "PATCH"
       }
       const body = {
-        statistics: {...statistics, correct: user.statistics.correct + 1}
+        statistics: {correct: user.statistics.correct + 1}
       }
-      console.log(body)
     }
 
     increaseSessionStats("correct")
@@ -62,7 +63,6 @@ export default function App() {
     const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1} 
     sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
     setSessionStats(sessionStatsNew)
-    console.log(sessionStatsOld, sessionStorage.getItem("sessionStats"))
   }
 
   return (

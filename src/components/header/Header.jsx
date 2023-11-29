@@ -4,6 +4,7 @@ import { userContext } from "../../App"
 
 export default function Header () {
   const { user, logoutUser } = useContext(userContext)
+  console.log(user, sessionStorage.user)
   const navigate = useNavigate()
   return (
     <header>
