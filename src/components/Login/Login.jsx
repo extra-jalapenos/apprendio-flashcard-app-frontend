@@ -33,8 +33,9 @@ export default function Login () {
       if (foundUser) {
         console.log("logging in handleSubmit", foundUser)
         setUser(foundUser)
+        sessionStorage.removeItem("sessionStats")
         setFailedLogin(false)
-        navigate("/")
+        navigate("/select-category")
       } else {
         setFailedLogin(true)
       }
@@ -63,7 +64,8 @@ export default function Login () {
     fetch(baseURL + endpoint, options)
       .then(res => res.json())
       .then(setUser(body))
-      .then(() => navigate("/"))
+      .then(() => navigate("/select-category"))
+      .catch(error => console.log(error, "error creating account"))
   }
 
   if (!knownUsers) return (<button>Loading…</button>)
