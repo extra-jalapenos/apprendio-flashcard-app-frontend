@@ -25,24 +25,19 @@ export default function App() {
 
   const [user, setUser] = useState(null)
   const loginUser = () => sessionStorage.setItem("user", JSON.stringify(user))
-  const initSession = () => sessionStorage.setItem("sessionStats", JSON.stringify({
-    "correct": 0,
-    "wrong": 0,
-    "total": 0
-  }))
 
   useEffect(loginUser, [user])
-  useEffect(initSession, [user])
-
 
   const [sessionStats, setSessionStats] = useState(JSON.parse(sessionStorage.getItem("sessionStats")) || initSession)
   const logCorrect = () => increaseSessionStats("correct")
   const logWrong = () => increaseSessionStats("wrong")
+  console.log(sessionStats, "in App")
 
   const increaseSessionStats = (keyName) => {
     const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
     const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1, total: sessionStatsOld.total + 1} 
     sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
+    setSessionStats(sessionStatsNew)
     console.log(sessionStatsOld, sessionStorage.getItem("sessionStats"))
   }
 
@@ -51,6 +46,7 @@ export default function App() {
   return (
     <>
       <userContext.Provider value={{user, setUser}}>
+      <sessionContext.Provider value={{logWrong, logCorrect, sessionStats, setSessionStats}}>
         <Header />
       <Routes>
         <Route path={"/"} element={<Start />}/>
@@ -62,7 +58,6 @@ export default function App() {
         <Route path={"/practice/:categoryId/"} element={<Practice />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
       </Routes>
-      <sessionContext.Provider value={{logWrong, logCorrect, sessionStats, setSessionStats}}>
         <Footer />
       </sessionContext.Provider>
       </userContext.Provider>

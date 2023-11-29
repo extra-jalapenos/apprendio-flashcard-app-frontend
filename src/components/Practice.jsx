@@ -38,7 +38,7 @@ function CardStats ({props}) {
 
 export default function Practice () {
 
-  const { logCorrect, logWrong } = sessionContext
+  const { logCorrect, logWrong } = useContext(sessionContext)
   const {categoryId, cardId} = useParams()
   const navigate = useNavigate()
   const [entries, setEntries] = useState(null)
