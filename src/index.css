@@ -80,6 +80,7 @@ button, input {
   color: inherit;
   margin: 1em;
   cursor: pointer;
+  background-color: var(--white)
 }
 
 .buttoncontainer {
@@ -89,14 +90,19 @@ button, input {
   align-items: center;
 }
 
+input, button {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .circlebutton {
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 1rem;
+  padding: 0.25rem;
   height: 50px;
   width: 50px;
   border-radius: 100%;
   display: grid;
   place-items: center;
-  background-color: var(--white)
 }
 
 .green {
@@ -121,10 +127,6 @@ button, input {
   box-sizing: border-box;
   box-shadow: 0px 5px 5px 2px rgba(36, 0, 72, 0.05);
   /* transition: all 500ms; */
-}
-
-input {
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 input {

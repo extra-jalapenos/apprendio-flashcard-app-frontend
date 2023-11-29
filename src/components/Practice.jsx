@@ -91,15 +91,13 @@ export default function Practice () {
     setShowAnswer(true)
   }
 
-  const reveal = () => setShowAnswer(showAnswer ? false : true)
-
   const next = () => {
     if (currentCardIndex + 1 < entries.length) {
       const nextCard = entries[Number(currentCardIndex + 1)]
       navigate("/practice/"+ categoryId + "/" + nextCard.id)
       setCurrentCardIndex(currentCardIndex+1)
     } else {
-      navigate("/finish")
+      navigate("/")
     }
   }
 
@@ -125,7 +123,7 @@ export default function Practice () {
       {evaluation === null &&
         <div className="buttoncontainer">
           <button onClick={() => handleSubmit()}>Enter</button>
-          <p className="circlebutton red" onClick={() => next()}>→</p>
+          <button className="red" onClick={() => next()}>Next →</button>
         </div>
       }
       {evaluation !== null &&
