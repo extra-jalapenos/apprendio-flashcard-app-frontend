@@ -3,10 +3,8 @@
     {
       "id": 1,
       "displayname": "Ally",
-      "last": "2023-11-29",
       "statistics": {
-        "correct": 22,
-        "wrong": 0
+        "correct": 26
       }
     }
   ],

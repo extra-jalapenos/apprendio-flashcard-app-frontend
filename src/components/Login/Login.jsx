@@ -5,20 +5,20 @@ import { userContext } from "../../App"
 
 export default function Login () {
 
-  const { loginUser } = useContext(userContext)
+  const { setUser } = useContext(userContext)
 
   const navigate = useNavigate()
   const [knownUsers, setKnownUsers] = useState(null)
   const [knownUser, setKnownUser] = useState(null)
   const [failedLogin, setFailedLogin] = useState(false)
   const [username, setUsername] = useState(null)
+  
   const getUsers = () => {
     const endpoint = "/users"
     fetch(baseURL + endpoint)
       .then(res => res.json())
       .then(data => setKnownUsers(data))
   }
-
   useEffect(getUsers, [])
 
   const handleInput = (event) => {
@@ -29,11 +29,10 @@ export default function Login () {
 
   const handleSubmit = (event) => {
       event.preventDefault()
-      console.log(username)
       const foundUser = knownUsers.find(user => user.displayname === username)
-      console.log(foundUser)
       if (foundUser) {
-        loginUser(foundUser)
+        console.log("logging in handleSubmit", foundUser)
+        setUser(foundUser)
         setFailedLogin(false)
         navigate("/")
       } else {
@@ -42,7 +41,6 @@ export default function Login () {
     }
 
   const createAccount = () => {
-    console.log("Create")
     const endpoint = "/users"
     const body = {
       "displayname": username,
@@ -64,14 +62,10 @@ export default function Login () {
 
     fetch(baseURL + endpoint, options)
       .then(res => res.json())
-      .then(loginUser(body))
+      .then(setUser(body))
       .then(() => navigate("/"))
   }
 
-  const resetLogin = () => {
-    console.log()
-  }
-  
   if (!knownUsers) return (<button>Loading…</button>)
   
   return (

@@ -80,7 +80,6 @@ export default function Practice () {
   
   const getCurrentCard = () => {if (entries && currentCardIndex) {
     setCurrentCard(entries[cardId])
-    console.log("loaded card")
   }
 }
   useEffect(getCurrentCard, [currentCardIndex])
@@ -88,7 +87,6 @@ export default function Practice () {
   const handleEntry = (event) => setUserEntry(event.target.value) 
 
   const handleSubmit = () => {
-    console.log(!!currentCard.answer.match(userEntry))
     currentCard.answer.match(userEntry) ? setEvaluation(true) : setEvaluation(false)
     setShowAnswer(true)
   }

@@ -6,11 +6,11 @@ import CreateCategory from './components/CreateCategory'
 import Practice from './components/Practice'
 import CategorySelection from './components/CategorySelection'
 import Login from './components/Login/Login'
-import Register from './components/Login/Login'
 import Header from './components/header/Header'
 import "./Header.css"
-import Footer from './components/footer/footer'
+import Footer from './components/footer/Footer'
 import "./Footer.css"
+import { baseURL } from './helpers/helpers'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -22,14 +22,22 @@ const initSession = {
 
 export default function App() {
 
-  const [user, setUser] = useState(null)
-  
-  const loginUser = (user) => {
-    setUser(user)
-    sessionStorage.setItem("user", JSON.stringify(user))
-    setSessionStats(user.statistics)
-    sessionStorage.setItem("sessionStats", JSON.stringify(user.statistics))
+  const syncSessionStorage = () => {
+    console.log("running sync", new Date().toTimeString())
+    if (user) {
+      sessionStorage.setItem("user", JSON.stringify(user))
+    }
   }
+
+  const [user, setUser] = useState(null)
+
+  const loadFromStorage = () => {
+    const { user } = sessionStorage
+    console.log("initial load", user)
+    if (user) setUser(JSON.parse(user))
+  }
+
+  useEffect(loadFromStorage, [])
 
   const logoutUser = () => {
     sessionStorage.removeItem("user")
@@ -38,26 +46,49 @@ export default function App() {
     sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
   }
 
-  const [sessionStats, setSessionStats] = useState(JSON.parse(sessionStorage.getItem("sessionStats")) || initSession)
-  const logCorrect = () => {
-    if (user) {
-      const endpoint = "/users/" + user.id
+  useEffect(syncSessionStorage, [user])
+
+  const [sessionStats, setSessionStats] = useState(initSession)
+  
+  const updateUserStats = (type) => {
+    console.log(!!user, "inside updateUserStats")
+    if (!type || !user) return
+    const endpoint = "/users/" + user.id
       const headers = {
         "content-type": "application/json"
       }
-      const options = {
-        method: "PATCH"
-      }
-      const body = {
-        statistics: {correct: user.statistics.correct + 1}
-      }
-    }
 
-    increaseSessionStats("correct")
+      const body = {
+        statistics: {correct: user.statistics[type] + 1}
+      }
+
+      const options = {
+        method: "PATCH",
+        headers: headers,
+        body: JSON.stringify(body)
+      }
+
+      fetch(baseURL + endpoint, options)
+        .then(response => response.json())
+        .catch(error => console.log(error, "error updating user"))
+  }
+  
+  const logCorrect = () => {
+    if (user) {
+      updateUserStats("correct")
+    } else {
+      increaseSessionStats("correct")
+    }
   }
 
-  const logWrong = () => increaseSessionStats("wrong")
-
+  const logWrong = () => {
+    if (user) {
+      updateUserStats("wrong")
+    } else {
+      increaseSessionStats("wrong")
+    }
+  }
+  
   const increaseSessionStats = (keyName) => {
     const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
     const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1} 
@@ -67,7 +98,7 @@ export default function App() {
 
   return (
     <>
-      <userContext.Provider value={{user, loginUser, logoutUser}}>
+      <userContext.Provider value={{user, setUser, logoutUser}}>
       <sessionContext.Provider value={{logWrong, logCorrect, sessionStats, setSessionStats}}>
         <Header />
       <Routes>
