@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { baseURL, entryBlueprint } from "../helpers/constants"
+import { useNavigate } from "react-router"
 
 function DropdownField ({category}) {
   const {id, title} = category
@@ -10,6 +11,8 @@ function DropdownField ({category}) {
 
 export default function CreateEntry() {
   const [categories, setCategories] = useState(null)
+
+  const navigate = useNavigate()
 
   const getCategories = () => {
     const endpoint = "/categories"
@@ -26,31 +29,30 @@ export default function CreateEntry() {
     "question": "",
     "answer": ""
   }
+
   const [form, setForm] = useState(initForm)
+
+  const resetForm = () => setForm(initForm)
 
   const handleInput = (event) => {
     const { name, value } = event.target
     setForm({ ...form, [name]:value })
+    console.log(name, value, form)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // if (!form.answer || !form.question) return
-    // if (form.answer && form.question) 
-    console.log("post")
 
     const endpoint = "/entries"
     const headers = {
       "content-type": "application/json"
     }
 
-    const category = categories.find(category => category.title === form.category)
-
     const body = { ...entryBlueprint,
-      "categoryId": category.id,
-      "last": new Date().toISOString,
+      "categoryId": form.categoryId,
+      "last": new Date().toISOString(),
       "question": form.question,
-      "answer": form.question,
+      "answer": form.answer,
     }
 
     const options = {
@@ -61,22 +63,24 @@ export default function CreateEntry() {
 
     fetch(baseURL + endpoint, options)
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(() => navigate("/new-entry"))
+      .then(() => resetForm())
       .catch(error => console.log("error creating entry", error))
   }
   
   if (!categories) return (<p>Loading…</p>)
 
   return (
-    <form className="twoColumns" onChange={handleInput} onSubmit={handleSubmit}>
+    <form className="twoColumns" onSubmit={handleSubmit}>
       <label>Category</label>
-      <select name="category">
-        {categories.map((category, index) => <DropdownField key={index} category={category}/>)}
+      <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput}>
+        {!form.categoryId && <option>Select Category</option>}
+        {categories.map((category, index) => <option key={index} value={category.id}>{category.title}</option>)}
       </select>
       <label>Question</label>
-      <textarea type="text" name="question" required/>
+      <textarea type="text" name="question" value={form.question} onChange={handleInput} required />
       <label>Answer</label>
-      <textarea type="text" name="answer" required/>
+      <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
       <p></p>
       <button value="Submit">➕ Create</button>
     </form>

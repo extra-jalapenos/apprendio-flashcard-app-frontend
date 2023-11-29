@@ -10,7 +10,6 @@ import Header from './components/header/Header'
 import "./Header.css"
 import Footer from './components/footer/Footer'
 import "./Footer.css"
-import { baseURL } from './helpers/constants'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -33,7 +32,6 @@ export default function App() {
 
   const loadFromStorage = () => {
     const { user } = sessionStorage
-    console.log("initial load", user)
     if (user) setUser(JSON.parse(user))
   }
 
