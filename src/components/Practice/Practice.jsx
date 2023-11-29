@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { baseURL } from "../../helpers/constants"
+import { baseURL, shuffle } from "../../helpers/constants"
 import { sessionContext, userContext } from "../../App"
 
 export default function Practice () {
@@ -38,7 +38,7 @@ export default function Practice () {
       .then(data => {
         const entriesFromCategory = data.filter(entry => entry.categoryId === Number(categoryId))
         setCurrentCardIndex(0)
-        setEntries(entriesFromCategory)
+        setEntries(shuffle(entriesFromCategory))
         navigate("/practice/"+ categoryId + "/" + entriesFromCategory[0].id)
         setCurrentCard(entriesFromCategory[0])
       })

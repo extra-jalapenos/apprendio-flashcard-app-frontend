@@ -12,4 +12,4 @@ export const entryBlueprint = {
 "answer": ""
 }
 
-const shuffle = (array) => array.sort(() => Math.random() - 0.5)
+export const shuffle = (array) => array.sort(() => Math.random() - 0.5)
