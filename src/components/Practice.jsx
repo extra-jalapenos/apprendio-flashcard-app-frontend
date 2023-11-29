@@ -20,6 +20,7 @@ function CardPair ({props, revealAnswer, handleEntry}) {
 function CardStats ({props}) {
   const { repetitions, stage } = props
   const { cardId } = useParams()
+  if (!cardId) return
   const totalrepetitions = repetitions.correct + repetitions.wrong
   return (
     <>
@@ -80,6 +81,8 @@ export default function Practice () {
   useEffect(getEntries, [])
   
   const getCurrentCard = () => {if (entries && currentCardIndex) {
+    setShowAnswer(false)
+    setEvaluation(null)
     setCurrentCard(entries[cardId])
   }
 }
@@ -98,6 +101,7 @@ export default function Practice () {
     } else {
       increaseSessionStats("correct")
     }
+    setUserEntry("")
     next()
   }
   
@@ -107,6 +111,7 @@ export default function Practice () {
     } else {
       increaseSessionStats("wrong")
     }
+    setUserEntry("")
     next()
   }
 
@@ -156,7 +161,7 @@ export default function Practice () {
 
   if (!category) return
 
-  if (!entries) {
+  if (entries && entries.length === 0) {
     return (
       <>
         <h3>Whoops! There are no entries for {category.title}</h3>

@@ -4,8 +4,8 @@
       "id": 1,
       "displayname": "Ally",
       "statistics": {
-        "correct": 42,
-        "wrong": 10
+        "correct": 1,
+        "wrong": 0
       }
     }
   ],
@@ -19,6 +19,19 @@
       "id": 2,
       "title": "French",
       "author": "Ally"
+    },
+    {
+      "user": {
+        "id": 1,
+        "displayname": "Ally",
+        "statistics": {
+          "correct": 1,
+          "wrong": 0
+        }
+      },
+      "entries": [],
+      "title": "Boolean",
+      "id": 3
     }
   ],
   "entries": [

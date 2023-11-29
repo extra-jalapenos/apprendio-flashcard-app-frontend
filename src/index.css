@@ -70,7 +70,7 @@ body {
   grid-template-columns: repeat(auto-fit, 25%);
 }
 
-button, input {
+button, input, select {
   border-radius: 1em;
   border: 1px solid transparent;
   padding: 0.5em;
@@ -130,6 +130,10 @@ input, button {
 
 input {
   padding: 0.5rem 1rem;
+}
+
+select {
+  padding: 0.5rem;
 }
 
 textarea {

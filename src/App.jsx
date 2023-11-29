@@ -23,7 +23,7 @@ const initSession = {
 export default function App() {
 
   const syncSessionStorage = () => {
-    console.log("running sync", new Date().toTimeString())
+    // console.log("running sync", new Date().toTimeString())
     if (user) {
       sessionStorage.setItem("user", JSON.stringify(user))
     }
@@ -58,9 +58,9 @@ export default function App() {
       <Routes>
         <Route path={"/"} element={<Start />}/>
         <Route path={"/login"} element={<Login />}/>
-        <Route path={"/:categoryId/create-entry"} element={<CreateEntry />}/>
         <Route path={"/create-category"} element={<CreateCategory />}/>
         <Route path={"/select-category"} element={<CategorySelection />}/>
+        <Route path={"/new-entry"} element={<CreateEntry />}/>
         <Route path={"/practice/:categoryId/"} element={<Practice />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
       </Routes>

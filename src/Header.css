@@ -13,7 +13,14 @@ nav {
 nav button, label {
   border-radius: 1em;
   padding: 0.5rem 1rem;
-  margin: 0.25rem 0.5rem ;
+  margin: 0.25rem 0.5rem;
   background-color: var(--grey);
   mix-blend-mode: multiply;
+}
+
+label {
+  border-radius: 1em;
+  padding: 0.5rem 1rem;
+  margin: 1em;
+  margin-bottom: auto;
 }
