@@ -71,7 +71,7 @@ export default function Login () {
   if (!knownUsers) return (<button>Loading…</button>)
   
   return (
-    <>
+    <div className="center">
       <form onSubmit={handleSubmit}>
         <label>Username</label>
         <input name="username" onChange={handleInput}/>
@@ -85,6 +85,6 @@ export default function Login () {
             </div>)
         }
       </form>
-    </>
+    </div>
   )
 }

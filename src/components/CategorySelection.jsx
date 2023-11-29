@@ -22,7 +22,7 @@ export default function LanguageSelection () {
 
   return (
     <>
-      <h2>Select your category</h2>
+      <h2 className="center">Select your category</h2>
       <div className="autoColumns">
         {categories.map((category, index) => <label key={index} onClick={() => navigate("/practice/"+category.id+"/")}>{category.title}</label>)}
         <button onClick={() => navigate("/create-category")}>Create new category</button>
