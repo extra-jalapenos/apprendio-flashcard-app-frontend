@@ -43,7 +43,8 @@ export default function CreateEntry() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-
+    if (!form.categoryId) return
+    
     const endpoint = "/entries"
 
     const body = { ...entryBlueprint,
@@ -74,7 +75,7 @@ export default function CreateEntry() {
   return (
     <form className="twoColumns" onSubmit={handleSubmit}>
       <label>Category</label>
-      <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput}>
+      <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput} required>
         {!form.categoryId && <option>Select Category</option>}
         {categories.map((category, index) => <option key={index} value={category.id}>{category.title}</option>)}
       </select>
@@ -83,7 +84,7 @@ export default function CreateEntry() {
       <label>Answer</label>
       <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
       <label>Clue / Context</label>
-      <textarea type="text" name="clue" value={form.clue} onChange={handleInput}  required />
+      <textarea type="text" name="clue" value={form.clue} onChange={handleInput} />
       <p></p>
       <button value="Submit">➕ Create</button>
     </form>

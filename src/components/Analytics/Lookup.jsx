@@ -1,5 +1,7 @@
 import { baseURL, headers } from "../../helpers/constants"
 import { useEffect, useState } from "react"
+import CreateEntry from "../CreateEntry"
+import { useNavigate } from "react-router"
 
 function ListPair ({card}) {
   const {prompt, answer} = card
@@ -12,11 +14,24 @@ function ListPair ({card}) {
 }
 
 function CategorySection ({title, entries}) {
-  return (
+  const navigate = useNavigate()
+  
+  if (!entries.length) return (
     <section>
       <h2>{title}</h2>
       <div className="list">
-        {!entries.length && <>NO ENTRIES</>}
+        <p className="listentry twoColumns">
+          <p>No entries yet – do you want to create one?</p>
+          <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
+        </p>
+      </div>
+    </section>
+  )
+
+  return (
+    <section>
+      <h2>{title} – {entries.length} {entries.length === 1 ? "entry" : "entries"}</h2>
+      <div className="list">
         {entries && entries.map((entry, index) => <ListPair key={index} card={entry}/>)}
       </div>
     </section>

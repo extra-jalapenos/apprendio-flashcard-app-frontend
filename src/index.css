@@ -17,6 +17,9 @@
   --white: rgba(255,255,255, 0.33);
   --grey: rgba(150, 150, 150, 0.5);
 
+  --lightWhite: rgba(255, 255, 255, 0.1);
+  --mediumWhite: rgba(255, 255, 255, 0.25);
+
   background: linear-gradient(-45deg, 
   rgb(47, 109, 129) 0%,
   rgb(40, 18, 79) 100%);
@@ -150,12 +153,17 @@ input, button {
 }
 
 .listentry {
-  border-radius: 1em;
-  margin: 0;
+  border-radius: 1rem;
+  margin: 1rem 0;
 }
 
 .list .listentry:nth-child(even) {
-  background-color: var(--white);
+  background-color: var(--lightWhite);
+}
+
+.list .listentry:nth-child(odd) {
+  background-color: var(--mediumWhite);
+  mix-blend-mode: multiply;
 }
 
 .listentry p {
@@ -183,8 +191,9 @@ textarea {
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 500ms;
 }
-/* 
-@media (prefers-color-scheme: light) {
+
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     --grey: rgba(240, 240, 240, 1);
