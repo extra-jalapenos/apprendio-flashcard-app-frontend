@@ -32,6 +32,6 @@ export const timeToNextPracticeObj = () => {
   return obj
 }
 
-export const siteTitle = "7️⃣ 🧠 🛁 Seven Brains"
+export const siteTitle = "🧠"
 
 export const shuffle = (array) => array.sort(() => Math.random() - 0.5)

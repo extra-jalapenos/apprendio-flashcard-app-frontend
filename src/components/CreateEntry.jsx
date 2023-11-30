@@ -72,7 +72,8 @@ export default function CreateEntry() {
   </div>)
 
   return (
-    <form className="twoColumns" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+      <div className="twoColumns" >
       <label>Category</label>
       <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput} required>
         {!form.categoryId && <option>Select Category</option>}
@@ -84,8 +85,11 @@ export default function CreateEntry() {
       <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
       <label>Clue / Context</label>
       <textarea type="text" name="clue" value={form.clue} onChange={handleInput} />
-      <p></p>
-      {!!form.categoryId && <button value="Submit">➕ Create</button>}
+      </div>
+      <div className="buttoncontainer">
+        {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}
+        {(form.prompt || form.answer || form.clue) && <button onClick={resetForm}>clear</button>}
+      </div>
     </form>
   )
 }

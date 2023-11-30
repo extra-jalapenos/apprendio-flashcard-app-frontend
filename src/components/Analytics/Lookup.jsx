@@ -4,21 +4,27 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"
 
-function ListPair ({card}) {
+function ListPair ({card, getEntries}) {
   const {prompt, answer, stage} = card
+
+  const handleDelete = () => {
+    deleteEntry(card.id)
+    getEntries()
+  }
+
   return (
     <div className="listentry threeColumns">
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
         <p className={stage >= maxStage ? "circlebutton green" : "circlebutton"}>{stage}</p>
-        <p className="circlebutton delete red" onClick={() => deleteEntry(card.id)}>🗑️</p>
+        <p className="circlebutton delete red" onClick={handleDelete}>🗑️</p>
       </div>
     </div>
   )
 }
 
-function CategorySection ({title, entries}) {
+function CategorySection ({title, entries, getEntries}) {
   const navigate = useNavigate()
 
   if (!entries.length) return (
@@ -40,14 +46,19 @@ function CategorySection ({title, entries}) {
     <section>
       <h2>{title} – {entries.length} {entries.length === 1 ? "entry" : "entries"} – {donePercent}% done</h2>
       <div className="list">
-        {entries && entries.map((entry, index) => <ListPair key={index} card={entry}/>)}
+        {entries && entries.map((entry, index) => <ListPair key={index} card={entry} getEntries={getEntries}/>)}
       </div>
     </section>
   )
 }
 
 export default function Lookup() {
+
   const [categories, setCategories] = useState(null)
+  const [entries, setEntries] = useState(null)
+  const [filteredEntries, setFilteredEntries] = useState(null)
+  const [searchText, setSearchText] = useState("")
+
   const getCategories = () => {
     const endpoint = "/categories"
 
@@ -58,21 +69,14 @@ export default function Lookup() {
   }
   useEffect(getCategories, [])
 
-  const [entries, setEntries] = useState(null)
-  const [filteredEntries, setFilteredEntries] = useState(null)
-  const [searchText, setSearchText] = useState("")
-
   const getEntries = () => {
     const endpoint = "/entries"
-
     fetch(baseURL + endpoint)
       .then(response => response.json())
       .then(data => setEntries(data))
       .catch(error => console.log("error getting entries", error))
   }
   useEffect(getEntries, [])
-
-  const entriesFromCategory = (categoryId) => entries.filter(entry => entry.categoryId === categoryId)
 
   const filterEntries = () => {
     if (!entries) return
@@ -94,7 +98,10 @@ export default function Lookup() {
     <section>
       <Searchbar handleInput={handleInput}/>
     </section>
-    {categories.map((category, index) => <CategorySection key={index} title={category.title} entries={filteredEntries.filter(entry => entry.categoryId === category.id)} />)}
+    {categories.map((category, index) => <CategorySection key={index} 
+    title={category.title} 
+    entries={filteredEntries.filter(entry => entry.categoryId === category.id)} 
+    getEntries={getEntries}/>)}
     </>
   )
 }
