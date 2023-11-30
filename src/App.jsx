@@ -19,6 +19,8 @@ const initSession = {
   "wrong": 0
 }
 
+useEffect(() => setSessionStats(initSession), [])
+
 export default function App() {
 
   const syncSessionStorage = () => {
