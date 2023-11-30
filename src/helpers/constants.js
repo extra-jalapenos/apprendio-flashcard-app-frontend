@@ -18,6 +18,20 @@ export const entryBlueprint = {
 
 export const maxStage = 10
 
+const dayInMilliseconds = 1000 * 60 * 60 * 24
+
+const timeToNextPractice = (stage) => stage ** 2.4 * dayInMilliseconds
+
+export const timeToNextPracticeObj = () => {
+  const obj = {}
+
+  for (let i = 0; i <= maxStage; i++) {
+    obj[String(i)] = parseInt(timeToNextPractice(i).toFixed(0))
+  }
+
+  return obj
+}
+
 export const siteTitle = "7️⃣ 🧠 🛁 Seven Brains"
 
 export const shuffle = (array) => array.sort(() => Math.random() - 0.5)

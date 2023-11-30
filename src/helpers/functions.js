@@ -49,3 +49,9 @@ export const deleteCategory = (id) => {
     .then(data => console.log(data))
     .catch(error => console.log("error deleting entry, id:", id, error))
 }
+
+export const readyForPractice = (stringDate, minTime) => {
+  const last = new Date(stringDate)
+  if (!!last) return true
+  minTime <= new Date() - new Date(stringDate)
+}

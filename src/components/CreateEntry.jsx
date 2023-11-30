@@ -85,7 +85,7 @@ export default function CreateEntry() {
       <label>Clue / Context</label>
       <textarea type="text" name="clue" value={form.clue} onChange={handleInput} />
       <p></p>
-      <button value="Submit">➕ Create</button>
+      {!!form.categoryId && <button value="Submit">➕ Create</button>}
     </form>
   )
 }
