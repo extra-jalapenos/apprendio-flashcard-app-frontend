@@ -5,8 +5,7 @@ export default function Start() {
   
   return (
     <div className="center">
-      <h1>Welcome back!</h1>
-      <p>Choose what you want to do today!</p>
+      <h2>Welcome back!</h2>
       <button onClick={() => navigate("/select-category")}>Practice</button>
       <button onClick={() => navigate("/new-entry")}>Create entries</button>
       <button  onClick={() => navigate("/lookup")}>Look up</button>

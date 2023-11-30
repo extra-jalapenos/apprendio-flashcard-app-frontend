@@ -7,6 +7,14 @@
         "correct": 0,
         "wrong": 0
       }
+    },
+    {
+      "displayname": "Login",
+      "statistics": {
+        "correct": 0,
+        "wrong": 0
+      },
+      "id": 2
     }
   ],
   "categories": [
@@ -21,22 +29,10 @@
       "author": "Ally"
     },
     {
-      "author": "unknown",
-      "title": "TestCategory",
+      "author": "Ally",
+      "title": "Hyperspecific knowledge about selected artists",
       "entries": [],
       "id": 3
-    },
-    {
-      "author": "Ally",
-      "title": "TestNew",
-      "entries": [],
-      "id": 4
-    },
-    {
-      "author": "Ed",
-      "title": "new",
-      "entries": [],
-      "id": 5
     }
   ],
   "entries": [
@@ -158,7 +154,7 @@
       "last": "2023-11-29",
       "repetitions": {
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "prompt": "un afflux / une affluence",
       "answer": "Ansturm, Andrang, Zustrom"
@@ -230,7 +226,7 @@
       "last": "2023-11-29",
       "repetitions": {
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "prompt": "en son âme et conscience",
       "answer": "nach bestem Wissen und Gewissen"
@@ -346,10 +342,10 @@
     {
       "id": 26,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-11-30T13:56:56.659Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "un arbuste",
@@ -406,10 +402,10 @@
     {
       "id": 31,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-11-30T13:56:39.790Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "un artiste",
@@ -686,7 +682,7 @@
       "last": "2023-11-29",
       "repetitions": {
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "prompt": "la boîte",
       "answer": "Quand vous licenciez des gens qui ont quinze ans de boîte, qui sont presque des frères, c’est très compliqué. (…die fünfzehn Jahre im Betrieb beschäftigt waren…) "
@@ -886,10 +882,10 @@
     {
       "id": 71,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-11-30T13:57:00.241Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "les carottes sont cuites fam.",
@@ -958,10 +954,10 @@
     {
       "id": 77,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-11-30T13:56:53.327Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "la case",
@@ -1222,10 +1218,10 @@
     {
       "id": 99,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-11-30T13:56:58.961Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "la communication d’enteprise",
@@ -1354,10 +1350,10 @@
     {
       "id": 110,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-11-30T13:57:01.375Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 1
       },
       "prompt": "la coque",
@@ -1400,82 +1396,17 @@
       "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
     },
     {
-      "categoryId": "1",
-      "stage": 0,
-      "last": "2023-11-30T10:04:55.413Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "Test",
-      "answer": "Test",
-      "clue": "Test",
-      "id": 116
-    },
-    {
-      "categoryId": 5,
-      "stage": 2,
-      "last": "2023-11-30T11:06:51.958Z",
-      "repetitions": {
-        "correct": 2,
-        "wrong": 0
-      },
-      "prompt": "Test",
-      "answer": "Test",
-      "clue": "Test",
-      "id": 117
-    },
-    {
-      "categoryId": "1",
-      "stage": 0,
-      "last": "2023-11-30T10:17:18.810Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "Asda",
-      "answer": "asdas",
-      "clue": "asda",
-      "id": 118
-    },
-    {
-      "categoryId": "5",
-      "stage": 0,
-      "last": "2023-11-30T11:04:04.882Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "Test",
-      "answer": "test",
-      "clue": "test",
-      "id": 119
-    },
-    {
       "categoryId": 3,
       "stage": 0,
-      "last": "2023-11-30T11:05:37.072Z",
+      "last": "2023-11-30T14:09:18.466Z",
       "repetitions": {
         "correct": 0,
         "wrong": 0
       },
-      "prompt": "asdasdad",
-      "answer": "asasdasd",
-      "clue": "",
-      "id": 120
-    },
-    {
-      "categoryId": "2",
-      "stage": 0,
-      "last": "2023-11-30T11:06:16.639Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "asdsa",
-      "answer": "asdad",
-      "clue": "",
-      "id": 121
+      "prompt": "What is Taylor Swift's middle name?",
+      "answer": "Alison",
+      "clue": "The company that is used to apply and manage the copyright for her brand and related phrases is using her initials: TAS Rights Management LLC",
+      "id": 122
     }
   ]
 }

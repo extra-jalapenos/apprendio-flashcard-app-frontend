@@ -113,7 +113,6 @@ export default function Practice () {
 
     fetch(baseURL + endpoint, options)
       .then(response => response.json())
-      .then(data => console.log(data, "success"))
       .catch(error => console.log("error registering change in card", error))
   }
 
@@ -125,14 +124,12 @@ export default function Practice () {
   }
 
   const updateUserStats = (type) => {
-    console.log(!!user, "inside updateUserStats")
     if (!type || !user) return
     const endpoint = "/users/" + user.id
 
       const body = {
         statistics: {...user.statistics, [type]: user.statistics[type] + 1}
       }
-      console.log(body)
 
       const options = {
         method: "PATCH",

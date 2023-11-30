@@ -29,11 +29,12 @@ export default function Login () {
 
   const handleSubmit = (event) => {
       event.preventDefault()
+      console.log("Here")
       const foundUser = knownUsers.find(user => user.displayname === username)
       if (foundUser) {
-        console.log("logging in handleSubmit", foundUser)
         setUser(foundUser)
         sessionStorage.removeItem("sessionStats")
+        console.log("Here2")
         setFailedLogin(false)
         navigate("/select-category")
       } else {
@@ -72,16 +73,19 @@ export default function Login () {
   return (
     <div className="center">
       <form onSubmit={handleSubmit}>
+        <h2>Login</h2>
         <label>Username</label>
         <input name="username" onChange={handleInput}/>
         <button value={"Submit"}>Submit</button>
         {failedLogin && knownUser === false && !!username && 
-              (<div>
-              <h3>Oh hi, {username}!</h3>
-              <p>You seem new here – do you want to create an account?</p>
-              <button className="green" onClick={createAccount}>Create Account</button>
-              <button className="red">Cancel</button>
-            </div>)
+          (
+          <div>
+            <h3>Oh hi, {username}!</h3>
+            <p>You seem new here – do you want to create an account?</p>
+            <button className="green" onClick={createAccount}>Create Account</button>
+            <button className="red">Cancel</button>
+          </div>
+          )
         }
       </form>
     </div>

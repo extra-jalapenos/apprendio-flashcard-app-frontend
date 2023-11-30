@@ -9,6 +9,7 @@ import Login from './components/Login/Login'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Lookup from './components/Analytics/Lookup'
+import Analytics from './components/Analytics/Analytics'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -29,7 +30,6 @@ export default function App() {
   }, [])
 
   const syncSessionStorage = () => {
-    // console.log("running sync", new Date().toTimeString())
     if (user) {
       sessionStorage.setItem("user", JSON.stringify(user))
     }
@@ -65,9 +65,10 @@ export default function App() {
         <Route path={"/create-category"} element={<CreateCategory />}/>
         <Route path={"/select-category"} element={<CategorySelection />}/>
         <Route path={"/new-entry"} element={<CreateEntry />}/>
-        <Route path={"/practice/:categoryId/"} element={<Practice />}/>
+        <Route path={"/practice/:categoryId"} element={<Practice />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
         <Route path={"/lookup/"} element={<Lookup />}/>
+        <Route path={"/analytics/"} element={<Analytics />}/>
       </Routes>
       </main>
         <Footer />

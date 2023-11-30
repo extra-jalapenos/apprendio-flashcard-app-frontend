@@ -2,6 +2,7 @@ import { baseURL, headers, maxStage } from "../../helpers/constants"
 import { deleteEntry } from "../../helpers/functions"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
+import Searchbar from "./Searchbar"
 
 function ListPair ({card}) {
   const {prompt, answer, stage} = card
@@ -58,6 +59,9 @@ export default function Lookup() {
   useEffect(getCategories, [])
 
   const [entries, setEntries] = useState(null)
+  const [filteredEntries, setFilteredEntries] = useState(null)
+  const [searchText, setSearchText] = useState("")
+
   const getEntries = () => {
     const endpoint = "/entries"
 
@@ -70,12 +74,27 @@ export default function Lookup() {
 
   const entriesFromCategory = (categoryId) => entries.filter(entry => entry.categoryId === categoryId)
 
+  const filterEntries = () => {
+    if (!entries) return
+    if (!searchText.length) return setFilteredEntries(entries)
+    const filteredForText = entries.filter(entry => !!entry.prompt.match(searchText) || !!entry.answer.match(searchText))
+    setFilteredEntries(filteredForText)
+  }
+
+  const handleInput = (event) => setSearchText(event.target.value)
+  
+  useEffect(filterEntries, [entries, searchText])
+
   if (!categories) return <div className="center">Loading categories</div>
   if (!entries) return <div className="center">Loading entries</div>
+  if (!filteredEntries) return <div className="center">Filtering entries</div>
 
   return (
     <>
-    {categories.map((category, index) => <CategorySection key={index} title={category.title} entries={entriesFromCategory(category.id)} />)}
+    <section>
+      <Searchbar handleInput={handleInput}/>
+    </section>
+    {categories.map((category, index) => <CategorySection key={index} title={category.title} entries={filteredEntries.filter(entry => entry.categoryId === category.id)} />)}
     </>
   )
 }

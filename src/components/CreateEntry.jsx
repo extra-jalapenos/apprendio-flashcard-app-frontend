@@ -38,7 +38,6 @@ export default function CreateEntry() {
   const handleInput = (event) => {
     const { name, value } = event.target
     setForm({ ...form, [name]:value })
-    console.log(name, value, form)
   }
 
   const handleSubmit = (event) => {
@@ -48,7 +47,7 @@ export default function CreateEntry() {
     const endpoint = "/entries"
 
     const body = { ...entryBlueprint,
-      "categoryId": form.categoryId,
+      "categoryId": Number(form.categoryId),
       "last": new Date().toISOString(),
       "prompt": form.prompt,
       "answer": form.answer,

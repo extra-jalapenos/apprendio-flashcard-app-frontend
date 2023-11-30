@@ -17,4 +17,4 @@
 - [ ] User can see how entries are distributed over the different stages of learning
 ### Extended
 - [ ] The user sees how many words they've practiced today, how many of them were right
-- [x] total practice stats
+- [x] The user sees total practice stats

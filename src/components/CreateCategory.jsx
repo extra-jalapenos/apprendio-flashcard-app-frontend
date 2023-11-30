@@ -59,13 +59,13 @@ export default function CreateCategory () {
   </div>)
 
   return (
-    <>
+    <main className="center">
     <h2>Create new category</h2>
     <form onChange={handleChange} onSubmit={handleSubmit}>
       <label>Name</label>
       <input name="title"/>
       <button>Create</button>
     </form>
-    </>
+    </main>
   )
 }
