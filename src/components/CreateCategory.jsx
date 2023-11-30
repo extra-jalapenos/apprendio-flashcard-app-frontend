@@ -1,7 +1,7 @@
 import { userContext } from "../App"
 import { baseURL, headers } from "../helpers/constants"
 import { useContext, useEffect, useState } from "react"
-import { Navigate, useNavigate } from "react-router"
+import { useNavigate } from "react-router"
 
 export default function CreateCategory () {
   const {user} = useContext(userContext)
@@ -29,11 +29,16 @@ export default function CreateCategory () {
   const createCategory = () => {
     
     const endpoint = "/categories"
+    const body = {
+      "author": (user ? user.displayname : "unknown"),
+      "title": form.title,
+      "entries": []
+    }
 
     const options = {
       method: "POST",
       headers: headers,
-      body: JSON.stringify(form)
+      body: JSON.stringify(body)
     }
 
     fetch(baseURL + endpoint, options)

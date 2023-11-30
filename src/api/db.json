@@ -4,7 +4,7 @@
       "id": 1,
       "displayname": "Ally",
       "statistics": {
-        "correct": 1,
+        "correct": 0,
         "wrong": 0
       }
     }
@@ -21,22 +21,15 @@
       "author": "Ally"
     },
     {
-      "user": {
-        "id": 1,
-        "displayname": "Ally",
-        "statistics": {
-          "correct": 1,
-          "wrong": 0
-        }
-      },
+      "author": "Ally",
+      "title": "Nolan",
       "entries": [],
-      "title": "Boolean",
       "id": 3
     },
     {
-      "user": "unknown",
+      "author": "unknown",
+      "title": "Test",
       "entries": [],
-      "title": "Taylor Swift",
       "id": 4
     }
   ],
