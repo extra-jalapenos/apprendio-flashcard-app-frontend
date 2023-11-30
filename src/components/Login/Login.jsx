@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { baseURL } from "../../helpers/constants"
+import { baseURL, headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../App"
 
@@ -49,10 +49,6 @@ export default function Login () {
         "correct": 0,
         "wrong": 0
       }
-    }
-    
-    const headers = {
-      "content-type": "application/json",
     }
 
     const options = {

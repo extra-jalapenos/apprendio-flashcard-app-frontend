@@ -12,6 +12,12 @@ export const entryBlueprint = {
 "answer": ""
 }
 
+export const headers = {
+  "content-type": "application/json"
+}
+
+export const maxStage = 10
+
 export const siteTitle = "7️⃣ 🧠 🛁 Seven Brains"
 
 export const shuffle = (array) => array.sort(() => Math.random() - 0.5)

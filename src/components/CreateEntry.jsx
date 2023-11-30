@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { baseURL, entryBlueprint } from "../helpers/constants"
+import { baseURL, headers, entryBlueprint } from "../helpers/constants"
 import { useNavigate } from "react-router"
 
 function DropdownField ({category}) {
@@ -45,9 +45,6 @@ export default function CreateEntry() {
     event.preventDefault()
 
     const endpoint = "/entries"
-    const headers = {
-      "content-type": "application/json"
-    }
 
     const body = { ...entryBlueprint,
       "categoryId": form.categoryId,

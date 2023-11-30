@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { baseURL, shuffle } from "../../helpers/constants"
+import { baseURL, headers, shuffle, maxStage } from "../../helpers/constants"
 import { sessionContext, userContext } from "../../App"
 
 export default function Practice () {
@@ -63,16 +63,21 @@ export default function Practice () {
   }
 
   const logCorrect = () => {
+    increaseCardStats("correct")
+
     if (user) {
       updateUserStats("correct")
     } else {
       increaseSessionStats("correct")
     }
+    
     setUserEntry("")
     next()
   }
   
   const logWrong = () => {
+    increaseCardStats("wrong")
+
     if (user) {
       updateUserStats("wrong")
     } else {
@@ -80,6 +85,36 @@ export default function Practice () {
     }
     setUserEntry("")
     next()
+  }
+
+  const increaseCardStats = (keyName) => {
+    const endpoint = "/entries/" + currentCard.id
+
+    const body = {
+      "repetitions": {
+        ...currentCard.repetitions,
+        [keyName]: currentCard.repetitions[keyName] + 1
+      }
+    }
+
+    if (currentCard.stage < maxStage && keyName === "correct") {
+      body.stage = currentCard.stage + 1
+    }
+
+    if (keyName === correct) {
+      body.last = new Date().toISOString()
+    }
+    
+    const options = {
+      method: "PATCH",
+      headers: headers,
+      body: JSON.stringify(body)
+    }
+
+    fetch(baseURL + endpoint, options)
+      .then(response => response.json())
+      .then(data => console.log(data, "success"))
+      .catch(error => console.log("error registering change in card", error))
   }
 
   const increaseSessionStats = (keyName) => {
@@ -93,9 +128,6 @@ export default function Practice () {
     console.log(!!user, "inside updateUserStats")
     if (!type || !user) return
     const endpoint = "/users/" + user.id
-      const headers = {
-        "content-type": "application/json"
-      }
 
       const body = {
         statistics: {...user.statistics, [type]: user.statistics[type] + 1}

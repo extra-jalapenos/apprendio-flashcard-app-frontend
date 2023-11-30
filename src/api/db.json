@@ -51,7 +51,10 @@
         "wrong": 0
       },
       "prompt": "les abords m. pl. d’une ville",
-      "answer": "die unmittelbare Umgebung einer Stadt"
+      "answer": "die unmittelbare Umgebung einer Stadt",
+      "statistics": {
+        "correct": 26
+      }
     },
     {
       "id": 2,
