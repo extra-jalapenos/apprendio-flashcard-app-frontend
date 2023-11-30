@@ -58,18 +58,14 @@ export default function BatchImport () {
 
   return (
     <>
+      <main className="center">
       <h2>Batch create entries</h2>
-      <main>
-        <div className="center twoColumns">
-          <p>Don't know how to start?</p>
-          {/* <p className="buttoncontainer"> */}
-            <DownloadButton url={"./src/assets/ImportTemplate.xlsx"} text="Download template"/>
-          {/* </p> */}
-        </div>
       <form onSubmit={handleSubmitXLSX}>
         <input type="file" accept="text/csv *.xlsx" onInput={handleInput}/>
         <button>Start import</button>
       </form>
+      <h3>Don't know how to start?</h3>
+      <DownloadButton url={"./src/assets/ImportTemplate.xlsx"} text="Download template"/>
       </main>
     </>
   )
