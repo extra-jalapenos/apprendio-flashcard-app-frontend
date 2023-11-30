@@ -4,18 +4,21 @@ import CreateEntry from "../CreateEntry"
 import { useNavigate } from "react-router"
 
 function ListPair ({card}) {
-  const {prompt, answer} = card
+  const {prompt, answer, stage} = card
   return (
-    <p className="listentry twoColumns">
+    <p className="listentry threeColumns">
       <p>{prompt}</p>
       <p>{answer}</p>
+      <div className="buttoncontainer">
+        <p className="circlebutton">{stage}</p>
+      </div>
     </p>
   )
 }
 
 function CategorySection ({title, entries}) {
   const navigate = useNavigate()
-  
+
   if (!entries.length) return (
     <section>
       <h2>{title}</h2>
