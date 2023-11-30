@@ -1,18 +1,19 @@
-import { baseURL, headers } from "../../helpers/constants"
+import { baseURL, headers, maxStage } from "../../helpers/constants"
+import { deleteEntry } from "../../helpers/functions"
 import { useEffect, useState } from "react"
-import CreateEntry from "../CreateEntry"
 import { useNavigate } from "react-router"
 
 function ListPair ({card}) {
   const {prompt, answer, stage} = card
   return (
-    <p className="listentry threeColumns">
+    <div className="listentry threeColumns">
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
-        <p className="circlebutton">{stage}</p>
+        <p className={stage >= maxStage ? "circlebutton green" : "circlebutton"}>{stage}</p>
+        <p className="circlebutton delete red" onClick={() => deleteEntry(card.id)}>🗑️</p>
       </div>
-    </p>
+    </div>
   )
 }
 
@@ -23,17 +24,20 @@ function CategorySection ({title, entries}) {
     <section>
       <h2>{title}</h2>
       <div className="list">
-        <p className="listentry twoColumns">
-          <p>No entries yet – do you want to create one?</p>
-          <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
-        </p>
+        <div className="listentry">
+          <p>No entries yet</p>
+          <p>… do you want to create one?</p>
+          <button onClick={() => navigate("/new-entry")}>➕ Add</button>
+        </div>
       </div>
     </section>
   )
+  
+  const donePercent = Number((entries.filter(entry => entry.stage >= maxStage).length) / entries.length * 100).toFixed(0)
 
   return (
     <section>
-      <h2>{title} – {entries.length} {entries.length === 1 ? "entry" : "entries"}</h2>
+      <h2>{title} – {entries.length} {entries.length === 1 ? "entry" : "entries"} – {donePercent}% done</h2>
       <div className="list">
         {entries && entries.map((entry, index) => <ListPair key={index} card={entry}/>)}
       </div>

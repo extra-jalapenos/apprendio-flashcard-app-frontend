@@ -162,10 +162,10 @@ export default function Practice () {
 
   if (entries && entries.length === 0) {
     return (
-      <>
+      <div className="center">
         <h3>Whoops! There are no entries for {category.title}</h3>
         <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
-      </>
+      </div>
     )
   }
 

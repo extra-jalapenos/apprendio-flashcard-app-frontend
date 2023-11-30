@@ -1,5 +1,9 @@
 export const baseURL = "http://localhost:3000"
 
+export const headers = {
+  "content-type": "application/json"
+}
+
 export const entryBlueprint = {
   "categoryId": "",
   "stage": 0,
@@ -10,10 +14,6 @@ export const entryBlueprint = {
   },
 "prompt": "", 
 "answer": ""
-}
-
-export const headers = {
-  "content-type": "application/json"
 }
 
 export const maxStage = 10

@@ -1390,7 +1390,7 @@
     {
       "id": 114,
       "categoryId": 2,
-      "stage": 0,
+      "stage": 10,
       "last": "2023-11-29",
       "repetitions": {
         "correct": 0,
@@ -1398,19 +1398,6 @@
       },
       "prompt": "au premier abord / de prime abord",
       "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
-    },
-    {
-      "categoryId": 1,
-      "stage": 0,
-      "last": "2023-11-30T10:04:31.914Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "Test Entry",
-      "answer": "Answer",
-      "clue": "asd",
-      "id": 115
     },
     {
       "categoryId": "1",

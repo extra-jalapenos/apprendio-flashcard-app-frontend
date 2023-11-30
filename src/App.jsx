@@ -7,9 +7,7 @@ import Practice from './components/Practice/Practice'
 import CategorySelection from './components/CategorySelection'
 import Login from './components/Login/Login'
 import Header from './components/header/Header'
-import "./Header.css"
 import Footer from './components/footer/Footer'
-import "./Footer.css"
 import Lookup from './components/Analytics/Lookup'
 
 const userContext = createContext()

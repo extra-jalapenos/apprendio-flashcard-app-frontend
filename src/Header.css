@@ -12,11 +12,11 @@ nav {
 }
 
 nav button, label {
+  background-color: var(--buttonbackground);
+  mix-blend-mode: multiply;
   border-radius: 1em;
   padding: 0.5rem 1rem;
   margin: 0.25rem 0.5rem;
-  background-color: var(--grey);
-  mix-blend-mode: multiply;
 }
 
 label {

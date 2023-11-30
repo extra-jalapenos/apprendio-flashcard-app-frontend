@@ -7,22 +7,21 @@
   --textcolor: var(--black);
   color:  rgba(255, 255, 255, 0.8);
 
-  --pink: rgba(255, 83, 189, 0.5);
-  --red: rgba(235, 0, 59, 0.5);
-  --orange: rgb(255, 232, 200);
-  --yellow: rgba(255,252,198,1);
-  --green: rgba(0, 235, 110, 0.5);
-  --blue: rgba(0, 176, 235, 0.5);
-  --violet: rgba(91, 0, 182, 0.5);
-  --white: rgba(255,255,255, 0.33);
+  --pink: rgb(129, 39, 94, 0.8);
+  --red: rgb(136, 33, 59, 0.8);
+  --orange: rgb(127, 92, 43, 0.8);
+  --yellow: rgba(125, 119, 0, 0.8);
+  --green: rgba(52, 98, 86, 0.8);
+  --blue: rgba(26, 64, 99, 0.8);
+  --violet: rgba(59, 0, 119, 0.8);
+  --white: rgba(116, 116, 116, 0.33);
   --grey: rgba(150, 150, 150, 0.5);
+  --buttonbackground: rgba(40, 40, 40, 0.333);
 
   --lightWhite: rgba(255, 255, 255, 0.1);
   --mediumWhite: rgba(255, 255, 255, 0.25);
-
-  background: linear-gradient(-45deg, 
-  rgb(47, 109, 129) 0%,
-  rgb(40, 18, 79) 100%);
+  background: linear-gradient(160deg, var(--pink) 0%, var(--violet) 36%, var(--blue) 87%, var(--green) 100%);
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -110,12 +109,11 @@ button, input, select {
   align-items: center;
 }
 
-input, button {
-  background-color: rgba(255, 255, 255, 0.5);
+input, button, .circlebutton {
+  background-color: var(--lightWhite);
 }
 
 .circlebutton {
-  background-color: rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
   margin: 1rem;
   height: 50px;
@@ -135,6 +133,16 @@ input, button {
 
 .red {
   background-color: var(--red);
+}
+
+.delete {
+  opacity: 0.5;
+  transition: opacity 250ms ease-in-out;
+}
+
+.delete:hover {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
 }
 
 .card, textarea  {
@@ -195,18 +203,28 @@ textarea {
 }
 
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    --grey: rgba(240, 240, 240, 1);
-    background: linear-gradient(333deg, rgba(183,238,255,1) 0%, rgba(238,222,255,1) 36%, rgba(255,220,244,1) 57%, rgba(247,237,223,1) 87%, rgba(255,252,198,1) 100%);
+    --pink: rgba(255, 117, 202, 0.3);
+    --red: rgba(255, 128, 160, 0.3);
+    --orange: rgba(255, 194, 109, 0.3);
+    --yellow: rgba(255, 242, 0, 0.3);
+    --green: rgba(0, 255, 119, 0.3);
+    --blue: rgba(0, 132, 255, 0.3);
+    --violet: rgba(128, 0, 255, 0.3);
     --green: rgba(106, 232, 203, 0.5);
     --blue: rgba(113, 219, 255, 0.5);
     --red: rgba(255, 83, 189, 0.5);
+    --buttonbackground: rgba(150, 150, 150, 0.2);
+    --lightWhite: rgba(255,255,255, 0.4);
+    --lightestWhite: rgba(255,255,255, 0.1);
+    background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 36%, var(--pink) 57%, var(--violet) 87%, var(--blue) 100%);
+  
+    background-attachment: fixed;
   }
 
   button {
-    background-color: rgba(255, 255, 255, 0.25);
     border: 1px white transparent;
   }
 
@@ -215,4 +233,4 @@ textarea {
     border-color: var(--pink);
     transition: background-color 5000ms linear;
   }
-} */
+}

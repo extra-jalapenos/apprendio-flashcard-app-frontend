@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router"
+
 export default function Start() {
   const navigate = useNavigate()
+  
   return (
     <div className="center">
       <h1>Welcome back!</h1>
