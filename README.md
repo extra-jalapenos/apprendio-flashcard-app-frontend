@@ -8,7 +8,7 @@
 ## USAGE
 - [x] User can enter new words / translations
 - [x] User can decide to start a practice session
-- [ ] User can enter the translation, click on a check button & if it's a match it'll automatically mark it as correct, if it's not the user can still say it is (in case it's used to practice e.g. definitions for school)
+- [x] User can enter the translation, click on a check button & if it's a match it'll automatically mark it as correct, if it's not the user can still say it is (in case it's used to practice e.g. definitions for school)
 ### Extended
 - [ ] User can import vocab via csv
 - [ ] User can see all entries and their translations

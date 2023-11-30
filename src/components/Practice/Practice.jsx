@@ -101,7 +101,7 @@ export default function Practice () {
       body.stage = currentCard.stage + 1
     }
 
-    if (keyName === correct) {
+    if (keyName === "correct") {
       body.last = new Date().toISOString()
     }
     

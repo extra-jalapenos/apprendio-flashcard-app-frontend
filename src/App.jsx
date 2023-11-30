@@ -19,9 +19,15 @@ const initSession = {
   "wrong": 0
 }
 
-useEffect(() => setSessionStats(initSession), [])
 
 export default function App() {
+  
+  const [sessionStats, setSessionStats] = useState(initSession)
+
+  useEffect(() => {
+    setSessionStats(initSession)
+    sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
+  }, [])
 
   const syncSessionStorage = () => {
     // console.log("running sync", new Date().toTimeString())
@@ -47,8 +53,6 @@ export default function App() {
   }
 
   useEffect(syncSessionStorage, [user])
-
-  const [sessionStats, setSessionStats] = useState(initSession)
 
   return (
     <>
