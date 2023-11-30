@@ -30,14 +30,6 @@
   background-attachment: fixed;
 }
 
-.darkTheme {
-  color-scheme: dark;
-}
-
-.lightTheme {
-  color-scheme: dark;
-}
-
 #root {
   height: 100vh;
   display: grid;
@@ -45,7 +37,6 @@
   "main"
   "footer";
   grid-template-rows: min-content 1fr min-content;
-  /* align-items: center; */
 }
 
 :root, textarea {
@@ -156,6 +147,7 @@ input, button, .circlebutton {
 
 .card, textarea  {
   background-color: rgba(255, 255, 255, 0.5);
+  color: black;
   border-radius: 0.5em;
   margin: 1rem 1rem;
   padding: 1.5rem;
@@ -198,6 +190,12 @@ input {
   width: 50%;
 }
 
+.searchbar::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+
 select {
   padding: 0.5rem;
 }
@@ -229,8 +227,8 @@ textarea {
     --blue: rgba(113, 219, 255, 0.5);
     --red: rgba(255, 83, 189, 0.5);
     --buttonbackground: rgba(150, 150, 150, 0.2);
-    --lightWhite: rgba(255,255,255, 0.3);
-    --lightestWhite: rgba(255,255,255, 0.1);
+    --lightWhite: rgba(255,255,255, 0.5);
+    --lightestWhite: rgba(255,255,255, 0.3);
     background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 36%, var(--pink) 57%, var(--violet) 87%, var(--blue) 100%);
   
     background-attachment: fixed;

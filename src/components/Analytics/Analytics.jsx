@@ -6,14 +6,23 @@ const analyze = (entries) => {
     total: entries.length
   }
 
-  const filterForStage = (categoryId) => entries.filter(entry => entry.categoryId === categoryId).length
+  const filterForStage = (stage) => entries.filter(entry => entry.stage === stage)
 
-  for (let i = 0; i++; i <= maxStage) {
-    result[String(i)] = filterForStage(i)
+  for (let i = 0; i <= maxStage; i++) {
+    const entriesAtStage = filterForStage(i)
+    result[String(i)] = entriesAtStage
   }
-
   return result
-} 
+}
+
+const renderResult = (resultObj) => {
+  console.log(resultObj)
+  return (
+    <div className="twoColumns">
+      {Object.keys(resultObj).map((name, index) => <><label>Stage {name}</label><p>{resultObj[name].length}</p></>)}
+    </div>
+  )
+}
 
 export default function Analytics () {
   const [categories, setCategories] = useState(null)
@@ -56,9 +65,11 @@ export default function Analytics () {
     Loading entries
   </div>)
 
+  const analyzedArr = analyze(entries)
+
   return (
     <main className="center">
-      
+      {renderResult(analyzedArr)}
     </main>
   )
 }

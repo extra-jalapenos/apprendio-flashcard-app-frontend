@@ -10,6 +10,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
+import BatchImport from './components/BatchImport'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -65,6 +66,7 @@ export default function App() {
         <Route path={"/create-category"} element={<CreateCategory />}/>
         <Route path={"/select-category"} element={<CategorySelection />}/>
         <Route path={"/new-entry"} element={<CreateEntry />}/>
+        <Route path={"/import"} element={<BatchImport />}/>
         <Route path={"/practice/:categoryId"} element={<Practice />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
         <Route path={"/lookup/"} element={<Lookup />}/>
