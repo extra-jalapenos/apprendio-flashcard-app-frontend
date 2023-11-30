@@ -1,15 +1,8 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
 import * as XLSX from "xlsx";
 
-
 const DownloadButton = ({url, text}) => {
-  const navigate = useNavigate()
-  const downloadFile = () => {
-    // window.location.href = navigate("/src/assets/ImportTemplate.xlsx")
-    window.location.href = {url}
-  }
-
+  const downloadFile = () => window.location.href = {url}
   return (
     <button onClick={downloadFile}>{text}</button>
   )
@@ -31,7 +24,6 @@ export default function BatchImport () {
       const fileContents = e.target.result;
       const dataArray = fileContents.split("\n");
       setData(dataArray);
-      console.log(dataArray)
     };
 
     reader.readAsText(file);
@@ -46,9 +38,8 @@ export default function BatchImport () {
     reader.onload = (e) => {
       const fileContents = e.target.result;
       const workbook = XLSX.read(fileContents, { type: "binary" });
-      const sheetName = workbook.SheetNames[0]; // Assuming you're interested in the first sheet
+      const sheetName = workbook.SheetNames[0];
       const sheet = workbook.Sheets[sheetName];
-      console.log(sheetName, sheet)
       const dataArray = XLSX.utils.sheet_to_json(sheet, { header: 1 });
       setData(dataArray);
     };
