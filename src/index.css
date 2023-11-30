@@ -2,28 +2,30 @@
   font-size: larger;
   height: 100%;
   color-scheme: light dark;
-  --white: rgba(255, 255, 255, 0.87);
-  color: var(--white);
+  --white: rgba(255, 255, 255);
   --black: rgb(40, 18, 79);
-  background: rgb(40, 18, 79);
+  --textcolor: var(--black);
+  color:  rgba(255, 255, 255, 0.8);
+
+  --pink: rgba(255, 83, 189, 0.5);
+  --red: rgba(235, 0, 59, 0.5);
+  --orange: rgb(255, 232, 200);
+  --yellow: rgba(255,252,198,1);
   --green: rgba(0, 235, 110, 0.5);
   --blue: rgba(0, 176, 235, 0.5);
-  --red: rgba(235, 0, 59, 0.5);
-  --pink: rgba(255, 83, 189, 0.5);
-  --violet: rgba(36, 0, 72, 0.2);
+  --violet: rgba(91, 0, 182, 0.5);
   --white: rgba(255,255,255, 0.33);
   --grey: rgba(150, 150, 150, 0.5);
-  --buttonbackground: rgba(109, 54, 163, 0.2);
-  --yellow: rgba(255,252,198,1);
-  --orange: rgb(255, 232, 200);
+
   background: linear-gradient(-45deg, 
   rgb(47, 109, 129) 0%,
   rgb(40, 18, 79) 100%);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-attachment: fixed;
 }
 
 #root {
@@ -143,6 +145,24 @@ input, button {
   box-shadow: 0px 5px 5px 2px rgba(36, 0, 72, 0.05);
 }
 
+.list {
+  margin: 2em;
+}
+
+.listentry {
+  border-radius: 1em;
+  margin: 0;
+}
+
+.list .listentry:nth-child(even) {
+  background-color: var(--white);
+}
+
+.listentry p {
+  padding: 1em;
+  margin: 0
+}
+
 input {
   padding: 0.5rem 1rem;
 }
@@ -163,20 +183,15 @@ textarea {
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 500ms;
 }
-
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
-    background: rgb(183,238,255);
     --grey: rgba(240, 240, 240, 1);
     background: linear-gradient(333deg, rgba(183,238,255,1) 0%, rgba(238,222,255,1) 36%, rgba(255,220,244,1) 57%, rgba(247,237,223,1) 87%, rgba(255,252,198,1) 100%);
     --green: rgba(106, 232, 203, 0.5);
     --blue: rgba(113, 219, 255, 0.5);
     --red: rgba(255, 83, 189, 0.5);
-  }
-  a:hover {
-    color: #747bff;
   }
 
   button {
@@ -189,4 +204,4 @@ textarea {
     border-color: var(--pink);
     transition: background-color 5000ms linear;
   }
-}
+} */

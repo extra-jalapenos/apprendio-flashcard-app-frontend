@@ -10,6 +10,7 @@ import Header from './components/header/Header'
 import "./Header.css"
 import Footer from './components/footer/Footer'
 import "./Footer.css"
+import Lookup from './components/Analytics/Lookup'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -68,6 +69,7 @@ export default function App() {
         <Route path={"/new-entry"} element={<CreateEntry />}/>
         <Route path={"/practice/:categoryId/"} element={<Practice />}/>
         <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
+        <Route path={"/lookup/"} element={<Lookup />}/>
       </Routes>
       </main>
         <Footer />

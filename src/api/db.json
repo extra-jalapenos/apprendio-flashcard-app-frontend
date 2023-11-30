@@ -19,18 +19,6 @@
       "id": 2,
       "title": "French",
       "author": "Ally"
-    },
-    {
-      "author": "Ally",
-      "title": "Nolan",
-      "entries": [],
-      "id": 3
-    },
-    {
-      "author": "unknown",
-      "title": "Test",
-      "entries": [],
-      "id": 4
     }
   ],
   "entries": [
@@ -1392,59 +1380,6 @@
       },
       "prompt": "au premier abord / de prime abord",
       "answer": "gleich zu Beginn (schon), auf den ersten Blick, beim ersten Anschein"
-    },
-    {
-      "categoryId": 4,
-      "stage": 0,
-      "last": "2023-11-29T23:11:42.395Z",
-      "repetitions": {
-        "correct": 0,
-        "wrong": 0
-      },
-      "prompt": "What is Taylor's middle name?",
-      "answer": "Alison",
-      "clue": "The company used to apply / register for trademark phrases related to her brand and songs is called TAS Rights Management LLC, using her initials.",
-      "id": 115
-    }
-  ],
-  "languages": [
-    {
-      "id": 1,
-      "name": "Test",
-      "creator": "Ally",
-      "items": [
-        {
-          "id": 1,
-          "name": "Test"
-        },
-        {
-          "id": 2,
-          "name": "Test"
-        },
-        {
-          "id": 3,
-          "name": "Test"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Test",
-      "creator": "Ally",
-      "items": [
-        {
-          "id": 1,
-          "name": "Test"
-        },
-        {
-          "id": 2,
-          "name": "Test"
-        },
-        {
-          "id": 3,
-          "name": "Test"
-        }
-      ]
     }
   ]
 }

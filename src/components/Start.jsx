@@ -7,7 +7,8 @@ export default function Start() {
       <p>Choose what you want to do today!</p>
       <button onClick={() => navigate("/select-category")}>Practice</button>
       <button onClick={() => navigate("/new-entry")}>Create entries</button>
-      <button>Analytics</button>
+      <button  onClick={() => navigate("/lookup")}>Look up</button>
+      <button  onClick={() => navigate("/analytics")}>Analytics</button>
     </div>
   )
 }
