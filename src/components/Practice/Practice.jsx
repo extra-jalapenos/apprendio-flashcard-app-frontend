@@ -9,7 +9,7 @@ export default function Practice () {
 
   const { user, setUser } = useContext(userContext)
   const { setSessionStats } = useContext(sessionContext)
-  const {categoryId, cardId} = useParams()
+  const { categoryId, cardId } = useParams()
   const navigate = useNavigate()
   const [entries, setEntries] = useState(null)
   const [category, setCategory] = useState(null)
@@ -32,15 +32,19 @@ export default function Practice () {
 
   const getEntries = () => {
     const endpoint = "/entries"
-
+    
     fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => {
-        const entriesFromCategory = data.filter(entry => entry.categoryId === Number(categoryId))
+    .then(response => response.json())
+    .then(data => {
+      const entriesFromCategory = data.filter(entry => entry.categoryId === Number(categoryId) && entry.stage < maxStage)
+      if (entriesFromCategory.length) {
         setCurrentCardIndex(0)
         setEntries(shuffle(entriesFromCategory))
         navigate("/practice/"+ categoryId + "/" + entriesFromCategory[0].id)
         setCurrentCard(entriesFromCategory[0])
+      } else {
+        setEntries([])
+      }
       })
       .catch(error => console.log("error getting entries", error))
   }
@@ -48,11 +52,12 @@ export default function Practice () {
   useEffect(getEntries, [])
   
   const getCurrentCard = () => {if (entries && currentCardIndex) {
-    setShowAnswer(false)
-    setEvaluation(null)
-    setCurrentCard(entries[cardId])
+      setShowAnswer(false)
+      setEvaluation(null)
+      setCurrentCard(entries[currentCardIndex])
+    }
   }
-}
+
   useEffect(getCurrentCard, [currentCardIndex])
 
   const handleEntry = (event) => setUserEntry(event.target.value) 
@@ -146,8 +151,8 @@ export default function Practice () {
   const next = () => {
     if (currentCardIndex + 1 < entries.length) {
       const nextCard = entries[Number(currentCardIndex + 1)]
-      navigate("/practice/"+ categoryId + "/" + nextCard.id)
       setCurrentCardIndex(currentCardIndex+1)
+      navigate("/practice/"+ categoryId + "/" + nextCard.id)
     } else {
       navigate("/")
     }
@@ -166,9 +171,11 @@ export default function Practice () {
     )
   }
 
+  console.log(currentCardIndex, entries)
+
   if (!currentCard) return (<div className="center">
-  Loading card…
-</div>)
+    Loading card…
+  </div>)
 
   return (
     <>

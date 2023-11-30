@@ -1,4 +1,5 @@
 import { useParams } from "react-router"
+import { maxStage } from "../../helpers/constants"
 
 export default function CardStats ({props}) {
   const { repetitions, stage } = props
@@ -9,13 +10,11 @@ export default function CardStats ({props}) {
     <>
     <h3>Card {cardId}</h3>
     <div className="buttoncontainer">
-        <label>Correct</label>
-        <p className="circlebutton">{repetitions.correct}</p>
-        <p className="circlebutton">{totalrepetitions ? repetitions.correct / totalrepetitions + "%" : "0%"}</p>
+        <p className="circlebutton">{totalrepetitions ? (repetitions.correct / totalrepetitions * 100).toFixed(0) : "0"}%</p>
         <label>Total</label>
         <p className="circlebutton">{totalrepetitions}</p>
         <label>Level</label>
-        <p className="circlebutton">{stage}</p>
+        <p className={stage >= maxStage ? "circlebutton green" : "circlebutton"}>{stage}</p>
     </div>
     </>
   )

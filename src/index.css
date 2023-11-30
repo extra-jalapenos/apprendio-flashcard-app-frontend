@@ -221,7 +221,7 @@ textarea {
     --blue: rgba(113, 219, 255, 0.5);
     --red: rgba(255, 83, 189, 0.5);
     --buttonbackground: rgba(150, 150, 150, 0.2);
-    --lightWhite: rgba(255,255,255, 0.4);
+    --lightWhite: rgba(255,255,255, 0.3);
     --lightestWhite: rgba(255,255,255, 0.1);
     background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 36%, var(--pink) 57%, var(--violet) 87%, var(--blue) 100%);
   
