@@ -1397,10 +1397,10 @@
     },
     {
       "categoryId": 3,
-      "stage": 10,
+      "stage": 5,
       "last": "2023-11-30T15:26:35.097Z",
       "repetitions": {
-        "correct": 12,
+        "correct": 5,
         "wrong": 0
       },
       "prompt": "What is Taylor Swift's middle name?",
@@ -1410,10 +1410,10 @@
     },
     {
       "categoryId": 3,
-      "stage": 10,
+      "stage": 3,
       "last": "2023-11-30T16:41:24.225Z",
       "repetitions": {
-        "correct": 10,
+        "correct": 3,
         "wrong": 2
       },
       "prompt": "What is the name of Muse's first studio album?",

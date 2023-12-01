@@ -6,6 +6,7 @@
 - run "npm ci"
 - make TWO terminals, and run "npm run dev" and "npm run server"
 - go to http://localhost:5173
+- if you want to delete
 
 # Feature overview
 ## General Config
