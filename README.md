@@ -6,7 +6,7 @@
 - run "npm ci"
 - make TWO terminals, and run "npm run dev" and "npm run server"
 - go to http://localhost:5173
-- if you want to delete
+- if you want to delete all config, copy the contents of src/api/clean-db.json into src/api/db.json.
 
 # Feature overview
 ## General Config
