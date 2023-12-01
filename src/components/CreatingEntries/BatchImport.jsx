@@ -32,7 +32,7 @@ export default function BatchImport () {
       reader.onload = (e) => {
         const fileContents = e.target.result;
         const lineArray = fileContents.split("\n")
-        const dataArray = lineArray.map(line => Array(line.split(",")));
+        const dataArray = lineArray.map(line => line.split(","));
         setData(dataArray);
       };
       reader.readAsText(file);
