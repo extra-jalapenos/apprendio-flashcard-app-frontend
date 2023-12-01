@@ -1,4 +1,13 @@
 # Flashcard App
+
+## How do I use this?
+- git clone this repo to your machine with "git clone …@github.com:vocab-trainer.git"
+- cd in the directory
+- run "npm ci"
+- make TWO terminals, and run "npm run dev" and "npm run server"
+- go to http://localhost:5173
+
+# Feature overview
 ## General Config
 - [x] User can create a new category (language / topical)
 ### Extended
