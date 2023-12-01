@@ -165,7 +165,16 @@ input, button, .circlebutton {
   border-radius: 1rem;
   margin: 1rem 0;
   display: grid;
+}
+
+.reviewEntry {
+  display: grid;
   grid-template-columns: repeat(2, 3fr) 1fr;
+}
+
+.reviewData {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25%);
 }
 
 .list .listentry:nth-child(even) {

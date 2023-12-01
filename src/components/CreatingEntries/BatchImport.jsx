@@ -34,11 +34,13 @@ export default function BatchImport () {
 
       const reader = new FileReader();
       reader.onload = (e) => {
-        console.log(e.target)
+        console.log(e.target.result)
         const fileContents = e.target.result;
-        const dataArray = fileContents.split("\n");
+        const lineArray = fileContents.split("\n")
+        console.log(lineArray.length, lineArray[0])
+        const dataArray = lineArray.map(line => Array(line.split(",")));
         setData(dataArray);
-        console.log(dataArray)
+        // console.log(dataArray)
       };
       reader.readAsText(file);
     }
@@ -79,7 +81,7 @@ export default function BatchImport () {
         </>
       }
 
-      {!!data && <BatchImportReview data={data} type={"xlsx"} />}
+      {!!data && <BatchImportReview data={data} />}
       </main>
     </>
   )

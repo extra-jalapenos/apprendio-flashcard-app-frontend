@@ -18,8 +18,9 @@ const analyze = (entries) => {
 const renderResult = (resultObj) => {
   console.log(resultObj)
   return (
-    <div className="twoColumns">
-      {Object.keys(resultObj).map((name, index) => <><label>Stage {name}</label><p>{resultObj[name].length}</p></>)}
+    <div className="list">
+      <h2>{resultObj.total} {resultObj.total === 1 ? "entry" : "entries"}</h2>
+      {Object.keys(resultObj).map((name, index) => <div key={index} className="listentry reviewEntry"><p><b>Stage {name}</b></p><p>{resultObj[name].length || Number(resultObj[name])}{resultObj[name].length === 1 ? " entry": " entries"}</p><p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(1) + "%"}</p></div>)}
     </div>
   )
 }

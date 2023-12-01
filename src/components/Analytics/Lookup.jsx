@@ -13,7 +13,7 @@ function ListPair ({card, getEntries}) {
   }
 
   return (
-    <div className="listentry threeColumns">
+    <div className="listentry reviewEntry">
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
@@ -31,7 +31,7 @@ function CategorySection ({title, entries, getEntries}) {
     <section>
       <h2>{title}</h2>
       <div className="list">
-        <div className="listentry">
+        <div className="listentry reviewEntry">
           <p>No entries yet</p>
           <p>… do you want to create one?</p>
           <button onClick={() => navigate("/new-entry")}>➕ Add</button>
