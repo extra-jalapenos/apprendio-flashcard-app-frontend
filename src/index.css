@@ -83,6 +83,11 @@ main {
   place-content: center;
 }
 
+.threeColumns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .fourColumns {
   display: grid;
   grid-template-columns: repeat(auto-fit, 25%);

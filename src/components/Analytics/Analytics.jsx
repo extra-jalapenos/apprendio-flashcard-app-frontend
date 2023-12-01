@@ -20,9 +20,15 @@ const renderResult = (resultObj) => {
   return (
     <div className="list">
       <h2>{resultObj.total} {resultObj.total === 1 ? "entry" : "entries"}</h2>
-      {Object.keys(resultObj).map((name, index) => <div key={index} className="listentry reviewEntry"><p><b>Stage {name}</b></p><p>{resultObj[name].length || Number(resultObj[name])}{resultObj[name].length === 1 ? " entry": " entries"}</p><p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(1) + "%"}</p></div>)}
-    </div>
-  )
+      {Object.keys(resultObj).map((name, index) => {
+      return (<div key={index} className="listentry threeColumns">
+        <p><b>Stage {name}</b></p>
+        <p>{resultObj[name].length || Number(resultObj[name])}{resultObj[name].length === 1 ? " entry": " entries"}</p>
+        <p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(1) + "%"}</p>
+        </div>
+      )})}
+      </div>
+    )
 }
 
 export default function Analytics () {
