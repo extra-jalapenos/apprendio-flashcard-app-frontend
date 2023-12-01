@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { baseURL, headers, entryBlueprint } from "../helpers/constants"
+import { baseURL, headers, entryBlueprint } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import BatchImport from "./BatchImport"
 
@@ -87,7 +87,7 @@ export default function CreateEntry() {
       <textarea type="text" name="clue" value={form.clue} onChange={handleInput} />
       <div className="buttoncontainer">
         <p>Want to create a lot of entries?</p>
-        <button onClick={() => navigate("/import")}>Import CSV</button>
+        <button onClick={() => navigate("/import")}>Import</button>
       </div>
       <div className="buttoncontainer">
         {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}

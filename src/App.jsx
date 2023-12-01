@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Start from "./components/Start"
-import CreateEntry from './components/CreateEntry'
+import CreateEntry from './components/CreatingEntries/CreateEntry'
 import CreateCategory from './components/CreateCategory'
 import Practice from './components/Practice/Practice'
 import CategorySelection from './components/CategorySelection'
@@ -10,7 +10,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
-import BatchImport from './components/BatchImport'
+import BatchImport from './components/CreatingEntries/BatchImport'
 
 const userContext = createContext()
 const sessionContext = createContext()
