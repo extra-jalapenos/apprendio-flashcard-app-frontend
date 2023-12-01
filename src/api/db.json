@@ -138,10 +138,10 @@
     {
       "id": 9,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-12-01T12:41:06.575Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "faire l’affaire",
@@ -754,7 +754,7 @@
       "last": "2023-11-29",
       "repetitions": {
         "correct": 0,
-        "wrong": 1
+        "wrong": 2
       },
       "prompt": "les brucelles f pl",
       "answer": "Pinzette (für Präzisionsarbeiten)"
@@ -1074,10 +1074,10 @@
     {
       "id": 87,
       "categoryId": 2,
-      "stage": 0,
-      "last": "2023-11-29",
+      "stage": 1,
+      "last": "2023-12-01T12:41:04.375Z",
       "repetitions": {
-        "correct": 0,
+        "correct": 1,
         "wrong": 0
       },
       "prompt": "le chatoiement",
