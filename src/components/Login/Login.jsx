@@ -29,12 +29,10 @@ export default function Login () {
 
   const handleSubmit = (event) => {
       event.preventDefault()
-      console.log("Here")
       const foundUser = knownUsers.find(user => user.displayname === username)
       if (foundUser) {
         setUser(foundUser)
         sessionStorage.removeItem("sessionStats")
-        console.log("Here2")
         setFailedLogin(false)
         navigate("/select-category")
       } else {

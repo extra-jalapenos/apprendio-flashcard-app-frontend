@@ -22,31 +22,23 @@ export default function BatchImport () {
 
     const filetype = () => {
       const fileTypeDotPosition = file.name.lastIndexOf(".")
-      console.log(fileTypeDotPosition, file.name)
       return file.name.slice(fileTypeDotPosition)
     }
 
     const type = filetype()
-    console.log(type)
 
     const processCSV = () => {
-      console.log("csv processing", data)
-
       const reader = new FileReader();
       reader.onload = (e) => {
-        console.log(e.target.result)
         const fileContents = e.target.result;
         const lineArray = fileContents.split("\n")
-        console.log(lineArray.length, lineArray[0])
         const dataArray = lineArray.map(line => Array(line.split(",")));
         setData(dataArray);
-        // console.log(dataArray)
       };
       reader.readAsText(file);
     }
 
     const processXLSX = () => {
-      console.log("xlsx processing", data)
       const reader = new FileReader();
       reader.onload = (e) => {
         const fileContents = e.target.result;

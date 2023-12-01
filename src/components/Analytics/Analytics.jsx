@@ -16,7 +16,6 @@ const analyze = (entries) => {
 }
 
 const renderResult = (resultObj) => {
-  console.log(resultObj)
   return (
     <div className="list">
       <h2>{resultObj.total} {resultObj.total === 1 ? "entry" : "entries"}</h2>
