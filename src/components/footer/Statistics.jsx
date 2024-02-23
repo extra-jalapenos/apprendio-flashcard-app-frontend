@@ -11,11 +11,11 @@ export default function Statistics () {
         {new Date().toLocaleDateString()}
       </li>
       <label>🥇 Correct</label>
-      <p className="circlebutton green">{user ? user.statistics.correct : sessionStats.correct}</p>
+      {/* <p className="circlebutton green">{user ? user.statistics.correct : sessionStats.correct}</p> */}
       <label>↻ Maybe next time</label>
-      <p className="circlebutton red">{user ? user.statistics.wrong : sessionStats.wrong}</p>
+      {/* <p className="circlebutton red">{user ? user.statistics.wrong : sessionStats.wrong}</p> */}
       <label>Total</label>
-      <p className="circlebutton blue">{user ? user.statistics.correct + user.statistics.wrong : sessionStats.correct + sessionStats.wrong}</p>
+      {/* <p className="circlebutton blue">{user ? user.statistics.correct + user.statistics.wrong : sessionStats.correct + sessionStats.wrong}</p> */}
     </div>
   )
 }
