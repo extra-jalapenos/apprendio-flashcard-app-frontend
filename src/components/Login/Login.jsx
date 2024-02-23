@@ -11,33 +11,35 @@ export default function Login () {
   const [knownUsers, setKnownUsers] = useState(null)
   const [knownUser, setKnownUser] = useState(null)
   const [failedLogin, setFailedLogin] = useState(false)
-  const [username, setUsername] = useState(null)
-  
-  const getUsers = () => {
-    const endpoint = "/users"
-    fetch(baseURL + endpoint)
-      .then(res => res.json())
-      .then(data => setKnownUsers(data))
-  }
-  useEffect(getUsers, [])
+  const [loginData, setLoginData] = useState(null)
 
   const handleInput = (event) => {
-    setUsername(event.target.value)
-    const checkDatabase = () => !!knownUsers.find(user => user.displayname === event.target.value)
-    setKnownUser(checkDatabase())
+    const { name, value } = event.target
+    setLoginData({
+      ...loginData,
+      [name]: value
+    })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
       event.preventDefault()
-      const foundUser = knownUsers.find(user => user.displayname === username)
-      if (foundUser) {
-        setUser(foundUser)
-        sessionStorage.removeItem("sessionStats")
-        setFailedLogin(false)
-        navigate("/select-category")
-      } else {
-        setFailedLogin(true)
+      const options = {
+        method: "POST",
+        headers,
+        body: JSON.stringify(loginData)
       }
+      console.log(options)
+      const tryLogin = await fetch(`/api/${baseURL}/login`, options)
+      console.log(tryLogin)
+      // const foundUser = knownUsers.find(user => user.displayname === username)
+      // if (foundUser) {
+      //   setUser(foundUser)
+      //   sessionStorage.removeItem("sessionStats")
+      //   setFailedLogin(false)
+      //   navigate("/select-category")
+      // } else {
+      //   setFailedLogin(true)
+      // }
     }
 
   const createAccount = () => {
@@ -63,19 +65,16 @@ export default function Login () {
       .catch(error => console.log(error, "error creating account"))
   }
 
-  if (!knownUsers) return (
-    <div className="center">
-      Loading users…
-    </div>)
-  
   return (
     <div className="center">
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
         <label>Username</label>
         <input name="username" onChange={handleInput}/>
+        <label>Password</label>
+        <input name="password" type="password" onChange={handleInput}/>
         <button value={"Submit"}>Submit</button>
-        {failedLogin && knownUser === false && !!username && 
+        {failedLogin && knownUser === false && !!username &&
           (
           <div>
             <h3>Oh hi, {username}!</h3>
