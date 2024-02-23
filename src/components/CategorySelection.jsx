@@ -1,22 +1,27 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router"
-import { baseURL } from "../helpers/constants"
+import { baseURL, header } from "../helpers/constants"
 
 export default function LanguageSelection () {
 
   const navigate = useNavigate()
   const [categories, setCategories] = useState(null)
 
-  const getCategories = () => {
-    const endpoint = "/categories"
-
-    fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => setCategories(data))
-      .catch(error => console.log("error loading categories", error))
+  const getCategories = async () => {
+    try {
+      const res = await fetch("/api/categories")
+      const data = res.json()
+      if (res.status === 200) {
+        setCategories(data.categories)
+      } else {
+        setCategories([])
+      }
+    } catch (error) {
+      console.log("error fetching categories")
+    }
   }
 
-  useEffect(getCategories, [])
+  useEffect(() => getCategories(), [])
 
   if (!categories) return (<div className="center">
       Loading…
