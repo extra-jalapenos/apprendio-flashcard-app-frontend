@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { baseURL } from './src/helpers/constants.js'
-console.log(baseURL)
 
 export default defineConfig({
   server:{
