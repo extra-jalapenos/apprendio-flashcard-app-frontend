@@ -1,4 +1,5 @@
-export const baseURL = "http://localhost:3000"
+// export const baseURL = "http://localhost:3000"
+export const baseURL = import.meta.env.VITE_API_URL
 
 export const headers = {
   "content-type": "application/json"
@@ -12,7 +13,7 @@ export const entryBlueprint = {
     "correct": 0,
     "wrong": 0
   },
-"prompt": "", 
+"prompt": "",
 "answer": ""
 }
 
