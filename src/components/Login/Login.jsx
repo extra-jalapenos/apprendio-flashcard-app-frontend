@@ -8,8 +8,6 @@ export default function Login () {
   const { setUser } = useContext(userContext)
 
   const navigate = useNavigate()
-  const [knownUsers, setKnownUsers] = useState(null)
-  const [knownUser, setKnownUser] = useState(null)
   const [failedLogin, setFailedLogin] = useState(false)
   const [loginData, setLoginData] = useState(null)
 
@@ -28,32 +26,40 @@ export default function Login () {
         headers,
         body: JSON.stringify(loginData)
       }
-      console.log(options)
-      const tryLogin = await fetch("/login", options)
-      console.log(tryLogin)
-    }
 
-  const createAccount = () => {
-    const endpoint = "/users"
-    const body = {
-      "displayname": username,
-      "statistics": {
-        "correct": 0,
-        "wrong": 0
+      try {
+        const tryLogin = await fetch("/api/login", options)
+        console.log(tryLogin.status)
+        const data = await tryLogin.json()
+        if (tryLogin.status === 200) {
+          sessionStorage.setItem("token", data.token)
+          setUser(loginData.username)
+          navigate("/")
+        } else {
+          setFailedLogin(true)
+          console.log(data)
+        }
+      } catch (error) {
+        console.log(error, "something went wrong during login")
       }
     }
 
+  const createAccount = async () => {
     const options = {
       method: "POST",
       headers: headers,
-      body: JSON.stringify(body)
+      body: JSON.stringify(loginData)
     }
 
-    fetch(baseURL + endpoint, options)
-      .then(res => res.json())
-      .then(setUser(body))
-      .then(() => navigate("/select-category"))
-      .catch(error => console.log(error, "error creating account"))
+    try {
+      const register = await fetch("/api/register", options)
+      if (register.code === 200) {
+        const data = register.json()
+        console.log(data)
+      }
+    } catch (error) {
+      console.log(error, "something went wrong during signup")
+    }
   }
 
   return (
@@ -65,10 +71,10 @@ export default function Login () {
         <label>Password</label>
         <input name="password" type="password" onChange={handleInput}/>
         <button value={"Submit"}>Submit</button>
-        {failedLogin && knownUser === false && !!username &&
+        {failedLogin === true &&
           (
           <div>
-            <h3>Oh hi, {username}!</h3>
+            <h3>Oh hi, {loginData.username}!</h3>
             <p>You seem new here – do you want to create an account?</p>
             <button className="green" onClick={createAccount}>Create Account</button>
             <button className="red">Cancel</button>
