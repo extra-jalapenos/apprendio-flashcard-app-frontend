@@ -29,17 +29,8 @@ export default function Login () {
         body: JSON.stringify(loginData)
       }
       console.log(options)
-      const tryLogin = await fetch(`/api/${baseURL}/login`, options)
+      const tryLogin = await fetch("/login", options)
       console.log(tryLogin)
-      // const foundUser = knownUsers.find(user => user.displayname === username)
-      // if (foundUser) {
-      //   setUser(foundUser)
-      //   sessionStorage.removeItem("sessionStats")
-      //   setFailedLogin(false)
-      //   navigate("/select-category")
-      // } else {
-      //   setFailedLogin(true)
-      // }
     }
 
   const createAccount = () => {
