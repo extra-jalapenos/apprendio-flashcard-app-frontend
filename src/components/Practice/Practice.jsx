@@ -155,10 +155,10 @@ export default function Practice () {
 
   const increaseCardStats = async (keyName) => {
     const body = {
-      "repetitions": currentCard.repetitions + 1
+      repetitions: currentCard.repetitions + 1
     }
 
-    if (currentCard.stage < maxStage && keyName === "correct") {
+    if (currentCard.level < maxStage && keyName === "correct") {
       body.level = currentCard.level + 1
     }
 
@@ -172,8 +172,9 @@ export default function Practice () {
       body: JSON.stringify(body)
     }
 
+    console.log(options)
     try {
-      const response = await fetch(`/api/cards/${cardId}`, options)
+      const response = await fetch(`/api/cards/${currentCard.id}`, options)
       if (response.status === 200) {
         const data = await response.json()
         const card = data.card
