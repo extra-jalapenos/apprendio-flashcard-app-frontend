@@ -128,58 +128,60 @@ export default function Practice () {
     setShowAnswer(true)
   }
 
-  // const logCorrect = () => {
-  //   increaseCardStats("correct")
+  const logCorrect = () => {
+    increaseCardStats("correct")
 
-  //   if (user) {
-  //     updateUserStats("correct")
-  //   } else {
-  //     increaseSessionStats("correct")
-  //   }
+    // if (user) {
+    //   updateUserStats("correct")
+    // } else {
+    //   increaseSessionStats("correct")
+    // }
 
-  //   setUserEntry("")
-  //   next()
-  // }
+    // setUserEntry("")
+    next()
+  }
 
-  // const logWrong = () => {
-  //   increaseCardStats("wrong")
+  const logWrong = () => {
+    increaseCardStats("wrong")
 
-  //   if (user) {
-  //     updateUserStats("wrong")
-  //   } else {
-  //     increaseSessionStats("wrong")
-  //   }
-  //   setUserEntry("")
-  //   next()
-  // }
+    // if (user) {
+    //   updateUserStats("wrong")
+    // } else {
+    //   increaseSessionStats("wrong")
+    // }
+    // setUserEntry("")
+    next()
+  }
 
-  const increaseCardStats = (keyName) => {
-    const endpoint = "/cards/" + currentCard.id
-
+  const increaseCardStats = async (keyName) => {
     const body = {
-      "repetitions": {
-        ...currentCard.repetitions,
-        [keyName]: currentCard.repetitions[keyName] + 1
-      }
+      "repetitions": currentCard.repetitions + 1
     }
 
     if (currentCard.stage < maxStage && keyName === "correct") {
-      body.stage = currentCard.stage + 1
+      body.level = currentCard.level + 1
     }
 
     if (keyName === "correct") {
-      body.last = new Date().toISOString()
+      body.lastAskedAt = new Date().toISOString()
     }
 
     const options = {
       method: "PATCH",
-      headers: headers,
+      headers: makeHeaders(),
       body: JSON.stringify(body)
     }
 
-    fetch(baseURL + endpoint, options)
-      .then(response => response.json())
-      .catch(error => console.log("error registering change in card", error))
+    try {
+      const response = await fetch(`/cards/${cardId}`, options)
+      if (response.status === 200) {
+        const data = await response.json()
+        const card = data.card
+        console.log("success modifying card", card)
+      }
+    } catch (error) {
+        console.log("error modifying card", cardId)
+    }
   }
 
   const increaseSessionStats = (keyName) => {
