@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
-import { headers } from "../helpers/constants"
+import { makeHeaders } from "../helpers/functions"
 
 export default function LanguageSelection () {
 
@@ -10,11 +10,8 @@ export default function LanguageSelection () {
   const getCategories = () => {
     const response = async () => {
       try {
-        const myHeaders = new Headers()
-        const token = sessionStorage.getItem("token")
-        myHeaders.set("Authorization", `Bearer ${token}`)
         const options = {
-          headers: headers()
+          headers: makeHeaders()
         }
         const res = await fetch("/api/users/me/categories", options)
         const data = await res.json()

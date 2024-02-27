@@ -1,5 +1,16 @@
 import { baseURL, headers } from "./constants"
 
+export const makeHeaders = (method = "GET") => {
+  const headers = new Headers()
+  headers.set("method", method)
+  headers.set("content-type", "application/json")
+  const token = sessionStorage.getItem("token")
+  if (token) {
+    headers.set("Authorization", "Bearer " + token)
+  }
+  return headers
+}
+
 export const getEntries = () => {
   const endpoint = "/entries/"
 
