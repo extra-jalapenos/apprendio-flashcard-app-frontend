@@ -1,4 +1,5 @@
 import { baseURL, headers } from "./constants"
+import { timeToNextPracticeObj } from "./constants"
 
 export const makeHeaders = (method = "GET") => {
   const headers = new Headers()
@@ -61,8 +62,11 @@ export const deleteCategory = (id) => {
     .catch(error => console.log("error deleting entry, id:", id, error))
 }
 
-export const readyForPractice = (stringDate, minTime) => {
-  const last = new Date(stringDate)
-  if (!!last) return true
-  minTime <= new Date() - new Date(stringDate)
+export const readyForPractice = (card) => {
+  if (!card.lastAsked) return true
+  const last = new Date(card.lastAsked)
+  const timeDiff = new Date() - last
+  const timeDiffObj = timeToNextPracticeObj()
+  const minTimeDiff = timeDiffObj[card.level]
+  return timeDiff >= minTimeDiff
 }
