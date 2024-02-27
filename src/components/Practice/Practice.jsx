@@ -167,13 +167,13 @@ export default function Practice () {
     }
 
     const options = {
-      method: "PATCH",
+      method: "PUT",
       headers: makeHeaders(),
       body: JSON.stringify(body)
     }
 
     try {
-      const response = await fetch(`/cards/${cardId}`, options)
+      const response = await fetch(`/api/cards/${cardId}`, options)
       if (response.status === 200) {
         const data = await response.json()
         const card = data.card
