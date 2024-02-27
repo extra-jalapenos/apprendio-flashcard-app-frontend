@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { baseURL, headers, shuffle, maxStage, timeToNextPracticeObj } from "../../helpers/constants"
+import { baseURL, headers, shuffle, maxStage } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
 import { sessionContext, userContext } from "../../App"
@@ -21,7 +21,6 @@ export default function Practice () {
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
-  const timeDiffObj = timeToNextPracticeObj()
 
   const getCategory = () => {
     const get = async () => {
@@ -55,8 +54,9 @@ export default function Practice () {
         if (response.status === 200) {
           const data = await response.json()
           const cards = data.cards
-          if (cards) {
-            const shuffledCards = shuffle(cards)
+          const filteredCards = cards.filter(card => readyForPractice(card) === true)
+          if (filteredCards) {
+            const shuffledCards = shuffle(filteredCards)
             setCards(shuffledCards)
             setCurrentCardIndex(0)
             navigate("/practice/"+ categoryId + "/" + shuffledCards[0].id)
@@ -104,7 +104,17 @@ export default function Practice () {
   }
 
   if (!cards) {
-    return `There are no cards for ${category.name}`
+    return `There are no cards to practice for ${category.name}`
+  }
+
+  if (cards && cards.length === 0) {
+    return (
+      <div className="center">
+        <h3>Whoops!</h3>
+        <p>There are no cards to practice for "{category.name}".</p>
+        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
+      </div>
+    )
   }
 
   if (!currentCard) {
