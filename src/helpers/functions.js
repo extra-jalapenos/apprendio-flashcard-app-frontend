@@ -1,9 +1,8 @@
 import { baseURL, headers } from "./constants"
 import { timeToNextPracticeObj } from "./constants"
 
-export const makeHeaders = (method = "GET") => {
+export const makeHeaders = () => {
   const headers = new Headers()
-  headers.set("method", method)
   headers.set("content-type", "application/json")
   const token = sessionStorage.getItem("token")
   if (token) {
