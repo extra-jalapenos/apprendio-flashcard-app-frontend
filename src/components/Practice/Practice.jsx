@@ -128,30 +128,30 @@ export default function Practice () {
     setShowAnswer(true)
   }
 
-  const logCorrect = () => {
-    increaseCardStats("correct")
+  // const logCorrect = () => {
+  //   increaseCardStats("correct")
 
-    if (user) {
-      updateUserStats("correct")
-    } else {
-      increaseSessionStats("correct")
-    }
+  //   if (user) {
+  //     updateUserStats("correct")
+  //   } else {
+  //     increaseSessionStats("correct")
+  //   }
 
-    setUserEntry("")
-    next()
-  }
+  //   setUserEntry("")
+  //   next()
+  // }
 
-  const logWrong = () => {
-    increaseCardStats("wrong")
+  // const logWrong = () => {
+  //   increaseCardStats("wrong")
 
-    if (user) {
-      updateUserStats("wrong")
-    } else {
-      increaseSessionStats("wrong")
-    }
-    setUserEntry("")
-    next()
-  }
+  //   if (user) {
+  //     updateUserStats("wrong")
+  //   } else {
+  //     increaseSessionStats("wrong")
+  //   }
+  //   setUserEntry("")
+  //   next()
+  // }
 
   const increaseCardStats = (keyName) => {
     const endpoint = "/cards/" + currentCard.id
@@ -189,25 +189,25 @@ export default function Practice () {
     setSessionStats(sessionStatsNew)
   }
 
-  const updateUserStats = (type) => {
-    if (!type || !user) return
-    const endpoint = "/users/" + user.id
+  // const updateUserStats = (type) => {
+  //   if (!type || !user) return
+  //   const endpoint = "/users/" + user.id
 
-      const body = {
-        statistics: {...user.statistics, [type]: user.statistics[type] + 1}
-      }
+  //     const body = {
+  //       statistics: {...user.statistics, [type]: user.statistics[type] + 1}
+  //     }
 
-      const options = {
-        method: "PATCH",
-        headers: headers,
-        body: JSON.stringify(body)
-      }
+  //     const options = {
+  //       method: "PATCH",
+  //       headers: headers,
+  //       body: JSON.stringify(body)
+  //     }
 
-      fetch(baseURL + endpoint, options)
-        .then(response => response.json())
-        .then(data => setUser(data))
-        .catch(error => console.log(error, "error updating user"))
-  }
+  //     fetch(baseURL + endpoint, options)
+  //       .then(response => response.json())
+  //       .then(data => setUser(data))
+  //       .catch(error => console.log(error, "error updating user"))
+  // }
 
   const next = () => {
     if (currentCardIndex + 1 < cards.length) {
@@ -218,20 +218,6 @@ export default function Practice () {
       navigate("/")
     }
   }
-
-  if (cards && cards.length === 0) {
-    return (
-      <div className="center">
-        <h3>Whoops!</h3>
-        <p>There are no cards to practice for "{category.title}".</p>
-        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
-      </div>
-    )
-  }
-
-  if (!currentCard) return (<div className="center">
-    Loading card…
-  </div>)
 
   return (
     <>
