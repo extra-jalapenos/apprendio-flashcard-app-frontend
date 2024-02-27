@@ -63,8 +63,8 @@ export const deleteCategory = (id) => {
 }
 
 export const readyForPractice = (card) => {
-  if (!card.lastAsked) return true
-  const last = new Date(card.lastAsked)
+  if (!card.lastAskedAt) return true
+  const last = new Date(card.lastAskedAt)
   const timeDiff = new Date() - last
   const timeDiffObj = timeToNextPracticeObj()
   const minTimeDiff = timeDiffObj[card.level]
