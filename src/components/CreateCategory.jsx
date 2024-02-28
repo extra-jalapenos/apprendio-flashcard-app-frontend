@@ -1,7 +1,7 @@
 import { userContext } from "../App"
-import { baseURL, headers } from "../helpers/constants"
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
+import { makeHeaders } from "../helpers/functions"
 
 export default function CreateCategory () {
   const {user} = useContext(userContext)
@@ -9,61 +9,76 @@ export default function CreateCategory () {
   const [categories, setCategories] = useState(null)
   const [form, setForm] = useState({user: (user || "unknown"), entries: []})
 
-  const getCategories = () => {
-    const endpoint = "/categories"
-    fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => setCategories(data))
-      .catch(error => console.log("error loading categories", error))
+  const getCategories = async () => {
+    try {
+      const options = {
+        headers: makeHeaders()
+      }
+      const response = await fetch("/api/users/me/categories", options)
+      if (response.status === 200) {
+        const data = response.json()
+        setCategories(data.categories)
+      } else {
+        console.log(response.status, "status fetching categories")
+      }
+    } catch (error) {
+      console.log(error, "error fetching categories")
+    }
   }
 
-  useEffect(getCategories, [])
+  useEffect(() => getCategories(), [])
 
   const handleChange = (event) => {
     const {name, value} = event.target
     setForm({...form, [name]: value})
   }
 
-  const duplicate = () => !!categories.find(category => category.title === form.title)
+  const duplicate = () => !!categories.find(category => category.name === form.name)
 
-  const createCategory = () => {
-    
-    const endpoint = "/categories"
-    const body = {
-      "author": (user ? user.displayname : "unknown"),
-      "title": form.title,
-      "entries": []
+  const createCategory = async () => {
+
+    try {
+      const body = {
+        "name": form.name
+      }
+
+      const options = {
+        method: "POST",
+        headers: makeHeaders(),
+        body: JSON.stringify(body)
+      }
+
+      const response = await fetch("/api/categories", options)
+      if (response.status === 200) {
+        const data = await response.json()
+        console.log("created category", data.category)
+      } else {
+        console.log("something went wrong")
+      }
+      navigate("/select-category")
+    } catch (error) {
+      console.log(error, "error creating category")
     }
 
-    const options = {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(body)
-    }
-
-    fetch(baseURL + endpoint, options)
-      .then(response => response.json())
-      .then(data => console.log(data, "success"))
-      .then(() => navigate("/select-category"))
-      .catch(error => console.log("Error creating category", error))
-    
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     duplicate() ? navigate("/select-category") : createCategory()
   }
 
-  if (!categories) return (<div className="center">
-    Loading categories…
-  </div>)
+  if (!categories) return (
+    <div className="center">
+      Loading categories…
+    </div>
+  )
 
   return (
     <main className="center">
     <h2>Create new category</h2>
     <form onChange={handleChange} onSubmit={handleSubmit}>
       <label>Name</label>
-      <input name="title"/>
+      <input name="name"/>
       <button>Create</button>
     </form>
     </main>
