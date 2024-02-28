@@ -1,15 +1,15 @@
-import { baseURL, headers, maxLevel } from "../../helpers/constants"
-import { deleteEntry } from "../../helpers/functions"
+import { maxLevel } from "../../helpers/constants"
+import { deleteEntry, makeHeaders } from "../../helpers/functions"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"
 
-function ListPair ({card, getEntries}) {
+function ListPair ({card, getCards}) {
   const {prompt, answer, level} = card
 
   const handleDelete = () => {
     deleteEntry(card.id)
-    getEntries()
+    getCards()
   }
 
   return (
@@ -24,12 +24,12 @@ function ListPair ({card, getEntries}) {
   )
 }
 
-function CategorySection ({title, entries, getEntries}) {
+function CategorySection ({name, cards, getCards}) {
   const navigate = useNavigate()
 
-  if (!entries.length) return (
+  if (!cards.length) return (
     <section>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       <div className="list">
         <div className="listentry reviewEntry">
           <p>No entries yet</p>
@@ -40,13 +40,13 @@ function CategorySection ({title, entries, getEntries}) {
     </section>
   )
 
-  const donePercent = Number((entries.filter(entry => entry.level >= maxLevel).length) / entries.length * 100).toFixed(0)
+  const donePercent = Number((cards.filter(card => card.level >= maxLevel).length) / cards.length * 100).toFixed(0)
 
   return (
     <section>
-      <h2>{title} – {entries.length} {entries.length === 1 ? "entry" : "entries"} – {donePercent}% done</h2>
+      <h2>{name} – {cards.length} {cards.length === 1 ? "card" : "cards"} – {donePercent}% done</h2>
       <div className="list">
-        {entries && entries.map((entry, index) => <ListPair key={index} card={entry} getEntries={getEntries}/>)}
+        {cards && cards.map((card, index) => <ListPair key={index} card={card} getCards={getCards}/>)}
       </div>
     </section>
   )
@@ -54,54 +54,57 @@ function CategorySection ({title, entries, getEntries}) {
 
 export default function Lookup() {
 
-  const [categories, setCategories] = useState(null)
-  const [entries, setEntries] = useState(null)
-  const [filteredEntries, setFilteredEntries] = useState(null)
+  const [data, setData] = useState(null)
+  const [filteredCards, setFilteredCards] = useState(null)
   const [searchText, setSearchText] = useState("")
 
-  const getCategories = () => {
-    const endpoint = "/categories"
-
-    fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => setCategories(data))
-      .catch(error => console.log("error getting categories", error))
+  const getCards = () => {
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        const response = await fetch("/api/users/me/categories/details", options)
+        // this is not a mistake, the cards are included in their category-element: categories: [ ... cards: [] ]
+        if (response.status === 200) {
+          const data = await response.json()
+          setData(data.categories)
+        }
+      } catch (error) {
+        console.log(error, "error fetching cards")
+      }
+    }
+    get()
   }
-  useEffect(getCategories, [])
+  useEffect(getCards, [])
 
-  const getEntries = () => {
-    const endpoint = "/entries"
-    fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => setEntries(data))
-      .catch(error => console.log("error getting entries", error))
-  }
-  useEffect(getEntries, [])
-
-  const filterEntries = () => {
-    if (!entries) return
-    if (!searchText.length) return setFilteredEntries(entries)
-    const filteredForText = entries.filter(entry => !!entry.prompt.match(searchText) || !!entry.answer.match(searchText))
-    setFilteredEntries(filteredForText)
+  const filterCards = () => {
+    if (!data) return
+    if (!searchText.length) return setFilteredCards(data)
+    const filteredForText = data.filter(category => {
+      category.Card = category.Card.filter(card => !!card.prompt.match(searchText) || !!card.answer.match(searchText))
+      return category
+    })
+    setFilteredCards(filteredForText)
   }
 
   const handleInput = (event) => setSearchText(event.target.value)
 
-  useEffect(filterEntries, [entries, searchText])
+  useEffect(filterCards, [data, searchText])
 
-  if (!categories) return <div className="center">Loading categories</div>
-  if (!entries) return <div className="center">Loading entries</div>
-  if (!filteredEntries) return <div className="center">Filtering entries</div>
+  if (!data) return <div className="center">Loading cards…</div>
+  if (!filteredCards) return <div className="center">Filtering cards…</div>
 
   return (
     <>
     <section>
       <Searchbar handleInput={handleInput}/>
     </section>
-    {categories.map((category, index) => <CategorySection key={index}
-    title={category.title}
-    entries={filteredEntries.filter(entry => entry.categoryId === category.id)}
-    getEntries={getEntries}/>)}
+    {data.map((category, index) => <CategorySection key={index}
+        name={category.name}
+        cards={category.Card}
+        getCards={getCards}
+      />)}
     </>
   )
 }
