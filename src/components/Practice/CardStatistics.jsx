@@ -1,5 +1,5 @@
 import { useParams } from "react-router"
-import { maxStage } from "../../helpers/constants"
+import { maxLevel } from "../../helpers/constants"
 
 export default function CardStats ({props}) {
   const { repetitions, level, lastAskedAt } = props
@@ -14,7 +14,7 @@ export default function CardStats ({props}) {
         <label>Total</label>
         <p className="circlebutton">{repetitions}</p>
         <label>Level</label>
-        <p className={level >= maxStage ? "circlebutton green" : "circlebutton"}>{level}</p>
+        <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
     </div>
     </>
   )

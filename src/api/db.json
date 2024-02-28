@@ -39,7 +39,7 @@
     {
       "id": 1,
       "categoryId": 2,
-      "stage": 5,
+      "level": 5,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 5,
@@ -52,7 +52,7 @@
     {
       "id": 2,
       "categoryId": 2,
-      "stage": 3,
+      "level": 3,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 3,
@@ -65,7 +65,7 @@
     {
       "id": 3,
       "categoryId": 2,
-      "stage": 8,
+      "level": 8,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 8,
@@ -78,7 +78,7 @@
     {
       "id": 4,
       "categoryId": 2,
-      "stage": 1,
+      "level": 1,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 1,
@@ -91,7 +91,7 @@
     {
       "id": 5,
       "categoryId": 2,
-      "stage": 6,
+      "level": 6,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 6,
@@ -104,7 +104,7 @@
     {
       "id": 6,
       "categoryId": 2,
-      "stage": 4,
+      "level": 4,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 4,
@@ -117,7 +117,7 @@
     {
       "id": 7,
       "categoryId": 2,
-      "stage": 9,
+      "level": 9,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 9,
@@ -130,7 +130,7 @@
     {
       "id": 9,
       "categoryId": 2,
-      "stage": 2,
+      "level": 2,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 2,
@@ -143,7 +143,7 @@
     {
       "id": 10,
       "categoryId": 2,
-      "stage": 7,
+      "level": 7,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 7,
@@ -156,7 +156,7 @@
     {
       "id": 11,
       "categoryId": 2,
-      "stage": 5,
+      "level": 5,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 5,
@@ -169,7 +169,7 @@
     {
       "id": 12,
       "categoryId": 2,
-      "stage": 3,
+      "level": 3,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 3,
@@ -182,7 +182,7 @@
     {
       "id": 14,
       "categoryId": 2,
-      "stage": 1,
+      "level": 1,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 1,
@@ -195,7 +195,7 @@
     {
       "id": 15,
       "categoryId": 2,
-      "stage": 6,
+      "level": 6,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 6,
@@ -208,7 +208,7 @@
     {
       "id": 16,
       "categoryId": 2,
-      "stage": 4,
+      "level": 4,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 4,
@@ -220,7 +220,7 @@
     },
     {
       "categoryId": 3,
-      "stage": 6,
+      "level": 6,
       "last": "2023-12-01T17:53:14.600Z",
       "repetitions": {
         "correct": 6,
@@ -233,7 +233,7 @@
     },
     {
       "categoryId": 3,
-      "stage": 4,
+      "level": 4,
       "last": "2023-12-01T16:03:31.863Z",
       "repetitions": {
         "correct": 4,
@@ -246,7 +246,7 @@
     },
     {
       "categoryId": 3,
-      "stage": 10,
+      "level": 10,
       "last": "2023-12-01T17:53:00.734Z",
       "repetitions": {
         "correct": 10,

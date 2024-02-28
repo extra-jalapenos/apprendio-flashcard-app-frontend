@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { baseURL, headers, shuffle, maxStage } from "../../helpers/constants"
+import { baseURL, headers, shuffle, maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
 import { sessionContext, userContext } from "../../App"
@@ -167,7 +167,7 @@ export default function Practice () {
       repetitions: currentCard.repetitions + 1
     }
 
-    if (currentCard.level < maxStage && keyName === "correct") {
+    if (currentCard.level < maxLevel && keyName === "correct") {
       body.level = currentCard.level + 1
     }
 

@@ -22,11 +22,11 @@
 - [x] time between practice instances grows longer (as in, the more times you successfully answered a flashcard, the longer it'll take for it to re-appear again)
 ### Extended
 - [x] User can choose a file to import multiple flashcards
-- [ ] review data before import 
+- [ ] review data before import
 - [x] User can see all entries and their translations
 
 ## ANALYTICS
-- [x] User can see how entries are distributed over the different stages of learning
+- [x] User can see how entries are distributed over the different levels of learning
 ### Extended
 - [ ] User sees daily stats -> will not do that, no value imo
 - [x] The user sees total practice stats

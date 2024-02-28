@@ -1,11 +1,11 @@
-import { baseURL, headers, maxStage } from "../../helpers/constants"
+import { baseURL, headers, maxLevel } from "../../helpers/constants"
 import { deleteEntry } from "../../helpers/functions"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"
 
 function ListPair ({card, getEntries}) {
-  const {prompt, answer, stage} = card
+  const {prompt, answer, level} = card
 
   const handleDelete = () => {
     deleteEntry(card.id)
@@ -17,7 +17,7 @@ function ListPair ({card, getEntries}) {
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
-        <p className={stage >= maxStage ? "circlebutton green" : "circlebutton"}>{stage}</p>
+        <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
         <p className="circlebutton delete red" onClick={handleDelete}>🗑️</p>
       </div>
     </div>
@@ -39,8 +39,8 @@ function CategorySection ({title, entries, getEntries}) {
       </div>
     </section>
   )
-  
-  const donePercent = Number((entries.filter(entry => entry.stage >= maxStage).length) / entries.length * 100).toFixed(0)
+
+  const donePercent = Number((entries.filter(entry => entry.level >= maxLevel).length) / entries.length * 100).toFixed(0)
 
   return (
     <section>
@@ -86,7 +86,7 @@ export default function Lookup() {
   }
 
   const handleInput = (event) => setSearchText(event.target.value)
-  
+
   useEffect(filterEntries, [entries, searchText])
 
   if (!categories) return <div className="center">Loading categories</div>
@@ -98,9 +98,9 @@ export default function Lookup() {
     <section>
       <Searchbar handleInput={handleInput}/>
     </section>
-    {categories.map((category, index) => <CategorySection key={index} 
-    title={category.title} 
-    entries={filteredEntries.filter(entry => entry.categoryId === category.id)} 
+    {categories.map((category, index) => <CategorySection key={index}
+    title={category.title}
+    entries={filteredEntries.filter(entry => entry.categoryId === category.id)}
     getEntries={getEntries}/>)}
     </>
   )
