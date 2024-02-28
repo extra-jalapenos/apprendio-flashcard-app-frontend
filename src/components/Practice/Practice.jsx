@@ -28,7 +28,6 @@ export default function Practice () {
         const options = {
           headers: makeHeaders()
         }
-        await fetch(`/api/hello`, options)
         console.log(categoryId, `/api/categories/${categoryId}`)
         const response = await fetch(`/api/categories/${categoryId}`, options)
         if (response.status === 200) {
@@ -97,14 +96,24 @@ export default function Practice () {
     get()
   }
 
-  useEffect(getCurrentCard, [cardId])
+  useEffect(getCurrentCard, [currentCardIndex])
 
   if (!category) {
-    return "Loading category…"
+    return (
+      <div className="center">
+        <h3>Loading category…</h3>
+        <p>This might take some time.</p>
+      </div>
+    )
   }
 
   if (!cards) {
-    return `There are no cards to practice for ${category.name}`
+    return (
+      <div className="center">
+        <h3>Loading cards in {category.name}…</h3>
+        <p>This might take some time.</p>
+      </div>
+    )
   }
 
   if (cards && cards.length === 0) {
@@ -185,12 +194,12 @@ export default function Practice () {
     }
   }
 
-  const increaseSessionStats = (keyName) => {
-    const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
-    const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1}
-    sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
-    setSessionStats(sessionStatsNew)
-  }
+  // const increaseSessionStats = (keyName) => {
+  //   const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
+  //   const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1}
+  //   sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
+  //   setSessionStats(sessionStatsNew)
+  // }
 
   // const updateUserStats = (type) => {
   //   if (!type || !user) return
