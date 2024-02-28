@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { baseURL, headers, entryBlueprint } from "../../helpers/constants"
 import { useNavigate } from "react-router"
+import { makeHeaders } from "../../helpers/functions"
 import BatchImport from "./BatchImport"
 
 function DropdownField ({category}) {
@@ -16,24 +17,33 @@ export default function CreateEntry() {
   const navigate = useNavigate()
 
   const getCategories = () => {
-    const endpoint = "/categories"
-    fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => setCategories(data))
-      .catch(error => console.log("error loading categories", error))
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        const response = await fetch("/api/users/me/categories", options)
+        if (response.status === 200) {
+          const data = await response.json()
+          setCategories(data.categories)
+        }
+      } catch (error) {
+        console.log(error, "error fetching categories")
+      }
+    }
+    get()
   }
 
   useEffect(getCategories, [])
 
   const initForm = {
-    "categoryId": null,
-    "prompt": "",
-    "answer": "",
-    "clue": ""
+    categoryId: null,
+    prompt: "",
+    answer: "",
+    hint: ""
   }
 
   const [form, setForm] = useState(initForm)
-
   const resetForm = () => setForm(initForm)
 
   const handleInput = (event) => {
@@ -41,33 +51,42 @@ export default function CreateEntry() {
     setForm({ ...form, [name]:value })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     if (!form.categoryId) return
-    
-    const endpoint = "/entries"
 
-    const body = { ...entryBlueprint,
-      "categoryId": Number(form.categoryId),
-      "last": new Date().toISOString(),
-      "prompt": form.prompt,
-      "answer": form.answer,
-      "clue": form.clue
+    try {
+      const { prompt, answer, hint } = form
+
+      const body = { ...entryBlueprint,
+        categoryId: Number(form.categoryId),
+        lastAskedAt: null,
+        prompt,
+        answer,
+        hint
+      }
+
+      const options = {
+        method: "POST",
+        headers: makeHeaders(),
+        body: JSON.stringify(body)
+      }
+
+      const response = await fetch("/api/cards", options)
+      if (response.status === 201) {
+        const data = await response.json()
+        console.log("created", data.card)
+        navigate("/new-entry")
+      } else {
+        console.log(response.status)
+        console.log("error creating entry")
+      }
+    } catch (error) {
+      console.log(error, "error creating entry")
     }
 
-    const options = {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(body)
-    }
-
-    fetch(baseURL + endpoint, options)
-      .then(response => response.json())
-      .then(() => navigate("/new-entry"))
-      .then(() => resetForm())
-      .catch(error => console.log("error creating entry", error))
   }
-  
+
   if (!categories) return (<div className="center">
     Loading categories…
   </div>)
@@ -77,21 +96,26 @@ export default function CreateEntry() {
       <label>Category</label>
       <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput} required>
         {!form.categoryId && <option>Select Category</option>}
-        {categories.map((category, index) => <option key={index} value={category.id}>{category.title}</option>)}
+        {categories.map((category, index) => <option key={index} value={category.id}>{category.name}</option>)}
       </select>
+
       <label>Prompt</label>
       <textarea type="text" name="prompt" value={form.prompt} onChange={handleInput} required />
+
       <label>Answer</label>
       <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
-      <label>Clue / Context</label>
-      <textarea type="text" name="clue" value={form.clue} onChange={handleInput} />
+
+      <label>Hint or context</label>
+      <textarea type="text" name="hint" value={form.hint} onChange={handleInput} />
+
       <div className="buttoncontainer">
         <p>Want to create a lot of entries?</p>
         <button onClick={() => navigate("/import")}>Import</button>
       </div>
+
       <div className="buttoncontainer">
         {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}
-        {(form.prompt || form.answer || form.clue) && <button onClick={resetForm}>clear</button>}
+        {(form.prompt || form.answer || form.hint) && <button onClick={resetForm}>clear</button>}
       </div>
     </form>
   )
