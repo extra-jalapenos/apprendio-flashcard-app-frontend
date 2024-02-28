@@ -49,7 +49,7 @@ export default function CreateCategory () {
       }
 
       const response = await fetch("/api/categories", options)
-      if (response.status === 200) {
+      if (response.status === 201) {
         const data = await response.json()
         console.log("created category", data.category)
       } else {
