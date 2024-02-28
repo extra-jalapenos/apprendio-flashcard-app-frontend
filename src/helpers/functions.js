@@ -1,4 +1,15 @@
 import { baseURL, headers } from "./constants"
+import { timeToNextPracticeObj } from "./constants"
+
+export const makeHeaders = () => {
+  const headers = new Headers()
+  headers.set("content-type", "application/json")
+  const token = sessionStorage.getItem("token")
+  if (token) {
+    headers.set("Authorization", "Bearer " + token)
+  }
+  return headers
+}
 
 export const getEntries = () => {
   const endpoint = "/entries/"
@@ -50,8 +61,11 @@ export const deleteCategory = (id) => {
     .catch(error => console.log("error deleting entry, id:", id, error))
 }
 
-export const readyForPractice = (stringDate, minTime) => {
-  const last = new Date(stringDate)
-  if (!!last) return true
-  minTime <= new Date() - new Date(stringDate)
+export const readyForPractice = (card) => {
+  if (!card.lastAskedAt) return true
+  const last = new Date(card.lastAskedAt)
+  const timeDiff = new Date() - last
+  const timeDiffObj = timeToNextPracticeObj()
+  const minTimeDiff = timeDiffObj[card.level]
+  return timeDiff >= minTimeDiff
 }

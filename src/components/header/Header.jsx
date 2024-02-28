@@ -11,7 +11,7 @@ export default function Header () {
       <nav>
         <button onClick={() => navigate("/")}>{siteTitle}</button>
         <button onClick={() => navigate("/select-category")}>Switch Category</button>
-        <button onClick={() => navigate("/login")}>{user ? "🐝 " + user.displayname : "Login"}</button>
+        <button onClick={() => navigate("/login")}>{user ? "🐝 " + user : "Login"}</button>
         {user && <button onClick={() => logoutUser()}>⏻ Logout</button>}
       </nav>
     </header>

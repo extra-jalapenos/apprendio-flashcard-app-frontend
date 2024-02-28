@@ -1,28 +1,15 @@
 import { useEffect, useState } from "react"
-import { baseURL, headers, maxStage } from "../../helpers/constants"
-
-const analyze = (entries) => {
-  const result = {
-    total: entries.length
-  }
-
-  const filterForStage = (stage) => entries.filter(entry => entry.stage === stage)
-
-  for (let i = 0; i <= maxStage; i++) {
-    const entriesAtStage = filterForStage(i)
-    result[String(i)] = entriesAtStage
-  }
-  return result
-}
+import { maxLevel } from "../../helpers/constants"
+import { makeHeaders } from "../../helpers/functions"
 
 const renderResult = (resultObj) => {
   return (
     <div className="list">
-      <h2>{resultObj.total} {resultObj.total === 1 ? "entry" : "entries"}</h2>
+      <h2>{resultObj.total} {resultObj.total === 1 ? "card" : "cards"}</h2>
       {Object.keys(resultObj).map((name, index) => {
       return (<div key={index} className="listentry threeColumns">
-        <p><b>Stage {name}</b></p>
-        <p>{resultObj[name].length || Number(resultObj[name])}{resultObj[name].length === 1 ? " entry": " entries"}</p>
+        <p><b>Level {name}</b></p>
+        <p>{resultObj[name].length || Number(resultObj[name])}{resultObj[name].length === 1 ? " card": " cards"}</p>
         <p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(1) + "%"}</p>
         </div>
       )})}
@@ -31,47 +18,57 @@ const renderResult = (resultObj) => {
 }
 
 export default function Analytics () {
-  const [categories, setCategories] = useState(null)
+  const [cards, setCards] = useState()
 
-  const getCategories = () => {
-    const endpoint = "/categories"
-  
-    const options = {
-      headers: headers
+  const getData = () => {
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        const response = await fetch("/api/users/me/cards", options)
+        if (response.status === 200) {
+          const data = await response.json()
+          setCards(data.cards)
+        } else {
+          console.log("something went wrong")
+        }
+      } catch (error) {
+        console.log(error, "during request")
+      }
     }
-  
-    fetch(baseURL + endpoint, options)
-      .then(response => response.json())
-      .then(data => setCategories(data))
+    get()
   }
 
-  useEffect(getCategories, [])
+  useEffect(getData, [])
 
-  const [entries, setEntries] = useState(null)
-
-  const getEntries = () => {
-    const endpoint = "/entries"
-  
-    const options = {
-      headers: headers
+  const analyze = () => {
+    const result = {
+      total: cards.length
     }
-  
-    fetch(baseURL + endpoint, options)
-      .then(response => response.json())
-      .then(data => setEntries(data))
+
+    const filterForLevel = (level) => cards.filter(card => card.level === level)
+
+    for (let i = 0; i <= maxLevel; i++) {
+      const cardsOnLevel = filterForLevel(i)
+      result[String(i)] = cardsOnLevel
+    }
+    return result
   }
 
-  useEffect(getEntries, [])
+  if (!cards) return (
+    <div className="center">
+      Loading cards…
+    </div>
+  )
 
-  if (!categories) return (<div className="center">
-    Loading categories…
-  </div>)
+  if (cards.length === null) return (
+    <div className="center">
+      You haven&apos;t created any cards yet.
+    </div>
+  )
 
-  if (!entries) return (<div className="center">
-    Loading entries
-  </div>)
-
-  const analyzedArr = analyze(entries)
+  const analyzedArr = analyze()
 
   return (
     <main className="center">

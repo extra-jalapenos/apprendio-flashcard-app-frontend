@@ -2,67 +2,135 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { baseURL, headers, shuffle, maxStage, timeToNextPracticeObj } from "../../helpers/constants"
+import { baseURL, headers, shuffle, maxLevel } from "../../helpers/constants"
+import { makeHeaders } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
 import { sessionContext, userContext } from "../../App"
-
 export default function Practice () {
 
-  const { user, setUser } = useContext(userContext)
+  // const { user, setUser } = useContext(userContext)
   const { setSessionStats } = useContext(sessionContext)
   const { categoryId, cardId } = useParams()
   const navigate = useNavigate()
-  const [entries, setEntries] = useState(null)
+
   const [category, setCategory] = useState(null)
-  const [currentCard, setCurrentCard] = useState(null)
+  const [cards, setCards] = useState(null)
   const [currentCardIndex, setCurrentCardIndex] = useState(null)
+  const [currentCard, setCurrentCard] = useState(null)
+
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
-  const timeDiffObj = timeToNextPracticeObj()
 
   const getCategory = () => {
-    const endpoint = "/categories/" + categoryId
-
-    fetch(baseURL + endpoint)
-      .then(response => response.json())
-      .then(data => setCategory(data))
-      .catch(error => console.log("error getting entries", error))
-  }
-
-  useEffect(getCategory, [])
-
-  const getEntries = () => {
-    const endpoint = "/entries"
-    
-    fetch(baseURL + endpoint)
-    .then(response => response.json())
-    .then(data => {
-      const entriesFromCategory = data.filter(entry => entry.categoryId === Number(categoryId) && entry.stage < maxStage && readyForPractice(entry.last, timeDiffObj[entry.stage]))
-      if (entriesFromCategory.length) {
-        setCurrentCardIndex(0)
-        setEntries(shuffle(entriesFromCategory))
-        navigate("/practice/"+ categoryId + "/" + entriesFromCategory[0].id)
-        setCurrentCard(entriesFromCategory[0])
-      } else {
-        setEntries([])
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        console.log(categoryId, `/api/categories/${categoryId}`)
+        const response = await fetch(`/api/categories/${categoryId}`, options)
+        if (response.status === 200) {
+          const data = await response.json()
+          setCategory(data.category)
+        }
+      } catch (error) {
+        console.log("something went wrong fetching the category")
       }
-      })
-      .catch(error => console.log("error getting entries", error))
+    }
+    get()
   }
 
-  useEffect(getEntries, [])
-  
-  const getCurrentCard = () => {if (entries && currentCardIndex) {
-      setShowAnswer(false)
-      setEvaluation(null)
-      setCurrentCard(entries[currentCardIndex])
+  useEffect(getCategory, [categoryId])
+
+  const getCards = () => {
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        const response = await fetch(`/api/categories/${categoryId}/cards`, options)
+        if (response.status === 200) {
+          const data = await response.json()
+          const cards = data.cards
+          const filteredCards = cards.filter(card => readyForPractice(card) === true)
+          if (filteredCards) {
+            const shuffledCards = shuffle(filteredCards)
+            setCards(shuffledCards)
+            setCurrentCardIndex(0)
+            navigate("/practice/"+ categoryId + "/" + shuffledCards[0].id)
+          } else {
+            setCards([])
+          }
+        } else {
+          console.log(response.status)
+        }
+      } catch (error) {
+        console.log("something went wrong fetching the category's cards")
+      }
     }
+    get()
+  }
+
+  useEffect(getCards, [])
+
+  const getCurrentCard = () => {
+    if (currentCardIndex === null) {
+      return
+    }
+    console.log("getting card num", currentCardIndex, cards[currentCardIndex])
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        const response = await fetch(`/api/cards/${cardId}`, options)
+        if (response.status === 200) {
+          const data = await response.json()
+          setCurrentCard(data.card)
+        }
+      } catch (error) {
+        console.log("something went wrong fetching the card")
+      }
+    }
+    get()
   }
 
   useEffect(getCurrentCard, [currentCardIndex])
 
-  const handleEntry = (event) => setUserEntry(event.target.value) 
+  if (!category) {
+    return (
+      <div className="center">
+        <h3>Loading category…</h3>
+        <p>This might take some time.</p>
+      </div>
+    )
+  }
+
+  if (!cards) {
+    return (
+      <div className="center">
+        <h3>Loading cards in {category.name}…</h3>
+        <p>This might take some time.</p>
+      </div>
+    )
+  }
+
+  if (cards && cards.length === 0) {
+    return (
+      <div className="center">
+        <h3>Whoops!</h3>
+        <p>There are no cards to practice for "{category.name}".</p>
+        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
+      </div>
+    )
+  }
+
+  if (!currentCard) {
+    return `Error loading card ${currentCardIndex}`
+  }
+
+  const handleEntry = (event) => setUserEntry(event.target.value)
 
   const handleSubmit = () => {
     currentCard.answer.match(userEntry) ? setEvaluation(true) : setEvaluation(false)
@@ -72,111 +140,96 @@ export default function Practice () {
   const logCorrect = () => {
     increaseCardStats("correct")
 
-    if (user) {
-      updateUserStats("correct")
-    } else {
-      increaseSessionStats("correct")
-    }
-    
-    setUserEntry("")
+    // if (user) {
+    //   updateUserStats("correct")
+    // } else {
+    //   increaseSessionStats("correct")
+    // }
+
+    // setUserEntry("")
     next()
   }
-  
+
   const logWrong = () => {
     increaseCardStats("wrong")
 
-    if (user) {
-      updateUserStats("wrong")
-    } else {
-      increaseSessionStats("wrong")
-    }
-    setUserEntry("")
+    // if (user) {
+    //   updateUserStats("wrong")
+    // } else {
+    //   increaseSessionStats("wrong")
+    // }
+    // setUserEntry("")
     next()
   }
 
-  const increaseCardStats = (keyName) => {
-    const endpoint = "/entries/" + currentCard.id
-
+  const increaseCardStats = async (keyName) => {
     const body = {
-      "repetitions": {
-        ...currentCard.repetitions,
-        [keyName]: currentCard.repetitions[keyName] + 1
-      }
+      repetitions: currentCard.repetitions + 1
     }
 
-    if (currentCard.stage < maxStage && keyName === "correct") {
-      body.stage = currentCard.stage + 1
+    if (currentCard.level < maxLevel && keyName === "correct") {
+      body.level = currentCard.level + 1
     }
 
     if (keyName === "correct") {
-      body.last = new Date().toISOString()
+      body.lastAskedAt = new Date().toISOString()
     }
-    
+
     const options = {
-      method: "PATCH",
-      headers: headers,
+      method: "PUT",
+      headers: makeHeaders(),
       body: JSON.stringify(body)
     }
 
-    fetch(baseURL + endpoint, options)
-      .then(response => response.json())
-      .catch(error => console.log("error registering change in card", error))
-  }
-
-  const increaseSessionStats = (keyName) => {
-    const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
-    const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1} 
-    sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
-    setSessionStats(sessionStatsNew)
-  }
-
-  const updateUserStats = (type) => {
-    if (!type || !user) return
-    const endpoint = "/users/" + user.id
-
-      const body = {
-        statistics: {...user.statistics, [type]: user.statistics[type] + 1}
+    console.log(options)
+    try {
+      const response = await fetch(`/api/cards/${currentCard.id}`, options)
+      if (response.status === 200) {
+        const data = await response.json()
+        const card = data.card
+        console.log("success modifying card", card)
       }
-
-      const options = {
-        method: "PATCH",
-        headers: headers,
-        body: JSON.stringify(body)
-      }
-
-      fetch(baseURL + endpoint, options)
-        .then(response => response.json())
-        .then(data => setUser(data))
-        .catch(error => console.log(error, "error updating user"))
+    } catch (error) {
+        console.log("error modifying card", cardId)
+    }
   }
+
+  // const increaseSessionStats = (keyName) => {
+  //   const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
+  //   const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1}
+  //   sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
+  //   setSessionStats(sessionStatsNew)
+  // }
+
+  // const updateUserStats = (type) => {
+  //   if (!type || !user) return
+  //   const endpoint = "/users/" + user.id
+
+  //     const body = {
+  //       statistics: {...user.statistics, [type]: user.statistics[type] + 1}
+  //     }
+
+  //     const options = {
+  //       method: "PATCH",
+  //       headers: headers,
+  //       body: JSON.stringify(body)
+  //     }
+
+  //     fetch(baseURL + endpoint, options)
+  //       .then(response => response.json())
+  //       .then(data => setUser(data))
+  //       .catch(error => console.log(error, "error updating user"))
+  // }
 
   const next = () => {
-    if (currentCardIndex + 1 < entries.length) {
-      const nextCard = entries[Number(currentCardIndex + 1)]
+    if (currentCardIndex + 1 < cards.length) {
+      const nextCard = cards[Number(currentCardIndex + 1)]
       setCurrentCardIndex(currentCardIndex+1)
       navigate("/practice/"+ categoryId + "/" + nextCard.id)
     } else {
       navigate("/")
     }
   }
-
-  useEffect(getCurrentCard, [currentCardIndex])
-
-  if (!category) return
-
-  if (entries && entries.length === 0) {
-    return (
-      <div className="center">
-        <h3>Whoops!</h3>
-        <p>There are no entries to practice for "{category.title}".</p>
-        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
-      </div>
-    )
-  }
-
-  if (!currentCard) return (<div className="center">
-    Loading card…
-  </div>)
 
   return (
     <>

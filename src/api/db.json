@@ -39,7 +39,7 @@
     {
       "id": 1,
       "categoryId": 2,
-      "stage": 5,
+      "level": 5,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 5,
@@ -47,12 +47,12 @@
       },
       "prompt": "House",
       "answer": "Maison",
-      "clue": "Dwelling place"
+      "hint": "Dwelling place"
     },
     {
       "id": 2,
       "categoryId": 2,
-      "stage": 3,
+      "level": 3,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 3,
@@ -60,12 +60,12 @@
       },
       "prompt": "Sun",
       "answer": "Soleil",
-      "clue": "Shines in the sky"
+      "hint": "Shines in the sky"
     },
     {
       "id": 3,
       "categoryId": 2,
-      "stage": 8,
+      "level": 8,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 8,
@@ -73,12 +73,12 @@
       },
       "prompt": "Tree",
       "answer": "Arbre",
-      "clue": "Has branches and leaves"
+      "hint": "Has branches and leaves"
     },
     {
       "id": 4,
       "categoryId": 2,
-      "stage": 1,
+      "level": 1,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 1,
@@ -86,12 +86,12 @@
       },
       "prompt": "Water",
       "answer": "Eau",
-      "clue": "Essential for life"
+      "hint": "Essential for life"
     },
     {
       "id": 5,
       "categoryId": 2,
-      "stage": 6,
+      "level": 6,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 6,
@@ -99,12 +99,12 @@
       },
       "prompt": "Mountain",
       "answer": "Montagne",
-      "clue": "Tall landform"
+      "hint": "Tall landform"
     },
     {
       "id": 6,
       "categoryId": 2,
-      "stage": 4,
+      "level": 4,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 4,
@@ -112,12 +112,12 @@
       },
       "prompt": "Friend",
       "answer": "Ami",
-      "clue": "Close companion"
+      "hint": "Close companion"
     },
     {
       "id": 7,
       "categoryId": 2,
-      "stage": 9,
+      "level": 9,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 9,
@@ -125,12 +125,12 @@
       },
       "prompt": "Book",
       "answer": "Livre",
-      "clue": "Contains written words"
+      "hint": "Contains written words"
     },
     {
       "id": 9,
       "categoryId": 2,
-      "stage": 2,
+      "level": 2,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 2,
@@ -138,12 +138,12 @@
       },
       "prompt": "Travel",
       "answer": "Voyage",
-      "clue": "Journey to different places"
+      "hint": "Journey to different places"
     },
     {
       "id": 10,
       "categoryId": 2,
-      "stage": 7,
+      "level": 7,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 7,
@@ -151,12 +151,12 @@
       },
       "prompt": "Food",
       "answer": "Nourriture",
-      "clue": "Eaten for sustenance"
+      "hint": "Eaten for sustenance"
     },
     {
       "id": 11,
       "categoryId": 2,
-      "stage": 5,
+      "level": 5,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 5,
@@ -164,12 +164,12 @@
       },
       "prompt": "Music",
       "answer": "Musique",
-      "clue": "Artistic sound expression"
+      "hint": "Artistic sound expression"
     },
     {
       "id": 12,
       "categoryId": 2,
-      "stage": 3,
+      "level": 3,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 3,
@@ -177,12 +177,12 @@
       },
       "prompt": "Time",
       "answer": "Temps",
-      "clue": "Measured in seconds, minutes, hours"
+      "hint": "Measured in seconds, minutes, hours"
     },
     {
       "id": 14,
       "categoryId": 2,
-      "stage": 1,
+      "level": 1,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 1,
@@ -190,12 +190,12 @@
       },
       "prompt": "Language",
       "answer": "Langue",
-      "clue": "Means of communication"
+      "hint": "Means of communication"
     },
     {
       "id": 15,
       "categoryId": 2,
-      "stage": 6,
+      "level": 6,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 6,
@@ -203,12 +203,12 @@
       },
       "prompt": "Art",
       "answer": "Art",
-      "clue": "Expressive creation"
+      "hint": "Expressive creation"
     },
     {
       "id": 16,
       "categoryId": 2,
-      "stage": 4,
+      "level": 4,
       "last": "2023-11-30T15:35:43.609Z",
       "repetitions": {
         "correct": 4,
@@ -216,11 +216,11 @@
       },
       "prompt": "Family",
       "answer": "Famille",
-      "clue": "Close relatives"
+      "hint": "Close relatives"
     },
     {
       "categoryId": 3,
-      "stage": 6,
+      "level": 6,
       "last": "2023-12-01T17:53:14.600Z",
       "repetitions": {
         "correct": 6,
@@ -228,12 +228,12 @@
       },
       "prompt": "What is Taylor Swift's middle name?",
       "answer": "Alison",
-      "clue": "The company that is used to apply and manage the copyright for her brand and related phrases is using her initials: TAS Rights Management LLC",
+      "hint": "The company that is used to apply and manage the copyright for her brand and related phrases is using her initials: TAS Rights Management LLC",
       "id": 122
     },
     {
       "categoryId": 3,
-      "stage": 4,
+      "level": 4,
       "last": "2023-12-01T16:03:31.863Z",
       "repetitions": {
         "correct": 4,
@@ -241,12 +241,12 @@
       },
       "prompt": "What is the name of Muse's first studio album?",
       "answer": "Showbiz (released October 8, 1999)",
-      "clue": "First letter: S",
+      "hint": "First letter: S",
       "id": 123
     },
     {
       "categoryId": 3,
-      "stage": 10,
+      "level": 10,
       "last": "2023-12-01T17:53:00.734Z",
       "repetitions": {
         "correct": 10,
@@ -254,7 +254,7 @@
       },
       "prompt": "Did David Bowie have two different coloured eyes?",
       "answer": "No – he had a permanently dilated pupil from getting into a fight, giving the illusion of different eye colours, but had two blue eyes.",
-      "clue": "",
+      "hint": "",
       "id": 124
     }
   ]

@@ -1,21 +1,20 @@
 import { useParams } from "react-router"
-import { maxStage } from "../../helpers/constants"
+import { maxLevel } from "../../helpers/constants"
 
 export default function CardStats ({props}) {
-  const { repetitions, stage, last } = props
+  const { repetitions, level, lastAskedAt } = props
   const { cardId } = useParams()
   if (!cardId) return
-  const totalrepetitions = repetitions.correct + repetitions.wrong
   return (
     <>
     <h3>Card {cardId}</h3>
     <div className="buttoncontainer">
-        {last && <label>Last known at {new Date(last).toLocaleString()}</label>}
-        <p className="circlebutton">{totalrepetitions ? (repetitions.correct / totalrepetitions * 100).toFixed(0) : "0"}%</p>
+        {lastAskedAt && <label>Last known at {new Date(lastAskedAt).toLocaleString()}</label>}
+        <p className="circlebutton">{repetitions ? (level / repetitions * 100).toFixed(0) : "0"}%</p>
         <label>Total</label>
-        <p className="circlebutton">{totalrepetitions}</p>
+        <p className="circlebutton">{repetitions}</p>
         <label>Level</label>
-        <p className={stage >= maxStage ? "circlebutton green" : "circlebutton"}>{stage}</p>
+        <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
     </div>
     </>
   )

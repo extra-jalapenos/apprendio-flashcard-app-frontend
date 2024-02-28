@@ -22,8 +22,9 @@ const initSession = {
 
 
 export default function App() {
-  
+
   const [sessionStats, setSessionStats] = useState(initSession)
+  const token = sessionStorage.getItem("token")
 
   useEffect(() => {
     setSessionStats(initSession)
@@ -57,7 +58,7 @@ export default function App() {
   return (
     <>
       <userContext.Provider value={{user, setUser, logoutUser}}>
-      <sessionContext.Provider value={{sessionStats, setSessionStats}}>
+      <sessionContext.Provider value={{token, sessionStats, setSessionStats}}>
         <Header />
       <main>
       <Routes>

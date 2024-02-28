@@ -1,4 +1,5 @@
-export const baseURL = "http://localhost:3000"
+export const baseURL = "http://localhost:4000"
+// export const baseURL = import.meta.env.BASE_URL
 
 export const headers = {
   "content-type": "application/json"
@@ -6,26 +7,26 @@ export const headers = {
 
 export const entryBlueprint = {
   "categoryId": "",
-  "stage": 0,
+  "level": 0,
   "last": "",
   "repetitions": {
     "correct": 0,
     "wrong": 0
   },
-"prompt": "", 
+"prompt": "",
 "answer": ""
 }
 
-export const maxStage = 10
+export const maxLevel = 10
 
 const dayInMilliseconds = 1000 * 60 * 60 * 24
 
-const timeToNextPractice = (stage) => stage ** 2.4 * dayInMilliseconds
+const timeToNextPractice = (level) => level ** 2.4 * dayInMilliseconds
 
 export const timeToNextPracticeObj = () => {
   const obj = {}
 
-  for (let i = 0; i <= maxStage; i++) {
+  for (let i = 0; i <= maxLevel; i++) {
     obj[String(i)] = parseInt(timeToNextPractice(i).toFixed(0))
   }
 
