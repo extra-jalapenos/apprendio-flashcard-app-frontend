@@ -85,7 +85,7 @@ export default function Lookup() {
       return
     }
     const filteredForText = data.filter(category => {
-      category.Card = category.Card.filter(card => !!card.prompt.match(searchText) || !!card.answer.match(searchText))
+      category.Cards = category.Cards.filter(card => !!card.prompt.match(searchText) || !!card.answer.match(searchText))
       return category
     })
     setFilteredCards(filteredForText)
@@ -105,7 +105,7 @@ export default function Lookup() {
     </section>
     {data.map((category, index) => <CategorySection key={index}
         name={category.name}
-        cards={category.Card}
+        cards={category.Cards}
         getCards={getCards}
       />)}
     </>
