@@ -80,7 +80,10 @@ export default function Lookup() {
 
   const filterCards = () => {
     if (!data) return
-    if (!searchText.length) return setFilteredCards(data)
+    if (!searchText.length) {
+      setFilteredCards(data)
+      return
+    }
     const filteredForText = data.filter(category => {
       category.Card = category.Card.filter(card => !!card.prompt.match(searchText) || !!card.answer.match(searchText))
       return category
@@ -90,10 +93,10 @@ export default function Lookup() {
 
   const handleInput = (event) => setSearchText(event.target.value)
 
-  useEffect(filterCards, [data, searchText])
+  useEffect(filterCards, [searchText])
 
   if (!data) return <div className="center">Loading cards…</div>
-  if (!filteredCards) return <div className="center">Filtering cards…</div>
+  if (!filteredCards && searchText.length > 0) return <div className="center">Filtering cards…</div>
 
   return (
     <>
