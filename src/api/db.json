@@ -47,7 +47,7 @@
       },
       "prompt": "House",
       "answer": "Maison",
-      "clue": "Dwelling place"
+      "hint": "Dwelling place"
     },
     {
       "id": 2,
@@ -60,7 +60,7 @@
       },
       "prompt": "Sun",
       "answer": "Soleil",
-      "clue": "Shines in the sky"
+      "hint": "Shines in the sky"
     },
     {
       "id": 3,
@@ -73,7 +73,7 @@
       },
       "prompt": "Tree",
       "answer": "Arbre",
-      "clue": "Has branches and leaves"
+      "hint": "Has branches and leaves"
     },
     {
       "id": 4,
@@ -86,7 +86,7 @@
       },
       "prompt": "Water",
       "answer": "Eau",
-      "clue": "Essential for life"
+      "hint": "Essential for life"
     },
     {
       "id": 5,
@@ -99,7 +99,7 @@
       },
       "prompt": "Mountain",
       "answer": "Montagne",
-      "clue": "Tall landform"
+      "hint": "Tall landform"
     },
     {
       "id": 6,
@@ -112,7 +112,7 @@
       },
       "prompt": "Friend",
       "answer": "Ami",
-      "clue": "Close companion"
+      "hint": "Close companion"
     },
     {
       "id": 7,
@@ -125,7 +125,7 @@
       },
       "prompt": "Book",
       "answer": "Livre",
-      "clue": "Contains written words"
+      "hint": "Contains written words"
     },
     {
       "id": 9,
@@ -138,7 +138,7 @@
       },
       "prompt": "Travel",
       "answer": "Voyage",
-      "clue": "Journey to different places"
+      "hint": "Journey to different places"
     },
     {
       "id": 10,
@@ -151,7 +151,7 @@
       },
       "prompt": "Food",
       "answer": "Nourriture",
-      "clue": "Eaten for sustenance"
+      "hint": "Eaten for sustenance"
     },
     {
       "id": 11,
@@ -164,7 +164,7 @@
       },
       "prompt": "Music",
       "answer": "Musique",
-      "clue": "Artistic sound expression"
+      "hint": "Artistic sound expression"
     },
     {
       "id": 12,
@@ -177,7 +177,7 @@
       },
       "prompt": "Time",
       "answer": "Temps",
-      "clue": "Measured in seconds, minutes, hours"
+      "hint": "Measured in seconds, minutes, hours"
     },
     {
       "id": 14,
@@ -190,7 +190,7 @@
       },
       "prompt": "Language",
       "answer": "Langue",
-      "clue": "Means of communication"
+      "hint": "Means of communication"
     },
     {
       "id": 15,
@@ -203,7 +203,7 @@
       },
       "prompt": "Art",
       "answer": "Art",
-      "clue": "Expressive creation"
+      "hint": "Expressive creation"
     },
     {
       "id": 16,
@@ -216,7 +216,7 @@
       },
       "prompt": "Family",
       "answer": "Famille",
-      "clue": "Close relatives"
+      "hint": "Close relatives"
     },
     {
       "categoryId": 3,
@@ -228,7 +228,7 @@
       },
       "prompt": "What is Taylor Swift's middle name?",
       "answer": "Alison",
-      "clue": "The company that is used to apply and manage the copyright for her brand and related phrases is using her initials: TAS Rights Management LLC",
+      "hint": "The company that is used to apply and manage the copyright for her brand and related phrases is using her initials: TAS Rights Management LLC",
       "id": 122
     },
     {
@@ -241,7 +241,7 @@
       },
       "prompt": "What is the name of Muse's first studio album?",
       "answer": "Showbiz (released October 8, 1999)",
-      "clue": "First letter: S",
+      "hint": "First letter: S",
       "id": 123
     },
     {
@@ -254,7 +254,7 @@
       },
       "prompt": "Did David Bowie have two different coloured eyes?",
       "answer": "No – he had a permanently dilated pupil from getting into a fight, giving the illusion of different eye colours, but had two blue eyes.",
-      "clue": "",
+      "hint": "",
       "id": 124
     }
   ]
