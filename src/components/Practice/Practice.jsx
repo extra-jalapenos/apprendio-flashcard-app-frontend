@@ -224,6 +224,7 @@ export default function Practice () {
   const next = () => {
     if (currentCardIndex + 1 < cards.length) {
       setShowAnswer(false)
+      setEvaluation(null)
       const nextCard = cards[Number(currentCardIndex + 1)]
       setCurrentCardIndex(currentCardIndex+1)
       navigate("/practice/"+ categoryId + "/" + nextCard.id)
