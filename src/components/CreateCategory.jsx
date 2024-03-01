@@ -9,24 +9,28 @@ export default function CreateCategory () {
   const [categories, setCategories] = useState(null)
   const [form, setForm] = useState({user: (user || "unknown"), entries: []})
 
-  const getCategories = async () => {
-    try {
-      const options = {
-        headers: makeHeaders()
+  const getCategories = () => {
+    const get = async () => {
+      try {
+        const options = {
+          headers: makeHeaders()
+        }
+        const response = await fetch("/api/users/me/categories", options)
+        console.log(response)
+        if (response.status === 200) {
+          const data = await response.json()
+          setCategories(data.categories)
+        } else {
+          console.log(response.status, "status fetching categories")
+        }
+      } catch (error) {
+        console.log(error, "error fetching categories")
       }
-      const response = await fetch("/api/users/me/categories", options)
-      if (response.status === 200) {
-        const data = response.json()
-        setCategories(data.categories)
-      } else {
-        console.log(response.status, "status fetching categories")
-      }
-    } catch (error) {
-      console.log(error, "error fetching categories")
     }
+    get()
   }
 
-  useEffect(() => getCategories(), [])
+  useEffect(getCategories, [])
 
   const handleChange = (event) => {
     const {name, value} = event.target
@@ -36,7 +40,6 @@ export default function CreateCategory () {
   const duplicate = () => !!categories.find(category => category.name === form.name)
 
   const createCategory = async () => {
-
     try {
       const body = {
         "name": form.name
