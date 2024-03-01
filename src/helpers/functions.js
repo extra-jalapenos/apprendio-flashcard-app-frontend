@@ -22,17 +22,22 @@ export const getEntries = () => {
     .then(response => response.json())
 }
 
-export const deleteEntry = (id) => {
-  const endpoint = "/entries/" + id
-
+export const deleteEntry = async (id) => {
   const options = {
     method: "DELETE",
-    headers: headers
+    headers: makeHeaders()
   }
 
-  fetch(baseURL + endpoint, options)
-    .then(response => response.json())
-    .catch(error => console.log("error deleting entry, id:", id, error))
+  try {
+    const response = await fetch(`/api/cards/${id}`, options)
+    if (response.status === 204) {
+      console.log("success deleting")
+    } else {
+      console.log("error deleting entry, id:", id, error)
+    }
+  } catch (error) {
+    console.log("error deleting entry, id:", id, error)
+  }
 }
 
 
