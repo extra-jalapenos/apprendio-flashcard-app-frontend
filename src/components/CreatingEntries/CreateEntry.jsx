@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { baseURL, headers, entryBlueprint } from "../../helpers/constants"
+import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions"
 import BatchImport from "./BatchImport"
@@ -75,8 +75,12 @@ export default function CreateEntry() {
       const response = await fetch("/api/cards", options)
       if (response.status === 201) {
         const data = await response.json()
-        console.log("created", data.card)
-        navigate("/new-entry")
+        if (response.status === 201) {
+          console.log("created", data.card)
+          resetForm()
+        } else {
+          console.log(response.status, "error creating card")
+        }
       } else {
         console.log(response.status)
         console.log("error creating entry")
