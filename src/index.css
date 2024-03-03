@@ -73,6 +73,7 @@ main {
   grid-area: "main";
   place-content: center;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 .twoColumns {
