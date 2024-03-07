@@ -1,139 +1,26 @@
-import { useEffect, useState, useContext } from "react"
-import { useParams, useNavigate } from "react-router"
+import { useState, useContext } from "react"
+import { useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { baseURL, headers, shuffle, maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/functions"
-import { readyForPractice } from "../../helpers/functions"
-import { sessionContext, userContext } from "../../App"
-export default function Practice () {
+import { practiceContext, sessionContext, userContext } from "../../App"
+
+export default function Practice ({card}) {
 
   // const { user, setUser } = useContext(userContext)
+  const { cards, setCards } = useContext(practiceContext)
   const { setSessionStats } = useContext(sessionContext)
-  const { categoryId, cardId } = useParams()
   const navigate = useNavigate()
 
-  const [category, setCategory] = useState(null)
-  const [cards, setCards] = useState(null)
-  const [currentCardIndex, setCurrentCardIndex] = useState(null)
-  const [currentCard, setCurrentCard] = useState(null)
-
+  const { prompt, answer, hint, repetitions, level, maxLevel } = card
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
 
-  const getCategory = () => {
-    const get = async () => {
-      try {
-        const options = {
-          headers: makeHeaders()
-        }
-        console.log(categoryId, `/api/categories/${categoryId}`)
-        const response = await fetch(`/api/categories/${categoryId}`, options)
-        if (response.status === 200) {
-          const data = await response.json()
-          setCategory(data.category)
-        }
-      } catch (error) {
-        console.log("something went wrong fetching the category")
-      }
-    }
-    get()
-  }
-
-  useEffect(getCategory, [categoryId])
-
-  const getCards = () => {
-    const get = async () => {
-      try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch(`/api/categories/${categoryId}/cards`, options)
-        if (response.status === 200) {
-          const data = await response.json()
-          const cards = data.cards
-          const filteredCards = cards.filter(card => readyForPractice(card) === true)
-          if (filteredCards) {
-            const shuffledCards = shuffle(filteredCards)
-            setCards(shuffledCards)
-            setCurrentCardIndex(0)
-            navigate("/practice/"+ categoryId + "/" + shuffledCards[0].id)
-          } else {
-            setCards([])
-          }
-        } else {
-          console.log(response.status)
-        }
-      } catch (error) {
-        console.log("something went wrong fetching the category's cards")
-      }
-    }
-    get()
-  }
-
-  useEffect(getCards, [])
-
-  const getCurrentCard = () => {
-    if (currentCardIndex === null) {
-      return
-    }
-    console.log("getting card num", currentCardIndex, cards[currentCardIndex])
-    const get = async () => {
-      try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch(`/api/cards/${cardId}`, options)
-        if (response.status === 200) {
-          const data = await response.json()
-          setCurrentCard(data.card)
-        }
-      } catch (error) {
-        console.log("something went wrong fetching the card")
-      }
-    }
-    get()
-  }
-
-  useEffect(getCurrentCard, [currentCardIndex])
-
-  if (!category) {
-    return (
-      <div className="center">
-        <h3>Loading category…</h3>
-        <p>This might take some time.</p>
-      </div>
-    )
-  }
-
-  if (!cards) {
-    return (
-      <div className="center">
-        <h3>Loading cards in {category.name}…</h3>
-        <p>This might take some time.</p>
-      </div>
-    )
-  }
-
-  if (cards && cards.length === 0) {
-    return (
-      <div className="center">
-        <h3>Whoops!</h3>
-        <p>There are no cards to practice for "{category.name}".</p>
-        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
-      </div>
-    )
-  }
-
-  if (!currentCard) {
-    return `Error loading card ${currentCardIndex}`
-  }
-
   const handleEntry = (event) => setUserEntry(event.target.value)
 
   const handleSubmit = () => {
-    currentCard.answer.match(userEntry) ? setEvaluation(true) : setEvaluation(false)
+    answer.match(userEntry) ? setEvaluation(true) : setEvaluation(false)
     setShowAnswer(true)
   }
 
@@ -164,11 +51,11 @@ export default function Practice () {
 
   const increaseCardStats = async (keyName) => {
     const body = {
-      repetitions: currentCard.repetitions + 1
+      repetitions: repetitions + 1
     }
 
-    if (currentCard.level < maxLevel && keyName === "correct") {
-      body.level = currentCard.level + 1
+    if (level < maxLevel && keyName === "correct") {
+      body.level = level + 1
     }
 
     if (keyName === "correct") {
@@ -183,14 +70,14 @@ export default function Practice () {
 
     console.log(options)
     try {
-      const response = await fetch(`/api/cards/${currentCard.id}`, options)
+      const response = await fetch(`/api/cards/${card.id}`, options)
       if (response.status === 200) {
         const data = await response.json()
         const card = data.card
         console.log("success modifying card", card)
       }
     } catch (error) {
-        console.log("error modifying card", cardId)
+        console.log("error modifying card", card.id)
     }
   }
 
@@ -222,12 +109,10 @@ export default function Practice () {
   // }
 
   const next = () => {
-    if (currentCardIndex + 1 < cards.length) {
+    setCards(cards.pop())
+    if (cards.length) {
       setShowAnswer(false)
       setEvaluation(null)
-      const nextCard = cards[Number(currentCardIndex + 1)]
-      setCurrentCardIndex(currentCardIndex+1)
-      navigate("/practice/"+ categoryId + "/" + nextCard.id)
     } else {
       navigate("/")
     }
@@ -235,8 +120,8 @@ export default function Practice () {
 
   return (
     <>
-      <CardStats props={currentCard} />
-      <CardPair props={currentCard} revealAnswer={showAnswer} handleEntry={handleEntry}/>
+      <CardStats card={card} />
+      <CardPair props={card} revealAnswer={showAnswer} handleEntry={handleEntry}/>
       {evaluation === null &&
         <div className="buttoncontainer">
           <button onClick={() => handleSubmit()}>Enter</button>
