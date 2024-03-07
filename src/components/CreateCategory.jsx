@@ -1,36 +1,28 @@
 import { userContext } from "../App"
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../helpers/functions"
+import { makeHeaders, getCategories } from "../helpers/functions"
 
 export default function CreateCategory () {
   const {user} = useContext(userContext)
   const navigate = useNavigate()
   const [categories, setCategories] = useState(null)
-  const [form, setForm] = useState({user: (user || "unknown"), entries: []})
+  const [form, setForm] = useState({ user: (user || "unknown"), entries: [] })
 
-  const getCategories = () => {
-    const get = async () => {
-      try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch("/api/users/me/categories", options)
-        console.log(response)
-        if (response.status === 200) {
-          const data = await response.json()
-          setCategories(data.categories)
-        } else {
-          console.log(response.status, "status fetching categories")
-        }
-      } catch (error) {
-        console.log(error, "error fetching categories")
+  const initCategories = () => {
+    try {
+      const categories = getCategories()
+      if (categories) {
+        setCategories(getCategories())
+      } else {
+        console.log(categories, "status fetching categories")
       }
+    } catch (error) {
+      console.log(error, "error fetching categories")
     }
-    get()
   }
 
-  useEffect(getCategories, [])
+  useEffect(initCategories, [])
 
   const handleChange = (event) => {
     const {name, value} = event.target

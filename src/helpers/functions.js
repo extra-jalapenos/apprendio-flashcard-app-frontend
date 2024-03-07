@@ -81,6 +81,23 @@ export const getCategory = async (categoryId) => {
   }
 }
 
+export const getCategories = async () => {
+  try {
+    const options = {
+      headers: makeHeaders()
+    }
+    const response = await fetch("/api/users/me/categories", options)
+    if (response.status === 200) {
+      const data = await response.json()
+      return data.categories
+    } else {
+      console.log(response.status, "status fetching categories")
+    }
+  } catch (error) {
+    console.log(error, "error fetching categories")
+  }
+}
+
 export const deleteCategory = (id) => {
   const endpoint = "/categories/" + id
 
