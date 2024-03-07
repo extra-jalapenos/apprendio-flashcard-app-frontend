@@ -1,9 +1,9 @@
-import { useEffect, useState, useContext, createContext } from "react"
+import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
-import { shuffle, maxLevel } from "../../helpers/constants"
-import { makeHeaders, getCategory, getCards } from "../../helpers/functions"
+import { shuffle } from "../../helpers/constants"
+import { getCategory, getCards } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
-import { sessionContext, userContext, practiceContext } from "../../App"
+import { sessionContext, practiceContext } from "../../App"
 import Practice from "./Practice"
 
 export default function LoadPractice () {
