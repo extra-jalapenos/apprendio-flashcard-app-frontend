@@ -8,7 +8,7 @@ import { practiceContext, sessionContext, userContext } from "../../App"
 export default function Practice ({card}) {
 
   // const { user, setUser } = useContext(userContext)
-  const { cards, setCards } = useContext(practiceContext)
+  const { cards, setCards, currentIndex, setCurrentIndex } = useContext(practiceContext)
   const { setSessionStats } = useContext(sessionContext)
   const navigate = useNavigate()
 
@@ -109,10 +109,10 @@ export default function Practice ({card}) {
   // }
 
   const next = () => {
-    setCards(cards.pop())
-    if (cards.length) {
+    if (currentIndex < cards.length) {
       setShowAnswer(false)
       setEvaluation(null)
+      setCurrentIndex(currentIndex+1)
     } else {
       navigate("/")
     }
@@ -124,14 +124,14 @@ export default function Practice ({card}) {
       <CardPair props={card} revealAnswer={showAnswer} handleEntry={handleEntry}/>
       {evaluation === null &&
         <div className="buttoncontainer">
-          <button onClick={() => handleSubmit()}>Enter</button>
-          <button className="red" onClick={() => next()}>Next →</button>
+          <button onClick={handleSubmit}>Enter</button>
+          <button className="red" onClick={next}>Next →</button>
         </div>
       }
       {evaluation !== null &&
       <div className="buttoncontainer">
-        <button className="circlebutton green" onClick={() => logCorrect()}>✓</button>
-        <button className="circlebutton red" onClick={() => logWrong()}>×</button>
+        <button className="circlebutton green" onClick={logCorrect}>✓</button>
+        <button className="circlebutton red" onClick={logWrong}>×</button>
       </div>
       }
     </>

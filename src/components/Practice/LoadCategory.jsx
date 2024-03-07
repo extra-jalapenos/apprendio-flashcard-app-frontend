@@ -70,5 +70,6 @@ export default function LoadPractice () {
     )
   }
 
+  console.log("found", cards.length)
   return <Practice card={cards[cards.length-1]} />
 }

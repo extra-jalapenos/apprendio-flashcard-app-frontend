@@ -58,12 +58,13 @@ export default function App() {
   useEffect(syncSessionStorage, [user])
 
   const [cards, setCards] = useState(null)
+  const [currentIndex, setCurrentIndex] = useState(null)
 
   return (
     <>
       <userContext.Provider value={{user, setUser, logoutUser}}>
       <sessionContext.Provider value={{token, sessionStats, setSessionStats}}>
-      <practiceContext.Provider value={{cards, setCards}}>
+      <practiceContext.Provider value={{cards, setCards, currentIndex, setCurrentIndex}}>
         <Header />
       <main>
         <Routes>

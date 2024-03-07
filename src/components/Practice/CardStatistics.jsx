@@ -1,7 +1,6 @@
 import { maxLevel } from "../../helpers/constants"
 
 export default function CardStats ({card}) {
-  console.log(card)
   const { repetitions, level, lastAskedAt, id } = card
   if (!id) return
   return (
