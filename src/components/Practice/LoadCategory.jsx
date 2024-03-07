@@ -7,8 +7,6 @@ import { sessionContext, practiceContext } from "../../App"
 import Practice from "./Practice"
 
 export default function LoadPractice () {
-
-  // const { user, setUser } = useContext(userContext)
   const { setSessionStats } = useContext(sessionContext)
   const { categoryId } = useParams()
   const navigate = useNavigate()
@@ -69,19 +67,24 @@ export default function LoadPractice () {
   }
 
   const next = () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++
-      console.log(currentIndex)
-      setCard(cards[currentIndex])
+    if (cards.length > 0) {
+      setCard(cards.pop())
+      setCards(cards)
     } else {
       navigate("/")
     }
   }
 
+  if (!card) {
+    return (
+      <div className="center">Loading card…</div>
+    )
+  }
+
   return (
     <>
       <h2 className="center">{category.name}</h2>
-      <Practice card={card} next={next} />
+      <Practice card={card} setCard={setCard} next={next} />
     </>
   )
 }

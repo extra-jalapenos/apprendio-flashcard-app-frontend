@@ -5,15 +5,9 @@ import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
 import { practiceContext, sessionContext, userContext } from "../../App"
 
-export default function Practice ({ card, next }) {
+export default function Practice ({ card, setCard, next }) {
   const { setSessionStats } = useContext(sessionContext)
   const navigate = useNavigate()
-
-  if (!card) {
-    return (
-      <div className="center">Loading card…</div>
-    )
-  }
 
   const { id, answer } = card
   const [showAnswer, setShowAnswer] = useState(false)
@@ -34,10 +28,17 @@ export default function Practice ({ card, next }) {
   }
 
   const logCorrect = async () => {
+    setCard({
+      ...card,
+      level: card.level+1,
+      repetitions: card.repetitions+1,
+      lastAskedAt: new Date().toISOString()
+    })
     try {
       const changedCard = await changeCardStats(id, 1)
       if (changedCard) {
         console.log("changed card", changedCard)
+        resetDisplayOptions()
         next()
       } else {
         console.log("error changing card", changedCard)
@@ -45,15 +46,18 @@ export default function Practice ({ card, next }) {
     } catch (error) {
       console.log("error logging correct", error)
     }
-    resetDisplayOptions()
-    next()
   }
 
   const logWrong = async () => {
+    setCard({
+      ...card,
+      repetitions: card.repetitions+1
+    })
     try {
       const changedCard = await changeCardStats(id, -1)
       if (changedCard) {
         console.log("changed card", changedCard)
+        resetDisplayOptions()
         next()
       } else {
         console.log("error changing card", changedCard)
@@ -61,8 +65,6 @@ export default function Practice ({ card, next }) {
     } catch (error) {
       console.log("error logging wrong", error)
     }
-    resetDisplayOptions()
-    next()
   }
 
   // const increaseSessionStats = (keyName) => {
