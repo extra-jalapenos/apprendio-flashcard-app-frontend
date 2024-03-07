@@ -14,33 +14,31 @@ export default function LoadPractice () {
   const navigate = useNavigate()
 
   const { cards, setCards } = useContext(practiceContext)
-  const [category, setCategory] = useState(null)
+  let { currentIndex } = useContext(practiceContext)
+  const [ category, setCategory ] = useState(null)
+  const [ card, setCard ] = useState(null)
 
-  const initCategory = () => {
+  const init = () => {
     const run = async () => {
       const category = await getCategory(categoryId)
       if (category) {
         setCategory(category)
+        const cards = await getCards(categoryId)
+        if (cards) {
+          const filteredCards = cards.filter((card) => readyForPractice(card))
+          const shuffledCards = shuffle(filteredCards)
+          setCards(shuffledCards)
+          console.log("shuffled cards")
+          currentIndex = 0
+          setCard(shuffledCards[currentIndex])
+          console.log("set index in shuffled cards")
+        }
       }
     }
     run()
   }
 
-  useEffect(initCategory, [categoryId])
-
-  const initCards = () => {
-    const run = async () => {
-      const cards = await getCards(categoryId)
-      if (cards) {
-        const filteredCards = cards.filter((card) => readyForPractice(card))
-        const shuffledCards = shuffle(filteredCards)
-        setCards(shuffledCards)
-      }
-    }
-    run()
-  }
-
-  useEffect(initCards, [category])
+  useEffect(init, [])
 
   if (!category) {
     return (
@@ -70,6 +68,20 @@ export default function LoadPractice () {
     )
   }
 
-  console.log("found", cards.length)
-  return <Practice card={cards[cards.length-1]} />
+  const next = () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++
+      console.log(currentIndex)
+      setCard(cards[currentIndex])
+    } else {
+      navigate("/")
+    }
+  }
+
+  return (
+    <>
+      <h2 className="center">{category.name}</h2>
+      <Practice card={card} next={next} />
+    </>
+  )
 }

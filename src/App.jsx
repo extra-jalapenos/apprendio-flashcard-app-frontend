@@ -58,14 +58,20 @@ export default function App() {
   useEffect(syncSessionStorage, [user])
 
   const [cards, setCards] = useState(null)
-  const [currentIndex, setCurrentIndex] = useState(null)
+  let currentIndex = null
+  const currentCard = () => {
+    if (currentIndex && cards && currentIndex < cards.length) {
+      return cards[currentIndex]
+    }
+    return null
+  }
 
   return (
     <>
       <userContext.Provider value={{user, setUser, logoutUser}}>
       <sessionContext.Provider value={{token, sessionStats, setSessionStats}}>
-      <practiceContext.Provider value={{cards, setCards, currentIndex, setCurrentIndex}}>
-        <Header />
+      <practiceContext.Provider value={{cards, setCards, currentIndex, currentCard}}>
+      <Header />
       <main>
         <Routes>
           <Route path={"/"} element={<Start />}/>
@@ -81,7 +87,7 @@ export default function App() {
           {/* <Route path={"/practice/:categoryId/:cardId"} element={<Practice card={card}/>}/> */}
         </Routes>
       </main>
-        <Footer />
+      <Footer />
       </practiceContext.Provider>
       </sessionContext.Provider>
       </userContext.Provider>

@@ -5,17 +5,26 @@ import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
 import { practiceContext, sessionContext, userContext } from "../../App"
 
-export default function Practice ({card}) {
-
-  // const { user, setUser } = useContext(userContext)
-  const { cards, setCards, currentIndex, setCurrentIndex } = useContext(practiceContext)
+export default function Practice ({ card, next }) {
   const { setSessionStats } = useContext(sessionContext)
   const navigate = useNavigate()
 
-  const { id, prompt, answer, hint, repetitions, level, maxLevel } = card
+  if (!card) {
+    return (
+      <div className="center">Loading card…</div>
+    )
+  }
+
+  const { id, answer } = card
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
+
+  const resetDisplayOptions = () => {
+    setShowAnswer(false)
+    setUserEntry("")
+    setEvaluation(null)
+  }
 
   const handleEntry = (event) => setUserEntry(event.target.value)
 
@@ -36,6 +45,8 @@ export default function Practice ({card}) {
     } catch (error) {
       console.log("error logging correct", error)
     }
+    resetDisplayOptions()
+    next()
   }
 
   const logWrong = async () => {
@@ -50,6 +61,8 @@ export default function Practice ({card}) {
     } catch (error) {
       console.log("error logging wrong", error)
     }
+    resetDisplayOptions()
+    next()
   }
 
   // const increaseSessionStats = (keyName) => {
@@ -78,16 +91,6 @@ export default function Practice ({card}) {
   //       .then(data => setUser(data))
   //       .catch(error => console.log(error, "error updating user"))
   // }
-
-  const next = () => {
-    if (currentIndex < cards.length) {
-      setShowAnswer(false)
-      setEvaluation(null)
-      setCurrentIndex(currentIndex+1)
-    } else {
-      navigate("/")
-    }
-  }
 
   return (
     <>
