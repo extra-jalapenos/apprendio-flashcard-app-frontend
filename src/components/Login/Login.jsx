@@ -62,7 +62,7 @@ export default function Login () {
           <h3>Oh hi, {loginData.username}!</h3>
           <p>You seem to have forgotten your login details – or did you want to create an account?</p>
           <button className="green" onClick={() => navigate("/register")}>Create Account</button>
-          <button className="red" onClick={resetPage}>Re-try login</button>
+          <button className="red" onClick={() => setLoginData(null)}>Re-try login</button>
         </div>
         )
       }
