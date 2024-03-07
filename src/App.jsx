@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Start from "./components/Start"
 import CreateEntry from './components/CreatingEntries/CreateEntry'
 import CreateCategory from './components/CreateCategory'
+import LoadPractice from './components/Practice/LoadCategory'
 import Practice from './components/Practice/Practice'
 import CategorySelection from './components/CategorySelection'
 import Login from './components/Login/Login'
@@ -15,6 +16,7 @@ import BatchImport from './components/CreatingEntries/BatchImport'
 
 const userContext = createContext()
 const sessionContext = createContext()
+const practiceContext = createContext()
 
 const initSession = {
   "correct": 0,
@@ -55,31 +57,35 @@ export default function App() {
 
   useEffect(syncSessionStorage, [user])
 
+  const [cards, setCards] = useState(null)
+
   return (
     <>
       <userContext.Provider value={{user, setUser, logoutUser}}>
       <sessionContext.Provider value={{token, sessionStats, setSessionStats}}>
+      <practiceContext.Provider value={{cards, setCards}}>
         <Header />
       <main>
-      <Routes>
-        <Route path={"/"} element={<Start />}/>
-        <Route path={"/login"} element={<Login />}/>
-        <Route path={"/register"} element={<Register />}/>
-        <Route path={"/create-category"} element={<CreateCategory />}/>
-        <Route path={"/select-category"} element={<CategorySelection />}/>
-        <Route path={"/new-entry"} element={<CreateEntry />}/>
-        <Route path={"/import"} element={<BatchImport />}/>
-        <Route path={"/practice/:categoryId"} element={<Practice />}/>
-        <Route path={"/practice/:categoryId/:cardId"} element={<Practice />}/>
-        <Route path={"/lookup/"} element={<Lookup />}/>
-        <Route path={"/analytics/"} element={<Analytics />}/>
-      </Routes>
+        <Routes>
+          <Route path={"/"} element={<Start />}/>
+          <Route path={"/login"} element={<Login />}/>
+          <Route path={"/register"} element={<Register />}/>
+          <Route path={"/create-category"} element={<CreateCategory />}/>
+          <Route path={"/select-category"} element={<CategorySelection />}/>
+          <Route path={"/new-entry"} element={<CreateEntry />}/>
+          <Route path={"/import"} element={<BatchImport />}/>
+          <Route path={"/lookup/"} element={<Lookup />}/>
+          <Route path={"/analytics/"} element={<Analytics />}/>
+          <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
+          {/* <Route path={"/practice/:categoryId/:cardId"} element={<Practice card={card}/>}/> */}
+        </Routes>
       </main>
         <Footer />
+      </practiceContext.Provider>
       </sessionContext.Provider>
       </userContext.Provider>
     </>
   )
 }
 
-export { App, userContext, sessionContext }
+export { App, userContext, sessionContext, practiceContext }
