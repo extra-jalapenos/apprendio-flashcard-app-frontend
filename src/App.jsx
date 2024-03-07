@@ -6,6 +6,7 @@ import CreateCategory from './components/CreateCategory'
 import Practice from './components/Practice/Practice'
 import CategorySelection from './components/CategorySelection'
 import Login from './components/Login/Login'
+import Register from './components/Login/Register'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Lookup from './components/Analytics/Lookup'
@@ -19,7 +20,6 @@ const initSession = {
   "correct": 0,
   "wrong": 0
 }
-
 
 export default function App() {
 
@@ -64,6 +64,7 @@ export default function App() {
       <Routes>
         <Route path={"/"} element={<Start />}/>
         <Route path={"/login"} element={<Login />}/>
+        <Route path={"/register"} element={<Register />}/>
         <Route path={"/create-category"} element={<CreateCategory />}/>
         <Route path={"/select-category"} element={<CategorySelection />}/>
         <Route path={"/new-entry"} element={<CreateEntry />}/>
