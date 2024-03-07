@@ -11,15 +11,21 @@ export const makeHeaders = () => {
   return headers
 }
 
-export const getEntries = () => {
-  const endpoint = "/entries/"
-
-  const options = {
-    headers: headers
+export const getCards = async (categoryId) => {
+  try {
+    const options = {
+      headers: makeHeaders()
+    }
+    const response = await fetch(`/api/categories/${categoryId}/cards`, options)
+    if (response.status === 200) {
+      const data = await response.json()
+      return data.cards
+    } else {
+      console.log(response.status)
+    }
+  } catch (error) {
+    console.log("something went wrong fetching the category's cards")
   }
-
-  fetch(baseURL + endpoint, options)
-    .then(response => response.json())
 }
 
 export const deleteEntry = async (id) => {
@@ -40,16 +46,20 @@ export const deleteEntry = async (id) => {
   }
 }
 
-
-export const getCategories = () => {
-  const endpoint = "/categories/"
-
-  const options = {
-    headers: headers
+export const getCategory = async (categoryId) => {
+  try {
+    const options = {
+      headers: makeHeaders()
+    }
+    const response = await fetch(`/api/categories/${categoryId}`, options)
+    if (response.status === 200) {
+      const data = await response.json()
+      return data.category
+    }
+  } catch (error) {
+    console.log("something went wrong fetching the category")
+    return null
   }
-
-  fetch(baseURL + endpoint, options)
-    .then(response => response.json())
 }
 
 export const deleteCategory = (id) => {
