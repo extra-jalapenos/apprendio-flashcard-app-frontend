@@ -92,6 +92,7 @@ export const getCategories = async () => {
       return data.categories
     } else {
       console.log(response.status, "status fetching categories")
+      return false
     }
   } catch (error) {
     console.log(error, "error fetching categories")

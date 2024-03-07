@@ -8,30 +8,30 @@ export default function LanguageSelection () {
   const [categories, setCategories] = useState(null)
 
   const getCategories = () => {
-    const response = async () => {
+    const get = async () => {
       try {
         const options = {
           headers: makeHeaders()
         }
-        const res = await fetch("/api/users/me/categories", options)
-        const data = await res.json()
-        if (res.status === 200) {
+        const response = await fetch("/api/users/me/categories", options)
+        if (response.status === 200) {
+          const data = await response.json()
           setCategories(data.categories)
-        } else {
-          console.log(data)
         }
       } catch (error) {
-        console.log("error fetching categories")
+        console.log(error, "error fetching categories")
       }
     }
-    response()
+    get()
   }
 
   useEffect(getCategories, [])
 
-  if (!categories) return (<div className="center">
+  if (!categories) return (
+    <div className="center">
       Loading…
-    </div>)
+    </div>
+  )
 
   return (
     <>
