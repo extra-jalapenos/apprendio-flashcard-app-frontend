@@ -2,7 +2,7 @@ import { useState, useContext } from "react"
 import { useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { makeHeaders } from "../../helpers/functions"
+import { changeCardStats } from "../../helpers/functions"
 import { practiceContext, sessionContext, userContext } from "../../App"
 
 export default function Practice ({card}) {
@@ -12,7 +12,7 @@ export default function Practice ({card}) {
   const { setSessionStats } = useContext(sessionContext)
   const navigate = useNavigate()
 
-  const { prompt, answer, hint, repetitions, level, maxLevel } = card
+  const { id, prompt, answer, hint, repetitions, level, maxLevel } = card
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
@@ -24,60 +24,31 @@ export default function Practice ({card}) {
     setShowAnswer(true)
   }
 
-  const logCorrect = () => {
-    increaseCardStats("correct")
-
-    // if (user) {
-    //   updateUserStats("correct")
-    // } else {
-    //   increaseSessionStats("correct")
-    // }
-
-    // setUserEntry("")
-    next()
-  }
-
-  const logWrong = () => {
-    increaseCardStats("wrong")
-
-    // if (user) {
-    //   updateUserStats("wrong")
-    // } else {
-    //   increaseSessionStats("wrong")
-    // }
-    // setUserEntry("")
-    next()
-  }
-
-  const increaseCardStats = async (keyName) => {
-    const body = {
-      repetitions: repetitions + 1
-    }
-
-    if (level < maxLevel && keyName === "correct") {
-      body.level = level + 1
-    }
-
-    if (keyName === "correct") {
-      body.lastAskedAt = new Date().toISOString()
-    }
-
-    const options = {
-      method: "PUT",
-      headers: makeHeaders(),
-      body: JSON.stringify(body)
-    }
-
-    console.log(options)
+  const logCorrect = async () => {
     try {
-      const response = await fetch(`/api/cards/${card.id}`, options)
-      if (response.status === 200) {
-        const data = await response.json()
-        const card = data.card
-        console.log("success modifying card", card)
+      const changedCard = await changeCardStats(id, 1)
+      if (changedCard) {
+        console.log("changed card", changedCard)
+        next()
+      } else {
+        console.log("error changing card", changedCard)
       }
     } catch (error) {
-        console.log("error modifying card", card.id)
+      console.log("error logging correct", error)
+    }
+  }
+
+  const logWrong = async () => {
+    try {
+      const changedCard = await changeCardStats(id, -1)
+      if (changedCard) {
+        console.log("changed card", changedCard)
+        next()
+      } else {
+        console.log("error changing card", changedCard)
+      }
+    } catch (error) {
+      console.log("error logging wrong", error)
     }
   }
 

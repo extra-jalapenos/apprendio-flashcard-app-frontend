@@ -28,6 +28,25 @@ export const getCards = async (categoryId) => {
   }
 }
 
+export const changeCardStats = async (cardId, changeBy) => {
+  const options = {
+    method: "PATCH",
+    headers: makeHeaders()
+  }
+
+  try {
+    const response = await fetch(`/api/cards/${cardId}?changeBy=${changeBy}`, options)
+    if (response.status === 200) {
+      const data = await response.json()
+      const card = data.card
+      return card
+    }
+  } catch (error) {
+    console.log("error modifying card", cardId)
+    return false
+  }
+}
+
 export const deleteEntry = async (id) => {
   const options = {
     method: "DELETE",
