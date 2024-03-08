@@ -1,18 +1,18 @@
 import { createContext, useEffect, useState } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Start from "./components/Start"
-import CreateEntry from './components/creatingEntries/CreateEntry'
+import CreateEntry from './components/CreatingEntries/CreateEntry'
 import CreateCategory from './components/CreateCategory'
-import LoadPractice from './components/practice/LoadCategory'
+import LoadPractice from './components/Practice/LoadCategory'
 import CategorySelection from './components/CategorySelection'
-import Login from './components/login/Login'
-import Register from './components/login/Register'
-import Lookup from './components/analytics/Lookup'
-import Analytics from './components/analytics/Analytics'
-import BatchImport from './components/creatingEntries/BatchImport'
-import { Statistics } from './components/footer/Statistics'
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
+import Login from './components/Login/Login'
+import Register from './components/Login/Register'
+import Lookup from './components/Analytics/Lookup'
+import Analytics from './components/Analytics/Analytics'
+import BatchImport from './components/CreatingEntries/BatchImport'
+import { Statistics } from './components/Footer/SessionStatistics'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 const userContext = createContext()
 const sessionContext = createContext()

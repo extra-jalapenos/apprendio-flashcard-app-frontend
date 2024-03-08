@@ -1,4 +1,4 @@
-import { Statistics } from "./Statistics"
+import { Statistics } from "./SessionStatistics"
 
 export default function Footer () {
   return (
