@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Start from "./components/Start"
 import CreateEntry from './components/CreatingEntries/CreateEntry'
 import CreateCategory from './components/CreateCategory'
@@ -25,6 +25,7 @@ const initSession = {
 
 export default function App() {
 
+  const navigate = useNavigate()
   const [sessionStats, setSessionStats] = useState(initSession)
   const token = sessionStorage.getItem("token")
 
@@ -53,6 +54,7 @@ export default function App() {
     setUser(null)
     setSessionStats(initSession)
     sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
+    navigate("/login")
   }
 
   useEffect(syncSessionStorage, [user])
