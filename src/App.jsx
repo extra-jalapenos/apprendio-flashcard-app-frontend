@@ -11,7 +11,7 @@ import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
 import BatchImport from './components/CreatingEntries/BatchImport'
 import { Statistics } from './components/Statistics/Statistics'
-import Header from './components/Header/Header'
+import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 
 const userContext = createContext()
