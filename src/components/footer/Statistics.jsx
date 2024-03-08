@@ -1,11 +1,9 @@
 import { useContext, useEffect } from "react"
-import { sessionContext, userContext } from "../../App"
+import { sessionContext } from "../../App"
 import { DateToYYYYMMDD, makeHeaders } from "../../helpers/functions"
 
 export default function Statistics () {
-
   const { sessionStats, setSessionStats } = useContext(sessionContext)
-  const { user } = useContext(userContext)
 
   const loadTodaysStats = () => {
     const get = async () => {
