@@ -84,14 +84,12 @@ main {
 
 .autoColumns {
   display: grid;
-  gap: 90px;
   place-content: center;
   place-items: center;
 }
 
 .threeColumns {
   display: grid;
-  gap: 10px;
   place-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
