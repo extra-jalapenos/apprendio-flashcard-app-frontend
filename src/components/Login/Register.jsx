@@ -30,13 +30,13 @@ export default function Register () {
     }
 
     try {
-      const register = await fetch("/api/register", options)
-      if (register.status === 201) {
-        const data = register.json()
+      const tryRegister = await fetch("/api/register", options)
+      if (tryRegister.status === 201) {
+        const data = await tryRegister.json()
         sessionStorage.setItem("token", data.token)
-        setUser(data.user)
+        setUser(signupData.username)
         navigate("/")
-      } else if (register.code === 403) {
+      } else if (tryRegister.status === 403) {
         console.log("username taken")
       } else {
         console.log("something went wrong registering")
