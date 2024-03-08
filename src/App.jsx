@@ -4,7 +4,6 @@ import Start from "./components/Start"
 import CreateEntry from './components/CreatingEntries/CreateEntry'
 import CreateCategory from './components/CreateCategory'
 import LoadPractice from './components/Practice/LoadCategory'
-import Practice from './components/Practice/Practice'
 import CategorySelection from './components/CategorySelection'
 import Login from './components/Login/Login'
 import Register from './components/Login/Register'
@@ -13,7 +12,6 @@ import Footer from './components/footer/Footer'
 import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
 import BatchImport from './components/CreatingEntries/BatchImport'
-import { getTodaysStats } from './helpers/functions'
 import { Statistics } from './components/Statistics/Statistics'
 
 const userContext = createContext()
