@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../../helpers/functions"
-import BatchImport from "./BatchImport"
+import { makeHeaders } from "../../helpers/functions.js"
+import BatchImport from "./BatchImport.jsx"
 
 function DropdownField ({category}) {
   const {id, title} = category
