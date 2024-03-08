@@ -2,11 +2,11 @@ import { useState, useContext } from "react"
 import { useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { changeCardStats } from "../../helpers/functions"
+import { changeCardStats, makeHeaders } from "../../helpers/functions"
 import { practiceContext, sessionContext, userContext } from "../../App"
 
 export default function Practice ({ card, setCard, next }) {
-  const { setSessionStats } = useContext(sessionContext)
+  const { sessionStats, setSessionStats } = useContext(sessionContext)
   const navigate = useNavigate()
 
   const { id, answer } = card
@@ -28,6 +28,11 @@ export default function Practice ({ card, setCard, next }) {
   }
 
   const logCorrect = async () => {
+    try {
+      updateTodaysStats(1, 0)
+    } catch {
+      console.log("error logging stat change")
+    }
     setCard({
       ...card,
       level: card.level+1,
@@ -49,6 +54,11 @@ export default function Practice ({ card, setCard, next }) {
   }
 
   const logWrong = async () => {
+    try {
+      updateTodaysStats(null, 1)
+    } catch {
+      console.log("error logging stat change")
+    }
     setCard({
       ...card,
       repetitions: card.repetitions+1
@@ -67,32 +77,42 @@ export default function Practice ({ card, setCard, next }) {
     }
   }
 
-  // const increaseSessionStats = (keyName) => {
-  //   const sessionStatsOld = JSON.parse(sessionStorage.getItem("sessionStats"))
-  //   const sessionStatsNew = {...sessionStatsOld, [keyName]: sessionStatsOld[keyName]+1}
-  //   sessionStorage.setItem("sessionStats", JSON.stringify(sessionStatsNew))
-  //   setSessionStats(sessionStatsNew)
-  // }
+  /**
+   * updateTodaysStats
+   * @param {int} increaseDecreaseAsNum
+   */
+  const updateTodaysStats = async (correct, incorrect) => {
+    const queryParams = []
+    if (correct > 0) {
+      queryParams.push(`correct=${correct}`)
+    }
+    if (incorrect > 0) {
+      queryParams.push(`incorrect=${incorrect}`)
+    }
 
-  // const updateUserStats = (type) => {
-  //   if (!type || !user) return
-  //   const endpoint = "/users/" + user.id
+    if (queryParams.length === 0) return
 
-  //     const body = {
-  //       statistics: {...user.statistics, [type]: user.statistics[type] + 1}
-  //     }
+    const queryParamStr = () => {
+      if (queryParams.length > 0) return "?" + queryParams.join("&")
+      return ""
+    }
 
-  //     const options = {
-  //       method: "PATCH",
-  //       headers: headers,
-  //       body: JSON.stringify(body)
-  //     }
+    const endpoint = `/api/users/me/statistics/${sessionStats.id}${queryParamStr()}`
+    const options = {
+      method: "PATCH",
+      headers: makeHeaders()
+    }
 
-  //     fetch(baseURL + endpoint, options)
-  //       .then(response => response.json())
-  //       .then(data => setUser(data))
-  //       .catch(error => console.log(error, "error updating user"))
-  // }
+    try {
+      const response = await fetch(endpoint, options)
+      const data = await response.json()
+      console.log("setting session stats", data)
+      setSessionStats(data.statistic)
+    } catch (error) {
+      console.log(error)
+      return false
+    }
+  }
 
   return (
     <>

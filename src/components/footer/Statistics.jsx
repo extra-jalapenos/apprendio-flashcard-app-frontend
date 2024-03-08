@@ -35,11 +35,11 @@ export default function Statistics () {
         {new Date().toLocaleDateString()}
       </li>
       <label>🥇 Correct</label>
-      <p className="circlebutton green">{user ? sessionStats.correct : sessionStats.correct}</p>
+      <p className="circlebutton green">{sessionStats ? sessionStats.correct : "…"}</p>
       <label>↻ Maybe next time</label>
-      <p className="circlebutton red">{user ? sessionStats.incorrect : sessionStats.incorrect}</p>
+      <p className="circlebutton red">{sessionStats ? sessionStats.incorrect : "…"}</p>
       <label>Total</label>
-      <p className="circlebutton blue">{user ? sessionStats.correct + sessionStats.incorrect : sessionStats.correct + sessionStats.incorrect}</p>
+      <p className="circlebutton blue">{sessionStats ? sessionStats.correct + sessionStats.incorrect : "…"}</p>
     </div>
   )
 }

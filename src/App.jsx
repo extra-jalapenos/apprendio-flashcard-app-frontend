@@ -52,9 +52,10 @@ export default function App() {
 
   const logoutUser = () => {
     sessionStorage.removeItem("user")
+    sessionStorage.removeItem("token")
+    sessionStorage.removeItem("sessionStats")
     setUser(null)
     setSessionStats(initSession)
-    sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
     navigate("/login")
   }
 
