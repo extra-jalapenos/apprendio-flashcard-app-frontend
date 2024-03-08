@@ -2,14 +2,6 @@ import { useEffect, useState } from "react"
 import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions.js"
-import BatchImport from "./BatchImport.jsx"
-
-function DropdownField ({category}) {
-  const {id, title} = category
-  return (
-    <option id={id}>{title}</option>
-  )
-}
 
 export default function CreateEntry() {
   const [categories, setCategories] = useState(null)
