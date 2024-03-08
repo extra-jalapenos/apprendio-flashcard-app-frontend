@@ -25,14 +25,21 @@ export default function Register () {
 
     const options = {
       method: "POST",
+      headers: headers,
       body: JSON.stringify(signupData)
     }
 
     try {
       const register = await fetch("/api/register", options)
-      if (register.code === 201) {
+      if (register.status === 201) {
         const data = register.json()
-        console.log(data)
+        sessionStorage.setItem("token", data.token)
+        setUser(data.user)
+        navigate("/")
+      } else if (register.code === 403) {
+        console.log("username taken")
+      } else {
+        console.log("something went wrong registering")
       }
     } catch (error) {
       console.log(error, "something went wrong during signup")
