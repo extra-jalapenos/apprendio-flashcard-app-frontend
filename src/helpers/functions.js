@@ -58,7 +58,7 @@ export const deleteEntry = async (id) => {
     if (response.status === 204) {
       console.log("success deleting")
     } else {
-      console.log("error deleting entry, id:", id, error)
+      console.log("error deleting entry, id:", id)
     }
   } catch (error) {
     console.log("error deleting entry, id:", id, error)

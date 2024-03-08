@@ -6,7 +6,7 @@ function Row ({rowArr}) {
   )
 }
 
-export default function BatchImportReview ({data, type}) {
+export default function BatchImportReview ({data}) {
   return (
     <>
       <h3>Review your data</h3>

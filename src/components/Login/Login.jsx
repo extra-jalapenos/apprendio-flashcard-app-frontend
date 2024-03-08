@@ -1,9 +1,8 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../App"
 import Form from "./Form"
-import { makeHeaders } from "../../helpers/functions"
 
 export default function Login () {
 

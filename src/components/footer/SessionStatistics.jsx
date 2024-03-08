@@ -25,7 +25,7 @@ export function Statistics () {
     get()
   }
 
-  useEffect(loadTodaysStats, [])
+  useEffect(loadTodaysStats)
 
   return (
     <div className="buttoncontainer">

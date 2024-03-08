@@ -3,11 +3,10 @@ import { useParams, useNavigate } from "react-router"
 import { shuffle } from "../../helpers/constants"
 import { getCategory, getCards } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
-import { sessionContext, practiceContext } from "../../App"
+import { practiceContext } from "../../App"
 import Practice from "./Practice"
 
 export default function LoadPractice () {
-  const { setSessionStats } = useContext(sessionContext)
   const { categoryId } = useParams()
   const navigate = useNavigate()
 

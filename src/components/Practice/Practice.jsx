@@ -1,13 +1,11 @@
 import { useState, useContext } from "react"
-import { useNavigate } from "react-router"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
 import { changeCardStats, makeHeaders } from "../../helpers/functions"
-import { practiceContext, sessionContext, userContext } from "../../App"
+import { sessionContext } from "../../App"
 
 export default function Practice ({ card, setCard, next }) {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
-  const navigate = useNavigate()
 
   const { id, answer } = card
   const [showAnswer, setShowAnswer] = useState(false)

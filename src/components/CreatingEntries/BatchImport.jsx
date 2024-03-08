@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import * as XLSX from "xlsx";
 import BatchImportReview from "./BatchImportReview";
 
@@ -50,7 +50,7 @@ export default function BatchImport () {
       };
       reader.readAsBinaryString(file);
     }
-    
+
     // CSV
     if (type === ".csv") processCSV(event)
 
@@ -68,7 +68,7 @@ export default function BatchImport () {
         <button>Start import</button>
       </form>
       {!data && <>
-          <h3>Don't know how to start?</h3>
+          <h3>Don&apos;t know how to start?</h3>
           <DownloadButton url={"./src/assets/ImportTemplate.xlsx"} text="Download template"/>
         </>
       }
