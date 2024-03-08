@@ -84,17 +84,21 @@ main {
 
 .autoColumns {
   display: grid;
+  gap: 90px;
   place-content: center;
+  place-items: center;
 }
 
 .threeColumns {
   display: grid;
+  gap: 10px;
+  place-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .fourColumns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 25%);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 button, input, select {
@@ -175,6 +179,7 @@ input, button, .circlebutton {
   border-radius: 1rem;
   margin: 1rem 0;
   display: grid;
+  grid-auto-flow: column;
 }
 
 .reviewEntry {

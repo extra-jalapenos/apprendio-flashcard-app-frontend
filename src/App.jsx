@@ -14,6 +14,7 @@ import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
 import BatchImport from './components/CreatingEntries/BatchImport'
 import { getTodaysStats } from './helpers/functions'
+import { Statistics } from './components/Statistics/Statistics'
 
 const userContext = createContext()
 const sessionContext = createContext()
@@ -87,6 +88,7 @@ export default function App() {
           <Route path={"/import"} element={<BatchImport />}/>
           <Route path={"/lookup/"} element={<Lookup />}/>
           <Route path={"/analytics/"} element={<Analytics />}/>
+          <Route path={"/statistics/"} element={<Statistics />}/>
           <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
           {/* <Route path={"/practice/:categoryId/:cardId"} element={<Practice card={card}/>}/> */}
         </Routes>

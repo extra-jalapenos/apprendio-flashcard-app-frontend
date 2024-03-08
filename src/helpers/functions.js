@@ -126,9 +126,7 @@ export const DateToYYYYMMDD = (date) => date.toISOString().slice(0, 10)
 
 export const getTodaysStats = async () => {
   const todayAsString = DateToYYYYMMDD(new Date())
-  console.log(todayAsString)
   const endpoint = `/api/users/me/statistics/${todayAsString}`
-  console.log(endpoint)
   const options = {
     headers: makeHeaders()
   }
@@ -136,9 +134,27 @@ export const getTodaysStats = async () => {
   try {
     const response = await fetch(endpoint, options)
     const data = await response.json()
-    return data
+    console.log(data)
+    return data.statistic
   } catch (error) {
     console.log(error)
-    return false
+  }
+}
+
+export const getMyStatistics = async () => {
+  const endpoint = `/api/users/me/statistics/`
+  const options = {
+    headers: makeHeaders()
+  }
+  try {
+    const response = await fetch(endpoint, options)
+    const data = await response.json()
+    if (data.statistics) {
+      return data.statistics
+    } else if (data.message) {
+      console.log(data.message)
+    }
+  } catch (error) {
+    console.log(error)
   }
 }
