@@ -44,6 +44,7 @@ export default function Register () {
     } catch (error) {
       console.log(error, "something went wrong during signup")
     }
+    event.target.reset()
   }
 
   return (
