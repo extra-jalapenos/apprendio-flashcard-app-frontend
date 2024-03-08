@@ -1,9 +1,33 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { sessionContext, userContext } from "../../App"
+import { DateToYYYYMMDD, makeHeaders } from "../../helpers/functions"
 
 export default function Statistics () {
-  const {sessionStats} = useContext(sessionContext)
+
+  const { sessionStats, setSessionStats } = useContext(sessionContext)
   const { user } = useContext(userContext)
+
+  const loadTodaysStats = () => {
+    const get = async () => {
+      const todayAsString = DateToYYYYMMDD(new Date())
+      const endpoint = `/api/users/me/statistics/${todayAsString}`
+      const options = {
+        headers: makeHeaders()
+      }
+
+      try {
+        const response = await fetch(endpoint, options)
+        const data = await response.json()
+        setSessionStats(data.statistics)
+      } catch (error) {
+        console.log(error)
+        return false
+      }
+    }
+    get()
+  }
+
+  useEffect(loadTodaysStats, [])
 
   return (
     <div className="buttoncontainer">
@@ -11,11 +35,11 @@ export default function Statistics () {
         {new Date().toLocaleDateString()}
       </li>
       <label>🥇 Correct</label>
-      {/* <p className="circlebutton green">{user ? user.statistics.correct : sessionStats.correct}</p> */}
+      <p className="circlebutton green">{user ? sessionStats.correct : sessionStats.correct}</p>
       <label>↻ Maybe next time</label>
-      {/* <p className="circlebutton red">{user ? user.statistics.wrong : sessionStats.wrong}</p> */}
+      <p className="circlebutton red">{user ? sessionStats.incorrect : sessionStats.incorrect}</p>
       <label>Total</label>
-      {/* <p className="circlebutton blue">{user ? user.statistics.correct + user.statistics.wrong : sessionStats.correct + sessionStats.wrong}</p> */}
+      <p className="circlebutton blue">{user ? sessionStats.correct + sessionStats.incorrect : sessionStats.correct + sessionStats.incorrect}</p>
     </div>
   )
 }

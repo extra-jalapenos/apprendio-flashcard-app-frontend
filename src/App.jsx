@@ -13,6 +13,7 @@ import Footer from './components/footer/Footer'
 import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
 import BatchImport from './components/CreatingEntries/BatchImport'
+import { getTodaysStats } from './helpers/functions'
 
 const userContext = createContext()
 const sessionContext = createContext()

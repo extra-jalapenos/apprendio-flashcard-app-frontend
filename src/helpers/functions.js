@@ -121,3 +121,24 @@ export const readyForPractice = (card) => {
   const minTimeDiff = timeDiffObj[card.level]
   return timeDiff >= minTimeDiff
 }
+
+export const DateToYYYYMMDD = (date) => date.toISOString().slice(0, 10)
+
+export const getTodaysStats = async () => {
+  const todayAsString = DateToYYYYMMDD(new Date())
+  console.log(todayAsString)
+  const endpoint = `/api/users/me/statistics/${todayAsString}`
+  console.log(endpoint)
+  const options = {
+    headers: makeHeaders()
+  }
+
+  try {
+    const response = await fetch(endpoint, options)
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.log(error)
+    return false
+  }
+}
