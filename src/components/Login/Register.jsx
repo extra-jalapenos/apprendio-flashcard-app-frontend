@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../App"
@@ -9,7 +9,6 @@ export default function Register () {
   const { setUser } = useContext(userContext)
 
   const navigate = useNavigate()
-  const [failedLogin, setFailedLogin] = useState(false)
   const [signupData, setSignupData] = useState(null)
 
   const handleInput = (event) => {
