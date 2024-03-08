@@ -10,9 +10,9 @@ import Register from './components/Login/Register'
 import Lookup from './components/Analytics/Lookup'
 import Analytics from './components/Analytics/Analytics'
 import BatchImport from './components/CreatingEntries/BatchImport'
-import { Statistics } from './components/Footer/SessionStatistics'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import { Statistics } from './components/footer/sessionStatistics'
+import Header from './components/header/header'
+import Footer from './components/footer/footer'
 
 const userContext = createContext()
 const sessionContext = createContext()
