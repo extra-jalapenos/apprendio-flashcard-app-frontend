@@ -12,8 +12,8 @@ import Lookup from './components/analytics/Lookup'
 import Analytics from './components/analytics/Analytics'
 import BatchImport from './components/creatingentries/BatchImport'
 import Statistics from './components/statistics/Statistics'
-import Header from './components/header/header'
-import Footer from './components/footer/footer'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
 
 export default function App() {
   const navigate = useNavigate()
