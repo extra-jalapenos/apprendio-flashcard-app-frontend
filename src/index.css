@@ -32,7 +32,7 @@
 
 #root {
   height: 100vh;
-  width: 1000px;
+  width: 100vw;
   display: grid;
   grid-template-areas: "header"
   "main"
@@ -123,6 +123,12 @@ input, button, .circlebutton {
   background-color: var(--lightWhite);
 }
 
+.required::after {
+  content: "*";
+  padding: 0.3em;
+  color: red
+}
+
 .circlebutton {
   box-sizing: border-box;
   margin: 1rem;
@@ -135,15 +141,15 @@ input, button, .circlebutton {
 }
 
 .green {
-  background-color: var(--green);
+  background-color: var(--lightgreen);
 }
 
 .blue {
-  background-color: var(--blue);
+  background-color: var(--lightblue);
 }
 
 .red {
-  background-color: var(--red);
+  background-color: var(--hotpink);
 }
 
 .delete {
@@ -238,20 +244,19 @@ textarea {
   :root {
     color: #213547;
     --pink: rgba(255, 117, 202, 0.3);
-    --red: rgba(255, 128, 160, 0.3);
+    --red: rgba(255, 128, 128, 0.3);
     --orange: rgba(255, 194, 109, 0.3);
     --yellow: rgba(255, 242, 0, 0.3);
-    --green: rgba(0, 255, 119, 0.3);
-    --blue: rgba(0, 132, 255, 0.3);
-    --violet: rgba(128, 0, 255, 0.3);
-    --green: rgba(106, 232, 203, 0.5);
-    --blue: rgba(113, 219, 255, 0.5);
-    --red: rgba(255, 83, 189, 0.5);
+    --green: rgba(56, 255, 149, 0.3);
+    --blue: rgba(67, 164, 255, 0.3);
+    --violet: rgba(188, 121, 255, 0.3);
+    --lightgreen: rgba(106, 232, 203, 0.5);
+    --lightblue: rgba(113, 219, 255, 0.5);
+    --hotpink: rgba(255, 83, 189, 0.5);
     --buttonbackground: rgba(150, 150, 150, 0.2);
     --lightWhite: rgba(255,255,255, 0.5);
     --lightestWhite: rgba(255,255,255, 0.3);
-    background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 36%, var(--pink) 57%, var(--violet) 87%, var(--blue) 100%);
-
+    background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 10%, var(--red) 30%, var(--pink) 50%, var(--violet) 67%, var(--blue) 100%);
     background-attachment: fixed;
   }
 
@@ -265,3 +270,7 @@ textarea {
     transition: background-color 5000ms linear;
   }
 }
+/*
+@media screen and (max-width: 600px) {
+
+} */
