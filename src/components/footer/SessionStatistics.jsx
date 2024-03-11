@@ -32,6 +32,9 @@ export default function SessionStatistics () {
   }
 
   useEffect(loadTodaysStats, [])
+  const correct = sessionStats.correct ? sessionStats.correct : ""
+  const incorrect = sessionStats.incorrect ? sessionStats.incorrect : ""
+  const total = sessionStats ? correct + incorrect : ""
 
   return (
     <div className="buttoncontainer">
@@ -39,11 +42,11 @@ export default function SessionStatistics () {
         {new Date().toLocaleDateString()}
       </label>
       {/* <label>🥇 Correct</label> */}
-      <p className="circlebutton green">{sessionStats ? sessionStats.correct : "…"}</p>
+      <p className="circlebutton green">{correct}</p>
       {/* <label>↻ Maybe next time</label> */}
-      <p className="circlebutton red">{sessionStats ? sessionStats.incorrect : "…"}</p>
+      <p className="circlebutton red">{incorrect}</p>
       {/* <label>Total</label> */}
-      <p className="circlebutton blue">{sessionStats ? sessionStats.correct + sessionStats.incorrect : "…"}</p>
+      <p className="circlebutton blue">{total}</p>
     </div>
   )
 }
