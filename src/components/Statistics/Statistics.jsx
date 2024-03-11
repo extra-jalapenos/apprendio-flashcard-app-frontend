@@ -46,9 +46,9 @@ export default function Statistics () {
     <>
       <div className="list autoColumns fourColumns">
         <p>Date</p>
-        <p>total</p>
-        <p>correct</p>
-        <p>incorrect</p>
+        <p>Total</p>
+        <p>Correct</p>
+        <p>Incorrect</p>
       </div>
       <div className="list">
         {history.map((entry, index) => <Entry key={index} statisticObj={entry} />)}
