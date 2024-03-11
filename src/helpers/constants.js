@@ -33,6 +33,7 @@ export const timeToNextPracticeObj = () => {
   return obj
 }
 
-export const siteTitle = "🧠"
+export const siteTitle = "Lernmausi"
+export const alternateSiteTitle = "Come back, here's cheese! 🧀"
 
 export const shuffle = (array) => array.sort(() => Math.random() - 0.5)
