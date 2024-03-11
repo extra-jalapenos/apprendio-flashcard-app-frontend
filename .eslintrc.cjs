@@ -16,6 +16,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'react/prop-types': [0]
+    'react/prop-types': [0],
+    'import/no-unresolved': [2, {
+      caseSensitive: true,
+      caseSensitiveStrict: true
+    }]
   },
 }
