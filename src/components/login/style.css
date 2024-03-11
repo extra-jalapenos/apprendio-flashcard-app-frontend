@@ -1,0 +1,15 @@
+.form {
+  margin: 1rem;
+  display: grid;
+  grid-gap: 1em;
+}
+.formfield-label {
+  color: var(--darkgrey);
+  font-size: smaller;
+  margin: 0;
+  padding: 0;
+}
+
+.formfield {
+  margin: 0;
+}

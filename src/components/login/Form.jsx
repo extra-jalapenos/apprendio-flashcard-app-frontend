@@ -1,13 +1,17 @@
+import "./style.css"
+
 export default function Form ({ handleSubmit, handleInput }) {
   return (
-    <div className="autoColumns">
-      <form onSubmit={handleSubmit}>
-        <span className="required">Username</span>
-        <input name="username" onChange={handleInput} autoComplete="username"/>
-        <span className="required">Password</span>
-        <input name="password" type="password" onChange={handleInput} autoComplete="password"/>
-        <button value={"Submit"}>Submit</button>
-      </form>
-    </div>
+    <form className="form" onChange={handleInput} onSubmit={handleSubmit}>
+      <div>
+        <p className="formfield-label required">username</p>
+        <input className="formfield" name="username" autoComplete="username"/>
+      </div>
+      <div>
+        <p className="formfield-label required">password</p>
+        <input className="formfield" name="password" type="password" autoComplete="password"/>
+      </div>
+      <button value={"Submit"}>Enter</button>
+    </form>
   )
 }
