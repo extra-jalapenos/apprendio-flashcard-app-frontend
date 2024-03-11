@@ -1,4 +1,5 @@
-import { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { initSession, sessionContext, userContext, practiceContext } from './context'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Start from "./components/Start"
 import CreateEntry from './components/creatingentries/CreateEntry'
@@ -14,17 +15,7 @@ import Statistics from './components/footer/SessionStatistics'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 
-const userContext = createContext()
-const sessionContext = createContext()
-const practiceContext = createContext()
-
-const initSession = {
-  "correct": 0,
-  "wrong": 0
-}
-
 export default function App() {
-
   const navigate = useNavigate()
   const [sessionStats, setSessionStats] = useState(initSession)
   const token = sessionStorage.getItem("token")
@@ -88,7 +79,6 @@ export default function App() {
           <Route path={"/analytics/"} element={<Analytics />}/>
           <Route path={"/statistics/"} element={<Statistics />}/>
           <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
-          {/* <Route path={"/practice/:categoryId/:cardId"} element={<Practice card={card}/>}/> */}
         </Routes>
       </main>
       <Footer />
@@ -98,5 +88,3 @@ export default function App() {
     </>
   )
 }
-
-export { App, userContext, sessionContext, practiceContext }

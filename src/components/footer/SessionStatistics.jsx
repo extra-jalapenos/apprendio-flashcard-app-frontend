@@ -1,31 +1,37 @@
 import { useContext, useEffect } from "react"
-import { sessionContext } from "../../App"
-import { DateToYYYYMMDD, makeHeaders } from "../../helpers/functions"
+import { sessionContext } from "../../context"
+import { makeHeaders } from "../../helpers/functions"
 
 export default function Statistics () {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
 
   const loadTodaysStats = () => {
     const get = async () => {
-      const todayAsString = DateToYYYYMMDD(new Date())
-      const endpoint = `/api/users/me/statistics/${todayAsString}`
+      const endpoint = `/api/users/me/statistics/today`
       const options = {
         headers: makeHeaders()
       }
 
       try {
         const response = await fetch(endpoint, options)
-        const data = await response.json()
-        setSessionStats(data.statistics)
+        if (response.status === 200) {
+          const data = await response.json()
+          setSessionStats(data.statistic)
+        } else if (response.status === 404) {
+          setSessionStats({ correct: 0, incorrect: 0 })
+        } else {
+          console.log()
+          return
+        }
       } catch (error) {
         console.log(error)
-        return false
+        return
       }
     }
     get()
   }
 
-  useEffect(loadTodaysStats)
+  useEffect(loadTodaysStats, [])
 
   return (
     <div className="buttoncontainer">

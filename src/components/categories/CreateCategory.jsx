@@ -1,10 +1,10 @@
-import { userContext } from "../../App"
+import { userContext } from "../../context"
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions"
 
 export default function CreateCategory () {
-  const {user} = useContext(userContext)
+  const { user } = useContext(userContext)
   const navigate = useNavigate()
   const [categories, setCategories] = useState(null)
   const [form, setForm] = useState({ user: (user || "unknown"), entries: [] })

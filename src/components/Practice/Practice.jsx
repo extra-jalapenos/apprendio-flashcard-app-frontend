@@ -2,7 +2,7 @@ import { useState, useContext } from "react"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
 import { changeCardStats, makeHeaders } from "../../helpers/functions"
-import { sessionContext } from "../../App"
+import { sessionContext } from "../../context"
 
 export default function Practice ({ card, setCard, next }) {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
