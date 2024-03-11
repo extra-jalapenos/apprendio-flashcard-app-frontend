@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { initSession, sessionContext, userContext, practiceContext } from './context'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Start from "./components/Start"
+import Home from './components/home/home'
 import CreateEntry from './components/creatingentries/CreateEntry'
 import CreateCategory from './components/categories/CreateCategory'
 import LoadPractice from './components/practice/LoadCategory'
@@ -85,7 +86,7 @@ export default function App() {
         <Header />
         <main>
           <Routes>
-            <Route path={"/"} element={<Login />}/>
+            <Route path={"/"} element={<Home />}/>
             <Route path={"/start"} element={<Start />}/>
             <Route path={"/login"} element={<Login />}/>
             <Route path={"/register"} element={<Register />}/>
