@@ -35,14 +35,14 @@ export default function SessionStatistics () {
 
   return (
     <div className="buttoncontainer">
-      <li>
+      <label>
         {new Date().toLocaleDateString()}
-      </li>
-      <label>🥇 Correct</label>
+      </label>
+      {/* <label>🥇 Correct</label> */}
       <p className="circlebutton green">{sessionStats ? sessionStats.correct : "…"}</p>
-      <label>↻ Maybe next time</label>
+      {/* <label>↻ Maybe next time</label> */}
       <p className="circlebutton red">{sessionStats ? sessionStats.incorrect : "…"}</p>
-      <label>Total</label>
+      {/* <label>Total</label> */}
       <p className="circlebutton blue">{sessionStats ? sessionStats.correct + sessionStats.incorrect : "…"}</p>
     </div>
   )
