@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Start from "./components/Start"
-import CreateEntry from './components/creatingEntries/CreateEntry'
+import CreateEntry from './components/creatingentries/CreateEntry'
 import CreateCategory from './components/categories/CreateCategory'
 import LoadPractice from './components/practice/LoadCategory'
 import CategorySelection from './components/categories/CategorySelection'
