@@ -23,7 +23,7 @@ function Entry ({statisticObj}) {
   )
 }
 
-export function Statistics () {
+export default function Statistics () {
   const [history, setHistory] = useState(null)
 
   const getData = () => {
