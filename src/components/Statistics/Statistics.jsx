@@ -12,21 +12,21 @@ function Entry ({statisticObj}) {
       </div>
     )
   }
-  
+
   return (
     <div className="listentry autoColumns fourColumns">
-    <p>{date}</p>
-    <div className="autoColumns threeColumns">
-      <span>{correct}</span>
-      <span className="circlebutton green" style={{opacity: total ? correct / total : 0}} />
-      <span>{(correct / total * 100).toFixed(0)+"%"}</span>
-    </div>
-    <div className="autoColumns threeColumns">
-      <span>{incorrect}</span>
-      <span className="circlebutton red" style={{opacity: total ? incorrect / total : 0}} />
-      <span>{(incorrect / total * 100).toFixed(0)+"%"}</span>
-    </div>
+      <p>{date}</p>
       <span className="circlebutton blue">{total}</span>
+      <div className="autoColumns threeColumns">
+        <span>{correct}</span>
+        <span className="circlebutton green" style={{opacity: total ? correct / total : 0}} />
+        <span>{(correct / total * 100).toFixed(0)+"%"}</span>
+      </div>
+      <div className="autoColumns threeColumns">
+        <span>{incorrect}</span>
+        <span className="circlebutton red" style={{opacity: total ? incorrect / total : 0}} />
+        <span>{(incorrect / total * 100).toFixed(0)+"%"}</span>
+      </div>
     </div>
   )
 }
@@ -46,9 +46,9 @@ export default function Statistics () {
     <>
       <div className="list autoColumns fourColumns">
         <p>Date</p>
+        <p>total</p>
         <p>correct</p>
         <p>incorrect</p>
-        <p>total</p>
       </div>
       <div className="list">
         {history.map((entry, index) => <Entry key={index} statisticObj={entry} />)}
