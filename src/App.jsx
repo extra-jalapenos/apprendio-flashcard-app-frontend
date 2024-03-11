@@ -10,7 +10,7 @@ import Register from './components/login/Register'
 import Lookup from './components/analytics/Lookup'
 import Analytics from './components/analytics/Analytics'
 import BatchImport from './components/creatingEntries/BatchImport'
-import Statistics from './components/footer/sessionStatistics'
+import Statistics from './components/footer/SessionStatistics'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 
