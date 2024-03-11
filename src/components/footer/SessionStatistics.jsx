@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { sessionContext } from "../../context"
 import { makeHeaders } from "../../helpers/functions"
 
-export default function Statistics () {
+export default function SessionStatistics () {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
 
   const loadTodaysStats = () => {
