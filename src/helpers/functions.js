@@ -125,8 +125,7 @@ export const readyForPractice = (card) => {
 export const DateToYYYYMMDD = (date) => date.toISOString().slice(0, 10)
 
 export const getTodaysStats = async () => {
-  const todayAsString = DateToYYYYMMDD(new Date())
-  const endpoint = `/api/users/me/statistics/${todayAsString}`
+  const endpoint = `/api/users/me/statistics/today`
   const options = {
     headers: makeHeaders()
   }
