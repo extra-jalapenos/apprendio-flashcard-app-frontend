@@ -10,6 +10,8 @@ import Login from './components/login/Login'
 import Register from './components/login/Register'
 import Lookup from './components/analytics/Lookup'
 import Analytics from './components/analytics/Analytics'
+import About from './components/about/About'
+import Imprint from './components/imprint/Imprint'
 import BatchImport from './components/creatingentries/BatchImport'
 import Statistics from './components/statistics/Statistics'
 import Header from './components/header/Header'
@@ -65,23 +67,26 @@ export default function App() {
       <userContext.Provider value={{user, setUser, logoutUser}}>
       <sessionContext.Provider value={{token, sessionStats, setSessionStats}}>
       <practiceContext.Provider value={{cards, setCards, currentIndex, currentCard}}>
-      <Header />
-      <main>
-        <Routes>
-          <Route path={"/"} element={<Start />}/>
-          <Route path={"/login"} element={<Login />}/>
-          <Route path={"/register"} element={<Register />}/>
-          <Route path={"/create-category"} element={<CreateCategory />}/>
-          <Route path={"/select-category"} element={<CategorySelection />}/>
-          <Route path={"/new-entry"} element={<CreateEntry />}/>
-          <Route path={"/import"} element={<BatchImport />}/>
-          <Route path={"/lookup/"} element={<Lookup />}/>
-          <Route path={"/analytics/"} element={<Analytics />}/>
-          <Route path={"/statistics/"} element={<Statistics />}/>
-          <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
-        </Routes>
-      </main>
-      <Footer />
+        <Header />
+        <main>
+          <Routes>
+            <Route path={"/"} element={<Start />}/>
+            <Route path={"/start"} element={<Start />}/>
+            <Route path={"/login"} element={<Login />}/>
+            <Route path={"/register"} element={<Register />}/>
+            <Route path={"/create-category"} element={<CreateCategory />}/>
+            <Route path={"/select-category"} element={<CategorySelection />}/>
+            <Route path={"/new-entry"} element={<CreateEntry />}/>
+            <Route path={"/import"} element={<BatchImport />}/>
+            <Route path={"/lookup/"} element={<Lookup />}/>
+            <Route path={"/analytics/"} element={<Analytics />}/>
+            <Route path={"/statistics/"} element={<Statistics />}/>
+            <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
+            <Route path={"/about"} element={<About />}/>
+            <Route path={"/imprint"} element={<Imprint />}/>
+          </Routes>
+        </main>
+        <Footer />
       </practiceContext.Provider>
       </sessionContext.Provider>
       </userContext.Provider>

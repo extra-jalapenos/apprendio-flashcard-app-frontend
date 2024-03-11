@@ -11,7 +11,7 @@ export default function Header () {
     return (
       <header>
         <nav>
-          <button onClick={() => navigate("/")}>{siteTitle}</button>
+          <button onClick={() => navigate("/start")}>{siteTitle}</button>
           <button onClick={() => navigate("/profile")}>{"🐭 " + user}</button>
           {user && <button onClick={() => logoutUser()}>⏻</button>}
         </nav>
@@ -21,9 +21,10 @@ export default function Header () {
     return (
       <header>
         <nav>
-          <button onClick={() => navigate("/")}>{siteTitle}</button>
           <button onClick={() => navigate("/register")}>Sign Up</button>
           <button onClick={() => navigate("/login")}>Login</button>
+          <button onClick={() => navigate("/about")}>FAQ</button>
+          <button onClick={() => navigate("/imprint")}>Imprint</button>
         </nav>
       </header>
     )

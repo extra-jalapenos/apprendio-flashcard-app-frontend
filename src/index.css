@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-size: larger;
   height: 100%;
@@ -47,7 +52,7 @@
   font-weight: 300;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 1rem;
   text-wrap: nowrap;
   overflow: hidden;
@@ -55,8 +60,7 @@ h1, h2, h3 {
 }
 
 p {
-  padding: 0;
-  margin: 0;
+  margin: 1rem;
 }
 
 .center {

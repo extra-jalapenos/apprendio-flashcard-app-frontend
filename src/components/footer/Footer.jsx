@@ -4,8 +4,9 @@ import { useContext } from "react"
 
 export default function Footer () {
   const { user } = useContext(userContext)
+
   if (!user) return
-  
+
   return (
     <footer>
       <SessionStatistics />

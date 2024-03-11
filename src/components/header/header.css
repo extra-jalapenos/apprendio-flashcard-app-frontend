@@ -14,16 +14,16 @@ nav {
 nav button, label, nav h1 {
   background-color: var(--buttonbackground);
   mix-blend-mode: multiply;
+  text-wrap: nowrap;
   border-radius: 1em;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   margin: 0.25rem 0.5rem;
 }
 
 label {
   border-radius: 1em;
-  padding: 0.5rem 1rem;
-  margin: 1em;
+  margin: 0;
   margin-bottom: auto;
 }
 
