@@ -53,8 +53,8 @@ export default function Login () {
   }
 
   return (
-    <div>
-      <h2>Log in</h2>
+    <div className="center">
+      <h2>Welcome back!</h2>
       <Form name="login" handleInput={handleInput} handleSubmit={handleSubmit} />
       {loginData !== null && failedLogin === true &&
         (

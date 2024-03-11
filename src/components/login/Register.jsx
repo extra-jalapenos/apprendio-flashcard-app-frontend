@@ -48,6 +48,12 @@ export default function Register () {
 
   return (
     <div className="center">
+      <div className="banner">
+        <p><b>Important note</b></p>
+        <p>Due to the app still being under development, we can&apos;t yet accept new users.</p>
+        <p className="fineprint">The main issue is that the backend is not yet connected. The best way to explain what this means is to think of this site as somebody that&apos;s very pretty and knows how to do a lot of cool, amazing things, but has no long-term memory (and no idea about how inappropriate it would be to show your cards to everybody else).</p>
+        <p>Thank you for your patience. ♥️</p>
+      </div>
       <h2>Create your account</h2>
       <Form name="signup" handleInput={handleInput} handleSubmit={handleSubmit}/>
     </div>

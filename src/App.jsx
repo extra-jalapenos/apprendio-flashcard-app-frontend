@@ -70,7 +70,7 @@ export default function App() {
         <Header />
         <main>
           <Routes>
-            <Route path={"/"} element={<Start />}/>
+            <Route path={"/"} element={<Login />}/>
             <Route path={"/start"} element={<Start />}/>
             <Route path={"/login"} element={<Login />}/>
             <Route path={"/register"} element={<Register />}/>
