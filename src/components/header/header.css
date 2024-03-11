@@ -26,3 +26,7 @@ label {
   margin: 1em;
   margin-bottom: auto;
 }
+
+@media screen and (max-width: 600px) {
+
+}

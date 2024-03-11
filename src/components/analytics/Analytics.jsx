@@ -5,7 +5,6 @@ import { makeHeaders } from "../../helpers/functions"
 const renderResult = (resultObj) => {
   return (
     <div className="list">
-      <h2>{resultObj.total} {resultObj.total === 1 ? "card" : "cards"}</h2>
       {Object.keys(resultObj).map((name, index) => {
       return (<div key={index} className="listentry threeColumns">
         <p><b>Level {name}</b></p>
