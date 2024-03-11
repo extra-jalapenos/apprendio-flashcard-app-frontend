@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { sessionContext } from "../../App"
 import { DateToYYYYMMDD, makeHeaders } from "../../helpers/functions"
 
-export function Statistics () {
+export default function Statistics () {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
 
   const loadTodaysStats = () => {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../helpers/functions"
+import { makeHeaders } from "../../helpers/functions"
 
 export default function LanguageSelection () {
 

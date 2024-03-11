@@ -1,7 +1,7 @@
-import { userContext } from "../App"
+import { userContext } from "../../App"
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../helpers/functions"
+import { makeHeaders } from "../../helpers/functions"
 
 export default function CreateCategory () {
   const {user} = useContext(userContext)
