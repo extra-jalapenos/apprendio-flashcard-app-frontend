@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { useContext } from "react"
-import { userContext } from "../../App"
+import { userContext } from "../../context"
 import { siteTitle } from "../../helpers/constants"
 
 export default function Header () {

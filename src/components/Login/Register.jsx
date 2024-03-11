@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
-import { userContext } from "../../App"
+import { userContext } from "../../context"
 import Form from "./Form"
 
 export default function Register () {

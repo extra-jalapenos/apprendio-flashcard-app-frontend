@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router"
 import { shuffle } from "../../helpers/constants"
 import { getCategory, getCards } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
-import { practiceContext } from "../../App"
+import { practiceContext } from "../../context"
 import Practice from "./Practice"
 
 export default function LoadPractice () {
