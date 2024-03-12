@@ -15,6 +15,7 @@ export default function Login () {
   const navigate = useNavigate()
   const [failedLogin, setFailedLogin] = useState(false)
   const [loginData, setLoginData] = useState(initUser)
+  const [failMessage, setFailMessage] = useState(null)
 
   const resetPage = () => {
     setLoginData(null)
@@ -44,14 +45,16 @@ export default function Login () {
       if (tryLogin.status === 200) {
         sessionStorage.setItem("token", data.token)
         setUser(loginData.username)
-        navigate("/")
+        navigate("/start")
       } else {
         if (tryLogin.status === 401) {
           setFailedLogin(true)
+          setFailMessage("Incorrect login data.")
         }
       }
     } catch (error) {
       console.log(error, "something went wrong during login")
+      setFailMessage("Something went wrong. Our bad.")
     }
     event.target.reset()
   }
@@ -60,10 +63,11 @@ export default function Login () {
     <div className="center">
       <h2>Welcome back!</h2>
       <Form name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
+      {failMessage && <p className="banner center">{failMessage}</p>}
       {loginData !== null && failedLogin === true &&
         (
         <div>
-          <h3>Oh hi, {loginData.username}!</h3>
+          <p>Oh hi, {loginData.username}!</p>
           <p>You seem to have forgotten your login details – or did you want to create an account?</p>
           <button className="green" onClick={() => navigate(`/register?username=${loginData.username}`)}>Create Account</button>
           <button className="red" onClick={resetPage}>Re-try login</button>

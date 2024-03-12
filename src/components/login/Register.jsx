@@ -13,6 +13,7 @@ export default function Register () {
 
   const navigate = useNavigate()
   const [signupData, setSignupData] = useState({ username })
+  const [failMessage, setFailMessage] = useState(null)
 
   const handleInput = (event) => {
     const { name, value } = event.target
@@ -40,11 +41,14 @@ export default function Register () {
         navigate("/")
       } else if (tryRegister.status === 403) {
         console.log("username taken")
+        setFailMessage(`Sorry, ${signupData.username} is already taken!`)
       } else {
         console.log("something went wrong registering")
+        setFailMessage("Don't know about that. Did you fill out everything?")
       }
     } catch (error) {
       console.log(error, "something went wrong during signup")
+      setFailMessage("Something went wrong. Our bad.")
     }
     event.target.reset()
   }
@@ -60,6 +64,7 @@ export default function Register () {
       </div>
       <h2>Hi, so nice to meet you!</h2>
       <p>Create your account and start right away!</p>
+      {failMessage && <p className="banner center">{failMessage}</p>}
       <Form name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
     </div>
   )
