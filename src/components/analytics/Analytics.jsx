@@ -4,12 +4,17 @@ import { makeHeaders } from "../../helpers/functions"
 
 const renderResult = (resultObj) => {
   return (
-    <div className="list">
+    <div className="list center">
+      <div className="list-header threeColumns">
+        <p>Level</p>
+        <p>Cards</p>
+        <p>Percent</p>
+      </div>
       {Object.keys(resultObj).map((name, index) => {
-      return (<div key={index} className="listentry threeColumns">
+      return (<div key={index} className="list-entry threeColumns">
         <p><b>Level {name}</b></p>
-        <p>{resultObj[name].length || Number(resultObj[name])}{resultObj[name].length === 1 ? " card": " cards"}</p>
-        <p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(1) + "%"}</p>
+        <p>{resultObj[name].length || Number(resultObj[name])}</p>
+        <p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(0) + "%"}</p>
         </div>
       )})}
       </div>
@@ -70,8 +75,8 @@ export default function Analytics () {
   const analyzedArr = analyze()
 
   return (
-    <main className="center">
+    <>
       {renderResult(analyzedArr)}
-    </main>
+    </>
   )
 }

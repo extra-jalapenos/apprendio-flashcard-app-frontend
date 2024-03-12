@@ -7,14 +7,14 @@ function Entry ({statisticObj}) {
   const total = Number(correct) + Number(incorrect)
   if (total <= 0) {
     return (
-      <div className="listentry autoColumns fourColumns">
+      <div className="list-entry autoColumns fourColumns">
         <p>{date}</p>
       </div>
     )
   }
 
   return (
-    <div className="listentry autoColumns fourColumns">
+    <div className="list-entry autoColumns fourColumns">
       <p>{date}</p>
       <span className="circlebutton blue">{total}</span>
       <div className="autoColumns threeColumns">

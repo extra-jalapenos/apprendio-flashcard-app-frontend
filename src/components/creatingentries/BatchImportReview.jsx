@@ -1,6 +1,6 @@
 function Row ({rowArr}) {
   return(
-    <li className="listentry reviewData" >
+    <li className="list-entry reviewData" >
       {rowArr.map((cell, index) => <p key={index}>{cell}</p>)}
     </li>
   )
