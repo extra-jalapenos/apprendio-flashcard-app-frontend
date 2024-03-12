@@ -17,21 +17,6 @@ import BatchImport from './components/creatingentries/BatchImport'
 import Statistics from './components/statistics/Statistics'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
-import { alternateSiteTitle, siteTitle } from './helpers/constants'
-
-// function to change title when focusing on tab
-function oldTitle() {
-  document.title = siteTitle;
-}
-
-// function to change title when un-focusing on tab
-function newTitle() {
-  document.title = alternateSiteTitle;
-}
-
-// bind functions to blur and focus events
-window.onblur = newTitle;
-window.onfocus = oldTitle;
 
 export default function App() {
   const navigate = useNavigate()

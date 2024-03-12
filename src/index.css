@@ -54,7 +54,7 @@
 
 h1, h2, h3, h4 {
   margin: 1rem;
-  text-wrap: nowrap;
+  /* text-wrap: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
