@@ -1,11 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 :root {
   font-size: larger;
+  line-height: 1.5;
+  font-weight: 500;
   height: 100%;
+
   color-scheme: light dark;
   --white: rgba(255, 255, 255);
   --black: rgb(40, 18, 79);
@@ -51,12 +55,6 @@
   "main"
   "footer";
   grid-template-rows: min-content 1fr min-content;
-}
-
-:root, textarea {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 500;
 }
 
 h1, h2, h3, h4 {
@@ -134,6 +132,11 @@ button, input, select {
   background-color: var(--white)
 }
 
+label {
+  border-radius: 1em;
+  margin: 0;
+}
+
 .buttoncontainer {
   display: grid;
   grid-auto-flow: column;
@@ -154,6 +157,7 @@ input, button, .circlebutton {
 
 .circlebutton {
   box-sizing: border-box;
+  padding: 0.2em;
   margin: 1rem;
   height: 40px;
   width: 40px;
@@ -272,5 +276,17 @@ textarea {
 @media screen and (max-width: 600px) {
   .twoColumns {
       grid-template-columns: 1fr;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0.25em 1em;
+  }
+
+  .circlebutton {
+    margin: 0.5em;
+  }
+
+  .card, textarea {
+    padding: 1em;
   }
 }
