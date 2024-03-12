@@ -20,3 +20,12 @@
   background-color: var(--mediumWhite);
   mix-blend-mode: multiply;
 }
+
+@media screen and (max-width: 600px) {
+  .list-header > p {
+    margin: 0.75vh;
+  }
+  .list-entry > p {
+    margin: 0.75vh 0;
+  }
+}
