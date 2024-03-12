@@ -3,6 +3,7 @@ import { deleteEntry, makeHeaders } from "../../helpers/functions"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"
+import "../../list.css"
 
 function ListPair ({card, getCards}) {
   const {prompt, answer, level} = card
@@ -13,7 +14,7 @@ function ListPair ({card, getCards}) {
   }
 
   return (
-    <div className="listentry reviewEntry">
+    <div className="list-entry reviewEntry">
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
@@ -31,7 +32,7 @@ function CategorySection ({name, cards, getCards}) {
     <section>
       <h2>{name}</h2>
       <div className="list">
-        <div className="listentry reviewEntry">
+        <div className="list-entry reviewEntry">
           <p>No entries yet</p>
           <p>… do you want to create one?</p>
           <button onClick={() => navigate("/new-entry")}>➕ Add</button>

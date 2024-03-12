@@ -96,6 +96,7 @@ main {
   scrollbar-width: none;
   overflow-x: none;
   overflow-y: scroll;
+  margin: 0 0.5rem;
 }
 
 .twoColumns {
@@ -196,17 +197,6 @@ input, button, .circlebutton {
   box-shadow: 0px 5px 5px 2px rgba(36, 0, 72, 0.05);
 }
 
-.list {
-  margin: 1em;
-}
-
-.listentry {
-  border-radius: 1rem;
-  margin: 1rem 0;
-  display: grid;
-  grid-auto-flow: column;
-}
-
 .reviewEntry {
   display: grid;
   grid-template-columns: repeat(2, 3fr) 1fr;
@@ -215,20 +205,6 @@ input, button, .circlebutton {
 .reviewData {
   display: grid;
   grid-template-columns: repeat(auto-fit, 25%);
-}
-
-.list .listentry:nth-child(even) {
-  background-color: var(--lightWhite);
-}
-
-.list .listentry:nth-child(odd) {
-  background-color: var(--mediumWhite);
-  mix-blend-mode: multiply;
-}
-
-.listentry > p {
-  padding: 0.5em;
-  margin: 0
 }
 
 input {

@@ -1,0 +1,22 @@
+
+.list {}
+
+.list-header > * {
+  font-weight: bold;
+}
+
+.list-entry {
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.list .list-entry:nth-child(even) {
+  background-color: var(--lightWhite);
+}
+
+.list .list-entry:nth-child(odd) {
+  background-color: var(--mediumWhite);
+  mix-blend-mode: multiply;
+}
