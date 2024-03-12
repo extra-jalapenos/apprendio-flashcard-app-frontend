@@ -7,10 +7,14 @@ import Form from "./Form"
 export default function Login () {
 
   const { setUser } = useContext(userContext)
+  const initUser = {
+    username: "",
+    password: ""
+  }
 
   const navigate = useNavigate()
   const [failedLogin, setFailedLogin] = useState(false)
-  const [loginData, setLoginData] = useState(null)
+  const [loginData, setLoginData] = useState(initUser)
 
   const resetPage = () => {
     setLoginData(null)
@@ -55,13 +59,13 @@ export default function Login () {
   return (
     <div className="center">
       <h2>Welcome back!</h2>
-      <Form name="login" handleInput={handleInput} handleSubmit={handleSubmit} />
+      <Form name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
       {loginData !== null && failedLogin === true &&
         (
         <div>
           <h3>Oh hi, {loginData.username}!</h3>
           <p>You seem to have forgotten your login details – or did you want to create an account?</p>
-          <button className="green" onClick={() => navigate("/register")}>Create Account</button>
+          <button className="green" onClick={() => navigate(`/register?username=${loginData.username}`)}>Create Account</button>
           <button className="red" onClick={resetPage}>Re-try login</button>
         </div>
         )

@@ -3,13 +3,16 @@ import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
 import Form from "./Form"
+import { useSearchParams } from "react-router-dom";
 
 export default function Register () {
 
   const { setUser } = useContext(userContext)
+  let [searchParams, setSearchParams] = useSearchParams();
+  const username = searchParams.get("username")
 
   const navigate = useNavigate()
-  const [signupData, setSignupData] = useState(null)
+  const [signupData, setSignupData] = useState({ username })
 
   const handleInput = (event) => {
     const { name, value } = event.target
@@ -57,7 +60,7 @@ export default function Register () {
       </div>
       <h2>Hi, so nice to meet you!</h2>
       <p>Create your account and start right away!</p>
-      <Form name="signup" handleInput={handleInput} handleSubmit={handleSubmit}/>
+      <Form name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
     </div>
   )
 }

@@ -19,6 +19,12 @@
   --green: rgba(52, 98, 86, 0.8);
   --blue: rgba(26, 64, 99, 0.8);
   --violet: rgba(59, 0, 119, 0.8);
+
+  --buttongreen: rgba(82, 202, 146, 0.5);
+  --buttonblue: rgba(29, 136, 172, 0.5);
+  --buttonpink: rgba(255, 8, 119, 0.5);
+  --links: rgb(114, 114, 255);
+
   --white: rgba(116, 116, 116, 0.33);
   --grey: rgba(150, 150, 150, 0.5);
   --buttonbackground: rgba(40, 40, 40, 0.333);
@@ -38,6 +44,7 @@
 #root {
   height: 100vh;
   width: 100vw;
+  min-width: fit-content;
   max-width: 1000px;
   display: grid;
   grid-template-areas: "header"
@@ -49,7 +56,7 @@
 :root, textarea {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 h1, h2, h3, h4 {
@@ -69,11 +76,12 @@ p {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--links);
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  text-decoration: underline;
 }
 
 body {
@@ -139,7 +147,8 @@ input, button, .circlebutton {
 .required::after {
   content: "*";
   padding: 0.3em;
-  color: red
+  font-weight: bolder;
+  color: rgb(255, 117, 161)
 }
 
 .circlebutton {
@@ -154,15 +163,15 @@ input, button, .circlebutton {
 }
 
 .green {
-  background-color: var(--lightgreen);
+  background-color: var(--buttongreen);
 }
 
 .blue {
-  background-color: var(--lightblue);
+  background-color: var(--buttonblue);
 }
 
 .red {
-  background-color: var(--hotpink);
+  background-color: var(--buttonpink);
 }
 
 .delete {
@@ -262,9 +271,10 @@ textarea {
     --green: rgba(56, 255, 149, 0.3);
     --blue: rgba(67, 164, 255, 0.3);
     --violet: rgba(188, 121, 255, 0.3);
-    --lightgreen: rgba(106, 232, 203, 0.5);
-    --lightblue: rgba(113, 219, 255, 0.5);
-    --hotpink: rgba(255, 83, 189, 0.5);
+    --buttongreen: rgba(106, 232, 203, 0.5);
+    --buttonblue: rgba(113, 219, 255, 0.5);
+    --buttonpink: rgba(255, 83, 189, 0.5);
+    --links: rgb(67,164,255);
     --buttonbackground: rgba(150, 150, 150, 0.2);
     --lightWhite: rgba(255,255,255, 0.5);
     --lightestWhite: rgba(255,255,255, 0.3);
