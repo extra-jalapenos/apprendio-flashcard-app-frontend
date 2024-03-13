@@ -161,3 +161,9 @@ export const getMyStatistics = async () => {
 export const phoneNum = (phoneNumStr) => phoneNumStr[0] === "+" ?
   `${phoneNumStr.slice(0, 3)} ${phoneNumStr.slice(3, 6)} ${phoneNumStr.slice(6)}`
   : `${phoneNumStr.slice(0, 4)} ${phoneNumStr.slice(5)}`
+
+export const greetServer = async () => {
+  const response = await fetch("/api/hello")
+  const data = await response.json()
+  console.log(data)
+}

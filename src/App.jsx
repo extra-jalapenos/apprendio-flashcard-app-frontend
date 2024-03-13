@@ -17,8 +17,11 @@ import BatchImport from './components/creatingentries/BatchImport'
 import Statistics from './components/statistics/Statistics'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import { greetServer } from './helpers/functions'
 
 export default function App() {
+  greetServer()
+  
   const navigate = useNavigate()
   const [sessionStats, setSessionStats] = useState(null)
   const token = sessionStorage.getItem("token")
