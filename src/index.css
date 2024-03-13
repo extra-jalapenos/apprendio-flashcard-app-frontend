@@ -14,7 +14,7 @@
   --white: rgba(255, 255, 255);
   --black: rgb(40, 18, 79);
   --textcolor: var(--black);
-  color:  rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 
   --pink: rgb(129, 39, 94, 0.8);
   --red: rgb(136, 33, 59, 0.8);
@@ -29,12 +29,12 @@
   --buttonpink: rgba(255, 8, 119, 0.5);
   --links: rgb(114, 114, 255);
 
-  --white: rgba(116, 116, 116, 0.33);
+  --lightestWhite: rgba(255,255,255, 0.1);
+  --lightWhite: rgba(255, 255, 255, 0.3);
+  --mediumWhite: rgba(255, 255, 255, 0.5);
   --grey: rgba(150, 150, 150, 0.5);
-  --buttonbackground: rgba(40, 40, 40, 0.333);
+  --buttonbackground: var(--lightestWhite);
 
-  --lightWhite: rgba(255, 255, 255, 0.1);
-  --mediumWhite: rgba(255, 255, 255, 0.25);
   background: linear-gradient(160deg, var(--pink) 0%, var(--violet) 36%, var(--blue) 87%, var(--green) 100%);
 
   font-synthesis: none;
@@ -255,9 +255,7 @@ textarea {
     --buttonblue: rgba(113, 219, 255, 0.5);
     --buttonpink: rgba(255, 83, 189, 0.5);
     --links: rgb(67,164,255);
-    --buttonbackground: rgba(150, 150, 150, 0.2);
-    --lightWhite: rgba(255,255,255, 0.5);
-    --lightestWhite: rgba(255,255,255, 0.3);
+    --buttonbackground: var(--lightWhite);
     background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 10%, var(--red) 30%, var(--pink) 50%, var(--violet) 67%, var(--blue) 100%);
     background-attachment: fixed;
   }
@@ -267,9 +265,9 @@ textarea {
   }
 
   button:hover {
-    background-color: var(--pink);
-    border-color: var(--pink);
-    transition: background-color 5000ms linear;
+    background-color: var(--mediumWhite);
+    border-color: var(--mediumWhite);
+    transition: background-color 1000ms linear;
   }
 }
 
