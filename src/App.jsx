@@ -21,12 +21,11 @@ import { greetServer } from './helpers/functions'
 
 export default function App() {
   greetServer()
-  
+
   const navigate = useNavigate()
   const [sessionStats, setSessionStats] = useState(null)
   const token = sessionStorage.getItem("token")
 
-  console.log(import.meta.env.VITE_API_URL, "in APP")
   const syncSessionStorage = () => {
     if (user) {
       sessionStorage.setItem("user", JSON.stringify(user))
