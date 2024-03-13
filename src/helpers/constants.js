@@ -1,5 +1,4 @@
-export const baseURL = "http://localhost:4000"
-// export const baseURL = import.meta.env.BASE_URL
+export const baseURL = import.meta.env.VITE_API_URL
 
 export const headers = {
   "content-type": "application/json"

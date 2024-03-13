@@ -35,7 +35,7 @@
   --grey: rgba(150, 150, 150, 0.5);
   --buttonbackground: var(--lightestWhite);
 
-  background: linear-gradient(160deg, var(--pink) 0%, var(--violet) 36%, var(--blue) 87%, var(--green) 100%);
+  background: radial-gradient(at top left, var(--pink) 0%, var(--violet) 36%, var(--blue) 87%, var(--green) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -256,7 +256,7 @@ textarea {
     --buttonpink: rgba(255, 83, 189, 0.5);
     --links: rgb(67,164,255);
     --buttonbackground: var(--lightWhite);
-    background: linear-gradient(160deg, var(--yellow) 0%, var(--orange) 10%, var(--red) 30%, var(--pink) 50%, var(--violet) 67%, var(--blue) 100%);
+    background: radial-gradient(at top left, var(--yellow) 0%, var(--orange) 15%, var(--red) 30%, var(--pink) 50%, var(--violet) 67%, var(--blue) 100%);
     background-attachment: fixed;
   }
 
