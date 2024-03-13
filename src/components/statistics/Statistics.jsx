@@ -1,31 +1,37 @@
 import { useEffect, useState } from "react";
 import { getMyStatistics } from "../../helpers/functions"
+import "./style.css"
 
 function Entry ({statisticObj}) {
-  const date = new Date(statisticObj.date).toLocaleDateString()
+  const options = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric"
+  }
+  const date = new Date(statisticObj.date).toLocaleDateString(undefined, options)
   const { correct, incorrect } = statisticObj
   const total = Number(correct) + Number(incorrect)
   if (total <= 0) {
     return (
-      <div className="list-entry autoColumns fourColumns">
+      <div className="list-entry">
         <p>{date}</p>
       </div>
     )
   }
 
   return (
-    <div className="list-entry autoColumns fourColumns">
+    <div className="list-entry">
       <p>{date}</p>
-      <span className="circlebutton blue">{total}</span>
+      <span id="total" className="circlebutton blue">{total}</span>
       <div className="autoColumns threeColumns">
-        <span>{correct}</span>
-        <span className="circlebutton green" style={{opacity: total ? correct / total : 0}} />
-        <span>{(correct / total * 100).toFixed(0)+"%"}</span>
+        <span id="correct" className="circlebutton green" style={{opacity: total ? correct / total : 0}} />
+        <span id="absolute" >{correct}</span>
+        <span id="percent" >{(correct / total * 100).toFixed(0)+"%"}</span>
       </div>
       <div className="autoColumns threeColumns">
-        <span>{incorrect}</span>
         <span className="circlebutton red" style={{opacity: total ? incorrect / total : 0}} />
-        <span>{(incorrect / total * 100).toFixed(0)+"%"}</span>
+        <span id="absolute">{incorrect}</span>
+        <span id="percent">{(incorrect / total * 100).toFixed(0)+"%"}</span>
       </div>
     </div>
   )
@@ -43,16 +49,14 @@ export default function Statistics () {
   if (!history) return <div>Loading…</div>
 
   return (
-    <>
-      <div className="list autoColumns fourColumns">
-        <p>Date</p>
-        <p>Total</p>
-        <p>Correct</p>
-        <p>Incorrect</p>
-      </div>
-      <div className="list">
-        {history.map((entry, index) => <Entry key={index} statisticObj={entry} />)}
-      </div>
-    </>
+    <div className="list">
+    <div className="list-header">
+      <p>Date</p>
+      <p id="total">Total</p>
+      <p>Correct</p>
+      <p>Incorrect</p>
+    </div>
+      {history.map((entry, index) => <Entry key={index} statisticObj={entry} />)}
+    </div>
   )
 }

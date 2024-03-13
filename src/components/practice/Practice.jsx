@@ -95,7 +95,7 @@ export default function Practice ({ card, setCard, next }) {
       return ""
     }
 
-    const endpoint = `/api/users/me/statistics/${sessionStats.id}${queryParamStr()}`
+    const endpoint = `/api/users/me/statistics/today${queryParamStr()}`
     const options = {
       method: "PATCH",
       headers: makeHeaders()

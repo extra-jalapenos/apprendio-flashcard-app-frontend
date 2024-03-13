@@ -3,6 +3,21 @@ import { maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/functions"
 
 const renderResult = (resultObj) => {
+  const total = Object.values(resultObj).reduce((accumulator, currentValue) => accumulator + currentValue.length, 0)
+  const averageLevel = () => {
+    let productSum = 0
+    let count = 0
+    const keys = Object.keys(resultObj)
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i]
+      if (typeof Number(key) == "number") {
+        productSum += Number(key) * resultObj[key].length
+        count += resultObj[key].length
+      }
+    }
+    return productSum / total
+  }
+
   return (
     <div className="list center">
       <div className="list-header threeColumns">
@@ -14,9 +29,13 @@ const renderResult = (resultObj) => {
       return (<div key={index} className="list-entry threeColumns">
         <p><b>Level {name}</b></p>
         <p>{resultObj[name].length || Number(resultObj[name])}</p>
-        <p>{((resultObj[name].length || resultObj[name]) / resultObj.total * 100).toFixed(0) + "%"}</p>
+        <p>{((resultObj[name].length || resultObj[name]) / total * 100).toFixed(0) + "%"}</p>
         </div>
       )})}
+      <div className="list-header">
+        <p>Total: {Math.abs(total) != 1 ? total + " cards" : total + " card"}</p>
+        <p>Average Level: {averageLevel().toFixed(0)}</p>
+      </div>
       </div>
     )
 }
@@ -47,10 +66,7 @@ export default function Analytics () {
   useEffect(getData, [])
 
   const analyze = () => {
-    const result = {
-      total: cards.length
-    }
-
+    const result = {}
     const filterForLevel = (level) => cards.filter(card => card.level === level)
 
     for (let i = 0; i <= maxLevel; i++) {
