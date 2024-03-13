@@ -1,2 +1,3 @@
-/api*  https://api.lernmausi.de/:splat  200
+/api/*  https://api.lernmausi.de/:splat  200
+/about https://www.lernmausi.de/about 200
 /* /index.html 200
