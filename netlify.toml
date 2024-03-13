@@ -3,11 +3,3 @@
   to = "https://api.lernmausi.de/:splat"
   status = 200
   force = true
-  [redirects.headers]
-    X-From = "Netlify"
-
-[[redirects]]
-  from = "/*"
-  to = "https://www.lernmausi.de/:splat"
-  status = 200
-  force = 200
