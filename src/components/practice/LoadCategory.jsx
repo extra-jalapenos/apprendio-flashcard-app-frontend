@@ -25,10 +25,8 @@ export default function LoadPractice () {
           const filteredCards = cards.filter((card) => readyForPractice(card))
           const shuffledCards = shuffle(filteredCards)
           setCards(shuffledCards)
-          console.log("shuffled cards")
           currentIndex = 0
           setCard(shuffledCards[currentIndex])
-          console.log("set index in shuffled cards")
         }
       }
     }

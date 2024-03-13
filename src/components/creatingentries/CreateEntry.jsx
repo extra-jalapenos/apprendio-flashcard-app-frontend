@@ -5,6 +5,7 @@ import { makeHeaders } from "../../helpers/functions.js"
 
 export default function CreateEntry() {
   const [categories, setCategories] = useState(null)
+  const [createdCards, setCreatedCards] = useState(null)
 
   const navigate = useNavigate()
 
@@ -66,15 +67,9 @@ export default function CreateEntry() {
 
       const response = await fetch("/api/cards", options)
       if (response.status === 201) {
-        const data = await response.json()
-        if (response.status === 201) {
-          console.log("created", data.card)
+          setCreatedCards(createdCards + 1)
           resetForm()
         } else {
-          console.log(response.status, "error creating card")
-        }
-      } else {
-        console.log(response.status)
         console.log("error creating entry")
       }
     } catch (error) {
@@ -105,13 +100,13 @@ export default function CreateEntry() {
       <textarea type="text" name="hint" value={form.hint} onChange={handleInput} />
 
       <div className="buttoncontainer">
-        <p>Want to create a lot of entries?</p>
-        <button onClick={() => navigate("/import")}>Import</button>
-      </div>
-
-      <div className="buttoncontainer">
         {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}
         {(form.prompt || form.answer || form.hint) && <button onClick={resetForm}>clear</button>}
+      </div>
+      {createdCards && <div className="banner green center">{createdCards} {createdCards != 1 ? "cards" : "card"} successfully created</div>}
+      <div className="buttoncontainer">
+        <p>Want to create a lot of entries?</p>
+        <button onClick={() => navigate("/import")}>Import</button>
       </div>
     </form>
   )

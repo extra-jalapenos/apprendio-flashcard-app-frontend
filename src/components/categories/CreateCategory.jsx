@@ -50,12 +50,8 @@ export default function CreateCategory () {
 
       const response = await fetch("/api/categories", options)
       if (response.status === 201) {
-        const data = await response.json()
-        console.log("created category", data.category)
-      } else {
-        console.log("something went wrong")
+        navigate("/select-category")
       }
-      navigate("/select-category")
     } catch (error) {
       console.log(error, "error creating category")
     }

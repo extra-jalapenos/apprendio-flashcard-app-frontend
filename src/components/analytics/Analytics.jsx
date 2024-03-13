@@ -53,11 +53,9 @@ export default function Analytics () {
         if (response.status === 200) {
           const data = await response.json()
           setCards(data.cards)
-        } else {
-          console.log("something went wrong")
         }
       } catch (error) {
-        console.log(error, "during request")
+        console.log(error, "something went wrong during request")
       }
     }
     get()
