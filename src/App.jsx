@@ -20,13 +20,8 @@ import Footer from './components/footer/Footer'
 
 export default function App() {
   const navigate = useNavigate()
-  const [sessionStats, setSessionStats] = useState(initSession)
+  const [sessionStats, setSessionStats] = useState(null)
   const token = sessionStorage.getItem("token")
-
-  useEffect(() => {
-    setSessionStats(initSession)
-    sessionStorage.setItem("sessionStats", JSON.stringify(initSession))
-  }, [])
 
   const syncSessionStorage = () => {
     if (user) {

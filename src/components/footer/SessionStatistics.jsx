@@ -18,7 +18,7 @@ export default function SessionStatistics () {
           const data = await response.json()
           setSessionStats(data.statistic)
         } else if (response.status === 404) {
-          setSessionStats({ correct: 0, incorrect: 0 })
+          console.log("no session stats yet")
         } else {
           console.log()
           return
@@ -32,6 +32,8 @@ export default function SessionStatistics () {
   }
 
   useEffect(loadTodaysStats, [])
+
+  if (!sessionStats) return (<></>)
   const correct = sessionStats.correct ? sessionStats.correct : ""
   const incorrect = sessionStats.incorrect ? sessionStats.incorrect : ""
   const total = sessionStats ? correct + incorrect : ""
