@@ -4,9 +4,8 @@
 - git clone this repo to your machine with "git clone …@github.com:vocab-trainer.git"
 - cd in the directory
 - run "npm ci"
-- make TWO terminals, and run "npm run dev" and "npm run server"
+- run "npm run dev"
 - go to http://localhost:5173
-- if you want to delete all config, copy the contents of src/api/clean-db.json into src/api/db.json.
 
 # Feature overview
 ## General Config
@@ -28,5 +27,13 @@
 ## ANALYTICS
 - [x] User can see how entries are distributed over the different levels of learning
 ### Extended
-- [ ] User sees daily stats -> will not do that, no value imo
+- [x] User sees daily stats
 - [x] The user sees total practice stats
+
+# Questions
+- what is the proper way of handing over the userID info after checking the validity of the token? Appending to params?
+- How do I deploy the backend?
+- Getting the api route fixed up in Netlify so it goes to the live backend -> ENV import
+- Netlify insists on entering the site on the homepage, and does not work when enterpoint is a subpage (404). Googling brings up using HashRouter instead of BrowserRouter but documentation recommends against this.
+- Docker-Postgres???
+- Protected Routes?
