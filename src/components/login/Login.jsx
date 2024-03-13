@@ -18,8 +18,9 @@ export default function Login () {
   const [failMessage, setFailMessage] = useState(null)
 
   const resetPage = () => {
-    setLoginData(null)
+    setLoginData(initUser)
     setFailedLogin(false)
+    setFailMessage(null)
   }
 
   const handleInput = (event) => {
