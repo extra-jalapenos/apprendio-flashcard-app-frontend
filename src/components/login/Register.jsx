@@ -64,7 +64,7 @@ export default function Register () {
       </div>
       <h2>Hi, so nice to meet you!</h2>
       <p>Create your account and start right away!</p>
-      {failMessage && <p className="banner center">{failMessage}</p>}
+      {failMessage && <p className="banner warning center">{failMessage}</p>}
       <Form name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
     </div>
   )
