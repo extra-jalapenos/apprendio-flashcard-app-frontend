@@ -38,7 +38,7 @@ export default function LoadPractice () {
 
   if (!category) return <Loading message={"Loading category…"} />
 
-  if (!cards) <Loading message={`Loading cards in ${category.name}…`} />
+  if (!cards) return <Loading message={`Loading cards in ${category.name}…`} />
 
   if (cards && cards.length === 0) {
     return (
