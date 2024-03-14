@@ -91,7 +91,6 @@ export const getCategories = async () => {
       const data = await response.json()
       return data.categories
     } else {
-      console.log(response.status, "status fetching categories")
       return false
     }
   } catch (error) {
@@ -133,7 +132,6 @@ export const getTodaysStats = async () => {
   try {
     const response = await fetch(endpoint, options)
     const data = await response.json()
-    console.log(data)
     return data.statistic
   } catch (error) {
     console.log(error)

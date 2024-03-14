@@ -41,7 +41,6 @@ export default function Login () {
 
     try {
       const tryLogin = await fetch("/api/login", options)
-      console.log(tryLogin.status)
       const data = await tryLogin.json()
       if (tryLogin.status === 200) {
         sessionStorage.setItem("token", data.token)

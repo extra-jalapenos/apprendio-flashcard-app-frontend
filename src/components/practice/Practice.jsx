@@ -40,11 +40,8 @@ export default function Practice ({ card, setCard, next }) {
     try {
       const changedCard = await changeCardStats(id, 1)
       if (changedCard) {
-        console.log("changed card", changedCard)
         resetDisplayOptions()
         next()
-      } else {
-        console.log("error changing card", changedCard)
       }
     } catch (error) {
       console.log("error logging correct", error)
@@ -64,11 +61,8 @@ export default function Practice ({ card, setCard, next }) {
     try {
       const changedCard = await changeCardStats(id, -1)
       if (changedCard) {
-        console.log("changed card", changedCard)
         resetDisplayOptions()
         next()
-      } else {
-        console.log("error changing card", changedCard)
       }
     } catch (error) {
       console.log("error logging wrong", error)

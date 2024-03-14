@@ -40,14 +40,11 @@ export default function Register () {
         setUser(signupData.username)
         navigate("/")
       } else if (tryRegister.status === 403) {
-        console.log("username taken")
         setFailMessage(`Sorry, ${signupData.username} is already taken!`)
       } else {
-        console.log("something went wrong registering")
         setFailMessage("Don't know about that. Did you fill out everything?")
       }
     } catch (error) {
-      console.log(error, "something went wrong during signup")
       setFailMessage("Something went wrong. Our bad.")
     }
     event.target.reset()

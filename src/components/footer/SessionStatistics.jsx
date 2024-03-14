@@ -19,9 +19,6 @@ export default function SessionStatistics () {
           setSessionStats(data.statistic)
         } else if (response.status === 404) {
           console.log("no session stats yet")
-        } else {
-          console.log()
-          return
         }
       } catch (error) {
         console.log(error)
