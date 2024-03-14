@@ -1,0 +1,44 @@
+.contentBox {
+  display: grid;
+  justify-content: center;
+}
+
+.quote {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 100px 0 50px 0;
+  position: 0;
+  text-align: justify;
+  max-width: 400px;
+  letter-spacing: 0.05em;
+  background: rgb(255,255,255);
+  background: linear-gradient(135deg, var(--mediumWhite) 0%, var(--lightestWhite) 100%);
+}
+
+.quote::before {
+  content: url(../../assets/icon-quote-dark.svg);
+  float: left;
+  margin: 10px;
+  position: relative;
+  top: -40px;
+  left: -55px;
+  width: 30px;
+  height: 0px;
+}
+
+.quote .source {
+  margin-top: 20px;
+  text-align: end;
+}
+
+.quote .source::before {
+  content: "– ";
+}
+
+.content p {
+  line-height: 2em;
+}
+
+.content p+p {
+  margin-top: 1em;
+}

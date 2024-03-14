@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div>
       <h2>Frequently Asked Questions</h2>
-      <h3>What is the purpose of this? 📚 🐭</h3>
+      <h3>What does lernmausi do? 📚 🐭</h3>
       <p>This site was created to have a web-based app to practice flashcards either at home or on the go. If that sounds like something that you&apos;d like, you&apos;ve come to the right place!</p>
       <h3>How can I switch to your app?</h3>
       <p>Lernmausi was originally created because our original learning app migrated from local installation to web-only, not supplying the option for importing a bunch of data. So <em>yes</em>, if you have your data in some structured format such as .xlsx or .csv, you will be able to import it. We also supply you with a template, if you&apos;re at a loss where to start.</p>

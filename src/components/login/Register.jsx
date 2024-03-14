@@ -55,7 +55,7 @@ export default function Register () {
 
   return (
     <div className="center">
-      <div className="banner">
+      <div className="banner warning">
         <p><b>Important note</b></p>
         <p>Due to the app still being under development, we can&apos;t yet accept new users. Thank you for your patience. ♥️</p>
 
