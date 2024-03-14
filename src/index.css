@@ -233,7 +233,6 @@ select {
 textarea {
   font-size: 1rem;
   resize: none;
-  width: calc(100% - 2rem);
   border: none;
 }
 

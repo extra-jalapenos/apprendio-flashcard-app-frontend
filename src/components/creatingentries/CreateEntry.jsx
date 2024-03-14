@@ -3,6 +3,7 @@ import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions.js"
 import Loading from "../loadingScreen/Loading.jsx"
+import "./style.css"
 
 export default function CreateEntry() {
   const [categories, setCategories] = useState(null)
@@ -38,7 +39,7 @@ export default function CreateEntry() {
   }
 
   const [form, setForm] = useState(initForm)
-  const resetForm = () => setForm(initForm)
+  const resetForm = () => setForm({...form, prompt: "", answer: "", hint: "" })
 
   const handleInput = (event) => {
     const { name, value } = event.target
@@ -82,31 +83,35 @@ export default function CreateEntry() {
   if (!categories) return <Loading />
 
   return (
-    <form className="twoColumns" onSubmit={handleSubmit}>
-      <label>Category</label>
-      <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput} required>
-        {!form.categoryId && <option>Select Category</option>}
-        {categories.map((category, index) => <option key={index} value={category.id}>{category.name}</option>)}
-      </select>
+    <>
+      <form className="container" onSubmit={handleSubmit}>
+        <label>Category</label>
+        <select name="categoryId" value={form.categoryId || "Select Category"} onChange={handleInput} required>
+          {!form.categoryId && <option>Select Category</option>}
+          {categories.map((category, index) => <option key={index} value={category.id}>{category.name}</option>)}
+        </select>
 
-      <label>Prompt</label>
-      <textarea type="text" name="prompt" value={form.prompt} onChange={handleInput} required />
+        <label>Prompt</label>
+        <textarea type="text" name="prompt" value={form.prompt} onChange={handleInput} required />
 
-      <label>Answer</label>
-      <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
+        <label>Answer</label>
+        <textarea type="text" name="answer" value={form.answer} onChange={handleInput}  required />
 
-      <label>Hint or context</label>
-      <textarea type="text" name="hint" value={form.hint} onChange={handleInput} />
-
-      <div className="buttoncontainer">
-        {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}
-        {(form.prompt || form.answer || form.hint) && <button onClick={resetForm}>clear</button>}
-      </div>
-      {createdCards && <div className="banner green center">{createdCards} {createdCards != 1 ? "cards" : "card"} successfully created</div>}
-      <div className="buttoncontainer">
-        <p>Want to create a lot of entries?</p>
-        <button onClick={() => navigate("/import")}>Import</button>
-      </div>
-    </form>
+        <label>Hint or context</label>
+        <textarea type="text" name="hint" value={form.hint} onChange={handleInput} />
+        <div>
+          Migrating? <button onClick={() => navigate("/import")}>Batch Import</button>
+        </div>
+        <div>
+          <div className="buttoncontainer">
+            {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}
+            {(form.prompt || form.answer || form.hint) && <button onClick={resetForm}>clear</button>}
+          </div>
+          {createdCards && <div>{createdCards} {createdCards != 1 ? "cards" : "card"} successfully created</div>}
+        <div>
+        </div>
+        </div>
+      </form>
+    </>
   )
 }
