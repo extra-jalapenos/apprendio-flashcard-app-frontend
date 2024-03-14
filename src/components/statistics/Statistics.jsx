@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMyStatistics } from "../../helpers/functions"
 import "./style.css"
+import Loading from "../loadingScreen/Loading";
 
 function Entry ({statisticObj}) {
   const options = {
@@ -46,7 +47,7 @@ export default function Statistics () {
 
   useEffect(getData, [])
 
-  if (!history) return <div>Loading…</div>
+  if (!history) return <Loading message={"Loading statistics…"}/>
 
   return (
     <div className="list">

@@ -5,6 +5,7 @@ import { getCategory, getCards } from "../../helpers/functions"
 import { readyForPractice } from "../../helpers/functions"
 import { practiceContext } from "../../context"
 import Practice from "./Practice"
+import Loading from "../loadingScreen/Loading"
 
 export default function LoadPractice () {
   const { categoryId } = useParams()
@@ -35,23 +36,9 @@ export default function LoadPractice () {
 
   useEffect(init, [])
 
-  if (!category) {
-    return (
-      <div className="center">
-        <h3>Loading category…</h3>
-        <p>This might take some time.</p>
-      </div>
-    )
-  }
+  if (!category) return <Loading message={"Loading category…"} />
 
-  if (!cards) {
-    return (
-      <div className="center">
-        <h3>Loading cards in {category.name}…</h3>
-        <p>This might take some time.</p>
-      </div>
-    )
-  }
+  if (!cards) <Loading message={`Loading cards in ${category.name}…`} />
 
   if (cards && cards.length === 0) {
     return (
@@ -72,11 +59,7 @@ export default function LoadPractice () {
     }
   }
 
-  if (!card) {
-    return (
-      <div className="center">Loading card…</div>
-    )
-  }
+  if (!card) <Loading message={"Loading card…"} />
 
   return (
     <>

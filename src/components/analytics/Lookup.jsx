@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"
 import "../../list.css"
+import Loading from "../loadingScreen/Loading"
 
 function ListPair ({card, getCards}) {
   const {prompt, answer, level} = card
@@ -96,8 +97,8 @@ export default function Lookup() {
 
   useEffect(filterCards, [searchText])
 
-  if (!data) return <div className="center">Loading cards…</div>
-  if (!filteredCards && searchText.length > 0) return <div className="center">Filtering cards…</div>
+  if (!data) return <Loading message={"Loading cards…"} />
+  if (!filteredCards && searchText.length > 0) return <Loading message={"Filtering cards…"} />
 
   return (
     <>

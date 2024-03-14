@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/functions"
+import Loading from "../loadingScreen/Loading"
 
 const renderResult = (resultObj) => {
   const total = Object.values(resultObj).reduce((accumulator, currentValue) => accumulator + currentValue.length, 0)
@@ -74,11 +75,7 @@ export default function Analytics () {
     return result
   }
 
-  if (!cards) return (
-    <div className="center">
-      Loading cards…
-    </div>
-  )
+  if (!cards) return <Loading message={"Loading cards…"}/>
 
   if (cards.length === null) return (
     <div className="center">

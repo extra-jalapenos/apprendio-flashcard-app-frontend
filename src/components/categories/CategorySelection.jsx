@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions"
+import Loading from "../loadingScreen/Loading"
 
 export default function LanguageSelection () {
 
@@ -27,11 +28,7 @@ export default function LanguageSelection () {
 
   useEffect(getCategories, [])
 
-  if (!categories) return (
-    <div className="center">
-      Loading…
-    </div>
-  )
+  if (!categories) return <Loading />
 
   return (
     <>

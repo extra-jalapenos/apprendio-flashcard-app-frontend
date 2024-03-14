@@ -2,6 +2,7 @@ import { userContext } from "../../context"
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions"
+import Loading from "../loadingScreen/Loading"
 
 export default function CreateCategory () {
   const { user } = useContext(userContext)
@@ -63,11 +64,7 @@ export default function CreateCategory () {
     duplicate() ? navigate("/select-category") : createCategory()
   }
 
-  if (!categories) return (
-    <div className="center">
-      Loading categories…
-    </div>
-  )
+  if (!categories) return <Loading message={"Loading categories…"} />
 
   return (
     <main className="center">

@@ -11,7 +11,7 @@ export default function Header () {
       <header>
         <nav>
           <button onClick={() => navigate("/start")}>🐭 Home</button>
-          <button onClick={() => navigate("/profile")}>{"🐭 " + user}</button>
+          <button onClick={() => navigate("/profile")}>{user}</button>
           {user && <button onClick={() => logoutUser()}>⏻</button>}
         </nav>
       </header>

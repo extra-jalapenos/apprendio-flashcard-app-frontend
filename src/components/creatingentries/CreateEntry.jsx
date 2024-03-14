@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/functions.js"
+import Loading from "../loadingScreen/Loading.jsx"
 
 export default function CreateEntry() {
   const [categories, setCategories] = useState(null)
@@ -78,9 +79,7 @@ export default function CreateEntry() {
 
   }
 
-  if (!categories) return (<div className="center">
-    Loading categories…
-  </div>)
+  if (!categories) return <Loading />
 
   return (
     <form className="twoColumns" onSubmit={handleSubmit}>
