@@ -17,11 +17,8 @@ import BatchImport from './components/creatingentries/BatchImport'
 import Statistics from './components/statistics/Statistics'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
-import { greetServer } from './helpers/functions'
 
 export default function App() {
-  greetServer()
-
   const navigate = useNavigate()
   const [sessionStats, setSessionStats] = useState(null)
   const token = sessionStorage.getItem("token")
@@ -83,6 +80,7 @@ export default function App() {
             <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
             <Route path={"/about"} element={<About />}/>
             <Route path={"/imprint"} element={<Imprint />}/>
+            <Route path="*" element={<p className="banner">There&apos;s nothing here: 404!</p>} />
           </Routes>
         </main>
         <Footer />

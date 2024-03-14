@@ -51,6 +51,8 @@ export default function Login () {
         if (tryLogin.status === 401) {
           setFailedLogin(true)
           setFailMessage("Incorrect login data.")
+        } else if (tryLogin.status === 400) {
+          setFailMessage("Please enter username and password.")
         }
       }
     } catch (error) {
