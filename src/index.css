@@ -290,3 +290,15 @@ textarea {
     padding: 1em;
   }
 }
+
+@media screen and (max-height: 700px) {
+  .card, textarea {
+    min-height: 8em;
+  }
+}
+
+@media screen and (max-height: 675px) {
+  .card, textarea {
+    min-height: 7em;
+  }
+}
