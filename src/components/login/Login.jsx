@@ -66,7 +66,11 @@ export default function Login () {
     <div className="center">
       <h2>Welcome back!</h2>
       <Form name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
-      {failMessage && <p className="banner center">{failMessage}</p>}
+      {failedLogin === false && <div className="banner center">
+        <b>Not sure what to do? Take a tour!</b>
+        <button onClick={() => setLoginData({username: "DemoDominik", password: "lernmausi"})}>Log in as Demo User</button>
+      </div>}
+      {failMessage && <p className="banner warning center">{failMessage}</p>}
       {loginData !== null && failedLogin === true &&
         (
         <div>
