@@ -22,9 +22,12 @@
 .banner {
   margin: 1em;
   padding: 0.5em;
-  display: inline;
+  max-width: 500px;
   border-radius: 1rem;
   text-align: left;
+}
+
+.warning {
   background: var(--red)
 }
 
