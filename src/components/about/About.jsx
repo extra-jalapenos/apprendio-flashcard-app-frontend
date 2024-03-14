@@ -11,7 +11,7 @@ export default function About() {
       <p>Lernmausi was originally created because our original learning app migrated from local installation to web-only, not supplying the option for importing a bunch of data. So <em>yes</em>, if you have your data in some structured format such as .xlsx or .csv, you will be able to import it. We also supply you with a template, if you&apos;re at a loss where to start.</p>
       <p>Sounds great? <a onClick={() => navigate("/register")}>Sign up here.</a></p>
       <h3>What if I want to use another app?</h3>
-      <p>You are able to download your entire set of cards in either .csv format or .xlsx. We don&quot;t see the point in holding your data hostage just because we&apos;re not a great match for your learning journey.</p>
+      <p>You are able to download your entire set of cards in either .csv format or .xlsx. We don&apos;t see the point in holding your data hostage just because we&apos;re not a great match for your learning journey.</p>
       <h3>Where is my data stored?</h3>
       <p>The database (essentially the heart of this app) is supplied by <a href="https://www.elephantsql.com/">ElephantSQL</a>, running on Google Servers. As ElephantSQL reaches End of Life in January 2025, we will probably migrate at some point in 2024.</p>
       <h3>What does &quot;Lernmausi&quot; mean?</h3>
