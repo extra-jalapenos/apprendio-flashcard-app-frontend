@@ -3,9 +3,3 @@
   to = "https://api.lernmausi.de/:splat"
   status = 200
   force = true
-
-[[redirects]]
-  from = "/*"
-  to = "https://www.lernmausi.de/:splat"
-  status = 200
-  force = true
