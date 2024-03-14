@@ -15,7 +15,7 @@ export default function About() {
       <h3>Where is my data stored?</h3>
       <p>The database (essentially the heart of this app) is supplied by <a href="https://www.elephantsql.com/">ElephantSQL</a>, running on Google Servers. As ElephantSQL reaches End of Life in January 2025, we will probably migrate at some point in 2024.</p>
       <h3>What does &quot;Lernmausi&quot; mean?</h3>
-      <p>&quot;Lernen&quot; is German for &quot;learning&quot;, &quot;Maus&quot; means &quot;mouse&quot;. You get a diminuitive of the latter by appending an -i, becoming an informal, affectionate term. It was also probably the most-used term among the creator of this site and their friends when this site came into existence. You pronounce it a bit like &quot;learnmousy&quot;, but with a more open e, quite dry r and a soft s: <em>[lɛʁnmaʊzi]</em>. It&apos;s not a pre-requisite to know this to sign up, though. To paraphrase Brian Eno – writing about pronunciation is a bit like dancing about architecture.</p>
+      <p>&quot;Lernen&quot; is German for &quot;learning&quot;, &quot;Maus&quot; means &quot;mouse&quot;. You get a diminuitive of the latter by appending an -i, becoming an informal, affectionate term. It was also probably the most-used term among the creator of this site and their friends when this site came into existence. You pronounce it a bit like &quot;learnmousy&quot;, but with a more open e, quite dry r and a soft s: <em>[lɛɹnmaʊziː]</em>. It&apos;s not a pre-requisite to know this to sign up, though. To paraphrase Brian Eno – writing about pronunciation is a bit like dancing about architecture.</p>
       <p>You, too, can become a Lernmausi, simply by <a onClick={() => navigate("/register")}>signing up here</a>.</p>
     </div>
   )
