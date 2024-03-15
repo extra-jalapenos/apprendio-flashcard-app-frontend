@@ -18,7 +18,7 @@ export default function Home() {
       </div>
       <h2>Flashcards, but in ✨ 2024 ✨</h2>
       <p>Learning anything can be tedious and hard. Especially when learning vocabulary for a new language or all diagnostic codes for diseases according to the <a href="https://en.wikipedia.org/wiki/ICD-10" target="blank">ICD</a>, flashcards are effective but time-consuming to write and not really made to be taken on the road (just think of the busdriver jamming the brakes!).</p>
-      <p>We&apos;ve made this site to be able to study when you want, how much you want. We&apos;ll handle the shuffling of cards and quizzing you – we&apos;ll also put them away if you&apos;ve learnt them, promise.</p>
+      <p>We&apos;ve made this site for you to be able to study when you want, how much you want. We&apos;ll handle the shuffling of cards and quizzing you – we&apos;ll also put them away if you&apos;ve learnt them, promise.</p>
       <p>The only thing you have to do is to keep coming back.</p>
       <div className="center">
         <button onClick={() => navigate("/register")}>Let&apos;s go!</button>
