@@ -35,8 +35,8 @@ function CategorySection ({name, cards, getCards}) {
       <div className="list">
         <div className="list-entry reviewEntry">
           <p>No entries yet</p>
-          <p>… do you want to create one?</p>
-          <button onClick={() => navigate("/new-entry")}>➕ Add</button>
+          <p>… do you want to create some?</p>
+          <button onClick={() => navigate("/new-entry")}>+ Add</button>
         </div>
       </div>
     </section>

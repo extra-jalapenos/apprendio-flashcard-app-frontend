@@ -104,7 +104,7 @@ export default function CreateEntry() {
         </div>
         <div>
           <div className="buttoncontainer">
-            {!!form.categoryId && form.answer && form.prompt && <button value="Submit">➕ Create</button>}
+            {!!form.categoryId && form.answer && form.prompt && <button value="Submit" className="green">Create</button>}
             {(form.prompt || form.answer || form.hint) && <button onClick={resetForm}>clear</button>}
           </div>
           {createdCards && <div>{createdCards} {createdCards != 1 ? "cards" : "card"} successfully created</div>}

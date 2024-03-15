@@ -72,7 +72,7 @@ export default function CreateCategory () {
     <form onChange={handleChange} onSubmit={handleSubmit}>
       <label>Name</label>
       <input name="name"/>
-      <button>Create</button>
+      <button>+ Create</button>
     </form>
     </main>
   )

@@ -45,7 +45,7 @@ export default function LoadPractice () {
       <div className="center">
         <h3>Whoops!</h3>
         <p>There are no cards to practice for &quot;{category.name}&quot;.</p>
-        <button onClick={() => navigate("/new-entry")}>➕ Add Entry</button>
+        <button onClick={() => navigate("/new-entry")}>+ Add cards</button>
       </div>
     )
   }
@@ -60,7 +60,7 @@ export default function LoadPractice () {
   }
 
   if (!card) <Loading message={"Loading card…"} />
-  
+
   return (
     <>
       <h2 className="center">{category.name}</h2>
