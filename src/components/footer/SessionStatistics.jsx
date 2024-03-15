@@ -20,6 +20,7 @@ export default function SessionStatistics () {
         } else if (response.status === 404) {
           console.log("no session stats yet")
         }
+        return
       } catch (error) {
         console.log(error)
         return
