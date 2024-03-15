@@ -1,16 +1,14 @@
 .contentBox {
   display: grid;
-  justify-content: center;
 }
 
 .quote {
   border-radius: 20px;
   padding: 10px;
-  margin: 100px 0 50px 0;
+  margin: 2em;
   position: 0;
   text-align: justify;
   max-width: 400px;
-  letter-spacing: 0.05em;
   background: var(--mediumWhite);
   background: linear-gradient(135deg, var(--mediumWhite) 0%, var(--lightestWhite) 100%);
 }
@@ -20,8 +18,9 @@
   float: left;
   margin: 10px;
   position: relative;
-  top: -40px;
-  left: -55px;
+  fill: white;
+  top: -30px;
+  left: -70px;
   width: 30px;
   height: 0px;
 }
@@ -29,6 +28,7 @@
 .quote .source {
   margin-top: 20px;
   text-align: end;
+  font-size: small;
 }
 
 .quote .source::before {
