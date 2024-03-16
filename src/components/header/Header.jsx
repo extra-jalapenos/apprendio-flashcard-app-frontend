@@ -10,9 +10,9 @@ export default function Header () {
     return (
       <header>
         <nav>
-          <button onClick={() => navigate("/start")}>🐭 Home</button>
+          <button onClick={() => navigate("/start")}>Start</button>
           <button onClick={() => navigate("/profile")}>{user}</button>
-          {user && <button onClick={() => logoutUser()}>⏻</button>}
+          {user && <button onClick={() => logoutUser()}>Logout</button>}
         </nav>
       </header>
     )
