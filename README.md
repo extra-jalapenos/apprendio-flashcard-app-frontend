@@ -1,7 +1,7 @@
-# Flashcard App
+# Apprendio – A flashcard app
 
 ## How do I use this?
-- git clone this repo to your machine with "git clone …@github.com:vocab-trainer.git"
+- git clone this repo to your machine with "git clone …@github.com:apprendio-flashcard-app.git"
 - cd in the directory
 - run "npm ci"
 - run "npm run dev"
