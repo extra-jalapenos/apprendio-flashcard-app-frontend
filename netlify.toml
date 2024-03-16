@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://api.apprendio.io/:splat"
+  to = "https://api.apprendio.online/:splat"
   status = 200
   force = true
