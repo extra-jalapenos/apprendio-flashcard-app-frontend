@@ -19,8 +19,8 @@ function ListPair ({card, getCards}) {
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
-        <button className="circlebutton blue" onClick={()=>window.open(`/edit/${card.id}`,'_blank')}>🖍️</button>
         <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
+        <button className="circlebutton" onClick={()=>window.open(`/edit/${card.id}`,'_blank')}>🖍️</button>
         <p className="circlebutton delete red" onClick={handleDelete}>🗑️</p>
       </div>
     </div>
