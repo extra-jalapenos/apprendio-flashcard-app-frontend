@@ -7,6 +7,7 @@ import "../../list.css"
 import Loading from "../loadingScreen/Loading"
 
 function ListPair ({card, getCards}) {
+  const navigate = useNavigate()
   const {prompt, answer, level} = card
 
   const handleDelete = async () => {
@@ -20,7 +21,7 @@ function ListPair ({card, getCards}) {
       <p>{answer}</p>
       <div className="buttoncontainer">
         <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
-        <button className="circlebutton edit" onClick={()=>window.open(`/edit/${card.id}`,'_blank')}>🖍️</button>
+        <button className="circlebutton edit" onClick={()=>navigate(`/edit/${card.id}`,'_blank')}>🖍️</button>
         <p className="circlebutton delete red" onClick={handleDelete}>🗑️</p>
       </div>
     </div>

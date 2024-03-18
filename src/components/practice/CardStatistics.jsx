@@ -8,7 +8,7 @@ export default function CardStats ({card}) {
   if (!id) return
   return (
     <>
-      <h3>Card {id}<button onClick={()=>window.open(`/edit/${id}`,'_blank')}>edit</button></h3>
+      <h3>Card {id}<button onClick={()=>navigate(`/edit/${id}`,'_blank')}>edit</button></h3>
       <div>
         <div className="buttoncontainer">
           {lastAskedAt && <label id="lastKnown">Last known: {new Date(lastAskedAt).toLocaleDateString()}</label>}
