@@ -11,6 +11,44 @@ export const makeHeaders = () => {
   return headers
 }
 
+export const getCard = async (cardId) => {
+  try {
+    const options = {
+      headers: makeHeaders()
+    }
+    const response = await fetch(`/api/cards/${cardId}`, options)
+    const data = await response.json()
+    if (response.status === 200) {
+      return data.card
+    } else {
+      console.log(data)
+      return null
+    }
+  } catch (error) {
+    console.log("something went wrong fetching the category's cards")
+  }
+}
+
+export const updateCard = async (cardId, cardBody) => {
+  try {
+    const options = {
+      method: "PUT",
+      headers: makeHeaders(),
+      body: JSON.stringify(cardBody)
+    }
+    const response = await fetch(`/api/cards/${cardId}`, options)
+    const data = await response.json()
+    if (response.status === 200) {
+      return data.card
+    } else {
+      console.log(data)
+      return null
+    }
+  } catch (error) {
+    console.log("something went wrong updating the card")
+  }
+}
+
 export const getCards = async (categoryId) => {
   try {
     const options = {

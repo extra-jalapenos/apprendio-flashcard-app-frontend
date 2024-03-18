@@ -18,6 +18,7 @@ import Statistics from './components/statistics/Statistics'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import NotFound from './components/notfound/NotFound'
+import EditCard from './components/practice/Edit'
 
 export default function App() {
   const navigate = useNavigate()
@@ -74,6 +75,7 @@ export default function App() {
             <Route path={"/create-category"} element={<CreateCategory />}/>
             <Route path={"/select-category"} element={<CategorySelection />}/>
             <Route path={"/new-entry"} element={<CreateEntry />}/>
+            <Route path={"/edit/:id"} element={<EditCard />}/>
             <Route path={"/import"} element={<BatchImport />}/>
             <Route path={"/lookup/"} element={<Lookup />}/>
             <Route path={"/analytics/"} element={<Analytics />}/>
