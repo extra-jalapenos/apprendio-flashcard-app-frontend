@@ -9,8 +9,8 @@ import Loading from "../loadingScreen/Loading"
 function ListPair ({card, getCards}) {
   const {prompt, answer, level} = card
 
-  const handleDelete = () => {
-    deleteEntry(card.id)
+  const handleDelete = async () => {
+    await deleteEntry(card.id)
     getCards()
   }
 
@@ -19,6 +19,7 @@ function ListPair ({card, getCards}) {
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
+        <button className="circlebutton blue" onClick={()=>window.open(`/edit/${card.id}`,'_blank')}>🖍️</button>
         <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
         <p className="circlebutton delete red" onClick={handleDelete}>🗑️</p>
       </div>
