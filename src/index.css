@@ -181,12 +181,12 @@ input, button, .circlebutton {
   background-color: var(--buttonpink);
 }
 
-.delete {
+.delete, .edit {
   opacity: 0.5;
   transition: opacity 250ms ease-in-out;
 }
 
-.delete:hover {
+.delete:hover, .edit:hover {
   opacity: 1;
   transition: opacity 500ms ease-in-out;
 }
