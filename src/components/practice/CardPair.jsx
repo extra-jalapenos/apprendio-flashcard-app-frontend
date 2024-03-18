@@ -6,7 +6,7 @@ export default function CardPair ({props, revealAnswer, handleEntry}) {
   return(
     <div className="twoColumns">
         <Card text={prompt || ""} />
-        {revealAnswer && <Card text={revealAnswer} />}
+        {revealAnswer && <Card text={revealAnswer ? answer : "" } />}
         {!revealAnswer && <InputField placeholder={hint} handleEntry={handleEntry}/>}
     </div>
   )
