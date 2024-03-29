@@ -4,7 +4,6 @@ import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"
 import { sessionContext } from "../../context"
-import NotFound from "../notfound/NotFound"
 import Loading from "../loadingScreen/Loading"
 
 export default function Practice ({ card, setCard, next }) {
