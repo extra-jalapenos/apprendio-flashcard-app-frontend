@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react"
 import { sessionContext } from "../../context"
-import { makeHeaders } from "../../helpers/functions"
+import { makeHeaders } from "../../helpers/auth"
 
 export default function SessionStatistics () {
   const { sessionStats, setSessionStats } = useContext(sessionContext)

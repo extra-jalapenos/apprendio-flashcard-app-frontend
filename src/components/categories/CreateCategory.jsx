@@ -1,7 +1,7 @@
 import { userContext } from "../../context"
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../../helpers/functions"
+import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
 
 export default function CreateCategory () {

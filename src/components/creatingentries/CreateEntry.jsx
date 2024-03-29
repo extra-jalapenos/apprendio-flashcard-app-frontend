@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../../helpers/functions.js"
+import { makeHeaders } from "../../helpers/auth.js"
 import Loading from "../loadingScreen/Loading.jsx"
 import "./style.css"
 

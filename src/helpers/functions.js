@@ -1,16 +1,6 @@
 import { baseURL, headers } from "./constants"
 import { timeToNextPracticeObj } from "./constants"
 
-export const makeHeaders = () => {
-  const headers = new Headers()
-  headers.set("content-type", "application/json")
-  const token = sessionStorage.getItem("token")
-  if (token) {
-    headers.set("Authorization", "Bearer " + token)
-  }
-  return headers
-}
-
 export const getCard = async (cardId) => {
   try {
     const options = {

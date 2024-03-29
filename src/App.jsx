@@ -68,19 +68,21 @@ export default function App() {
         <Header />
         <main>
           <Routes>
-            <Route path={"/"} element={<Home />}/>
+            <Route index path={"/"} element={<Home />}/>
             <Route path={"/start"} element={<Start />}/>
             <Route path={"/login"} element={<Login />}/>
             <Route path={"/register"} element={<Register />}/>
-            <Route path={"/create-category"} element={<CreateCategory />}/>
-            <Route path={"/select-category"} element={<CategorySelection />}/>
-            <Route path={"/new-entry"} element={<CreateEntry />}/>
-            <Route path={"/edit/:id"} element={<EditCard />}/>
-            <Route path={"/import"} element={<BatchImport />}/>
-            <Route path={"/lookup/"} element={<Lookup />}/>
-            <Route path={"/analytics/"} element={<Analytics />}/>
-            <Route path={"/statistics/"} element={<Statistics />}/>
-            <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
+            <ProtectedRoute user={user}>
+              <Route path={"/create-category"} element={<CreateCategory />}/>
+              <Route path={"/select-category"} element={<CategorySelection />}/>
+              <Route path={"/new-entry"} element={<CreateEntry />}/>
+              <Route path={"/edit/:id"} element={<EditCard />}/>
+              <Route path={"/import"} element={<BatchImport />}/>
+              <Route path={"/lookup/"} element={<Lookup />}/>
+              <Route path={"/analytics/"} element={<Analytics />}/>
+              <Route path={"/statistics/"} element={<Statistics />}/>
+              <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
+            </ProtectedRoute>
             <Route path={"/about"} element={<About />}/>
             <Route path={"/imprint"} element={<Imprint />}/>
             <Route path="*" element={<NotFound />} />

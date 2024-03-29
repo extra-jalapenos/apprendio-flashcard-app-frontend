@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { maxLevel } from "../../helpers/constants"
-import { makeHeaders } from "../../helpers/functions"
+import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
 
 const renderResult = (resultObj) => {
