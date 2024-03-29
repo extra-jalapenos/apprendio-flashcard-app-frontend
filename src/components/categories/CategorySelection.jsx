@@ -30,8 +30,6 @@ export default function LanguageSelection () {
 
   if (!categories) return <Loading />
 
-  console.log("we have categories", categories)
-
   return (
     <>
       <h2 className="center">Select your category</h2>
