@@ -19,10 +19,6 @@ export default function Practice ({ card, setCard, next }) {
   }
 
   const { id, answer } = card
-  if (!id) {
-    console.log("weird id of card", card)
-    return <NotFound />
-  }
 
   const resetDisplayOptions = () => {
     setShowAnswer(false)
