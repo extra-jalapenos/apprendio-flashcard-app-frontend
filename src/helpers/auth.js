@@ -13,7 +13,7 @@ export const ProtectedRoute = ({ children }) => {
   console.log("heres the token", token)
 
   if (!token) {
-    return <>Not Found</>
+    console.log("no token")
   }
 
   return (
