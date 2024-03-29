@@ -10,14 +10,14 @@ export default function Practice ({ card, setCard, next }) {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
 
   const { id, answer } = card
-  if (!id) {
-    console.log("weird id of card", card)
-    return <NotFound />
-  }
 
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
+  if (!id) {
+    console.log("weird id of card", card)
+    return <NotFound />
+  }
 
   const resetDisplayOptions = () => {
     setShowAnswer(false)
