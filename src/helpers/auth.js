@@ -1,4 +1,5 @@
 import { useNavigate, useLocation, Navigate } from "react-router-dom"
+import NotFound from "../components/notfound/NotFound"
 
 export const makeHeaders = () => {
   const headers = new Headers()
@@ -12,11 +13,10 @@ export const makeHeaders = () => {
 
 export const ProtectedRoute = ({ children }) => {
   const token = sessionStorage.getItem("token")
-  const location = useLocation()
   console.log("heres the token", token)
 
   if (!token) {
-    return <Navigate to={"/login"} replace state={{ from: location }} />
+    return <NotFound />
   }
 
   return (
