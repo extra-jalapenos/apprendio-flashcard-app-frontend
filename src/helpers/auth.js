@@ -1,4 +1,3 @@
-import { useNavigate, useLocation, Navigate } from "react-router-dom"
 import NotFound from "../components/notfound/NotFound"
 
 export const makeHeaders = () => {
