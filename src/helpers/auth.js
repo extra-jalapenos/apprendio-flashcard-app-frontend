@@ -1,5 +1,3 @@
-import NotFound from "../components/notfound/NotFound"
-
 export const makeHeaders = () => {
   const headers = new Headers()
   headers.set("content-type", "application/json")
@@ -15,7 +13,7 @@ export const ProtectedRoute = ({ children }) => {
   console.log("heres the token", token)
 
   if (!token) {
-    return <NotFound />
+    return <>Not Found</>
   }
 
   return (
