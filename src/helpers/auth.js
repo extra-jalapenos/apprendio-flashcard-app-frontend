@@ -10,7 +10,6 @@ export const makeHeaders = () => {
 
 export const ProtectedRoute = ({ children }) => {
   const token = sessionStorage.getItem("token")
-  console.log("heres the token", token)
 
   if (!token) {
     console.log("no token")
