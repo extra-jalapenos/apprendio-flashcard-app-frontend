@@ -1,5 +1,6 @@
 import { maxLevel } from "../../helpers/constants"
-import { deleteEntry, makeHeaders } from "../../helpers/auth"
+import { deleteEntry } from "../../helpers/functions"
+import { makeHeaders } from "../../helpers/auth"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"

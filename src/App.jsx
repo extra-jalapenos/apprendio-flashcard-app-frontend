@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { initSession, sessionContext, userContext, practiceContext } from './context'
 import { Routes, Route, useNavigate } from 'react-router-dom'
+import { ProtectedRoute } from './helpers/auth'
 import Start from "./components/Start"
 import Home from './components/home/home'
 import CreateEntry from './components/creatingentries/CreateEntry'
@@ -69,20 +70,58 @@ export default function App() {
         <main>
           <Routes>
             <Route index path={"/"} element={<Home />}/>
-            <Route path={"/start"} element={<Start />}/>
+            <Route path={"/start"} element={
+                <ProtectedRoute>
+                  <Start />
+                </ProtectedRoute>}
+              />
             <Route path={"/login"} element={<Login />}/>
             <Route path={"/register"} element={<Register />}/>
-            <ProtectedRoute user={user}>
-              <Route path={"/create-category"} element={<CreateCategory />}/>
-              <Route path={"/select-category"} element={<CategorySelection />}/>
-              <Route path={"/new-entry"} element={<CreateEntry />}/>
-              <Route path={"/edit/:id"} element={<EditCard />}/>
-              <Route path={"/import"} element={<BatchImport />}/>
-              <Route path={"/lookup/"} element={<Lookup />}/>
-              <Route path={"/analytics/"} element={<Analytics />}/>
-              <Route path={"/statistics/"} element={<Statistics />}/>
-              <Route path={"/practice/:categoryId"} element={<LoadPractice />}/>
-            </ProtectedRoute>
+              <Route path={"/create-category"} element={
+                <ProtectedRoute>
+                  <CreateCategory />
+                </ProtectedRoute>}
+              />
+              <Route path={"/select-category"} element={
+                <ProtectedRoute>
+                  <CategorySelection />
+                </ProtectedRoute>}
+              />
+              <Route path={"/new-entry"} element={
+                <ProtectedRoute>
+                  <CreateEntry />
+                </ProtectedRoute>}
+              />
+              <Route path={"/edit/:id"} element={
+                <ProtectedRoute>
+                  <EditCard />
+                </ProtectedRoute>}
+              />
+              <Route path={"/import"} element={
+                <ProtectedRoute>
+                  <BatchImport />
+                </ProtectedRoute>}
+              />
+              <Route path={"/lookup/"} element={
+                <ProtectedRoute>
+                  <Lookup />
+                </ProtectedRoute>}
+              />
+              <Route path={"/analytics/"} element={
+                <ProtectedRoute>
+                  <Analytics />
+                </ProtectedRoute>}
+              />
+              <Route path={"/statistics/"} element={
+                <ProtectedRoute>
+                  <Statistics />
+                </ProtectedRoute>}
+              />
+              <Route path={"/practice/:categoryId"} element={
+                <ProtectedRoute>
+                  <LoadPractice />
+                </ProtectedRoute>}
+              />
             <Route path={"/about"} element={<About />}/>
             <Route path={"/imprint"} element={<Imprint />}/>
             <Route path="*" element={<NotFound />} />

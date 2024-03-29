@@ -4,11 +4,17 @@ import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"
 import { sessionContext } from "../../context"
+import NotFound from "../notfound/NotFound"
 
 export default function Practice ({ card, setCard, next }) {
   const { sessionStats, setSessionStats } = useContext(sessionContext)
 
   const { id, answer } = card
+  if (!id) {
+    console.log("weird id of card", card)
+    return <NotFound />
+  }
+
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)

@@ -59,7 +59,7 @@ export default function LoadPractice () {
   }
 
   if (!card) <Loading message={"Loading card…"} />
-
+  
   return (
     <>
       <h2 className="center">{category.name}</h2>

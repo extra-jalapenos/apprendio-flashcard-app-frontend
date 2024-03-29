@@ -1,3 +1,5 @@
+import { useNavigate, useLocation, Navigate } from "react-router-dom"
+
 export const makeHeaders = () => {
   const headers = new Headers()
   headers.set("content-type", "application/json")
@@ -9,19 +11,15 @@ export const makeHeaders = () => {
 }
 
 export const ProtectedRoute = ({ children }) => {
-  const { token } = useAuth()
+  const token = sessionStorage.getItem("token")
   const location = useLocation()
+  console.log("heres the token", token)
 
   if (!token) {
     return <Navigate to={"/login"} replace state={{ from: location }} />
   }
 
   return (
-    <div className="container">
-      <Header />
-      <Navigation />
-      <Modal />
-      {children}
-    </div>
+    children
   )
 }
