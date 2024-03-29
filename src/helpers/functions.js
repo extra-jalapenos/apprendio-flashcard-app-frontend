@@ -1,4 +1,5 @@
 import { baseURL, headers } from "./constants"
+import { makeHeaders } from "./auth"
 import { timeToNextPracticeObj } from "./constants"
 
 export const getCard = async (cardId) => {
