@@ -1,4 +1,5 @@
 import { useState, useContext } from "react"
+import { useHotkeys } from "react-hotkeys-hook"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
@@ -7,11 +8,28 @@ import { sessionContext } from "../../context"
 import Loading from "../loadingScreen/Loading"
 
 export default function Practice ({ card, setCard, next }) {
-  const { sessionStats, setSessionStats } = useContext(sessionContext)
+  const { setSessionStats } = useContext(sessionContext)
 
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
+  useHotkeys(["ArrowUp", "ArrowDown"], (event) => {
+    if (!showAnswer) {
+      handleSubmit()
+    } else {
+      if (event.key === "ArrowUp") {
+        logCorrect()
+      } else if (event.key === "ArrowDown") {
+        logWrong()
+      }
+    }
+  });
+
+  useHotkeys(['arrowright'], () => {
+    if (showAnswer === false) {
+      next();
+    }
+  })
 
   if (!card) {
     return <Loading message="Loading card…"/>
@@ -129,6 +147,11 @@ export default function Practice ({ card, setCard, next }) {
         <button className="circlebutton red" onClick={logWrong}>×</button>
       </div>
       }
+      <div>
+        <p><em><b>Psst!</b></em> Did you know that you can control this app with your keyboard?</p>
+        <p>Press arrow up ↑ to reveal the answer or arrow right → to skip a card.<br/>
+        To log your answer, press arrow up ↑ for right or arrow down ↓ for wrong.</p>
+      </div>
     </>
   )
 }
