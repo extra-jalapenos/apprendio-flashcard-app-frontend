@@ -8,14 +8,17 @@ export const makeHeaders = () => {
   return headers
 }
 
-export const ProtectedRoute = ({ children }) => {
-  const token = sessionStorage.getItem("token")
-
-  if (!token) {
-    console.log("no token")
+export const checkToken = async () => {
+  const headers = makeHeaders()
+  const options = {
+    headers
   }
 
-  return (
-    children
-  )
+  try {
+    const response = await fetch("/api/users/me/", options)
+    const data = await response.json()
+    return data
+  } catch (error) {
+    return { error }
+  }
 }

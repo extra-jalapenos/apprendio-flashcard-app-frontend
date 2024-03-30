@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { initSession, sessionContext, userContext, practiceContext } from './context'
 import { Routes, Route, useNavigate } from 'react-router-dom'
-import { ProtectedRoute } from './helpers/auth'
+import { ProtectedRoute } from './helpers/ProtectedRoute'
 import Start from "./components/Start"
 import Home from './components/home/home'
 import CreateEntry from './components/creatingentries/CreateEntry'

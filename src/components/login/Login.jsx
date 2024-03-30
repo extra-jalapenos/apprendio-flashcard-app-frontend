@@ -3,9 +3,9 @@ import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
 import Form from "./Form"
+import { login } from "../../helpers/functions"
 
 export default function Login () {
-
   const { setUser } = useContext(userContext)
   const initUser = {
     username: "",
@@ -32,32 +32,31 @@ export default function Login () {
   }
 
   const handleSubmit = async (event) => {
-      event.preventDefault()
-      const options = {
-        method: "POST",
-        headers,
-        body: JSON.stringify(loginData)
-      }
+    event.preventDefault()
+    const { username, password } = loginData
+
+    if (!username || !password) {
+      setFailMessage("Please enter username and password.")
+      return
+    }
 
     try {
-      const tryLogin = await fetch("/api/login", options)
-      const data = await tryLogin.json()
-      if (tryLogin.status === 200) {
-        sessionStorage.setItem("token", data.token)
-        setUser(loginData.username)
-        navigate("/start")
+      const tryLogin = await login(username, password)
+      const { token } = tryLogin
+
+      if (!token) {
+        setFailedLogin(true)
+        setFailMessage("Incorrect login credentials.")
       } else {
-        if (tryLogin.status === 401) {
-          setFailedLogin(true)
-          setFailMessage("Incorrect login data.")
-        } else if (tryLogin.status === 400) {
-          setFailMessage("Please enter username and password.")
-        }
+        sessionStorage.setItem("token", token)
+        setUser(username)
+        navigate("/start")
       }
     } catch (error) {
       console.log(error, "something went wrong during login")
       setFailMessage("Something went wrong. Our bad.")
     }
+
     event.target.reset()
   }
 
