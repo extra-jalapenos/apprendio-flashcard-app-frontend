@@ -62,7 +62,12 @@ export default function Login () {
 
   return (
     <div className="center">
-      <h2>Welcome back!</h2>
+      <div className="banner warning">
+        <p><b>Important note – 24th June</b></p>
+        <p>We are currently migrating the database, so you cannot log in. Sorry!</p>
+        <p>We expect to be back the 31th of June, 2024.</p>
+      </div>
+      {/* <h2>Welcome back!</h2>
       <Form name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
       {failMessage && <p className="banner warning center">{failMessage}</p>}
       {failedLogin === false && <div className="banner center">
@@ -78,7 +83,7 @@ export default function Login () {
           <button className="red" onClick={resetPage}>Re-try login</button>
         </div>
         )
-      }
+      } */}
     </div>
   )
 }
