@@ -29,11 +29,3 @@
 ### Extended
 - [x] User sees daily stats
 - [x] The user sees total practice stats
-
-# Questions
-- what is the proper way of handing over the userID info after checking the validity of the token? Appending to params?
-- How do I deploy the backend?
-- Getting the api route fixed up in Netlify so it goes to the live backend -> ENV import
-- Netlify insists on entering the site on the homepage, and does not work when enterpoint is a subpage (404). Googling brings up using HashRouter instead of BrowserRouter but documentation recommends against this.
-- Docker-Postgres???
-- Protected Routes?
