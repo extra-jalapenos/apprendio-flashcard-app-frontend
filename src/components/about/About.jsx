@@ -13,7 +13,7 @@ export default function About() {
       <h3>What if I want to use another app?</h3>
       <p>You are able to download your entire set of cards in either .csv format or .xlsx. We don&apos;t see the point in holding your data hostage just because we&apos;re not a great match for your learning journey.</p>
       <h3>Where is my data stored?</h3>
-      <p>The database (essentially the heart of this app) is supplied by <a href="https://www.elephantsql.com/">ElephantSQL</a>, running on Google Servers. As ElephantSQL reaches End of Life in January 2025, we will probably migrate at some point in 2024.</p>
+      <p>The database (essentially the memory of this app) and backend (the brain) is supplied by <a href="https://railway.app/">Railway</a>.</p>
       <h3>What does &quot;Apprendio&quot; mean?</h3>
       <p>It doesn&apos;t per se mean anything – it&apos;s borrowing the main word stem from the French <i>apprendre</i>, meaning <i>to learn</i>. We will tell business partners that the -io at the end stands for the very tech-y &quot;input output&quot; abbreviation, which seems apt for a web-based app, but just among us – we chose that to make it sound a bit like a magic spell, because that&apos;s how easy it should feel to learn with us!</p>
     </div>
