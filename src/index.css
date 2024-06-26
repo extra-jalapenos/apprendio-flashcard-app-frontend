@@ -22,6 +22,7 @@
   --yellow: rgba(125, 119, 0, 0.8);
   --green: rgba(52, 98, 86, 0.8);
   --blue: rgba(26, 64, 99, 0.8);
+  --darkblue: rgba(26, 64, 99, 0.3);
   --violet: rgba(59, 0, 119, 0.8);
 
   --buttongreen: rgba(82, 202, 146, 0.5);
@@ -35,7 +36,7 @@
   --grey: rgba(150, 150, 150, 0.5);
   --buttonbackground: var(--lightestWhite);
 
-  background: radial-gradient(at top left, var(--pink) 0%, var(--violet) 36%, var(--blue) 87%, var(--green) 100%);
+  background: radial-gradient(at top left, var(--mediumWhite) 0%, var(--blue) 40%, var(--darkblue) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -251,13 +252,14 @@ textarea {
     --yellow: rgba(255, 242, 0, 0.3);
     --green: rgba(56, 255, 149, 0.3);
     --blue: rgba(67, 164, 255, 0.3);
+    --darkblue: rgba(67, 164, 255, 0.6);
     --violet: rgba(188, 121, 255, 0.3);
     --buttongreen: rgba(106, 232, 203, 0.5);
     --buttonblue: rgba(113, 219, 255, 0.5);
     --buttonpink: rgba(255, 83, 189, 0.5);
     --links: rgb(67,164,255);
     --buttonbackground: var(--lightWhite);
-    background: radial-gradient(at top left, var(--yellow) 0%, var(--orange) 15%, var(--red) 30%, var(--pink) 50%, var(--violet) 67%, var(--blue) 100%);
+    background: radial-gradient(at top left, var(--yellow) 0%, var(--blue) 40%, var(--darkblue) 100%);
     background-attachment: fixed;
   }
 
