@@ -38,7 +38,7 @@ export default function Register () {
         const data = await tryRegister.json()
         sessionStorage.setItem("token", data.token)
         setUser(signupData.username)
-        navigate("/")
+        navigate("/start")
       } else if (tryRegister.status === 403) {
         setFailMessage(`Sorry, ${signupData.username} is already taken!`)
       } else {
