@@ -14,7 +14,7 @@
   --white: rgba(255, 255, 255);
   --black: rgb(40, 18, 79);
   --textcolor: var(--black);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(223, 217, 217);
 
   --pink: rgb(129, 39, 94, 0.8);
   --red: rgb(136, 33, 59, 0.8);
@@ -133,7 +133,6 @@ button, input, select {
   margin: 1em;
   line-height: 1.3;
   cursor: pointer;
-  background-color: var(--lightestWhite)
 }
 
 label {
@@ -148,7 +147,7 @@ label {
   align-items: center;
 }
 
-input, button, .circlebutton {
+input, button, .circlebutton, select {
   background-color: var(--lightWhite);
 }
 
@@ -246,7 +245,7 @@ textarea {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #275073;
     --pink: rgba(255, 117, 202, 0.3);
     --red: rgba(255, 128, 128, 0.3);
     --orange: rgba(255, 194, 109, 0.3);
@@ -260,13 +259,12 @@ textarea {
     --buttonblue: rgba(113, 219, 255, 0.5);
     --buttonpink: rgba(255, 83, 189, 0.5);
     --links: rgb(67,164,255);
-    --buttonbackground: var(--lightWhite);
+
+    --lightestWhite: rgba(255,255,255, 0.25);
+    --lightWhite: rgba(255, 255, 255, 0.5);
+    --mediumWhite: rgba(255, 255, 255, 0.75);
     background: radial-gradient(at top left, var(--white) 0%, var(--blue) 40%, var(--mediumblue) 100%);
     background-attachment: fixed;
-  }
-
-  button {
-    border: 1px white transparent;
   }
 }
 
