@@ -15,7 +15,16 @@ label {
 
 @media screen and (max-width: 700px) {
   .container {
-    grid-template-columns: auto;
-    justify-content: start;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+
+  label {
+    justify-self: start;
+    line-height: 1em;
+  }
+
+  textarea {
+    min-height: 5em;
   }
 }

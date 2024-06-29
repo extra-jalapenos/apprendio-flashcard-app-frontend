@@ -28,12 +28,12 @@
 
   --buttongreen: rgba(82, 202, 146, 0.5);
   --buttonblue: rgba(0, 191, 255, 0.5);
-  --buttonpink: rgba(255, 8, 119, 0.5);
+  --buttonpink: rgba(145, 0, 19, 0.78);
   --links: rgb(102, 138, 255);
 
-  --lightestWhite: rgba(255,255,255, 0.1);
-  --lightWhite: rgba(255, 255, 255, 0.2);
-  --mediumWhite: rgba(255, 255, 255, 0.3);
+  --lightestWhite: rgba(255,255,255, 0.05);
+  --lightWhite: rgba(255, 255, 255, 0.125);
+  --mediumWhite: rgba(255, 255, 255, 0.25);
   --grey: rgba(150, 150, 150, 0.5);
   --buttonbackground: var(--lightestWhite);
 
@@ -125,7 +125,7 @@ main {
 button, input, select {
   border-radius: 1em;
   border: 1px solid transparent;
-  padding: 0.5em;
+  padding: 0.5em 0.75em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -200,7 +200,7 @@ input, button, .circlebutton {
   margin: 1rem 1rem;
   padding: 1.5rem;
   line-height: 1.5rem;
-  min-height: 10em;
+  min-height: 7em;
   box-sizing: border-box;
   box-shadow: 0px 5px 5px 2px rgba(36, 0, 72, 0.05);
 }
@@ -267,12 +267,6 @@ textarea {
 
   button {
     border: 1px white transparent;
-  }
-
-  button:hover {
-    background-color: var(--mediumWhite);
-    border-color: var(--mediumWhite);
-    transition: background-color 1000ms linear;
   }
 }
 

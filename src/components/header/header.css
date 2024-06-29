@@ -12,7 +12,6 @@ nav {
 }
 
 nav button, label, nav h1 {
-  background-color: var(--buttonbackground);
   mix-blend-mode: multiply;
   text-wrap: nowrap;
   border-radius: 1em;
