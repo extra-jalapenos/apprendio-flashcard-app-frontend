@@ -202,6 +202,17 @@ export const getMyStatistics = async () => {
   }
 }
 
+export const getTemplate = async () => {
+  const endpoint = `/api/templates/import/`
+  const options = { headers: makeHeaders() }
+  try {
+    const response = await fetch(endpoint, options)
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export const phoneNum = (phoneNumStr) => phoneNumStr[0] === "+" ?
   `${phoneNumStr.slice(0, 3)} ${phoneNumStr.slice(3, 6)} ${phoneNumStr.slice(6)}`
   : `${phoneNumStr.slice(0, 4)} ${phoneNumStr.slice(5)}`

@@ -18,7 +18,7 @@
   float: left;
   margin: 10px;
   position: relative;
-  fill: white;
+  background-color: red;
   top: -30px;
   left: -70px;
   width: 30px;
