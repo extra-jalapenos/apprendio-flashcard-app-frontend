@@ -94,7 +94,7 @@ body {
 
 main {
   grid-area: "main";
-  place-content: center;
+  align-items: center;
   scrollbar-width: none;
   overflow-x: none;
   overflow-y: scroll;
@@ -190,6 +190,7 @@ input, button, .circlebutton, select {
 .delete:hover, .edit:hover {
   opacity: 1;
   transition: opacity 500ms ease-in-out;
+  cursor: pointer;
 }
 
 .card, textarea  {
