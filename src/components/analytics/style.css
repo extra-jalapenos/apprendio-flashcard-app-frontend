@@ -1,0 +1,7 @@
+.list-entry {
+	margin: 0.25em;
+}
+
+.list-entry > p {
+	margin: 0.5em;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
+import "./style.css"
 
 const renderResult = (resultObj) => {
   const total = Object.values(resultObj).reduce((accumulator, currentValue) => accumulator + currentValue.length, 0)
