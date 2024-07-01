@@ -202,12 +202,27 @@ export const getMyStatistics = async () => {
   }
 }
 
+export const saveBlob = (blob) => {
+  const url = window.URL.createObjectURL(new Blob([blob]));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', blob.name);
+
+  document.body.appendChild(link);
+  link.click();
+  link.parentNode.removeChild(link);
+}
+
 export const getTemplate = async () => {
   const endpoint = `/api/templates/import/`
   const options = { headers: makeHeaders() }
   try {
     const response = await fetch(endpoint, options)
-    return response
+    const blob = await response.blob()
+    blob.lastModifiedDate = new Date()
+    blob.name = "apprendio-template.xlsx"
+    saveBlob(blob)
+    return true
   } catch (error) {
     console.log(error)
   }
