@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMyStatistics } from "../../helpers/functions"
-import "./style.css"
 import Loading from "../loadingScreen/Loading";
+import "./style.css"
 
 function Entry ({statisticObj}) {
   const options = {
@@ -23,14 +23,15 @@ function Entry ({statisticObj}) {
   return (
     <div className="list-entry">
       <p>{date}</p>
-      <span id="total" className="circlebutton blue">{total}</span>
-      <div className="autoColumns threeColumns">
-        <span id="correct" className="circlebutton green" style={{opacity: total ? correct / total : 0}} />
+      <p id="total">{total}</p>
+      {/* <p id="total" className="circlebutton blue">{total}</p> */}
+      <div className="autoColumns twoColumns">
+        {/* <span id="correct" className="circlebutton green" style={{opacity: total ? correct / total : 0}} /> */}
         <span id="absolute" >{correct}</span>
         <span id="percent" >{(correct / total * 100).toFixed(0)+"%"}</span>
       </div>
-      <div className="autoColumns threeColumns">
-        <span className="circlebutton red" style={{opacity: total ? incorrect / total : 0}} />
+      <div className="autoColumns twoColumns">
+        {/* <span className="circlebutton red" style={{opacity: total ? incorrect / total : 0}} /> */}
         <span id="absolute">{incorrect}</span>
         <span id="percent">{(incorrect / total * 100).toFixed(0)+"%"}</span>
       </div>
