@@ -237,3 +237,16 @@ export const greetServer = async () => {
   const data = await response.json()
   console.log(data)
 }
+
+const isValidEmail = (string) => {
+  const parts = string.split("@")
+  if (parts.length !== 2) return false
+
+  const [user, domain] = parts
+  if (user.length === 0 || domain.length === "") return false
+
+  const domainParts = domain.split(".")
+  if (domainParts.length < 2) return false
+
+  return true
+}
