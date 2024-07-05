@@ -98,7 +98,7 @@ export default function Lookup() {
 
   const handleInput = (event) => setSearchText(event.target.value)
 
-  useEffect(filterCards, [searchText])
+  useEffect(filterCards, [searchText, data])
 
   if (!data) return <Loading message={"Loading cards…"} />
   if (!filteredCards && searchText.length > 0) return <Loading message={"Filtering cards…"} />

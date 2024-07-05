@@ -9,7 +9,7 @@ import { isValidEmail } from "../../helpers/functions"
 export default function Register () {
 
   const { setUser } = useContext(userContext)
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   const username = searchParams.get("username")
 
   const navigate = useNavigate()

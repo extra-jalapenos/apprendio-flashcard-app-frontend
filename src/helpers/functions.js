@@ -1,6 +1,5 @@
-import { baseURL, headers } from "./constants"
+import { baseURL, headers, timeToNextPracticeObj } from "./constants"
 import { makeHeaders } from "./auth"
-import { timeToNextPracticeObj } from "./constants"
 
 export const login = async (username, password) => {
   const options = {

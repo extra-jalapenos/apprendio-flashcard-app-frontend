@@ -8,13 +8,11 @@ const renderResult = (resultObj) => {
   const total = Object.values(resultObj).reduce((accumulator, currentValue) => accumulator + currentValue.length, 0)
   const averageLevel = () => {
     let productSum = 0
-    let count = 0
     const keys = Object.keys(resultObj)
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i]
       if (typeof Number(key) == "number") {
         productSum += Number(key) * resultObj[key].length
-        count += resultObj[key].length
       }
     }
     return productSum / total
