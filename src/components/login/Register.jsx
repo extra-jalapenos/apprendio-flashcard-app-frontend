@@ -1,9 +1,10 @@
-import { useContext, useState } from "react"
+import { isValidElement, useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
 import Form from "./Form"
 import { useSearchParams } from "react-router-dom";
+import { isValidEmail } from "../../helpers/functions"
 
 export default function Register () {
 
@@ -25,6 +26,22 @@ export default function Register () {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+
+    if (isValidEmail(signupData.email) === false) {
+      setFailMessage("Please submit a valid email!")
+      return
+    }
+    
+    if (signupData.password === "" || signupData.repeatPassword === "") {
+      setFailMessage("Please fill out all fields!")
+      return
+    }
+
+    if (signupData.password !== signupData.repeatPassword) {
+      setFailMessage("Your passwords don't match!")
+      setSignupData({ ... signupData, password: "", repeatPassword: "" } )
+      return
+    }
 
     const options = {
       method: "POST",
