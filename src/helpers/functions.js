@@ -238,7 +238,7 @@ export const greetServer = async () => {
   console.log(data)
 }
 
-const isValidEmail = (string) => {
+export const isValidEmail = (string) => {
   const parts = string.split("@")
   if (parts.length !== 2) return false
 
