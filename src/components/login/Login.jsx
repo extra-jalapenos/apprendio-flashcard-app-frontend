@@ -1,9 +1,8 @@
 import { useContext, useState } from "react"
-import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
-import Form from "./Form"
 import { login } from "../../helpers/functions"
+import LoginForm from "./LoginForm"
 
 export default function Login () {
   const { setUser } = useContext(userContext)
@@ -63,7 +62,7 @@ export default function Login () {
   return (
     <div className="center">
       <h2>Welcome back!</h2>
-      <Form name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
+      <LoginForm name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
       {failMessage && <p className="banner warning center">{failMessage}</p>}
       {failedLogin === false && <div className="banner center">
         <b>Not sure what to do? Take a tour!</b>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMyStatistics } from "../../helpers/functions"
-import Loading from "../loadingScreen/Loading";
-import "./style.css"
+import Loading from "../loadingScreen/Loading"
 
 function Entry ({statisticObj}) {
   const options = {

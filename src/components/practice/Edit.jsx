@@ -43,7 +43,7 @@ export default function EditCard () {
     get()
   }
 
-  useEffect(init, [])
+  useEffect(init, [id])
 
   if (!card) return (<Loading message={`Loading card ${id}`}/>)
 

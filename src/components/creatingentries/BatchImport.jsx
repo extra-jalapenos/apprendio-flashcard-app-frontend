@@ -3,12 +3,6 @@ import { useState } from "react"
 import BatchImportReview from "./BatchImportReview";
 import { getTemplate } from "../../helpers/functions";
 
-// const DownloadButton = ({url, text}) => {
-//   const downloadFile = () => window.location.href = {url}
-//   return (
-//     <button onClick={getTemplate}>{text}</button>
-//   )
-// }
 
 export default function BatchImport () {
   const [file, setFile] = useState(null)

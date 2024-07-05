@@ -1,8 +1,7 @@
 import "./style.css"
 
-export default function Form ({ prefill, handleSubmit, handleInput }) {
-  const username = prefill.username || ""
-  const password = prefill.password || ""
+export default function LoginForm ({ prefill, handleSubmit, handleInput }) {
+  const { username, password } = prefill
   return (
     <form className="form" onChange={handleInput} onSubmit={handleSubmit}>
       <p className="formfield-label required">username</p>

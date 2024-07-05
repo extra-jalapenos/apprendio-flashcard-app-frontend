@@ -1,6 +1,5 @@
-import { baseURL, headers } from "./constants"
+import { baseURL, headers, timeToNextPracticeObj } from "./constants"
 import { makeHeaders } from "./auth"
-import { timeToNextPracticeObj } from "./constants"
 
 export const login = async (username, password) => {
   const options = {
@@ -236,4 +235,17 @@ export const greetServer = async () => {
   const response = await fetch("/api/hello")
   const data = await response.json()
   console.log(data)
+}
+
+export const isValidEmail = (string) => {
+  const parts = string.split("@")
+  if (parts.length !== 2) return false
+
+  const [user, domain] = parts
+  if (user.length === 0 || domain.length === "") return false
+
+  const domainParts = domain.split(".")
+  if (domainParts.length < 2) return false
+
+  return true
 }

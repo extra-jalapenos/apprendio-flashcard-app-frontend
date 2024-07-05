@@ -29,7 +29,7 @@ export default function SessionStatistics () {
     get()
   }
 
-  useEffect(loadTodaysStats, [])
+  useEffect(loadTodaysStats, [setSessionStats])
 
   if (!sessionStats) return (<></>)
   const correct = sessionStats.correct ? sessionStats.correct : ""

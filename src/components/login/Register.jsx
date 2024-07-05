@@ -2,13 +2,14 @@ import { useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
-import Form from "./Form"
+import SignupForm from "../signup/SignupForm"
 import { useSearchParams } from "react-router-dom";
+import { isValidEmail } from "../../helpers/functions"
 
 export default function Register () {
 
   const { setUser } = useContext(userContext)
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   const username = searchParams.get("username")
 
   const navigate = useNavigate()
@@ -25,6 +26,22 @@ export default function Register () {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+
+    if (isValidEmail(signupData.email) === false) {
+      setFailMessage("Please submit a valid email!")
+      return
+    }
+
+    if (signupData.password === "" || signupData.repeatPassword === "") {
+      setFailMessage("Please fill out all fields!")
+      return
+    }
+
+    if (signupData.password !== signupData.repeatPassword) {
+      setFailMessage("Your passwords don't match!")
+      setSignupData({ ... signupData, password: "", repeatPassword: "" } )
+      return
+    }
 
     const options = {
       method: "POST",
@@ -55,7 +72,7 @@ export default function Register () {
       <h2>Hi, so nice to meet you!</h2>
       <p>Create your account and start right away!</p>
       {failMessage && <p className="banner warning center">{failMessage}</p>}
-      <Form name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
+      <SignupForm name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
     </div>
   )
 }
