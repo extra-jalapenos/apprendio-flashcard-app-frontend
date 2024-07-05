@@ -20,6 +20,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import NotFound from './components/notfound/NotFound'
 import EditCard from './components/practice/Edit'
+import Profile from './components/profile/Profile'
 
 export default function App() {
   const navigate = useNavigate()
@@ -73,6 +74,11 @@ export default function App() {
             <Route path={"/start"} element={
                 <ProtectedRoute>
                   <Start />
+                </ProtectedRoute>}
+              />
+            <Route path={"/profile"} element={
+                <ProtectedRoute>
+                  <Profile />
                 </ProtectedRoute>}
               />
             <Route path={"/login"} element={<Login />}/>
