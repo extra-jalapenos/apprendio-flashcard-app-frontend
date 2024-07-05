@@ -1,8 +1,8 @@
-import { isValidElement, useContext, useState } from "react"
+import { useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
-import Form from "./Form"
+import SignupForm from "../signup/SignupForm"
 import { useSearchParams } from "react-router-dom";
 import { isValidEmail } from "../../helpers/functions"
 
@@ -31,7 +31,7 @@ export default function Register () {
       setFailMessage("Please submit a valid email!")
       return
     }
-    
+
     if (signupData.password === "" || signupData.repeatPassword === "") {
       setFailMessage("Please fill out all fields!")
       return
@@ -72,7 +72,7 @@ export default function Register () {
       <h2>Hi, so nice to meet you!</h2>
       <p>Create your account and start right away!</p>
       {failMessage && <p className="banner warning center">{failMessage}</p>}
-      <Form name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
+      <SignupForm name="signup" prefill={signupData} handleInput={handleInput} handleSubmit={handleSubmit}/>
     </div>
   )
 }
