@@ -7,7 +7,7 @@ import Searchbar from "./Searchbar"
 import "../../list.css"
 import Loading from "../loadingScreen/Loading"
 
-function ListPair ({card, getCards}) {
+function ListPair ({card, getCards, searchText}) {
   const navigate = useNavigate()
   const {prompt, answer, level} = card
 
@@ -16,8 +16,16 @@ function ListPair ({card, getCards}) {
     getCards()
   }
 
+  const filteredFor = () => {
+    if (!searchText) return true
+    if (!!card.prompt.match(searchText) || !!card.answer.match(searchText)) return true
+    return false
+  }
+
+  if (filteredFor() === false) return <></>
+
   return (
-    <div className="list-entry reviewEntry">
+    <div className={`list-entry reviewEntry`}>
       <p>{prompt}</p>
       <p>{answer}</p>
       <div className="buttoncontainer">
@@ -29,7 +37,7 @@ function ListPair ({card, getCards}) {
   )
 }
 
-function CategorySection ({name, cards, getCards}) {
+function CategorySection ({name, cards, getCards, searchText}) {
   const navigate = useNavigate()
 
   if (!cards.length) return (
@@ -51,7 +59,7 @@ function CategorySection ({name, cards, getCards}) {
     <section>
       <h2>{name} – {cards.length} {cards.length === 1 ? "card" : "cards"} – {donePercent}% done</h2>
       <div className="list">
-        {cards && cards.map((card, index) => <ListPair key={index} card={card} getCards={getCards}/>)}
+        {cards && cards.map((card, index) => <ListPair key={index} card={card} getCards={getCards} searchText={searchText}/>)}
       </div>
     </section>
   )
@@ -60,7 +68,6 @@ function CategorySection ({name, cards, getCards}) {
 export default function Lookup() {
 
   const [data, setData] = useState(null)
-  const [filteredCards, setFilteredCards] = useState(null)
   const [searchText, setSearchText] = useState("")
 
   const getCards = () => {
@@ -83,25 +90,9 @@ export default function Lookup() {
   }
   useEffect(getCards, [])
 
-  const filterCards = () => {
-    if (!data) return
-    if (!searchText.length) {
-      setFilteredCards(data)
-      return
-    }
-    const filteredForText = data.filter(category => {
-      category.cards = category.cards.filter(card => !!card.prompt.match(searchText) || !!card.answer.match(searchText))
-      return category
-    })
-    setFilteredCards(filteredForText)
-  }
-
   const handleInput = (event) => setSearchText(event.target.value)
 
-  useEffect(filterCards, [searchText, data])
-
   if (!data) return <Loading message={"Loading cards…"} />
-  if (!filteredCards && searchText.length > 0) return <Loading message={"Filtering cards…"} />
 
   return (
     <>
@@ -112,6 +103,7 @@ export default function Lookup() {
         name={category.name}
         cards={category.cards}
         getCards={getCards}
+        searchText={searchText}
       />)}
     </>
   )
