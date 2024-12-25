@@ -10,7 +10,6 @@
 
 label {
   justify-self: end;
-  align-self: start;
 }
 
 @media screen and (max-width: 700px) {

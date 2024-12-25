@@ -6,6 +6,7 @@ import { changeCardStats } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"
 import { sessionContext } from "../../context"
 import Loading from "../loadingScreen/Loading"
+import { useNavigate } from "react-router-dom"
 
 export default function Practice ({ card, setCard, next }) {
   const { setSessionStats } = useContext(sessionContext)
@@ -13,6 +14,8 @@ export default function Practice ({ card, setCard, next }) {
   const [showAnswer, setShowAnswer] = useState(false)
   const [userEntry, setUserEntry] = useState("")
   const [evaluation, setEvaluation] = useState(null)
+  const navigate = useNavigate()
+
   useHotkeys(["ArrowUp", "ArrowDown"], (event) => {
     if (!showAnswer) {
       handleSubmit()
@@ -143,11 +146,12 @@ export default function Practice ({ card, setCard, next }) {
       }
       {evaluation !== null &&
       <div className="buttoncontainer">
+        <button onClick={()=>navigate(`/edit/${id}`,'_blank')} className="blue">Edit this card</button>
         <button className="circlebutton green" onClick={logCorrect}>✓</button>
         <button className="circlebutton red" onClick={logWrong}>×</button>
       </div>
       }
-      <div>
+      <div id="keyboard-info">
         <p><em><b>Psst!</b></em> Did you know that you can control this app with your keyboard?</p>
         <p>Press arrow up ↑ to reveal the answer or arrow right → to skip a card.<br/>
         To log your answer, press arrow up ↑ for right or arrow down ↓ for wrong.</p>
