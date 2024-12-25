@@ -30,8 +30,8 @@ function ListPair ({card, getCards, searchText}) {
       <p>{answer}</p>
       <div className="buttoncontainer">
         <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
-        <button className="circlebutton edit" onClick={()=>navigate(`/edit/${card.id}`,'_blank')}>🖍️</button>
-        <p className="circlebutton delete red" onClick={handleDelete}>🗑️</p>
+        <button className="circlebutton edit" onClick={()=>navigate(`/edit/${card.id}`,'_blank')}>✎</button>
+        <p className="circlebutton delete red" onClick={handleDelete}>␡</p>
       </div>
     </div>
   )
