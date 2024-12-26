@@ -1,4 +1,4 @@
-import Card from "./Card"
+import Card from "../card/Card"
 import InputField from "../InputField"
 
 export default function CardPair ({props, revealAnswer, handleEntry}) {

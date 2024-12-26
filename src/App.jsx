@@ -6,7 +6,7 @@ import Start from "./components/Start"
 import Home from './components/home/home'
 import CreateEntry from './components/creatingentries/CreateEntry'
 import CreateCategory from './components/categories/CreateCategory'
-import LoadPractice from './components/practice/LoadCategory'
+import { LoadPractice } from './components/loadpractice/LoadPractice'
 import CategorySelection from './components/categories/CategorySelection'
 import Login from './components/login/Login'
 import Register from './components/login/Register'

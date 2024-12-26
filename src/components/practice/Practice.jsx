@@ -1,6 +1,6 @@
 import { useState, useContext } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
-import CardPair from "./CardPair"
+import CardPair from "../cardpair/CardPair"
 import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"

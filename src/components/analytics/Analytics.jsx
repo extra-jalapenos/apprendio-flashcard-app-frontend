@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
-import "./style.css"
+import "../../list.css"
 
 const renderResult = (resultObj) => {
   const total = Object.values(resultObj).reduce((accumulator, currentValue) => accumulator + currentValue.length, 0)
@@ -19,7 +19,7 @@ const renderResult = (resultObj) => {
   }
 
   return (
-    <div className="list center">
+    <div className="list">
       <div className="list-header threeColumns">
         <p>Level</p>
         <p>Cards</p>
@@ -32,7 +32,7 @@ const renderResult = (resultObj) => {
         <p>{((resultObj[name].length || resultObj[name]) / total * 100).toFixed(0) + "%"}</p>
         </div>
       )})}
-      <div className="list-header">
+      <div className="list-header twoColumns">
         <p>Total: {Math.abs(total) != 1 ? total + " cards" : total + " card"}</p>
         <p>Average Level: {averageLevel().toFixed(0)}</p>
       </div>

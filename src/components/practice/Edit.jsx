@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import Loading from "../loadingScreen/Loading"
 import { getCard, updateCard } from "../../helpers/functions"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export default function EditCard () {
   const [card, setCard] = useState(null)
   const [form, setForm] = useState(null)
   const [saveButtonText, setSaveButtonText] = useState("save")
+  const navigate = useNavigate()
 
   const switchAnswerAndPrompt = () => {
     const { answer, prompt } = form
@@ -20,14 +21,14 @@ export default function EditCard () {
   const handleInput = (event) => {
     const { name, value } = event.target
     setForm({ ...form, [name]:value })
-    setSaveButtonText("Save")
+    setSaveButtonText("save")
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    setSaveButtonText("Saving…")
+    setSaveButtonText("saving…")
     await updateCard(id, form)
-    setSaveButtonText("Saved")
+    setSaveButtonText("saved")
   }
 
   const { id } = useParams()
@@ -62,7 +63,8 @@ export default function EditCard () {
         <div>
         </div>
         <div className="buttoncontainer">
-          <button className="blue" onClick={switchAnswerAndPrompt}>Switch answer and prompt</button>
+          <button onClick={() => navigate(-1, {replace: false})}>return to previous page</button>
+          <button className="blue" onClick={switchAnswerAndPrompt}>switch answer and prompt</button>
           {!!form.categoryId && form.answer && form.prompt && <button value="Submit" className="green">{saveButtonText}</button>}
         </div>
       </form>

@@ -3,10 +3,10 @@ import { useParams, useNavigate } from "react-router"
 import { shuffle } from "../../helpers/constants"
 import { getCategory, getCards, readyForPractice } from "../../helpers/functions"
 import { practiceContext } from "../../context"
-import Practice from "./Practice"
+import Practice from "../practice/Practice"
 import Loading from "../loadingScreen/Loading"
 
-export default function LoadPractice () {
+export const LoadPractice = () => {
   const { categoryId } = useParams()
   const navigate = useNavigate()
 
@@ -59,7 +59,7 @@ export default function LoadPractice () {
   }
 
   if (!card) <Loading message={"Loading card…"} />
-  
+
   return (
     <>
       <h2 className="center">{category.name}</h2>

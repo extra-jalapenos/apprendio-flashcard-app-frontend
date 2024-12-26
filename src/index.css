@@ -102,23 +102,22 @@ main {
 }
 
 .twoColumns {
-  display: grid;
   grid-template-columns: repeat(auto-fit, 50%);
 }
 
+.autoColumns, .twoColumns, .threeColumns, .fourColumns {
+  justify-items: center;
+}
+
 .autoColumns {
-  display: grid;
   place-content: center;
 }
 
 .threeColumns {
-  display: grid;
-  place-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .fourColumns {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
