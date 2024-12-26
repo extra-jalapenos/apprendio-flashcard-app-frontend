@@ -1,5 +1,4 @@
 .buttoncontainer {
-  margin: 0 1em;
   display: grid;
   grid-gap: 1em;
 }

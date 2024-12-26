@@ -9,7 +9,7 @@ function Row ({rowArr}) {
 export default function BatchImportReview ({data}) {
   return (
     <>
-      <h3>Review your data</h3>
+      <h2>Review your data</h2>
       <div className="list">
         {data.map((row, index) => <Row key={index} rowArr={row}/>)}
       </div>

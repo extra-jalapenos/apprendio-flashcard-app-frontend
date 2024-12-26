@@ -38,11 +38,6 @@
     border-radius: 0.33rem;
     padding: 0.25rem;
   }
-  .list-entry .circlebutton.green, .list-entry .circlebutton.red {
-    width: 1em;
-    height: auto;
-    aspect-ratio: 1;
-  }
 }
 
 @media screen and (max-width: 500px) {

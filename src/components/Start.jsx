@@ -6,7 +6,7 @@ export default function Start() {
   return (
     <div className="center">
       <h2>Welcome back!</h2>
-      <div className="autoColumns">
+      <div className="list">
         <button onClick={() => navigate("/select-category")}>Practice</button>
         <button onClick={() => navigate("/new-entry")}>Create entries</button>
         <button  onClick={() => navigate("/lookup")}>Look up</button>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
+import "../../list.css"
 
 export default function LanguageSelection () {
 
@@ -33,7 +34,7 @@ export default function LanguageSelection () {
   return (
     <>
       <h2 className="center">Select your category</h2>
-      <div className="autoColumns">
+      <div className="list">
         {categories.map((category, index) => <button key={index} onClick={() => navigate("/practice/"+category.id+"/", { replace: false })}><b>{category.name}</b></button>)}
         <button onClick={() => navigate("/create-category", { replace: false })}>+ Add new category</button>
       </div>

@@ -50,7 +50,7 @@ export default function EditCard () {
 
   return(
     <>
-      <h3>Edit Card {id}</h3>
+      <h2>Edit Card {id}</h2>
       <form className="container" onSubmit={handleSubmit}>
         <label>Prompt</label>
         <textarea type="text" name="prompt" value={form.prompt} onChange={handleInput} required />

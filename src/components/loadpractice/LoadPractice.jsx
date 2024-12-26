@@ -42,7 +42,7 @@ export const LoadPractice = () => {
   if (cards && cards.length === 0) {
     return (
       <div className="center">
-        <h3>Whoops!</h3>
+        <h2>Whoops!</h2>
         <p>There are no cards to practice for &quot;{category.name}&quot;.</p>
         <button onClick={() => navigate("/new-entry")}>+ Add cards</button>
       </div>

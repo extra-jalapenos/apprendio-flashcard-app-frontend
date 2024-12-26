@@ -3,13 +3,14 @@ import { deleteEntry } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
-import Searchbar from "./Searchbar"
-import "../../list.css"
+import Searchbar from "../analytics/Searchbar"
 import Loading from "../loadingScreen/Loading"
+// import "../../list.css"
+import "./style.css"
 
 function ListPair ({card, getCards, searchText}) {
   const navigate = useNavigate()
-  const {prompt, answer, level} = card
+  const {prompt, answer, hint, level} = card
 
   const handleDelete = async () => {
     await deleteEntry(card.id)
@@ -25,13 +26,14 @@ function ListPair ({card, getCards, searchText}) {
   if (filteredFor() === false) return <></>
 
   return (
-    <div className={`list-entry reviewEntry`}>
-      <p>{prompt}</p>
-      <p>{answer}</p>
-      <div className="buttoncontainer">
+    <div className="list-entry">
+      <p id="prompt">{prompt}</p>
+      <p id="hint">{hint}</p>
+      <p id="answer">{answer}</p>
+      <div className="buttoncontainer" id="icons">
         <p className={level >= maxLevel ? "circlebutton green" : "circlebutton"}>{level}</p>
         <button className="circlebutton edit" onClick={()=>navigate(`/edit/${card.id}`,'_blank')}>✎</button>
-        <p className="circlebutton delete red" onClick={handleDelete}>␡</p>
+        <p className="delete red circlebutton" onClick={handleDelete}>␡</p>
       </div>
     </div>
   )
