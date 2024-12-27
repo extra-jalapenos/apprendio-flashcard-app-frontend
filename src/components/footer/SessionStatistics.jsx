@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { sessionContext } from "../../context"
+import { sessionContext } from "../context/context"
 import { makeHeaders } from "../../helpers/auth"
 
 export default function SessionStatistics () {

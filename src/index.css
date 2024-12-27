@@ -99,7 +99,7 @@ main {
   scrollbar-width: none;
   overflow-x: none;
   overflow-y: scroll;
-  margin: 0 0.5rem;
+  padding: 1rem;
 }
 
 .twoColumns {
@@ -115,6 +115,7 @@ main {
 }
 
 .threeColumns {
+	grid-auto-flow: column;
   grid-template-columns: repeat(3, 1fr);
 }
 

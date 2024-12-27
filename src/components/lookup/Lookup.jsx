@@ -3,9 +3,9 @@ import { deleteEntry } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
-import Searchbar from "../analytics/Searchbar"
+import Searchbar from "./Searchbar"
 import Loading from "../loadingScreen/Loading"
-// import "../../list.css"
+import "../../list.css"
 import "./style.css"
 
 function ListPair ({card, getCards, searchText}) {
@@ -58,7 +58,7 @@ function CategorySection ({name, cards, getCards, searchText}) {
   const donePercent = Number((cards.filter(card => card.level >= maxLevel).length) / cards.length * 100).toFixed(0)
 
   return (
-    <section>
+    <section id="lookup">
       <h2>{name} – {cards.length} {cards.length === 1 ? "card" : "cards"} – {donePercent}% done</h2>
       <div className="list">
         {cards && cards.map((card, index) => <ListPair key={index} card={card} getCards={getCards} searchText={searchText}/>)}

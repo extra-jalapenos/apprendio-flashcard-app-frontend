@@ -1,5 +1,5 @@
 import Card from "../card/Card"
-import InputField from "../InputField"
+import InputField from "../inputfield/InputField"
 
 export default function CardPair ({props, revealAnswer, handleEntry}) {
   const { prompt, answer, hint } = props

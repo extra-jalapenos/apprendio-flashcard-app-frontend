@@ -32,21 +32,13 @@
   background-color: var(--mediumWhite);
 }
 
-@media screen and (max-width: 600px) {
-  .list-entry {
-    margin: 0.25rem;
-    border-radius: 0.33rem;
-    padding: 0.25rem;
-  }
-}
-
 @media screen and (max-width: 500px) {
   #percent {
     display: none;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   #total {
     display: none;
   }

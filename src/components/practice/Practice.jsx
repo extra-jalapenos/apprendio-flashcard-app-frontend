@@ -4,7 +4,7 @@ import CardPair from "../cardpair/CardPair"
 import CardStats from "./CardStatistics"
 import { changeCardStats } from "../../helpers/functions"
 import { makeHeaders } from "../../helpers/auth"
-import { sessionContext } from "../../context"
+import { sessionContext } from "../context/context"
 import Loading from "../loadingScreen/Loading"
 import { useNavigate } from "react-router-dom"
 

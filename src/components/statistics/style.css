@@ -1,0 +1,48 @@
+#statistics .list-header, #statistics .list-entry {
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-flow: column;
+	place-items: center;
+}
+
+#statistics .list-entry > div {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto;
+	place-content: center;
+	gap: 1rem;
+}
+
+
+#statistics .list-header {
+	place-items: center;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	gap: 0.5rem;
+}
+
+#statistics p {
+	margin: 0;
+	padding: 0;
+}
+
+#statistics .circlebutton {
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+	#total {
+		display: none;
+	}
+
+	#statistics .list-header, #statistics .list-entry {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	#statistics .list-entry {
+		padding: 0.5rem;
+		gap: 0.5rem;
+	}
+}

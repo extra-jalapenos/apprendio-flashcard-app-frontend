@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router"
-import { userContext } from "../../context"
+import { userContext } from "../context/context"
 import { login } from "../../helpers/functions"
 import LoginForm from "./LoginForm"
 
@@ -60,6 +60,7 @@ export default function Login () {
   }
 
   return (
+    <>
     <div className="center">
       <h2>Welcome back!</h2>
       <LoginForm name="login" prefill={loginData} handleInput={handleInput} handleSubmit={handleSubmit} />
@@ -79,5 +80,6 @@ export default function Login () {
         )
       }
     </div>
+    </>
   )
 }

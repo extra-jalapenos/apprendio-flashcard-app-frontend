@@ -3,6 +3,7 @@ import { maxLevel } from "../../helpers/constants"
 import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
 import "../../list.css"
+import "./style.css"
 
 const renderResult = (resultObj) => {
   const total = Object.values(resultObj).reduce((accumulator, currentValue) => accumulator + currentValue.length, 0)
@@ -19,7 +20,7 @@ const renderResult = (resultObj) => {
   }
 
   return (
-    <div className="list">
+    <div className="list" id="analytics">
       <div className="list-header threeColumns">
         <p>Level</p>
         <p>Cards</p>

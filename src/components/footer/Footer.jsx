@@ -1,5 +1,5 @@
 import SessionStatistics from "./SessionStatistics"
-import { userContext } from "../../context"
+import { userContext } from "../context/context"
 import { useContext } from "react"
 
 export default function Footer () {

@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import { shuffle } from "../../helpers/constants"
 import { getCategory, getCards, readyForPractice } from "../../helpers/functions"
-import { practiceContext } from "../../context"
+import { practiceContext } from "../context/context"
 import Practice from "../practice/Practice"
 import Loading from "../loadingScreen/Loading"
 

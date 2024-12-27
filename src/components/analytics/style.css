@@ -1,0 +1,4 @@
+#analytics .list-entry {
+	grid-auto-flow: column;
+	grid-template-columns: repeat(3, 1fr);
+}

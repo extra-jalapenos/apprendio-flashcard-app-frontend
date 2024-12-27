@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
-import { userContext } from "../../context"
+import { userContext } from "../context/context"
 import SignupForm from "../signup/SignupForm"
 import { useSearchParams } from "react-router-dom";
 import { isValidEmail } from "../../helpers/functions"
