@@ -1,8 +1,8 @@
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
-import { login } from "../../helpers/functions"
 import LoginForm from "./LoginForm"
+import { api } from "../../api/api"
 
 export default function Login () {
   const { setUser } = useContext(userContext)
@@ -40,17 +40,17 @@ export default function Login () {
     }
 
     try {
-      const tryLogin = await login(username, password)
-      const { token } = tryLogin
-
-      if (!token) {
+      const tryLogin = api.login({ username, password })
+      if (tryLogin.message) {
         setFailedLogin(true)
         setFailMessage("Incorrect login credentials.")
-      } else {
-        sessionStorage.setItem("token", token)
-        setUser(username)
-        navigate("/start")
+        return
       }
+
+      const { token } = tryLogin
+      sessionStorage.setItem("token", token)
+      setUser(username)
+      navigate("/start")
     } catch (error) {
       console.log(error, "something went wrong during login")
       setFailMessage("Something went wrong. Our bad.")

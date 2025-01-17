@@ -1,23 +1,6 @@
 import { baseURL, headers, timeToNextPracticeObj } from "./constants"
 import { makeHeaders } from "./auth"
 
-export const login = async (username, password) => {
-  const options = {
-      headers: makeHeaders(),
-      method: "POST",
-      body: JSON.stringify({ username, password })
-    }
-
-  try {
-    const tryLogin = await fetch("/api/login", options)
-    const data = await tryLogin.json()
-    return data
-  } catch (error) {
-    console.log(error, "something went wrong during login")
-    return { error }
-  }
-}
-
 export const getCard = async (cardId) => {
   try {
     const options = {
