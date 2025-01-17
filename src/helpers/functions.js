@@ -1,6 +1,5 @@
-import { baseURL, headers, timeToNextPracticeObj } from "./constants"
+import { timeToNextPracticeObj } from "./constants"
 import { makeHeaders } from "./auth"
-
 
 export const readyForPractice = (card) => {
   if (!card.lastAskedAt) return true
