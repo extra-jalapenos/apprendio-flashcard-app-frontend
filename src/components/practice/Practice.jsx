@@ -2,11 +2,10 @@ import { useState, useContext } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
 import CardPair from "./CardPair"
 import CardStats from "./CardStatistics"
-import { changeCardStats } from "../../helpers/functions"
-import { makeHeaders } from "../../helpers/auth"
 import { sessionContext } from "../../context"
 import Loading from "../loadingScreen/Loading"
 import { useNavigate } from "react-router-dom"
+import { api } from "../../api/api"
 
 export default function Practice ({ card, setCard, next }) {
   const { setSessionStats } = useContext(sessionContext)
@@ -55,7 +54,8 @@ export default function Practice ({ card, setCard, next }) {
 
   const logCorrect = async () => {
     try {
-      updateTodaysStats(1, 0)
+      const stats = api.updateTodaysStats({ correct: 1, incorrect: 0})
+      setSessionStats(stats.statistic)
     } catch {
       console.log("error logging stat change")
     }
@@ -66,11 +66,10 @@ export default function Practice ({ card, setCard, next }) {
       lastAskedAt: new Date().toISOString()
     })
     try {
-      const changedCard = await changeCardStats(id, 1)
-      if (changedCard) {
-        resetDisplayOptions()
-        next()
-      }
+      const changedCard = await api.changeCardStats({ cardId: id, changeBy: 1 })
+      if (changedCard.message) return
+      resetDisplayOptions()
+      next()
     } catch (error) {
       console.log("error logging correct", error)
     }
@@ -78,7 +77,8 @@ export default function Practice ({ card, setCard, next }) {
 
   const logWrong = async () => {
     try {
-      updateTodaysStats(null, 1)
+      const stats = api.updateTodaysStats({ correct: null, incorrect: 1})
+      setSessionStats(stats.statistic)
     } catch {
       console.log("error logging stat change")
     }
@@ -86,51 +86,14 @@ export default function Practice ({ card, setCard, next }) {
       ...card,
       repetitions: card.repetitions+1
     })
+
     try {
-      const changedCard = await changeCardStats(id, -1)
-      if (changedCard) {
-        resetDisplayOptions()
-        next()
-      }
+      const changedCard = await api.changeCardStats({ cardId: id, changeBy: -1 })
+      if (changedCard.message) return
+      resetDisplayOptions()
+      next()
     } catch (error) {
       console.log("error logging wrong", error)
-    }
-  }
-
-  /**
-   * updateTodaysStats
-   * @param {int} increaseDecreaseAsNum
-   */
-  const updateTodaysStats = async (correct, incorrect) => {
-    const queryParams = []
-    if (correct > 0) {
-      queryParams.push(`correct=${correct}`)
-    }
-    if (incorrect > 0) {
-      queryParams.push(`incorrect=${incorrect}`)
-    }
-
-    if (queryParams.length === 0) return
-
-    const queryParamStr = () => {
-      if (queryParams.length > 0) return "?" + queryParams.join("&")
-      return ""
-    }
-
-    const endpoint = `/api/users/me/statistics/today${queryParamStr()}`
-    const options = {
-      method: "PATCH",
-      headers: makeHeaders()
-    }
-
-    try {
-      const response = await fetch(endpoint, options)
-      const data = await response.json()
-      console.log("setting session stats", data)
-      setSessionStats(data.statistic)
-    } catch (error) {
-      console.log(error)
-      return false
     }
   }
 
