@@ -61,12 +61,35 @@ class APIClient  {
 		return await this.call("GET", "api/users/me/categories")
 	}
 
+	async getCategoriesWithCards () {
+		return await this.call("GET", "api/users/me/categories/details")
+		// this is not a mistake, the cards are included in their category-element: categories: [ ... cards: [] ]
+	}
+
 	async deleteCategory (categoryId) {
 		return await this.call("DELETE", `api/categories/${categoryId}`)
 	}
 
 	async getTodaysStats () {
 		return await this.call("GET", "/api/users/me/statistics/today")
+	}
+
+	async updateTodaysStats ({ correct, incorrect }) {
+		const queryParams = []
+    if (correct > 0) {
+      queryParams.push(`correct=${correct}`)
+    }
+    if (incorrect > 0) {
+      queryParams.push(`incorrect=${incorrect}`)
+    }
+
+    if (queryParams.length === 0) return
+    const queryParamStr = () => {
+      if (queryParams.length > 0) return "?" + queryParams.join("&")
+      return
+    }
+
+		return await this.call("PATCH", `/api/users/me/statistics/today${queryParamStr()}`)
 	}
 
 	async getStatistics () {

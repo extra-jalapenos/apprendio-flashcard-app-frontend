@@ -1,18 +1,17 @@
 import { maxLevel } from "../../helpers/constants"
-import { deleteEntry } from "../../helpers/functions"
-import { makeHeaders } from "../../helpers/auth"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import Searchbar from "./Searchbar"
 import "../../list.css"
 import Loading from "../loadingScreen/Loading"
+import { api } from "../../api/api"
 
 function ListPair ({card, getCards, searchText}) {
   const navigate = useNavigate()
   const {prompt, answer, level} = card
 
   const handleDelete = async () => {
-    await deleteEntry(card.id)
+    await api.deleteCard(card.id)
     getCards()
   }
 
@@ -72,19 +71,9 @@ export default function Lookup() {
 
   const getCards = () => {
     const get = async () => {
-      try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch("/api/users/me/categories/details", options)
-        // this is not a mistake, the cards are included in their category-element: categories: [ ... cards: [] ]
-        if (response.status === 200) {
-          const data = await response.json()
-          setData(data.categories)
-        }
-      } catch (error) {
-        console.log(error, "error fetching cards")
-      }
+      const categories = await api.getCategoriesWithCards()
+      if (categories.message) return
+      setData(categories.categories)
     }
     get()
   }
