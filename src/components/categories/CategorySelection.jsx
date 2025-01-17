@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
 import { api } from "../../api/api"
 

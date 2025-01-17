@@ -66,8 +66,8 @@ export default function Practice ({ card, setCard, next }) {
       lastAskedAt: new Date().toISOString()
     })
     try {
-      const changedCard = await api.changeCardStats({ cardId: id, changeBy: 1 })
-      if (changedCard.message) return
+      const response = await api.changeCardStats({ cardId: id, changeBy: 1 })
+      if (response.message) return
       resetDisplayOptions()
       next()
     } catch (error) {
@@ -88,8 +88,8 @@ export default function Practice ({ card, setCard, next }) {
     })
 
     try {
-      const changedCard = await api.changeCardStats({ cardId: id, changeBy: -1 })
-      if (changedCard.message) return
+      const response = await api.changeCardStats({ cardId: id, changeBy: -1 })
+      if (response.message) return
       resetDisplayOptions()
       next()
     } catch (error) {
