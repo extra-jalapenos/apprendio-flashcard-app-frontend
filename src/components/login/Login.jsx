@@ -46,7 +46,7 @@ export default function Login () {
         setFailMessage("Incorrect login credentials.")
         return
       }
-      console.log(tryLogin)
+
       const { token } = tryLogin
       sessionStorage.setItem("token", token)
       setUser(username)

@@ -1,10 +1,11 @@
 import { useEffect, useState, useContext } from "react"
 import { useParams, useNavigate } from "react-router"
 import { shuffle } from "../../helpers/constants"
-import { getCategory, getCards, readyForPractice } from "../../helpers/functions"
+import { readyForPractice } from "../../helpers/functions"
 import { practiceContext } from "../../context"
 import Practice from "./Practice"
 import Loading from "../loadingScreen/Loading"
+import { api } from "../../api/api"
 
 export default function LoadPractice () {
   const { categoryId } = useParams()
@@ -17,18 +18,16 @@ export default function LoadPractice () {
 
   const init = () => {
     const run = async () => {
-      const category = await getCategory(categoryId)
-      if (category) {
-        setCategory(category)
-        const cards = await getCards(categoryId)
-        if (cards) {
-          const filteredCards = cards.filter((card) => readyForPractice(card))
-          const shuffledCards = shuffle(filteredCards)
-          setCards(shuffledCards)
-          currentIndex = 0
-          setCard(shuffledCards[currentIndex])
-        }
-      }
+      const category = await api.getCategory(categoryId)
+      if (category.message) return
+      setCategory(category.category)
+      const cards = await api.getCardsInCategory(categoryId)
+      if (cards.message) return
+      const filteredCards = cards.cards.filter((card) => readyForPractice(card))
+      const shuffledCards = shuffle(filteredCards)
+      setCards(shuffledCards)
+      currentIndex = 0
+      setCard(shuffledCards[currentIndex])
     }
     run()
   }
@@ -59,7 +58,7 @@ export default function LoadPractice () {
   }
 
   if (!card) <Loading message={"Loading card…"} />
-  
+
   return (
     <>
       <h2 className="center">{category.name}</h2>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Loading from "../loadingScreen/Loading"
-import { getCard, updateCard } from "../../helpers/functions"
 import { useParams } from "react-router-dom"
+import { api } from "../../api/api"
 
 export default function EditCard () {
   const [card, setCard] = useState(null)
@@ -23,27 +23,26 @@ export default function EditCard () {
     setSaveButtonText("Save")
   }
 
+  const { id } = useParams()
   const handleSubmit = async (event) => {
     event.preventDefault()
     setSaveButtonText("Saving…")
-    await updateCard(id, form)
+    await api.updateCard({ cardId: id,  ...form })
     setSaveButtonText("Saved")
   }
 
-  const { id } = useParams()
 
   const init = () => {
     const get = async () => {
-      const data = await getCard(id)
-      if (data) {
-        setCard(data)
-        setForm(data)
-      }
+      const card = await api.getCard(id)
+      if (card.message) return
+      setCard(card.card)
+      setForm(card.card)
     }
     get()
   }
 
-  useEffect(init, [id])
+  useEffect(init, [])
 
   if (!card) return (<Loading message={`Loading card ${id}`}/>)
 
