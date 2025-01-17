@@ -41,10 +41,14 @@ function Entry ({statisticObj}) {
 export default function Statistics () {
   const [history, setHistory] = useState(null)
 
-  const getData = async () => {
-    const response = await api.getStatistics()
-    if (response.message) return
-    setHistory(response.statistics)
+  const getData = () => {
+    const load = async () => {
+      const response = await api.getStatistics()
+      console.log(response)
+      if (response.message) return
+      setHistory(response.statistics)
+    }
+    load()
   }
   useEffect(getData, [])
 
