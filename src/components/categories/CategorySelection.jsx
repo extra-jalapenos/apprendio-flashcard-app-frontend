@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
+import { api } from "../../api/api"
 
 export default function LanguageSelection () {
 
@@ -10,18 +11,9 @@ export default function LanguageSelection () {
 
   const getCategories = () => {
     const get = async () => {
-      try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch("/api/users/me/categories", options)
-        if (response.status === 200) {
-          const data = await response.json()
-          setCategories(data.categories)
-        }
-      } catch (error) {
-        console.log(error, "error fetching categories")
-      }
+      const response = await api.getCategories()
+      if (response.message) return
+      setCategories(response.categories)
     }
     get()
   }

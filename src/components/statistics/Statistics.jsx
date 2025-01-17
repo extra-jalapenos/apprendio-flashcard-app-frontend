@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getMyStatistics } from "../../helpers/functions"
 import Loading from "../loadingScreen/Loading"
+import { api } from "../../api/api";
 
 function Entry ({statisticObj}) {
   const options = {
@@ -41,10 +41,11 @@ function Entry ({statisticObj}) {
 export default function Statistics () {
   const [history, setHistory] = useState(null)
 
-  const getData = () => {
-    getMyStatistics().then((data) => setHistory(data))
+  const getData = async () => {
+    const response = await api.getStatistics()
+    if (response.message) return
+    setHistory(response.statistics)
   }
-
   useEffect(getData, [])
 
   if (!history) return <Loading message={"Loading statistics…"}/>
