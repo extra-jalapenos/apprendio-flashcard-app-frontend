@@ -5,6 +5,7 @@ class APIClient  {
 		const headers = new Headers()
 		headers.set("content-type", "application/json")
 		const token = sessionStorage.getItem("token")
+		if (!token) console.error("there is no token")
 		if (token) {
 			headers.set("Authorization", "Bearer " + token)
 		}
