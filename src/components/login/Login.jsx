@@ -40,14 +40,17 @@ export default function Login () {
     }
 
     try {
-      const tryLogin = await api.login({ username, password })
-      if (tryLogin.message) {
+      const response = await api.login({ username, password })
+      if (response instanceof Error) {
         setFailedLogin(true)
-        setFailMessage("Incorrect login credentials.")
+        setFailMessage(response.message)
         return
       }
 
-      const { token } = tryLogin
+      const { token } = response
+      if (!token) {
+        setUser(initUser)
+      }
       sessionStorage.setItem("token", token)
       setUser(username)
       navigate("/start")

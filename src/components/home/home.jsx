@@ -11,10 +11,10 @@ export default function Home() {
         </p>
       </div> */}
       <div className="center">
-        <p className="quote">
+        <div className="quote">
           <p>Flashcards are still on parchment paper? That&apos;s totally <em>barbaric</em>!</p>
           <p className="source">Hermione Granger, probably</p>
-        </p>
+        </div>
       </div>
       <h2>Flashcards, but in 2024</h2>
       <p>Learning anything can be tedious and hard. Especially when learning vocabulary for a new language or all diagnostic codes for diseases according to the <a href="https://en.wikipedia.org/wiki/ICD-10" target="blank">ICD</a>, flashcards are effective but time-consuming to write and not really made to be taken on the road (just think of the busdriver jamming the brakes!).</p>

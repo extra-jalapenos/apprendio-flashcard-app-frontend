@@ -11,7 +11,8 @@ function ListPair ({card, getCards, searchText}) {
   const {prompt, answer, level} = card
 
   const handleDelete = async () => {
-    await api.deleteCard(card.id)
+    const response = await api.deleteCard(card.id)
+    if (response instanceof Error) return
     getCards()
   }
 
@@ -71,9 +72,9 @@ export default function Lookup() {
 
   const getCards = () => {
     const get = async () => {
-      const categories = await api.getCategoriesWithCards()
-      if (categories.message) return
-      setData(categories.categories)
+      const response = await api.getCategoriesWithCards()
+      if (response instanceof Error) return
+      setData(response.categories)
     }
     get()
   }

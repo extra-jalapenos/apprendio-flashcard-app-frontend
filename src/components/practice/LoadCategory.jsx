@@ -18,12 +18,12 @@ export default function LoadPractice () {
 
   const init = () => {
     const run = async () => {
-      const category = await api.getCategory(categoryId)
-      if (category.message) return
-      setCategory(category.category)
-      const cards = await api.getCardsInCategory(categoryId)
-      if (cards.message) return
-      const filteredCards = cards.cards.filter((card) => readyForPractice(card))
+      const responseCategory = await api.getCategory(categoryId)
+      if (responseCategory instanceof Error) return
+      setCategory(responseCategory.category)
+      const response = await api.getCardsInCategory(categoryId)
+      if (response instanceof Error) return
+      const filteredCards = response.cards.filter((card) => readyForPractice(card))
       const shuffledCards = shuffle(filteredCards)
       setCards(shuffledCards)
       currentIndex = 0

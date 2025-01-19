@@ -1,10 +1,10 @@
 import { useContext, useState } from "react"
-import { headers } from "../../helpers/constants"
 import { useNavigate } from "react-router"
 import { userContext } from "../../context"
 import SignupForm from "../signup/SignupForm"
 import { useSearchParams } from "react-router-dom";
 import { isValidEmail } from "../../helpers/functions"
+import { api } from "../../api/api"
 
 export default function Register () {
 
@@ -43,24 +43,15 @@ export default function Register () {
       return
     }
 
-    const options = {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(signupData)
-    }
-
     try {
-      const tryRegister = await fetch("/api/register", options)
-      if (tryRegister.status === 201) {
-        const data = await tryRegister.json()
-        sessionStorage.setItem("token", data.token)
-        setUser(signupData.username)
-        navigate("/start")
-      } else if (tryRegister.status === 403) {
-        setFailMessage(`Sorry, ${signupData.username} is already taken!`)
-      } else {
-        setFailMessage("Don't know about that. Did you fill out everything?")
+      const response = await api.register(signupData)
+      console.log(response)
+      if (response instanceof Error) {
+        setFailMessage(response.message)
+        return
       }
+      setUser(signupData.username)
+      navigate("/start")
     } catch (error) {
       setFailMessage("Something went wrong. Our bad.")
     }

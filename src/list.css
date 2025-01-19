@@ -1,6 +1,5 @@
 .list-header {
   font-weight: bold;
-  width: 100%;
   display: grid;
   align-items: center;
   grid-template-columns: auto;
@@ -13,7 +12,6 @@
   margin: 0.5rem 0;
   padding: 0.5rem;
   display: grid;
-  width: 100%;
   grid-template-columns: auto;
   grid-auto-flow: column;
   align-items: center;

@@ -27,17 +27,18 @@ export default function EditCard () {
   const handleSubmit = async (event) => {
     event.preventDefault()
     setSaveButtonText("Saving…")
-    await api.updateCard({ cardId: id,  ...form })
+    const response = await api.updateCard({ cardId: id,  ...form })
+    if (response instanceof Error) return
     setSaveButtonText("Saved")
   }
 
 
   const init = () => {
     const get = async () => {
-      const card = await api.getCard(id)
-      if (card.message) return
-      setCard(card.card)
-      setForm(card.card)
+      const response = await api.getCard(id)
+      if (response instanceof Error) return
+      setCard(response.card)
+      setForm(response.card)
     }
     get()
   }
