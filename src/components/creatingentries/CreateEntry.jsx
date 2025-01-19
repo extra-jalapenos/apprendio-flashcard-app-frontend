@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { entryBlueprint } from "../../helpers/constants.js"
 import { useNavigate } from "react-router"
-import { makeHeaders } from "../../helpers/auth.js"
 import Loading from "../loadingScreen/Loading.jsx"
 import "./style.css"
+import { api } from "../../api/api.js"
 
 export default function CreateEntry() {
   const [categories, setCategories] = useState(null)
@@ -14,14 +14,9 @@ export default function CreateEntry() {
   const getCategories = () => {
     const get = async () => {
       try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch("/api/users/me/categories", options)
-        if (response.status === 200) {
-          const data = await response.json()
-          setCategories(data.categories)
-        }
+        const response = await api.getCategories()
+        if (response instanceof Error) return
+        setCategories(response.categories)
       } catch (error) {
         console.log(error, "error fetching categories")
       }
@@ -51,29 +46,16 @@ export default function CreateEntry() {
     if (!form.categoryId) return
 
     try {
-      const { prompt, answer, hint } = form
-
       const body = { ...entryBlueprint,
+        ...form,
         categoryId: Number(form.categoryId),
-        lastAskedAt: null,
-        prompt,
-        answer,
-        hint
+        lastAskedAt: null
       }
 
-      const options = {
-        method: "POST",
-        headers: makeHeaders(),
-        body: JSON.stringify(body)
-      }
-
-      const response = await fetch("/api/cards", options)
-      if (response.status === 201) {
-          setCreatedCards(createdCards + 1)
-          resetForm()
-        } else {
-        console.log("error creating entry")
-      }
+      const response = await api.createCard(body)
+      if (response instanceof Error) return
+      setCreatedCards(createdCards + 1)
+      resetForm()
     } catch (error) {
       console.log(error, "error creating entry")
     }

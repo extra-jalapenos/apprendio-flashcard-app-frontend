@@ -8,7 +8,7 @@ export default function SessionStatistics () {
   const loadTodaysStats = () => {
     const get = async () => {
       const response = await api.getTodaysStats()
-      if (response.message) return
+      if (response instanceof Error) return
       setSessionStats(response.statistic)
     }
     get()

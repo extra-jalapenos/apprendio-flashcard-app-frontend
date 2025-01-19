@@ -44,8 +44,7 @@ export default function Statistics () {
   const getData = () => {
     const load = async () => {
       const response = await api.getStatistics()
-      console.log(response)
-      if (response.message) return
+      if (response instanceof Error) return
       setHistory(response.statistics)
     }
     load()

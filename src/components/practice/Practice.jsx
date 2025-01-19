@@ -54,8 +54,9 @@ export default function Practice ({ card, setCard, next }) {
 
   const logCorrect = async () => {
     try {
-      const stats = api.updateTodaysStats({ correct: 1, incorrect: 0})
-      setSessionStats(stats.statistic)
+      const response = await api.updateTodaysStats({ correct: 1, incorrect: 0})
+      if (response instanceof Error) return
+      setSessionStats(response.statistic)
     } catch {
       console.log("error logging stat change")
     }
@@ -67,7 +68,7 @@ export default function Practice ({ card, setCard, next }) {
     })
     try {
       const response = await api.changeCardStats({ cardId: id, changeBy: 1 })
-      if (response.message) return
+      if (response instanceof Error) return
       resetDisplayOptions()
       next()
     } catch (error) {
@@ -77,8 +78,9 @@ export default function Practice ({ card, setCard, next }) {
 
   const logWrong = async () => {
     try {
-      const stats = api.updateTodaysStats({ correct: null, incorrect: 1})
-      setSessionStats(stats.statistic)
+      const response = await api.updateTodaysStats({ correct: null, incorrect: 1})
+      if (response instanceof Error) return
+      setSessionStats(response.statistic)
     } catch {
       console.log("error logging stat change")
     }
@@ -89,7 +91,7 @@ export default function Practice ({ card, setCard, next }) {
 
     try {
       const response = await api.changeCardStats({ cardId: id, changeBy: -1 })
-      if (response.message) return
+      if (response instanceof Error) return
       resetDisplayOptions()
       next()
     } catch (error) {

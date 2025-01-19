@@ -11,7 +11,7 @@ export default function LanguageSelection () {
   const getCategories = () => {
     const get = async () => {
       const response = await api.getCategories()
-      if (response.message) return
+      if (response instanceof Error) return
       setCategories(response.categories)
     }
     get()

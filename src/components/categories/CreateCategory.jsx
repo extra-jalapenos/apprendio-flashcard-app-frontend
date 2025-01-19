@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { makeHeaders } from "../../helpers/auth"
 import Loading from "../loadingScreen/Loading"
+import { api } from "../../api/api"
 
 export default function CreateCategory () {
   const { user } = useContext(userContext)
@@ -13,14 +14,10 @@ export default function CreateCategory () {
   const getCategories = () => {
     const get = async () => {
       try {
-        const options = {
-          headers: makeHeaders()
-        }
-        const response = await fetch("/api/users/me/categories", options)
-        if (response.status === 200) {
-          const data = await response.json()
-          setCategories(data.categories)
-        }
+        const response = await api.getCategories()
+        if (response instanceof Error) return
+        const data = await response.json()
+        setCategories(data.categories)
       } catch (error) {
         console.log(error, "error fetching categories")
       }
@@ -39,24 +36,13 @@ export default function CreateCategory () {
 
   const createCategory = async () => {
     try {
-      const body = {
-        "name": form.name
-      }
-
-      const options = {
-        method: "POST",
-        headers: makeHeaders(),
-        body: JSON.stringify(body)
-      }
-
-      const response = await fetch("/api/categories", options)
-      if (response.status === 201) {
+      const response = await api.createCategory(form.name)
+      if (response instanceof Error) {
         navigate("/select-category")
       }
     } catch (error) {
       console.log(error, "error creating category")
     }
-
   }
 
   const handleSubmit = (event) => {

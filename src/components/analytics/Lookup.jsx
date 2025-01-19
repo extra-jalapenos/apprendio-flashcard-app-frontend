@@ -12,7 +12,7 @@ function ListPair ({card, getCards, searchText}) {
 
   const handleDelete = async () => {
     const response = await api.deleteCard(card.id)
-    if (response.message) return
+    if (response instanceof Error) return
     getCards()
   }
 
@@ -73,7 +73,7 @@ export default function Lookup() {
   const getCards = () => {
     const get = async () => {
       const response = await api.getCategoriesWithCards()
-      if (response.message) return
+      if (response instanceof Error) return
       setData(response.categories)
     }
     get()
