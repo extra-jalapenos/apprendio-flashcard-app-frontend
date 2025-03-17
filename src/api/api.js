@@ -1,5 +1,7 @@
 class APIClient  {
-	constructor () { }
+	constructor (BASE_URL) {
+		this.base_url = BASE_URL
+	}
 
 	makeHeaders () {
 		const headers = new Headers()
@@ -12,7 +14,7 @@ class APIClient  {
 		return headers
 	}
 
-	async call (method, url, body) {
+	async call (method, uri, body) {
 		try {
 			const options = {
 				headers: this.makeHeaders(),
@@ -20,7 +22,7 @@ class APIClient  {
 			}
 			if (body) options.body = body
 
-			const response = await fetch(url, options)
+			const response = await fetch(this.base_url + uri, options)
 			if (!(response.status >= 200 && response.status < 300)) throw response
 			if (response.status === 204) return response
 			return await response.json()
@@ -32,60 +34,60 @@ class APIClient  {
 	}
 
 	async login ({ username, password }) {
-		return await this.call("POST", "/api/login", JSON.stringify({ username, password }))
+		return await this.call("POST", "/login", JSON.stringify({ username, password }))
 	}
 
 	async register ({ username, email, password }) {
-		return await this.call("POST", "/api/register", JSON.stringify({ username, email, password }))
+		return await this.call("POST", "/register", JSON.stringify({ username, email, password }))
 	}
 
 	async getCard (cardId) {
-		return await this.call("GET", `/api/cards/${cardId}`)
+		return await this.call("GET", `/cards/${cardId}`)
 	}
 
 	async getCardsInCategory (categoryId) {
-		return await this.call("GET", `/api/categories/${categoryId}/cards`)
+		return await this.call("GET", `/categories/${categoryId}/cards`)
 	}
 
 	async createCard ({ categoryId, prompt, answer, hint }) {
-		return await this.call("POST", "/api/cards", JSON.stringify({ categoryId, prompt, answer, hint, lastAskedAt: null }))
+		return await this.call("POST", "/cards", JSON.stringify({ categoryId, prompt, answer, hint, lastAskedAt: null }))
 	}
 
 	async updateCard ({ cardId, prompt, answer, hint }) {
-		return await this.call("PUT", `/api/cards/${cardId}`, JSON.stringify({ cardId, prompt, answer, hint }))
+		return await this.call("PUT", `/cards/${cardId}`, JSON.stringify({ cardId, prompt, answer, hint }))
 	}
 
 	async changeCardStats ({ cardId, changeBy }) {
-		return await this.call("PATCH", `/api/cards/${cardId}?changeBy=${changeBy}`)
+		return await this.call("PATCH", `/cards/${cardId}?changeBy=${changeBy}`)
 	}
 
 	async deleteCard (cardId) {
-		return await this.call("DELETE", `/api/cards/${cardId}`)
+		return await this.call("DELETE", `/cards/${cardId}`)
 	}
 
 	async getCategory (categoryId) {
-		return await this.call("GET", `/api/categories/${categoryId}`)
+		return await this.call("GET", `/categories/${categoryId}`)
 	}
 
 	async getCategories () {
-		return await this.call("GET", "api/users/me/categories")
+		return await this.call("GET", "/users/me/categories")
 	}
 
 	async getCategoriesWithCards () {
 		// this is not a mistake, the cards are included in their category-element: categories: [ ... cards: [] ]
-		return await this.call("GET", "api/users/me/categories/details")
+		return await this.call("GET", "/users/me/categories/details")
 	}
 
 	async createCategory (name) {
-		return await this.call("POST", "/api/categories", JSON.parse({ name }))
+		return await this.call("POST", "/categories", JSON.parse({ name }))
 	}
 
 	async deleteCategory (categoryId) {
-		return await this.call("DELETE", `api/categories/${categoryId}`)
+		return await this.call("DELETE", `/categories/${categoryId}`)
 	}
 
 	async getTodaysStats () {
-		return await this.call("GET", "/api/users/me/statistics/today")
+		return await this.call("GET", "/users/me/statistics/today")
 	}
 
 	async updateTodaysStats ({ correct, incorrect }) {
@@ -103,12 +105,14 @@ class APIClient  {
       return
     }
 
-		return await this.call("PATCH", `/api/users/me/statistics/today${queryParamStr()}`)
+		return await this.call("PATCH", `/users/me/statistics/today${queryParamStr()}`)
 	}
 
 	async getStatistics () {
-		return await this.call("GET", "api/users/me/statistics")
+		return await this.call("GET", "/users/me/statistics")
 	}
 }
 
-export const api = new APIClient()
+const { VITE_API_URL } = import.meta.env
+if (!VITE_API_URL) throw new Error("API URL not defined!")
+export const api = new APIClient(VITE_API_URL)
