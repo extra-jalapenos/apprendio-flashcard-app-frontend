@@ -3,7 +3,7 @@
 ## How do I use this?
 - git clone this repo to your machine with "git clone …@github.com:apprendio-flashcard-app.git"
 - cd in the directory
-- run "npm ci"
+- run "npm ci" (npm Command Line Interface (CLI) must be available (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
 - run "npm run dev"
 - go to http://localhost:5173
 
